@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+// gui - CLI front-end to gui_daemon.js (starts it on first use).
+const fs = require('fs'), path = require('path'), http = require('http'), { spawn } = require('child_process');
+const WS = process.env.GUI_WORKSPACE || process.cwd();
+const portFile = path.join(WS, '.gui', 'port');
+const [cmd, ...args] = process.argv.slice(2);
+if (!cmd || cmd === '--help' || cmd === '-h') {
+  console.log('gui open <url> | screenshot | click <x> <y> | type "<text>" [--enter] | key <Key> | scroll <dy> |\n    select <x1> <y1> <x2> <y2> | copy | paste <file> [--append] | back | forward | url | shutdown');
+  process.exit(0);
+}
+function send(port) {
+  return new Promise((resolve, reject) => {
+    const req = http.request({ host: '127.0.0.1', port, method: 'POST', path: '/' }, res => {
+      let b = ''; res.on('data', c => (b += c)); res.on('end', () => resolve(JSON.parse(b)));
+    });
+    req.on('error', reject); req.end(JSON.stringify({ cmd, args }));
+  });
+}
+(async () => {
+  let port = fs.existsSync(portFile) ? +fs.readFileSync(portFile, 'utf8') : 0;
+  let out;
+  try { if (!port) throw new Error('no daemon'); out = await send(port); }
+  catch (e) {
+    if (fs.existsSync(portFile)) fs.unlinkSync(portFile);
+    fs.mkdirSync(path.dirname(portFile), { recursive: true });
+    const d = spawn(process.execPath, [path.join(__dirname, 'gui_daemon.js')], { detached: true, stdio: 'ignore', env: { ...process.env, GUI_WORKSPACE: WS, NODE_PATH: process.env.NODE_PATH || '' } });
+    d.unref();
+    for (let i = 0; i < 100 && !fs.existsSync(portFile); i++) await new Promise(r => setTimeout(r, 200));
+    out = await send(+fs.readFileSync(portFile, 'utf8'));
+  }
+  const { ts, tool, ...shown } = out;
+  console.log(JSON.stringify(shown));
+  process.exit(out.ok ? 0 : 1);
+})();

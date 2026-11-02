@@ -1,0 +1,2 @@
+{"task_id": "calc-s1", "family": "calculator", "tier": "S1", "target_loc": [100, 300],
+ "entry_points": ["src/calc.js", "src/cli.js"], "reuse_potential_prior": "high (shunting-yard / recursive-descent evaluators are ubiquitous)"}

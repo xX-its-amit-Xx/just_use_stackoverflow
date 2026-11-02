@@ -1,0 +1,17 @@
+{
+  "experiment_id": "size-dependent-retrieval-economics-v1",
+  "agent_harness": "claude-code-cli (headless: claude -p --output-format stream-json)",
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "permission_mode": "auto",
+  "max_wall_clock_s": {"S1": 1800, "S2": 3600, "S3": 5400, "S4": 10800, "S5": 21600},
+  "max_budget_usd":   {"S1": 3,    "S2": 8,    "S3": 25,   "S4": 80,    "S5": 200},
+  "success_threshold": 0.9,
+  "strategies": {
+    "generate_first": {"tools": ["Bash","Read","Write","Edit","Glob","Grep"], "env_tools": []},
+    "reuse_first":    {"tools": ["Bash","Read","Write","Edit","Glob","Grep","WebSearch","WebFetch"], "env_tools": ["rtool"]},
+    "hybrid":         {"tools": ["Bash","Read","Write","Edit","Glob","Grep","WebSearch","WebFetch"], "env_tools": ["rtool"]},
+    "gui_reuse_first":{"tools": ["Bash","Read","Write","Edit","Glob","Grep"], "env_tools": ["gui"]}
+  },
+  "disabled_tools_note": "Task/Agent (subagents) are disabled in every condition so all model invocations appear in one transcript."
+}

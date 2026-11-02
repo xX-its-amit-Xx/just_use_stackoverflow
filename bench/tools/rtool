@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+"""rtool - logged retrieval helper for the reuse-first / hybrid conditions.
+
+Every invocation appends one JSON line to $BENCH_TELEMETRY_DIR/retrieval.jsonl
+(default ./.telemetry) with the command, arguments, wall time, success flag,
+number of results returned, bytes and lines acquired, and source URLs. The
+harness joins these records with the model transcript.
+"""
+import gzip
+import io
+import json
+import os
+import shutil
+import ssl
+import subprocess
+import sys
+import tarfile
+import time
+import urllib.parse
+import urllib.request
+
+TEL_DIR = os.environ.get("BENCH_TELEMETRY_DIR", os.path.join(os.getcwd(), ".telemetry"))
+RET_DIR = os.path.join(os.getcwd(), ".retrieval")
+UA = "lazy-agent-experiment-rtool/1.0"
+
+
+def _ctx():
+    for f in (os.environ.get("SSL_CERT_FILE"), "/root/.ccr/ca-bundle.crt"):
+        if f and os.path.exists(f):
+            return ssl.create_default_context(cafile=f)
+    return ssl.create_default_context()
+
+
+def http_get(url, accept=None):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Encoding": "gzip", **({"Accept": accept} if accept else {})})
+    with urllib.request.urlopen(req, timeout=60, context=_ctx()) as r:
+        data = r.read()
+        if r.headers.get("Content-Encoding") == "gzip":
+            data = gzip.decompress(data)
+        return r.status, data
+
+
+def log(rec):
+    os.makedirs(TEL_DIR, exist_ok=True)
+    with open(os.path.join(TEL_DIR, "retrieval.jsonl"), "a") as f:
+        f.write(json.dumps(rec) + "\n")
+
+
+def count_lines(path):
+    n = 0
+    for root, dirs, files in os.walk(path):
+        dirs[:] = [d for d in dirs if d not in (".git", "node_modules")]
+        for fn in files:
+            try:
+                with open(os.path.join(root, fn), "rb") as f:
+                    n += f.read().count(b"\n")
+            except OSError:
+                pass
+    return n
+
+
+def opt(args, name, default=None):
+    if name in args:
+        i = args.index(name)
+        v = args[i + 1]
+        del args[i:i + 2]
+        return v
+    return default
+
+
+def gh_search(args, kind):
+    n = int(opt(args, "--n", 10))
+    lang = opt(args, "--lang")
+    q = " ".join(args)
+    if lang:
+        q += f" language:{lang}"
+    endpoint = "search/repositories" if kind == "repo" else "search/code"
+    p = subprocess.run(["gh", "api", "-X", "GET", endpoint, "-f", f"q={q}", "-f", f"per_page={n}"],
+                       capture_output=True, text=True, timeout=120)
+    if p.returncode != 0:
+        raise RuntimeError(p.stderr.strip() or p.stdout.strip())
+    d = json.loads(p.stdout)
+    items = d.get("items", [])
+    out, urls = [], []
+    for it in items:
+        if kind == "repo":
+            out.append({"full_name": it["full_name"], "url": it["html_url"], "stars": it.get("stargazers_count"),
+                        "license": (it.get("license") or {}).get("spdx_id"), "language": it.get("language"),
+                        "description": (it.get("description") or "")[:200], "default_branch": it.get("default_branch"),
+                        "size_kb": it.get("size")})
+            urls.append(it["html_url"])
+        else:
+            out.append({"repo": it["repository"]["full_name"], "path": it["path"], "url": it["html_url"]})
+            urls.append(it["html_url"])
+    print(json.dumps({"total_count": d.get("total_count"), "items": out}, indent=1))
+    return {"query": q, "n_results": len(items), "source_urls": urls}
+
+
+def so_search(args):
+    n = int(opt(args, "--n", 10))
+    q = " ".join(args)
+    url = ("https://api.stackexchange.com/2.3/search/advanced?" + urllib.parse.urlencode(
+        {"order": "desc", "sort": "relevance", "q": q, "site": "stackoverflow", "pagesize": n, "filter": "default"}))
+    _, data = http_get(url)
+    d = json.loads(data)
+    out = [{"question_id": it["question_id"], "title": it["title"], "score": it["score"], "answers": it["answer_count"],
+            "accepted": it.get("accepted_answer_id"), "tags": it.get("tags"), "url": it["link"]} for it in d.get("items", [])]
+    print(json.dumps(out, indent=1))
+    return {"query": q, "n_results": len(out), "source_urls": [o["url"] for o in out]}
+
+
+def html_to_text(h):
+    import html as _h
+    import re as _re
+    h = _re.sub(r"<pre[^>]*><code[^>]*>", "\n```\n", h)
+    h = _re.sub(r"</code></pre>", "\n```\n", h)
+    h = _re.sub(r"<br\s*/?>|</p>|</li>", "\n", h)
+    h = _re.sub(r"<[^>]+>", "", h)
+    return _h.unescape(h)
+
+
+def so_answers(args):
+    qid = args[0]
+    url = (f"https://api.stackexchange.com/2.3/questions/{qid}/answers?" + urllib.parse.urlencode(
+        {"order": "desc", "sort": "votes", "site": "stackoverflow", "filter": "withbody"}))
+    _, data = http_get(url)
+    d = json.loads(data)
+    os.makedirs(os.path.join(RET_DIR, "snippets"), exist_ok=True)
+    path = os.path.join(RET_DIR, "snippets", f"so_{qid}.md")
+    txt = []
+    for a in d.get("items", []):
+        txt.append(f"## answer {a.get('answer_id')} score={a.get('score')} accepted={a.get('is_accepted')}\n"
+                   f"source: https://stackoverflow.com/a/{a.get('answer_id')} (CC BY-SA)\n\n{html_to_text(a.get('body', ''))}\n")
+    body = "\n".join(txt)
+    with open(path, "w") as f:
+        f.write(body)
+    print(body)
+    print(f"\n[saved to {path}]")
+    return {"n_results": len(d.get("items", [])), "local_path": path, "lines": body.count("\n"), "bytes": len(body),
+            "source_urls": [f"https://stackoverflow.com/q/{qid}"]}
+
+
+def npm_search(args):
+    n = int(opt(args, "--n", 10))
+    q = " ".join(args)
+    _, data = http_get("https://registry.npmjs.org/-/v1/search?" + urllib.parse.urlencode({"text": q, "size": n}))
+    d = json.loads(data)
+    out = [{"name": o["package"]["name"], "version": o["package"]["version"],
+            "description": (o["package"].get("description") or "")[:200],
+            "license": o["package"].get("license"), "repo": (o["package"].get("links") or {}).get("repository")}
+           for o in d.get("objects", [])]
+    print(json.dumps(out, indent=1))
+    return {"query": q, "n_results": len(out), "source_urls": [f"https://www.npmjs.com/package/{o['name']}" for o in out]}
+
+
+def npm_fetch(args):
+    spec = args[0]
+    name, _, ver = spec.rpartition("@") if spec.count("@") > (1 if spec.startswith("@") else 0) else (spec, "", "")
+    name = name or spec
+    _, meta = http_get(f"https://registry.npmjs.org/{urllib.parse.quote(name, safe='@')}")
+    meta = json.loads(meta)
+    ver = ver or meta["dist-tags"]["latest"]
+    tarball = meta["versions"][ver]["dist"]["tarball"]
+    _, tgz = http_get(tarball)
+    dest = os.path.join(RET_DIR, "npm", f"{name.replace('/', '__')}@{ver}")
+    shutil.rmtree(dest, ignore_errors=True)
+    os.makedirs(dest)
+    with tarfile.open(fileobj=io.BytesIO(tgz), mode="r:gz") as t:
+        t.extractall(dest, filter="data")
+    lic = meta["versions"][ver].get("license")
+    print(json.dumps({"package": name, "version": ver, "license": lic, "path": dest}, indent=1))
+    return {"local_path": dest, "lines": count_lines(dest), "bytes": len(tgz), "license": lic,
+            "source_urls": [tarball]}
+
+
+def clone(args):
+    ref = opt(args, "--ref")
+    repo = args[0].replace("https://github.com/", "").rstrip("/").removesuffix(".git")
+    dest = os.path.join(RET_DIR, "repos", repo.replace("/", "__"))
+    shutil.rmtree(dest, ignore_errors=True)
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    cmd = ["git", "clone", "--depth", "1", "-q"] + (["--branch", ref] if ref else []) + [f"https://github.com/{repo}", dest]
+    p = subprocess.run(cmd, capture_output=True, text=True, timeout=600, env={**os.environ, "GIT_TERMINAL_PROMPT": "0"})
+    if p.returncode != 0:
+        raise RuntimeError(p.stderr.strip())
+    lic = None
+    for fn in os.listdir(dest):
+        if fn.upper().startswith(("LICENSE", "LICENCE", "COPYING")):
+            with open(os.path.join(dest, fn), errors="replace") as f:
+                lic = f.readline().strip()[:80]
+    files = sum(len(fs) for r, d, fs in os.walk(dest) if "/.git" not in r)
+    print(json.dumps({"repo": repo, "path": dest, "files": files, "license_first_line": lic}, indent=1))
+    return {"local_path": dest, "lines": count_lines(dest), "files": files, "license": lic,
+            "source_urls": [f"https://github.com/{repo}"]}
+
+
+def fetch(args):
+    url = args[0]
+    m = None
+    if url.startswith("https://github.com/") and "/blob/" in url:  # convert blob -> raw
+        m = url.replace("https://github.com/", "https://raw.githubusercontent.com/").replace("/blob/", "/", 1)
+    status, data = http_get(m or url)
+    os.makedirs(os.path.join(RET_DIR, "snippets"), exist_ok=True)
+    fn = urllib.parse.quote((m or url).split("://", 1)[1], safe="")[:180]
+    path = os.path.join(RET_DIR, "snippets", fn)
+    with open(path, "wb") as f:
+        f.write(data)
+    text = data.decode("utf-8", errors="replace")
+    print(text[:200000])
+    print(f"\n[saved to {path}]")
+    return {"http_status": status, "local_path": path, "lines": text.count("\n"), "bytes": len(data), "source_urls": [url]}
+
+
+CMDS = {"gh-search": lambda a: gh_search(a, "repo"), "gh-code-search": lambda a: gh_search(a, "code"),
+        "so-search": so_search, "so-answers": so_answers, "npm-search": npm_search, "npm-fetch": npm_fetch,
+        "clone": clone, "fetch": fetch}
+
+
+def main():
+    if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help") or sys.argv[1] not in CMDS:
+        print(__doc__)
+        print("commands: " + ", ".join(CMDS))
+        sys.exit(0 if len(sys.argv) >= 2 and sys.argv[1] in ("-h", "--help") else 2)
+    cmd, args = sys.argv[1], sys.argv[2:]
+    t0 = time.time()
+    rec = {"ts": t0, "tool": "rtool", "command": cmd, "args": list(args)}
+    try:
+        info = CMDS[cmd](list(args)) or {}
+        rec.update(info, ok=True)
+        code = 0
+    except Exception as e:  # failures are data, not crashes
+        rec.update(ok=False, error=str(e)[:500])
+        print(f"rtool {cmd} failed: {e}", file=sys.stderr)
+        code = 1
+    rec["duration_s"] = round(time.time() - t0, 3)
+    log(rec)
+    sys.exit(code)
+
+
+if __name__ == "__main__":
+    main()

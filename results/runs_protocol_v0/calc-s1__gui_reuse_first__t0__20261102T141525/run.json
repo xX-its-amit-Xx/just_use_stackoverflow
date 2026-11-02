@@ -1,0 +1,167 @@
+{
+ "run_id": "calc-s1__gui_reuse_first__t0__20261102T141525",
+ "task_id": "calc-s1",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S1",
+ "family": "calculator",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 5,
+ "model_invocations": 5,
+ "input_tokens": 10,
+ "output_tokens": 2242,
+ "cached_input_tokens": 44662,
+ "cache_creation_tokens": 6492,
+ "reasoning_tokens": 109,
+ "total_tokens": 2252,
+ "total_tokens_incl_cache": 53406,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.052874,
+ "inference_cost_attributed_usd": 0.052874,
+ "harness_reported_cost_usd": 0.052874199999999996,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.000559,
+ "total_execution_cost_usd": 0.053434,
+ "elapsed_s": 25.17,
+ "agent_elapsed_s": 24.66,
+ "eval_s": 0.5,
+ "active_s": 22.82,
+ "api_s": 19.35,
+ "hidden_tests": 58,
+ "hidden_pass": 58,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 70,
+ "test_loc": 5,
+ "comment_lines": 0,
+ "blank_lines": 0,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 70,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 0,
+  "screenshots": 0,
+  "screenshot_tokens_estimate": 0,
+  "screenshot_tokens_viewed_estimate": 0,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 0,
+  "gui_action_time_s": 0.0,
+  "browser_session_span_s": 0.0,
+  "visual_reasoning_calls": 0,
+  "visual_reasoning_cost_usd": 0
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 67,
+   "mean_file_loc": 35.0,
+   "functions": 14,
+   "loc_per_function": 5.0,
+   "duplicate_line_ratio": 0.037
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 54,
+   "trivial": 16,
+   "exact": 0,
+   "modified": 0,
+   "generated": 54
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 70
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 10,
+    "outputTokens": 2242,
+    "cacheReadInputTokens": 44662,
+    "cacheCreationInputTokens": 6492,
+    "webSearchRequests": 0,
+    "costUSD": 0.052874199999999996,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 109,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 6492,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 10,
+    "output": 2242,
+    "cr": 44662,
+    "cw": 6492
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "code_generation": 1,
+  "test_execution": 2,
+  "other": 1
+ }
+}

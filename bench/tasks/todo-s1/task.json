@@ -1,0 +1,2 @@
+{"task_id": "todo-s1", "family": "todo", "tier": "S1", "target_loc": [100, 300],
+ "entry_points": ["src/todo.js", "src/cli.js"], "reuse_potential_prior": "high (todo apps are the canonical tutorial project, but rarely with this exact API)"}

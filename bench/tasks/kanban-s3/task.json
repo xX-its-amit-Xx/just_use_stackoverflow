@@ -1,0 +1,2 @@
+{"task_id": "kanban-s3", "family": "kanban", "tier": "S3", "target_loc": [2000, 5000],
+ "entry_points": ["src/server.js", "src/main.js"], "reuse_potential_prior": "medium (many kanban apps exist but use frameworks/DBs; stdlib-only constraint forces adaptation)"}

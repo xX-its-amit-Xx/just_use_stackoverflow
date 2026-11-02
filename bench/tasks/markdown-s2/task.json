@@ -1,0 +1,2 @@
+{"task_id": "markdown-s2", "family": "markdown", "tier": "S2", "target_loc": [500, 1000],
+ "entry_points": ["src/markdown.js", "src/cli.js"], "reuse_potential_prior": "very high (marked, markdown-it, snarkdown, commonmark.js); safe-mode + slug/toc require adaptation"}

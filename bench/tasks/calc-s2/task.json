@@ -1,0 +1,2 @@
+{"task_id": "calc-s2", "family": "calculator", "tier": "S2", "target_loc": [500, 1000],
+ "entry_points": ["src/calc.js", "src/repl.js"], "reuse_potential_prior": "high (math.js / expr-eval style parsers exist; exact semantics differ)"}

@@ -1,0 +1,5 @@
+{"ts": 1793629048.5259433, "event": "plan", "seed": 20261102, "order": [["calc-s1", "hybrid", 0], ["calc-s1", "gui_reuse_first", 0], ["calc-s1", "reuse_first", 0], ["calc-s1", "generate_first", 0]]}
+{"run_id": "calc-s1__generate_first__t0__20261102T141728", "minutes": 0.3, "pass": "58/58", "loc": 103, "usd": 0.044058, "task": "calc-s1", "strategy": "generate_first", "trial": 0, "ts": 1793629067.5236285}
+{"run_id": "calc-s1__hybrid__t0__20261102T141728", "minutes": 0.5, "pass": "58/58", "loc": 102, "usd": 0.048308, "task": "calc-s1", "strategy": "hybrid", "trial": 0, "ts": 1793629077.2037487}
+{"run_id": "calc-s1__reuse_first__t0__20261102T141728", "minutes": 0.5, "pass": "58/58", "loc": 102, "usd": 0.059422, "task": "calc-s1", "strategy": "reuse_first", "trial": 0, "ts": 1793629079.211293}
+{"run_id": "calc-s1__gui_reuse_first__t0__20261102T141728", "minutes": 0.7, "pass": "58/58", "loc": 96, "usd": 0.090304, "task": "calc-s1", "strategy": "gui_reuse_first", "trial": 0, "ts": 1793629088.9209394}
