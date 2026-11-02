@@ -18,7 +18,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from harness import evaluate, run_trial  # noqa: E402
 
 REPO = os.path.dirname(HERE)
 STRATS = ["generate_first", "reuse_first", "hybrid", "gui_reuse_first"]
@@ -32,9 +31,18 @@ def done(task, strat, trial):
 
 
 def one(task, strat, trial):
+    """Run the trial and its evaluation in separate processes (no GIL coupling between concurrent trials)."""
+    import subprocess
     t0 = time.time()
-    rid, out, ws = run_trial.run(task, strat, trial)
-    r = evaluate.process(out)
+    p = subprocess.run([sys.executable, "-m", "harness.run_trial", task, strat, str(trial)], cwd=HERE, capture_output=True, text=True)
+    if p.returncode:
+        raise RuntimeError(p.stderr[-800:])
+    info = json.loads(p.stdout.strip().splitlines()[-1])
+    rid, out = info["run_id"], info["out"]
+    e = subprocess.run([sys.executable, "-m", "harness.evaluate", out], cwd=HERE, capture_output=True, text=True, timeout=3600)
+    if e.returncode:
+        raise RuntimeError(f"evaluate failed for {rid}: {e.stderr[-800:]}")
+    r = json.load(open(os.path.join(out, "run.json")))
     return {"run_id": rid, "minutes": round((time.time() - t0) / 60, 1), "pass": f"{r['hidden_pass']}/{r['hidden_tests']}",
             "loc": r["functional_loc"], "usd": r["inference_cost_usd"]}
 

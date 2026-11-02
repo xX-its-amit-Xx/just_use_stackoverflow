@@ -1,0 +1,44 @@
+{
+ "external_exact_fraction": 0.004,
+ "external_modified_fraction": 0.068,
+ "external_fraction": 0.072,
+ "line_classes": {
+  "nontrivial": 250,
+  "trivial": 109,
+  "exact": 1,
+  "modified": 17,
+  "generated": 232
+ },
+ "corpus_sources": 2,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 291,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 145,
+  "gui_clipboard": 146
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1793629490601.txt",
+   18
+  ],
+  [
+   ".retrieval/parser.js",
+   18
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 18,
+   "trivial": 6
+  },
+  "src/calc.js": {
+   "exact": 1,
+   "modified": 15,
+   "generated": 214,
+   "trivial": 103
+  }
+ },
+ "final_functional_loc": 354
+}

@@ -172,6 +172,17 @@ def contamination_check(tool_index):
     return hits
 
 
+def permission_denials(tool_index):
+    """Tool calls refused by the harness permission classifier (auto mode), with the stated reason."""
+    out = []
+    for t in tool_index.values():
+        txt = t["result"].get("text", "") or ""
+        if "denied by the Claude Code auto mode classifier" in txt or "Permission for this action was denied" in txt:
+            m = re.search(r"Reason: \[([^\]]+)\]", txt)
+            out.append({"action_type": t["kind"], "reason": m.group(1) if m else "unknown", "step": t["step"]})
+    return out
+
+
 def node_check(app_dir):
     bad = []
     for d, dirs, files in os.walk(os.path.join(app_dir, "src")):
@@ -345,7 +356,9 @@ def process(run_dir, copy=True):
     search_cost = tok["web_search_requests"] * pc["server_tools"]["web_search_per_request"]
     hr = meta.get("harness_result") or {}
     active_s = (hr.get("duration_api_ms") or 0) / 1000 + sum(e["tool_wall_s"] for e in events)
-    elapsed_agent = meta["agent_elapsed_s"]
+    # Agent elapsed time = the CLI's own session duration (task assignment -> final result). The orchestrator's
+    # observed process wall time is kept separately: it can be inflated if the orchestrator is slow to reap the process.
+    elapsed_agent = (hr.get("duration_ms") or 0) / 1000 or meta["agent_elapsed_s"]
     compute_cost = (elapsed_agent + eval_s) / 3600 * pc["compute"]["usd_per_container_hour"]
     q_tests = hid["tests"]
     run = {k: meta[k] for k in ("run_id", "task_id", "strategy", "trial", "tier", "family", "model", "effort")}
@@ -361,7 +374,7 @@ def process(run_dir, copy=True):
         "harness_reported_cost_usd": hr.get("total_cost_usd"),
         "search_api_cost_usd": round(search_cost, 6), "compute_cost_usd_estimate": round(compute_cost, 6),
         "total_execution_cost_usd": round(inference + search_cost + compute_cost, 6),
-        "elapsed_s": round(elapsed_agent + eval_s, 2), "agent_elapsed_s": round(elapsed_agent, 2), "eval_s": round(eval_s, 2),
+        "elapsed_s": round(elapsed_agent + eval_s, 2), "agent_elapsed_s": round(elapsed_agent, 2), "orchestrator_observed_s": round(meta["agent_elapsed_s"], 2), "eval_s": round(eval_s, 2),
         "active_s": round(active_s, 2), "api_s": round((hr.get("duration_api_ms") or 0) / 1000, 2),
         "hidden_tests": q_tests, "hidden_pass": hid["pass"], "hidden_fail": hid["fail"],
         "own_tests": own["tests"], "own_pass": own["pass"],
@@ -376,7 +389,7 @@ def process(run_dir, copy=True):
     run["quality"] = {
         "security_findings": security_scan(art), "dependencies": dependency_check(art), "maintainability": maintainability(art, loc_info),
         "license": license_check(art, prov), "syntax_errors": node_check(art), "human_interventions": 0,
-        "contamination": contamination_check(tool_index), "hidden_failed_names": hid.get("failed_names", []),
+        "contamination": contamination_check(tool_index), "permission_denials": permission_denials(tool_index), "hidden_failed_names": hid.get("failed_names", []),
     }
     run["provenance"] = prov_small
     run["reconciliation"] = recon

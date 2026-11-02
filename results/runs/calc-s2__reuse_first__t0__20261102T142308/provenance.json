@@ -1,0 +1,48 @@
+{
+ "external_exact_fraction": 0.003875968992248062,
+ "external_modified_fraction": 0.046511627906976744,
+ "external_fraction": 0.050387596899224806,
+ "line_classes": {
+  "nontrivial": 258,
+  "trivial": 101,
+  "exact": 1,
+  "modified": 12,
+  "generated": 245
+ },
+ "corpus_sources": 9,
+ "corpus_sources_contributing": 3,
+ "corpus_lines": 3842,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 3756,
+  "tool_result": 86
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
+   12
+  ],
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
+   12
+  ],
+  [
+   "tool_result:toolu_01WNtWogFA3NjU8RQDkSWUK4",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 0,
+   "modified": 4,
+   "generated": 19,
+   "trivial": 5
+  },
+  "src/calc.js": {
+   "exact": 1,
+   "modified": 8,
+   "generated": 226,
+   "trivial": 96
+  }
+ },
+ "final_functional_loc": 355
+}

@@ -66,6 +66,8 @@ def flatten(r):
     out["syntax_errors"] = len(q.get("syntax_errors") or [])
     out["contamination_flags"] = len(q.get("contamination") or [])
     out["human_interventions"] = q.get("human_interventions", 0)
+    out["permission_denials"] = len(q.get("permission_denials") or [])
+    out["permission_denials_code_from_external"] = sum(1 for d in (q.get("permission_denials") or []) if "External" in d.get("reason", ""))
     for k, v in (r.get("protocol") or {}).items():
         out[f"protocol_{k}"] = v
     for k, v in (q.get("maintainability") or {}).items():

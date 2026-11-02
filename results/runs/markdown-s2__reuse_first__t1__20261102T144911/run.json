@@ -1,0 +1,184 @@
+{
+ "run_id": "markdown-s2__reuse_first__t1__20261102T144911",
+ "task_id": "markdown-s2",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S2",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 10,
+ "model_invocations": 10,
+ "input_tokens": 20,
+ "output_tokens": 4046,
+ "cached_input_tokens": 121784,
+ "cache_creation_tokens": 7556,
+ "reasoning_tokens": 592,
+ "total_tokens": 4066,
+ "total_tokens_incl_cache": 133406,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.082902,
+ "inference_cost_attributed_usd": 0.082902,
+ "harness_reported_cost_usd": 0.0829024,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.001407,
+ "total_execution_cost_usd": 0.08431,
+ "elapsed_s": 63.32,
+ "agent_elapsed_s": 62.63,
+ "orchestrator_observed_s": 64.7,
+ "eval_s": 0.69,
+ "active_s": 67.5,
+ "api_s": 52.45,
+ "hidden_tests": 56,
+ "hidden_pass": 56,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 65,
+ "functional_chars": 1979,
+ "normalized_loc": 66,
+ "test_loc": 6,
+ "comment_lines": 1,
+ "blank_lines": 8,
+ "retrieval": {
+  "search_queries": 2,
+  "search_results_examined": 3,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 1,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 8771,
+  "cloned_repo_lines": 12824,
+  "retrieved_loc_incorporated": 2,
+  "retrieved_loc_modified": 13,
+  "retrieved_loc_discarded": 8756,
+  "generated_loc": 50,
+  "modified_loc": 13,
+  "integration_modifications": 0,
+  "external_fraction": 0.2304,
+  "search_to_use_conversion": 0.4286,
+  "repository_acquisition_s": 2.74,
+  "retrieval_actions": 2,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.5
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 6,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "26d6053e00e2541e"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 56,
+   "mean_file_loc": 32.5,
+   "functions": 12,
+   "loc_per_function": 5.4,
+   "duplicate_line_ratio": 0.0
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.034501061571125265,
+  "external_modified_fraction": 0.19585987261146498,
+  "external_fraction": 0.23036093418259024,
+  "line_classes": {
+   "nontrivial": 1884,
+   "trivial": 1245,
+   "exact": 65,
+   "modified": 369,
+   "generated": 1450
+  },
+  "corpus_sources": 7,
+  "corpus_sources_contributing": 3,
+  "corpus_lines": 8771,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 8740,
+   "tool_result": 31
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+    431
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+    389
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+    12
+   ]
+  ],
+  "final_functional_loc": 65
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 20,
+    "outputTokens": 4046,
+    "cacheReadInputTokens": 121784,
+    "cacheCreationInputTokens": 7556,
+    "webSearchRequests": 0,
+    "costUSD": 0.0829024,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 592,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 7556,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 20,
+    "output": 4046,
+    "cr": 121784,
+    "cw": 7556
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "web_search": 1,
+  "repository_clone": 1,
+  "repository_inspection": 4,
+  "code_generation": 2,
+  "other": 1
+ }
+}

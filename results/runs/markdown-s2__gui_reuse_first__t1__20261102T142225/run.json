@@ -24,11 +24,12 @@
  "inference_cost_attributed_usd": 0.044916,
  "harness_reported_cost_usd": 0.0449155,
  "search_api_cost_usd": 0.0,
- "compute_cost_usd_estimate": 0.00094,
- "total_execution_cost_usd": 0.045855,
- "elapsed_s": 42.29,
- "agent_elapsed_s": 41.97,
- "eval_s": 0.31,
+ "compute_cost_usd_estimate": 0.000913,
+ "total_execution_cost_usd": 0.045828,
+ "elapsed_s": 41.08,
+ "agent_elapsed_s": 40.42,
+ "orchestrator_observed_s": 41.97,
+ "eval_s": 0.66,
  "active_s": 47.94,
  "api_s": 27.81,
  "hidden_tests": 1,
@@ -37,6 +38,8 @@
  "own_tests": 1,
  "own_pass": 0,
  "functional_loc": 0,
+ "functional_chars": 0,
+ "normalized_loc": 0,
  "test_loc": 6,
  "comment_lines": 0,
  "blank_lines": 0,
@@ -115,6 +118,13 @@
   "syntax_errors": [],
   "human_interventions": 0,
   "contamination": [],
+  "permission_denials": [
+   {
+    "action_type": "file_copy",
+    "reason": "Code from External",
+    "step": 5
+   }
+  ],
   "hidden_failed_names": [
    "/home/user/just_use_stackoverflow/bench/tasks/markdown-s2/hidden/markdown_s2.test.js"
   ]

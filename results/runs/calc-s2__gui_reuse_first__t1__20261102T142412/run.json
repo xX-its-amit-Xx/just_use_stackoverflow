@@ -1,0 +1,196 @@
+{
+ "run_id": "calc-s2__gui_reuse_first__t1__20261102T142412",
+ "task_id": "calc-s2",
+ "strategy": "gui_reuse_first",
+ "trial": 1,
+ "tier": "S2",
+ "family": "calculator",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 14,
+ "model_invocations": 13,
+ "input_tokens": 26,
+ "output_tokens": 11050,
+ "cached_input_tokens": 203222,
+ "cache_creation_tokens": 23303,
+ "reasoning_tokens": 2611,
+ "total_tokens": 11076,
+ "total_tokens_incl_cache": 237601,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.224086,
+ "inference_cost_attributed_usd": 0.224086,
+ "harness_reported_cost_usd": 0.22408619999999999,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.002285,
+ "total_execution_cost_usd": 0.226371,
+ "elapsed_s": 102.84,
+ "agent_elapsed_s": 101.81,
+ "orchestrator_observed_s": 103.39,
+ "eval_s": 1.03,
+ "active_s": 108.23,
+ "api_s": 82.21,
+ "hidden_tests": 89,
+ "hidden_pass": 89,
+ "hidden_fail": 0,
+ "own_tests": 3,
+ "own_pass": 3,
+ "functional_loc": 354,
+ "functional_chars": 9498,
+ "normalized_loc": 317,
+ "test_loc": 6,
+ "comment_lines": 5,
+ "blank_lines": 17,
+ "retrieval": {
+  "search_queries": 2,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 1,
+  "files_copied": 1,
+  "snippets_retrieved": 1,
+  "retrieved_loc": 291,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 1,
+  "retrieved_loc_modified": 24,
+  "retrieved_loc_discarded": 266,
+  "generated_loc": 329,
+  "modified_loc": 24,
+  "integration_modifications": 0,
+  "external_fraction": 0.072,
+  "search_to_use_conversion": 1.0,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 5,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 5,
+  "screenshots": 4,
+  "screenshot_tokens_estimate": 5460,
+  "screenshot_tokens_viewed_estimate": 5460,
+  "clicks": 0,
+  "text_selections": 1,
+  "copy_operations": 1,
+  "paste_operations": 1,
+  "failed_navigations": 0,
+  "gui_action_time_s": 13.52,
+  "browser_session_span_s": 96.88,
+  "visual_reasoning_calls": 4,
+  "visual_reasoning_cost_usd": 0.039285
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 11,
+  "retrieval_invocations": 7,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "a326796de3e18da2"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 328,
+   "mean_file_loc": 177.0,
+   "functions": 63,
+   "loc_per_function": 5.6,
+   "duplicate_line_ratio": 0.048
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [
+    "7% of non-trivial lines match retrieved material but PROVENANCE.json is empty"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.004,
+  "external_modified_fraction": 0.068,
+  "external_fraction": 0.072,
+  "line_classes": {
+   "nontrivial": 250,
+   "trivial": 109,
+   "exact": 1,
+   "modified": 17,
+   "generated": 232
+  },
+  "corpus_sources": 2,
+  "corpus_sources_contributing": 2,
+  "corpus_lines": 291,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 145,
+   "gui_clipboard": 146
+  },
+  "contributing_sources": [
+   [
+    ".gui/clipboard_history/1793629490601.txt",
+    18
+   ],
+   [
+    ".retrieval/parser.js",
+    18
+   ]
+  ],
+  "final_functional_loc": 354
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 26,
+    "outputTokens": 11050,
+    "cacheReadInputTokens": 203222,
+    "cacheCreationInputTokens": 23303,
+    "webSearchRequests": 0,
+    "costUSD": 0.22408619999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 2611,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 23303,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 26,
+    "output": 11050,
+    "cr": 203222,
+    "cw": 23303
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 4,
+  "screenshot": 3,
+  "file_copy": 1,
+  "other": 3,
+  "code_generation": 1
+ }
+}

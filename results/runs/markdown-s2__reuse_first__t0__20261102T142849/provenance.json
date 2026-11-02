@@ -1,0 +1,53 @@
+{
+ "external_exact_fraction": 0.034427966101694914,
+ "external_modified_fraction": 0.19597457627118645,
+ "external_fraction": 0.23040254237288135,
+ "line_classes": {
+  "nontrivial": 1888,
+  "trivial": 1245,
+  "exact": 65,
+  "modified": 370,
+  "generated": 1453
+ },
+ "corpus_sources": 6,
+ "corpus_sources_contributing": 3,
+ "corpus_lines": 8740,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 8740
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+   432
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+   390
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+   13
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 42,
+   "trivial": 18
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 8,
+   "trivial": 0
+  },
+  "src/vendor/markdown-it.esm.min.mjs": {
+   "exact": 65,
+   "modified": 368,
+   "generated": 1403,
+   "trivial": 1227
+  }
+ },
+ "final_functional_loc": 70
+}

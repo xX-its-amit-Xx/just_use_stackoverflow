@@ -24,11 +24,12 @@
  "inference_cost_attributed_usd": 0.199324,
  "harness_reported_cost_usd": 0.19932429999999998,
  "search_api_cost_usd": 0.0,
- "compute_cost_usd_estimate": 0.001799,
- "total_execution_cost_usd": 0.201124,
- "elapsed_s": 80.97,
- "agent_elapsed_s": 80.2,
- "eval_s": 0.77,
+ "compute_cost_usd_estimate": 0.001765,
+ "total_execution_cost_usd": 0.20109,
+ "elapsed_s": 79.44,
+ "agent_elapsed_s": 78.19,
+ "orchestrator_observed_s": 80.2,
+ "eval_s": 1.25,
  "active_s": 83.27,
  "api_s": 59.49,
  "hidden_tests": 56,
@@ -37,6 +38,8 @@
  "own_tests": 2,
  "own_pass": 2,
  "functional_loc": 164,
+ "functional_chars": 50082,
+ "normalized_loc": 1669,
  "test_loc": 6,
  "comment_lines": 11,
  "blank_lines": 11,
@@ -115,6 +118,13 @@
   "syntax_errors": [],
   "human_interventions": 0,
   "contamination": [],
+  "permission_denials": [
+   {
+    "action_type": "code_generation",
+    "reason": "Code from External",
+    "step": 5
+   }
+  ],
   "hidden_failed_names": [
    "raw html block escaped"
   ]

@@ -1,0 +1,44 @@
+{
+ "external_exact_fraction": 0.015151515151515152,
+ "external_modified_fraction": 0.015151515151515152,
+ "external_fraction": 0.030303030303030304,
+ "line_classes": {
+  "nontrivial": 66,
+  "trivial": 31,
+  "exact": 1,
+  "modified": 1,
+  "generated": 64
+ },
+ "corpus_sources": 13,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 5980,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 5921,
+  "tool_result": 59
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/prianyu__calculator/dist/calculator.js",
+   2
+  ],
+  [
+   ".retrieval/repos/prianyu__calculator/index.js",
+   2
+  ]
+ ],
+ "per_file": {
+  "src/calc.js": {
+   "exact": 1,
+   "modified": 1,
+   "generated": 59,
+   "trivial": 29
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 2
+  }
+ },
+ "final_functional_loc": 97
+}

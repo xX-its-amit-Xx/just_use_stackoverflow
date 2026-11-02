@@ -1,0 +1,1 @@
+[{"source_url":"n/a","license":"n/a","files_or_snippet":"none reused","local_paths":[],"lines_used_estimate":0,"how_adapted":"Searched GitHub (gh-search) and Stack Overflow (so-search) and npm; no usable dependency-free node:http implementation matching this spec was found, so all code was written from scratch."}]

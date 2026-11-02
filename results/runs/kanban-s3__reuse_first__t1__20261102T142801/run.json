@@ -1,0 +1,193 @@
+{
+ "run_id": "kanban-s3__reuse_first__t1__20261102T142801",
+ "task_id": "kanban-s3",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S3",
+ "family": "kanban",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 9,
+ "model_invocations": 9,
+ "input_tokens": 18,
+ "output_tokens": 13576,
+ "cached_input_tokens": 133620,
+ "cache_creation_tokens": 19287,
+ "reasoning_tokens": 527,
+ "total_tokens": 13594,
+ "total_tokens_incl_cache": 166501,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.226306,
+ "inference_cost_attributed_usd": 0.226306,
+ "harness_reported_cost_usd": 0.226306,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.002013,
+ "total_execution_cost_usd": 0.228319,
+ "elapsed_s": 90.6,
+ "agent_elapsed_s": 86.63,
+ "orchestrator_observed_s": 87.92,
+ "eval_s": 3.97,
+ "active_s": 89.24,
+ "api_s": 78.92,
+ "hidden_tests": 27,
+ "hidden_pass": 27,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 378,
+ "functional_chars": 20639,
+ "normalized_loc": 688,
+ "test_loc": 36,
+ "comment_lines": 1,
+ "blank_lines": 16,
+ "retrieval": {
+  "search_queries": 7,
+  "search_results_examined": 15,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 177,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 177,
+  "generated_loc": 378,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": 0.0,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 4,
+  "retrieval_failures": 3,
+  "retrieval_failure_rate": 0.75
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 6,
+  "retrieval_invocations": 4,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "8c3d351f94294572"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 14
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 16
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 17
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 18
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 3,
+   "max_file_loc": 351,
+   "mean_file_loc": 126.0,
+   "functions": 70,
+   "loc_per_function": 5.4,
+   "duplicate_line_ratio": 0.0806
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": false,
+   "issues": [
+    "no license recorded for n/a",
+    "third-party code used but no THIRD_PARTY_NOTICES.md / NOTICE file"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 335,
+   "trivial": 44,
+   "exact": 0,
+   "modified": 0,
+   "generated": 335
+  },
+  "corpus_sources": 4,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 177,
+  "corpus_lines_by_kind": {
+   "tool_result": 177
+  },
+  "contributing_sources": [],
+  "final_functional_loc": 378
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 18,
+    "outputTokens": 13576,
+    "cacheReadInputTokens": 133620,
+    "cacheCreationInputTokens": 19287,
+    "webSearchRequests": 0,
+    "costUSD": 0.226306,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 527,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 19287,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 18,
+    "output": 13576,
+    "cr": 133620,
+    "cw": 19287
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "github_search": 2,
+  "web_search": 2,
+  "code_generation": 2,
+  "other": 2
+ }
+}

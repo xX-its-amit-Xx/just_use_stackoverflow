@@ -1,0 +1,21 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { createServer } from '../../src/server.js';
+test('cards, wip, move', async () => {
+  const srv = createServer(); await new Promise(r => srv.listen(0, r));
+  const base = `http://127.0.0.1:${srv.address().port}`;
+  let tok;
+  const call = async (m, p, b) => { const r = await fetch(base + p, { method: m, headers: { 'content-type': 'application/json', ...(tok ? { authorization: `Bearer ${tok}` } : {}) }, body: b ? JSON.stringify(b) : undefined }); return [r.status, r.status === 204 ? null : await r.json()]; };
+  await call('POST', '/api/auth/register', { username: 'bob', password: 'password123' });
+  tok = (await call('POST', '/api/auth/login', { username: 'bob', password: 'password123' }))[1].token;
+  const [, b] = await call('POST', '/api/boards', { name: 'B' });
+  await call('PATCH', `/api/columns/${b.columns[1].id}`, { wipLimit: 1 });
+  const [s1, c1] = await call('POST', `/api/columns/${b.columns[0].id}/cards`, { title: 'a' });
+  assert.equal(s1, 201);
+  const [, c2] = await call('POST', `/api/columns/${b.columns[0].id}/cards`, { title: 'b' });
+  assert.equal((await call('POST', `/api/cards/${c1.id}/move`, { columnId: b.columns[1].id }))[0], 200);
+  const [s, e] = await call('POST', `/api/cards/${c2.id}/move`, { columnId: b.columns[1].id });
+  assert.equal(s, 409); assert.equal(e.error, 'wip_limit');
+  assert.equal((await call('GET', `/api/boards/${b.id}/activity`))[1][0].type, 'card.moved');
+  srv.close();
+});

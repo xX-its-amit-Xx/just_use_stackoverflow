@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/expr-eval (also searched: GitHub scientific-calculator repos via rtool gh-search)",
+    "license": "MIT",
+    "files_or_snippet": "expr-eval@2.0.2 fetched and inspected only (dist bundle); GitHub/npm candidates reviewed",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Nothing copied. Candidates (expr-eval, mathjs, small GitHub calculators) do not match SPEC semantics (implicit-multiplication precedence, CalcError positions, angle modes, user functions). src/calc.js and src/repl.js were written from scratch; stated explicitly as the no-usable-candidate case."
+  }
+]

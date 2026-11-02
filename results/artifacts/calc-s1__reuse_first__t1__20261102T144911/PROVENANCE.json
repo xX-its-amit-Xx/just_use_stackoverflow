@@ -1,0 +1,1 @@
+[{"source_url":"https://github.com/spyannis/jsExpeval","license":"MIT","files_or_snippet":"ExpEval.js","local_paths":["src/calc.js"],"lines_used_estimate":30,"how_adapted":"Kept peek/whitespace-skip and expression/term/factor recursive-descent structure; rewrote number lexing, added ^, %, unary precedence, errors with positions, finiteness checks."}]

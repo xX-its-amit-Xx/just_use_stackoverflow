@@ -1,0 +1,188 @@
+{
+ "run_id": "calc-s2__reuse_first__t0__20261102T142308",
+ "task_id": "calc-s2",
+ "strategy": "reuse_first",
+ "trial": 0,
+ "tier": "S2",
+ "family": "calculator",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 10,
+ "model_invocations": 10,
+ "input_tokens": 20,
+ "output_tokens": 10964,
+ "cached_input_tokens": 191011,
+ "cache_creation_tokens": 24707,
+ "reasoning_tokens": 2033,
+ "total_tokens": 10984,
+ "total_tokens_incl_cache": 226702,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.227609,
+ "inference_cost_attributed_usd": 0.227609,
+ "harness_reported_cost_usd": 0.22760910000000004,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.004515,
+ "total_execution_cost_usd": 0.232124,
+ "elapsed_s": 203.16,
+ "agent_elapsed_s": 202.28,
+ "orchestrator_observed_s": 203.68,
+ "eval_s": 0.88,
+ "active_s": 205.38,
+ "api_s": 76.04,
+ "hidden_tests": 89,
+ "hidden_pass": 89,
+ "hidden_fail": 0,
+ "own_tests": 3,
+ "own_pass": 3,
+ "functional_loc": 355,
+ "functional_chars": 9951,
+ "normalized_loc": 332,
+ "test_loc": 6,
+ "comment_lines": 4,
+ "blank_lines": 15,
+ "retrieval": {
+  "search_queries": 3,
+  "search_results_examined": 10,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 3842,
+  "cloned_repo_lines": 4249,
+  "retrieved_loc_incorporated": 1,
+  "retrieved_loc_modified": 17,
+  "retrieved_loc_discarded": 3824,
+  "generated_loc": 337,
+  "modified_loc": 17,
+  "integration_modifications": 0,
+  "external_fraction": 0.0504,
+  "search_to_use_conversion": 0.3333,
+  "repository_acquisition_s": 0.85,
+  "retrieval_actions": 3,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 5,
+  "retrieval_invocations": 4,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "a326796de3e18da2"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 327,
+   "mean_file_loc": 177.5,
+   "functions": 61,
+   "loc_per_function": 5.8,
+   "duplicate_line_ratio": 0.0504
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": false,
+   "issues": [
+    "third-party code used but no THIRD_PARTY_NOTICES.md / NOTICE file"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.003875968992248062,
+  "external_modified_fraction": 0.046511627906976744,
+  "external_fraction": 0.050387596899224806,
+  "line_classes": {
+   "nontrivial": 258,
+   "trivial": 101,
+   "exact": 1,
+   "modified": 12,
+   "generated": 245
+  },
+  "corpus_sources": 9,
+  "corpus_sources_contributing": 3,
+  "corpus_lines": 3842,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 3756,
+   "tool_result": 86
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
+    12
+   ],
+   [
+    ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
+    12
+   ],
+   [
+    "tool_result:toolu_01WNtWogFA3NjU8RQDkSWUK4",
+    1
+   ]
+  ],
+  "final_functional_loc": 355
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 20,
+    "outputTokens": 10964,
+    "cacheReadInputTokens": 191011,
+    "cacheCreationInputTokens": 24707,
+    "webSearchRequests": 0,
+    "costUSD": 0.22760910000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 2033,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 24707,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 20,
+    "output": 10964,
+    "cr": 191011,
+    "cw": 24707
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "web_search": 1,
+  "repository_clone": 1,
+  "repository_inspection": 1,
+  "code_generation": 1,
+  "test_execution": 3,
+  "github_search": 1,
+  "other": 1
+ }
+}

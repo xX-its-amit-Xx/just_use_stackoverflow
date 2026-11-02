@@ -103,3 +103,7 @@
 - **Prompt compliance.** Strategy conditions are enforced by prompt and audited afterwards (`protocol_*` columns), not by sandboxing. Generate-first could technically still reach the network.
 - **Small n.** The pilot uses ≤3 trials per cell, and the CIs are wide.
 - **Provenance blind spots.** Matching misses code that was retrieved and then heavily rewritten, and code downloaded directly into `src/` by a raw `curl -o`, which bypasses the corpus.
+
+## 9. Evaluation-suite changes during the pilot (applied retroactively to all runs)
+
+- `kanban-s3` "web UI served": the check originally required the literal `/api/auth/login` in the served JS. Three correct UIs built paths through a prefixing helper (`api('POST','/auth/login')`) and failed. The check now matches `auth/login`, `/boards` and `move`. Every stored artifact was re-evaluated.

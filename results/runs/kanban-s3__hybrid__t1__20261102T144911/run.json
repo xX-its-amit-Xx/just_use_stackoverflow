@@ -1,0 +1,181 @@
+{
+ "run_id": "kanban-s3__hybrid__t1__20261102T144911",
+ "task_id": "kanban-s3",
+ "strategy": "hybrid",
+ "trial": 1,
+ "tier": "S3",
+ "family": "kanban",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 5,
+ "model_invocations": 4,
+ "input_tokens": 8,
+ "output_tokens": 13896,
+ "cached_input_tokens": 42504,
+ "cache_creation_tokens": 17759,
+ "reasoning_tokens": 343,
+ "total_tokens": 13904,
+ "total_tokens_incl_cache": 74167,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.214262,
+ "inference_cost_attributed_usd": 0.214262,
+ "harness_reported_cost_usd": 0.21426240000000002,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.001874,
+ "total_execution_cost_usd": 0.216136,
+ "elapsed_s": 84.33,
+ "agent_elapsed_s": 81.12,
+ "orchestrator_observed_s": 83.2,
+ "eval_s": 3.21,
+ "active_s": 80.88,
+ "api_s": 76.47,
+ "hidden_tests": 27,
+ "hidden_pass": 27,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 463,
+ "functional_chars": 22697,
+ "normalized_loc": 757,
+ "test_loc": 36,
+ "comment_lines": 10,
+ "blank_lines": 18,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 463,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 3,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "8c3d351f94294572"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 11
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 15
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 20
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 3,
+   "max_file_loc": 430,
+   "mean_file_loc": 154.3,
+   "functions": 90,
+   "loc_per_function": 5.1,
+   "duplicate_line_ratio": 0.0919
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 381,
+   "trivial": 92,
+   "exact": 0,
+   "modified": 0,
+   "generated": 381
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 463
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 8,
+    "outputTokens": 13896,
+    "cacheReadInputTokens": 42504,
+    "cacheCreationInputTokens": 17759,
+    "webSearchRequests": 0,
+    "costUSD": 0.21426240000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 343,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 17759,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 8,
+    "output": 13896,
+    "cr": 42504,
+    "cw": 17759
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 2,
+  "code_generation": 1
+ }
+}

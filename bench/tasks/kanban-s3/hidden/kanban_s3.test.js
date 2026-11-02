@@ -271,5 +271,6 @@ test('web UI served', async () => {
   const html = await r.text(); assert.match(html, /<html/i);
   const scripts = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map(m => m[1]);
   let js = html; for (const s of scripts) js += await (await fetch(new URL(s, S.base + '/'))).text();
-  assert.match(js, /\/api\/auth\/login/); assert.match(js, /\/api\/boards/); assert.match(js, /move/);
+  // UI must call the API; paths may be built through a prefixing helper (e.g. api('POST','/auth/login')).
+  assert.match(js, /auth\/login/); assert.match(js, /\/boards/); assert.match(js, /move/);
 });

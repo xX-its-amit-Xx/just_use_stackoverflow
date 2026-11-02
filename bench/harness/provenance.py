@@ -24,7 +24,10 @@ TEXT_EXT = SRC_EXT | {".md", ".txt", ".json", ""}
 MAX_FILE_BYTES = 400_000
 KEYWORDS = set("""break case catch class const continue debugger default delete do else export extends finally for function if import in
 instanceof let new return super switch this throw try typeof var void while with yield async await of static get set true false null undefined""".split())
-TOKEN_RE = re.compile(r"[A-Za-z_$][\w$]*|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|'(?:\\.|[^'])*'|\"(?:\\.|[^\"])*\"|`(?:\\.|[^`])*`|==?=?|!==?|=>|&&|\|\||[^\s\w]")
+# Possessive quantifiers + disjoint alternatives: no catastrophic backtracking on unterminated or
+# backslash-heavy string literals (the original pattern froze the evaluator on vendored libraries).
+TOKEN_RE = re.compile(r"[A-Za-z_$][\w$]*+|\d++(?:\.\d+)?(?:[eE][+-]?\d+)?|'(?:[^'\\]|\\.)*+'|\"(?:[^\"\\]|\\.)*+\"|`(?:[^`\\]|\\.)*+`|==?=?|!==?|=>|&&|\|\||[^\s\w]")
+MAX_LINE = 400  # longer lines (minified / data tables) are only matched exactly
 
 
 def norm(line):
@@ -45,6 +48,8 @@ def is_trivial(s):
 
 
 def skeleton(s):
+    if len(s) > MAX_LINE:
+        return None
     toks = TOKEN_RE.findall(s)
     out = []
     for t in toks:
