@@ -1,0 +1,17 @@
+body{font-family:system-ui,sans-serif;margin:0;background:#f4f5f7;color:#172b4d}
+header{display:flex;gap:8px;align-items:center;padding:8px 16px;background:#0747a6;color:#fff;flex-wrap:wrap}
+header select,header input,header button{padding:4px}
+nav button{margin-right:4px}
+main{padding:16px}
+.board{display:flex;gap:12px;overflow-x:auto}
+.col{background:#ebecf0;border-radius:4px;min-width:220px;padding:8px;min-height:200px}
+.col.over{background:#cfe0ff}
+.card{background:#fff;border-radius:3px;padding:8px;margin:6px 0;box-shadow:0 1px 2px #0003;cursor:pointer}
+.card small{color:#5e6c84}
+.panel{background:#fff;padding:12px;border-radius:4px;margin-bottom:12px}
+.notif{position:fixed;right:8px;top:48px;width:320px;background:#fff;color:#000;box-shadow:0 2px 8px #0005;padding:8px;z-index:5}
+.unread{font-weight:bold}
+.err{color:#bf2600}
+input,select,textarea,button{font:inherit}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:4px 0}
+table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:2px 6px}

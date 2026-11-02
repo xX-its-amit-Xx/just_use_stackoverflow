@@ -88,7 +88,7 @@ def is_test_path(rel):
 
 
 def count_tree(root):
-    out = {"functional_chars": 0, "functional_loc": 0, "test_loc": 0, "comment_lines": 0, "blank_lines": 0, "src_files": 0, "test_files": 0,
+    out = {"minified_vendor_files": 0, "minified_vendor_bytes": 0, "functional_chars": 0, "functional_loc": 0, "test_loc": 0, "comment_lines": 0, "blank_lines": 0, "src_files": 0, "test_files": 0,
            "boilerplate_files": 0, "per_file": {}}
     for d, dirs, files in os.walk(root):
         dirs[:] = [x for x in dirs if x not in EXCLUDE_DIRS]
@@ -101,6 +101,8 @@ def count_tree(root):
                     out["boilerplate_files"] += 1
                 continue
             if ".min." in fn:
+                out["minified_vendor_files"] += 1
+                out["minified_vendor_bytes"] += os.path.getsize(p)
                 continue
             try:
                 text = open(p, encoding="utf-8", errors="replace").read()

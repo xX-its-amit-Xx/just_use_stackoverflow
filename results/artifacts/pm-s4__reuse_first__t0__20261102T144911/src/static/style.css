@@ -1,0 +1,15 @@
+body{font-family:system-ui,sans-serif;margin:0;background:#f4f5f7;color:#172b4d}
+header{display:flex;gap:8px;align-items:center;padding:8px 12px;background:#0747a6;color:#fff;flex-wrap:wrap}
+header select,header input,header button{padding:4px}
+nav button{margin-right:4px}
+main{padding:12px}
+.board{display:flex;gap:10px;overflow-x:auto}
+.col{background:#ebecf0;border-radius:4px;min-width:200px;padding:6px;min-height:100px}
+.col h4{margin:2px 0 6px}
+.card{background:#fff;border-radius:3px;padding:6px;margin-bottom:6px;box-shadow:0 1px 1px #0003;cursor:grab}
+.card small{color:#5e6c84}
+.panel{background:#fff;padding:10px;border-radius:4px;margin-bottom:10px}
+.err{color:#c00}
+.notif{position:fixed;right:10px;top:48px;width:300px;background:#fff;color:#000;box-shadow:0 2px 8px #0005;padding:8px;max-height:60vh;overflow:auto}
+a.link{color:#0052cc;cursor:pointer}
+table{border-collapse:collapse}td,th{padding:3px 8px;border-bottom:1px solid #ddd;text-align:left}

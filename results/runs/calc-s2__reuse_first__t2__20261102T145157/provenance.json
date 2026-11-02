@@ -1,0 +1,104 @@
+{
+ "external_exact_fraction": 0.0694980694980695,
+ "external_modified_fraction": 0.09652509652509653,
+ "external_fraction": 0.16602316602316602,
+ "line_classes": {
+  "nontrivial": 259,
+  "trivial": 95,
+  "exact": 18,
+  "modified": 25,
+  "generated": 216
+ },
+ "corpus_sources": 29,
+ "corpus_sources_contributing": 17,
+ "corpus_lines": 3076,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 3015,
+  "tool_result": 61
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/celaldrg__calculator/src/parser.js",
+   27
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/tokenizer.js",
+   14
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/ui.js",
+   7
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/ui-support.test.js",
+   5
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/functions.js",
+   5
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/engine.test.js",
+   4
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/calculator.test.js",
+   3
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/main.js",
+   3
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/tokenizer.test.js",
+   2
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/engine.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/support.test.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/calculator.js",
+   1
+  ],
+  [
+   "tool_result:toolu_01VwNCyMvhSVr9uurMFzv6Sp",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/evaluator.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/errors.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/keys.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/format.js",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 20,
+   "trivial": 6
+  },
+  "src/calc.js": {
+   "exact": 18,
+   "modified": 23,
+   "generated": 196,
+   "trivial": 89
+  }
+ },
+ "final_functional_loc": 349
+}

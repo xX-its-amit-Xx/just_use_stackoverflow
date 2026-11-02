@@ -35,11 +35,11 @@ test('workspace key validation and uniqueness', async () => {
 test('last admin cannot be removed', async () => { assert.equal((await call('DELETE', `/api/workspaces/${ws.id}/members/${A.id}`, undefined, A.t)).status, 400); });
 test('guest cannot create projects or see unshared projects', async () => {
   assert.equal((await call('POST', `/api/workspaces/${ws.id}/projects`, { name: 'G', key: 'GG' }, G.t)).status, 403);
-  assert.equal((await call('GET', `/api/projects/${pr.id}`, undefined, G.t)).status, 403);
+  assert.ok([403, 404].includes((await call('GET', `/api/projects/${pr.id}`, undefined, G.t)).status));  // spec v1 did not define GET /api/projects/:id
 });
 test('api tokens authenticate and are shown once', async () => {
   const r = await call('POST', '/api/tokens', { name: 'ci' }, A.t); assert.equal(r.status, 201); assert.ok(r.body.token);
-  assert.equal((await call('GET', '/api/auth/me', undefined, r.body.token)).body.user.username, 'alice');
+  const me = (await call('GET', '/api/auth/me', undefined, r.body.token)).body; assert.equal((me.user || me).username, 'alice');  // spec v1 referenced kanban-s3 for the shape
   const list = await call('GET', '/api/tokens', undefined, A.t); assert.ok(!JSON.stringify(list.body).includes(r.body.token));
   await call('DELETE', `/api/tokens/${r.body.id}`, undefined, A.t); assert.equal((await call('GET', '/api/auth/me', undefined, r.body.token)).status, 401);
 });
@@ -145,7 +145,8 @@ test('webhooks are signed and delivered', async () => {
   hook.close(); assert.equal(got.length, 1);
   assert.equal(got[0].sig, 'sha256=' + crypto.createHmac('sha256', 's3cret').update(got[0].b).digest('hex'));
   assert.equal(JSON.parse(got[0].b).event, 'issue.created');
-  const d = (await call('GET', `/api/webhooks/${w.id}/deliveries`, undefined, A.t)).body; assert.equal(d[0].status, 200);
+  const d = (await call('GET', `/api/webhooks/${w.id}/deliveries`, undefined, A.t)).body;
+  assert.ok(d[0].status === 200 || /^(success|delivered|ok|succeeded)$/i.test(String(d[0].status)), `delivery status ${d[0].status}`);  // spec v1 ambiguous
 });
 test('project stats and cycle time', async () => {
   const p = (await call('POST', `/api/workspaces/${ws.id}/projects`, { name: 'St', key: 'ST' }, A.t)).body;

@@ -240,9 +240,7 @@ def _scatter(ax, df, xcol, ycol, logy=True):
         if g.empty:
             continue
         ax.scatter(g[xcol], g[ycol], s=36, marker=MARK[s], color=COLOR[s], edgecolor="#fcfcfb", linewidth=1.2, label=LABEL[s], zorder=3)
-        m = g.groupby("tier").agg(x=(xcol, "mean"), y=(ycol, "mean")).reset_index()
-        m["r"] = m["tier"].map(TIER_ORDER.index)
-        m = m.sort_values("r")
+        m = g.groupby("task_id").agg(x=(xcol, "mean"), y=(ycol, "mean")).reset_index().sort_values("x")
         ax.plot(m["x"], m["y"], color=COLOR[s], alpha=0.8, zorder=2)
     ax.set_xscale("log")
     if logy:
@@ -251,26 +249,29 @@ def _scatter(ax, df, xcol, ycol, logy=True):
 
 
 def plots(df, ev, reff):
-    ok = df[df["functional_loc"] > 0]
+    # x-axis = task size = mean functional LOC of the generate-first implementations of that task
+    size = df[df["strategy"] == "generate_first"].groupby("task_id")["functional_loc"].mean()
+    df = df.assign(task_size_loc=df["task_id"].map(size))
+    ok = df[df["task_size_loc"] > 0]
     # 1 weighted cost vs size
     fig, axs = plt.subplots(1, 2, figsize=(10, 4))
-    _scatter(axs[0], ok, "functional_loc", "inference_cost_usd")
-    axs[0].set(title="Weighted inference cost vs implementation size", xlabel="functional LOC of final implementation (log)", ylabel="inference cost, USD (log)")
-    _scatter(axs[1], ok, "functional_loc", "total_tokens_incl_cache")
-    axs[1].set(title="Total tokens processed vs size", xlabel="functional LOC (log)", ylabel="input+cache+output tokens (log)")
+    _scatter(axs[0], ok, "task_size_loc", "inference_cost_usd")
+    axs[0].set(title="Weighted inference cost vs task size", xlabel="task size: generate-first functional LOC (log)", ylabel="inference cost, USD (log)")
+    _scatter(axs[1], ok, "task_size_loc", "total_tokens_incl_cache")
+    axs[1].set(title="Total tokens processed vs task size", xlabel="task size: generate-first functional LOC (log)", ylabel="input+cache+output tokens (log)")
     fig.tight_layout(); fig.savefig(os.path.join(PLOTS, "token_cost_vs_size.png")); plt.close(fig)
     # 2 output tokens
     fig, ax = plt.subplots(figsize=(6, 4))
-    _scatter(ax, ok, "functional_loc", "output_tokens")
-    ax.set(title="Output tokens vs implementation size", xlabel="functional LOC (log)", ylabel="output tokens (log)")
+    _scatter(ax, ok, "task_size_loc", "output_tokens")
+    ax.set(title="Output tokens vs task size", xlabel="task size: generate-first functional LOC (log)", ylabel="output tokens (log)")
     fig.tight_layout(); fig.savefig(os.path.join(PLOTS, "output_tokens_vs_size.png")); plt.close(fig)
     # 3 input tokens: uncached+cache-write vs cache-read, two panels (one axis each)
     d = ok.assign(fresh_input=ok["input_tokens"] + ok["cache_creation_tokens"])
     fig, axs = plt.subplots(1, 2, figsize=(10, 4))
-    _scatter(axs[0], d, "functional_loc", "fresh_input")
-    axs[0].set(title="Uncached + cache-write input tokens", xlabel="functional LOC (log)", ylabel="tokens (log)")
-    _scatter(axs[1], d, "functional_loc", "cached_input_tokens")
-    axs[1].set(title="Cache-read input tokens", xlabel="functional LOC (log)", ylabel="tokens (log)")
+    _scatter(axs[0], d, "task_size_loc", "fresh_input")
+    axs[0].set(title="Uncached + cache-write input tokens", xlabel="task size (log)", ylabel="tokens (log)")
+    _scatter(axs[1], d, "task_size_loc", "cached_input_tokens")
+    axs[1].set(title="Cache-read input tokens", xlabel="task size (log)", ylabel="tokens (log)")
     fig.tight_layout(); fig.savefig(os.path.join(PLOTS, "input_tokens_vs_size.png")); plt.close(fig)
     # 4 integration cost vs retrieved LOC
     fig, ax = plt.subplots(figsize=(6, 4))

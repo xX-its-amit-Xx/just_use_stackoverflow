@@ -1,0 +1,32 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 442,
+  "trivial": 174,
+  "exact": 0,
+  "modified": 0,
+  "generated": 442
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 434,
+   "trivial": 173
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 8,
+   "trivial": 1
+  }
+ },
+ "final_functional_loc": 605
+}

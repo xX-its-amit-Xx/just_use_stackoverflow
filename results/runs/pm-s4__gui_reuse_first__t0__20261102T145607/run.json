@@ -1,0 +1,190 @@
+{
+ "run_id": "pm-s4__gui_reuse_first__t0__20261102T145607",
+ "task_id": "pm-s4",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 11,
+ "model_invocations": 11,
+ "input_tokens": 22,
+ "output_tokens": 42906,
+ "cached_input_tokens": 259279,
+ "cache_creation_tokens": 49968,
+ "reasoning_tokens": 6932,
+ "total_tokens": 42928,
+ "total_tokens_incl_cache": 352175,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.654904,
+ "inference_cost_attributed_usd": 0.654904,
+ "harness_reported_cost_usd": 0.6549039000000001,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.006222,
+ "total_execution_cost_usd": 0.661126,
+ "elapsed_s": 279.98,
+ "agent_elapsed_s": 275.54,
+ "orchestrator_observed_s": 277.29,
+ "eval_s": 4.44,
+ "active_s": 283.25,
+ "api_s": 263.23,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 937,
+ "functional_chars": 57446,
+ "normalized_loc": 1915,
+ "minified_vendor_bytes": 0,
+ "test_loc": 57,
+ "comment_lines": 20,
+ "blank_lines": 23,
+ "retrieval": {
+  "search_queries": 2,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 937,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 2,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 2,
+  "screenshots": 2,
+  "screenshot_tokens_estimate": 2730,
+  "screenshot_tokens_viewed_estimate": 2730,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 0,
+  "gui_action_time_s": 5.54,
+  "browser_session_span_s": 267.58,
+  "visual_reasoning_calls": 2,
+  "visual_reasoning_cost_usd": 0.109816
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 6,
+  "retrieval_invocations": 4,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "25f09f3e01e4dacb"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 93
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 7,
+   "max_file_loc": 649,
+   "mean_file_loc": 133.9,
+   "functions": 252,
+   "loc_per_function": 3.7,
+   "duplicate_line_ratio": 0.0335
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [
+    "no license recorded for https://github.com/search?q=kanban+node+http+rest+api+json+file&type=repositories"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 805,
+   "trivial": 152,
+   "exact": 0,
+   "modified": 0,
+   "generated": 805
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 937
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 22,
+    "outputTokens": 42906,
+    "cacheReadInputTokens": 259279,
+    "cacheCreationInputTokens": 49968,
+    "webSearchRequests": 0,
+    "costUSD": 0.6549039000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 6932,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 49968,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 22,
+    "output": 42906,
+    "cr": 259279,
+    "cw": 49968
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 2,
+  "screenshot": 2,
+  "code_generation": 5,
+  "other": 1
+ }
+}

@@ -1,12 +1,12 @@
 # pm-s4 — Lightweight project-management application (tier S4)
 
-A self-hosted Jira/Linear-style project manager: JSON REST API on `node:http` (stdlib only, no runtime npm dependencies) plus a browser single-page application. All data persisted to a JSON file (`dataFile`). Conventions (errors `{error, message}`, Bearer auth, ISO timestamps, string ids, 400/401/403/404/409/429 semantics) are identical to kanban-s3.
+A self-hosted Jira/Linear-style project manager: JSON REST API on `node:http` (stdlib only, no runtime npm dependencies) plus a browser single-page application. All data persisted to a JSON file (`dataFile`). Conventions: JSON bodies; errors `{ "error": "<code>", "message": "<text>" }`; `Authorization: Bearer <token>`; ISO-8601 timestamps; string ids; 400 validation, 401 unauthenticated, 403 forbidden (resource exists but no access), 404 not found, 409 conflict, 429 rate limited. `GET /api/projects/:id` returns the project (403 for workspace members without access).
 
 ## Module
 `src/server.js`: `export function createServer({ dataFile, clock } = {})` → `http.Server` (not listening). `clock` (optional) is a function returning the current `Date` (tests inject it). `src/main.js` starts on `PORT`.
 
 ## 1. Accounts, workspaces, RBAC
-- Register/login/logout/me exactly as kanban-s3 (incl. rate limit and hashed passwords). `PATCH /api/auth/me {displayName?, password?, currentPassword}`.
+- `POST /api/auth/register {username, password, displayName?}` → 201 `{ user }`; `POST /api/auth/login` → `{ token, user }` (5 failed attempts per username in 15 min → 429); `POST /api/auth/logout` → 204; `GET /api/auth/me` → `{ user }`. User object `{ id, username, displayName }`; passwords hashed with salt. `PATCH /api/auth/me {displayName?, password?, currentPassword}`.
 - Personal API tokens: `POST /api/tokens {name}` → 201 `{id, name, token}` (token shown once, stored hashed); `GET /api/tokens` (no secrets); `DELETE /api/tokens/:id`. API tokens authenticate like session tokens.
 - Workspaces: `POST /api/workspaces {name, key}` (`key` 2–10 uppercase letters, unique) → creator is `admin`. Workspace roles `admin | member | guest`. `POST /api/workspaces/:id/members {username, role}`, `PATCH`, `DELETE` (admin only; the last admin cannot be removed → 400).
 - Guests see only projects they are explicitly added to and cannot create projects.
@@ -41,7 +41,7 @@ Issue: `{ id, key: "<PROJECTKEY>-<n>", projectId, type: bug|feature|task|epic|su
 ## 7. Import / export, webhooks, audit
 - `GET /api/projects/:id/export.csv` → RFC 4180 CSV with header `key,type,title,status,priority,assignee,labels,storyPoints,parent,epic,sprint,dueDate,createdAt,resolvedAt` (labels `;`-joined; assignee as username).
 - `POST /api/projects/:id/import.csv` (text/csv body, same columns; `key` ignored) → `{ created, errors: [{ line, message }] }`; valid rows are imported even if others fail.
-- Webhooks: `POST /api/projects/:id/webhooks {url, events: [issue.created|issue.updated|issue.deleted|comment.created], secret}`. On events the server POSTs JSON `{event, issue, actorId, at}` with header `X-PM-Signature: sha256=<hex HMAC-SHA256(secret, body)>`; deliveries recorded at `GET /api/webhooks/:id/deliveries` (`{status, attempts, lastError}`), with up to 3 attempts on failure.
+- Webhooks: `POST /api/projects/:id/webhooks {url, events: [issue.created|issue.updated|issue.deleted|comment.created], secret}`. On events the server POSTs JSON `{event, issue, actorId, at}` with header `X-PM-Signature: sha256=<hex HMAC-SHA256(secret, body)>`; deliveries recorded at `GET /api/webhooks/:id/deliveries` (`{status, attempts, lastError}`, `status` = last HTTP status code), with up to 3 attempts on failure.
 - Workspace audit log `GET /api/workspaces/:id/audit` (admin): membership, role, workflow, token and webhook changes.
 
 ## 8. Web UI

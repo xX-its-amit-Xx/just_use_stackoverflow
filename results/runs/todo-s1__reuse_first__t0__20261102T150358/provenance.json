@@ -1,0 +1,44 @@
+{
+ "external_exact_fraction": 0.008264462809917356,
+ "external_modified_fraction": 0.01652892561983471,
+ "external_fraction": 0.024793388429752067,
+ "line_classes": {
+  "nontrivial": 121,
+  "trivial": 39,
+  "exact": 1,
+  "modified": 2,
+  "generated": 118
+ },
+ "corpus_sources": 11,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 351,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 286,
+  "tool_result": 65
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/awesome-todo@0.2.2/package/dist/cli.js",
+   2
+  ],
+  [
+   ".retrieval/npm/awesome-todo@0.2.2/package/dist/storage.js",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/todo.js": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 86,
+   "trivial": 33
+  },
+  "src/cli.js": {
+   "exact": 1,
+   "modified": 1,
+   "generated": 32,
+   "trivial": 6
+  }
+ },
+ "final_functional_loc": 160
+}

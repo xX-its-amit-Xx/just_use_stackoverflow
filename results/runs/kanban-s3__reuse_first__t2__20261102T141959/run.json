@@ -24,12 +24,12 @@
  "inference_cost_attributed_usd": 0.199753,
  "harness_reported_cost_usd": 0.19975310000000002,
  "search_api_cost_usd": 0.0,
- "compute_cost_usd_estimate": 0.00178,
- "total_execution_cost_usd": 0.201533,
- "elapsed_s": 80.08,
+ "compute_cost_usd_estimate": 0.001809,
+ "total_execution_cost_usd": 0.201562,
+ "elapsed_s": 81.42,
  "agent_elapsed_s": 76.34,
  "orchestrator_observed_s": 78.35,
- "eval_s": 3.74,
+ "eval_s": 5.08,
  "active_s": 76.57,
  "api_s": 69.59,
  "hidden_tests": 27,
@@ -40,6 +40,7 @@
  "functional_loc": 391,
  "functional_chars": 20063,
  "normalized_loc": 669,
+ "minified_vendor_bytes": 0,
  "test_loc": 32,
  "comment_lines": 6,
  "blank_lines": 16,
@@ -107,13 +108,10 @@
    "duplicate_line_ratio": 0.0731
   },
   "license": {
-   "provenance_entries": 1,
+   "provenance_entries": 0,
    "notices_file": false,
-   "issues": [
-    "no license recorded for n/a",
-    "third-party code used but no THIRD_PARTY_NOTICES.md / NOTICE file"
-   ],
-   "compliant": false
+   "issues": [],
+   "compliant": true
   },
   "syntax_errors": [],
   "human_interventions": 0,

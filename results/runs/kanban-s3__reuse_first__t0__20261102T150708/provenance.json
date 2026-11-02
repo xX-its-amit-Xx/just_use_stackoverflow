@@ -1,0 +1,40 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 378,
+  "trivial": 75,
+  "exact": 0,
+  "modified": 0,
+  "generated": 378
+ },
+ "corpus_sources": 2,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 68,
+ "corpus_lines_by_kind": {
+  "tool_result": 68
+ },
+ "contributing_sources": [],
+ "per_file": {
+  "src/ui.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 30,
+   "trivial": 1
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 346,
+   "trivial": 74
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 0
+  }
+ },
+ "final_functional_loc": 441
+}

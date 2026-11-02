@@ -1,0 +1,3 @@
+[
+ {"source_url":"https://www.npmjs.com/package/d3-dsv (https://github.com/d3/d3-dsv)","license":"ISC","files_or_snippet":"src/dsv.js (d3-dsv@3.0.1)","local_paths":["src/vendor/dsv.js"],"lines_used_estimate":150,"how_adapted":"Copied verbatim with header comment; used parseRows/formatRow for RFC 4180 CSV import/export. Rest of the app (REST API, search language, sprints, SPA) written new: GitHub/npm searches (rtool gh-search, npm-search, so-search) found no small stdlib-only Jira-like candidates (only large TS/Ruby, AGPL/GPL platforms)."}
+]

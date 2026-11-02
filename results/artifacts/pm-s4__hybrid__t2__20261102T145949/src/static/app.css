@@ -1,0 +1,9 @@
+body{font-family:system-ui,sans-serif;margin:0;color:#222;background:#f5f6f8}
+header{display:flex;gap:8px;align-items:center;padding:8px 12px;background:#1d3557;color:#fff;flex-wrap:wrap}
+header select,header input,header button{padding:4px}
+main{padding:12px}.board{display:flex;gap:10px;overflow-x:auto}
+.col{background:#e6e9ef;border-radius:6px;min-width:200px;padding:8px;min-height:120px}
+.card{background:#fff;border-radius:4px;padding:6px;margin:6px 0;cursor:pointer;box-shadow:0 1px 2px #0003}
+.panel{background:#fff;padding:10px;margin:8px 0;border-radius:6px}
+nav button{margin-right:4px}.err{color:#b00}.muted{color:#777;font-size:12px}
+input,select,textarea{margin:2px}

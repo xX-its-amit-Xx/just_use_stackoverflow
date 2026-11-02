@@ -146,6 +146,8 @@ def license_check(app_dir, prov):
     if entries is None:
         issues.append("PROVENANCE.json missing or invalid")
         entries = []
+    # entries that only document "nothing reused" are not third-party sources
+    entries = [e for e in entries if isinstance(e, dict) and str(e.get("source_url") or "").strip().lower() not in ("", "n/a", "none", "null", "-")]
     for e in entries:
         lic = str((e or {}).get("license") or "")
         if not lic or lic.lower() in ("unknown", "none", "n/a"):
@@ -379,7 +381,8 @@ def process(run_dir, copy=True):
         "hidden_tests": q_tests, "hidden_pass": hid["pass"], "hidden_fail": hid["fail"],
         "own_tests": own["tests"], "own_pass": own["pass"],
         "functional_loc": loc_info["functional_loc"], "functional_chars": loc_info["functional_chars"],
-        "normalized_loc": round(loc_info["functional_chars"] / 30), "test_loc": loc_info["test_loc"], "comment_lines": loc_info["comment_lines"],
+        "normalized_loc": round(loc_info["functional_chars"] / 30),
+        "minified_vendor_bytes": loc_info["minified_vendor_bytes"], "test_loc": loc_info["test_loc"], "comment_lines": loc_info["comment_lines"],
         "blank_lines": loc_info["blank_lines"],
     })
     run["retrieval"] = retrieval_metrics(events, tool_index, ws, run_dir, prov)

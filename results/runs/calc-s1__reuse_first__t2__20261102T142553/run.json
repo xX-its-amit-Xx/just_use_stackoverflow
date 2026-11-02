@@ -24,12 +24,12 @@
  "inference_cost_attributed_usd": 0.057615,
  "harness_reported_cost_usd": 0.05761490000000001,
  "search_api_cost_usd": 0.0,
- "compute_cost_usd_estimate": 0.000739,
- "total_execution_cost_usd": 0.058354,
- "elapsed_s": 33.27,
+ "compute_cost_usd_estimate": 0.000749,
+ "total_execution_cost_usd": 0.058363,
+ "elapsed_s": 33.68,
  "agent_elapsed_s": 32.38,
  "orchestrator_observed_s": 33.9,
- "eval_s": 0.89,
+ "eval_s": 1.31,
  "active_s": 34.81,
  "api_s": 26.19,
  "hidden_tests": 58,
@@ -40,6 +40,7 @@
  "functional_loc": 97,
  "functional_chars": 2138,
  "normalized_loc": 71,
+ "minified_vendor_bytes": 0,
  "test_loc": 5,
  "comment_lines": 0,
  "blank_lines": 4,
@@ -127,11 +128,11 @@
   },
   "contributing_sources": [
    [
-    ".retrieval/repos/prianyu__calculator/dist/calculator.js",
+    ".retrieval/repos/prianyu__calculator/index.js",
     2
    ],
    [
-    ".retrieval/repos/prianyu__calculator/index.js",
+    ".retrieval/repos/prianyu__calculator/dist/calculator.js",
     2
    ]
   ],

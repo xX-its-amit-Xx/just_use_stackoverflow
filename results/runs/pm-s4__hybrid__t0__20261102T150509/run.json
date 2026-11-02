@@ -1,0 +1,174 @@
+{
+ "run_id": "pm-s4__hybrid__t0__20261102T150509",
+ "task_id": "pm-s4",
+ "strategy": "hybrid",
+ "trial": 0,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 1,
+ "model_invocations": 22,
+ "input_tokens": 44,
+ "output_tokens": 44654,
+ "cached_input_tokens": 1039186,
+ "cache_creation_tokens": 57203,
+ "reasoning_tokens": 6012,
+ "total_tokens": 44698,
+ "total_tokens_incl_cache": 1141087,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.779359,
+ "inference_cost_attributed_usd": 0.779359,
+ "harness_reported_cost_usd": 0.7793586000000001,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.000154,
+ "total_execution_cost_usd": 0.779513,
+ "elapsed_s": 6.94,
+ "agent_elapsed_s": 2.54,
+ "orchestrator_observed_s": 1202.62,
+ "eval_s": 4.4,
+ "active_s": 726.18,
+ "api_s": 275.53,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 3,
+ "own_pass": 3,
+ "functional_loc": 932,
+ "functional_chars": 57078,
+ "normalized_loc": 1903,
+ "minified_vendor_bytes": 0,
+ "test_loc": 95,
+ "comment_lines": 28,
+ "blank_lines": 32,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 932,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 3,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "25f09f3e01e4dacb"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 24
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 5,
+   "max_file_loc": 761,
+   "mean_file_loc": 186.4,
+   "functions": 203,
+   "loc_per_function": 4.6,
+   "duplicate_line_ratio": 0.031
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 806,
+   "trivial": 146,
+   "exact": 0,
+   "modified": 0,
+   "generated": 806
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 932
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 44,
+    "outputTokens": 44654,
+    "cacheReadInputTokens": 1039186,
+    "cacheCreationInputTokens": 57203,
+    "webSearchRequests": 0,
+    "costUSD": 0.7793586000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 6012,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 57203,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 44,
+    "output": 44654,
+    "cr": 1039186,
+    "cw": 57203
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 8,
+  "code_generation": 4,
+  "test_execution": 7,
+  "code_edit": 2
+ }
+}

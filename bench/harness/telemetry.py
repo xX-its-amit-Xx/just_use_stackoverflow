@@ -94,10 +94,17 @@ def _bash_kind(cmd, state):
     m = re.search(r"(?:^|[\s;&|/])gui\s+([a-z]+)", c)
     if m:
         return "screenshot" if m.group(1) == "screenshot" else "computer_use"
+    # code written through the shell (checked before network rules: heredoc bodies may mention curl/git) (heredocs / tee / printf redirection) counts as code writing, not testing
+    if re.search(r"(cat|tee)\s+(-a\s+)?>{0,2}\s*['\"]?[\w./-]+\.(m?js|cjs|ts|json|html|css|md)['\"]?\s*<<|<<-?\s*['\"]?\w+['\"]?\s*>{1,2}\s*[\w./-]+\.(m?js|ts|html|css)", c):
+        return "debugging" if state["failing"] else "code_generation"
+    if re.search(r"\b(sed|perl)\s+-[a-z]*i", c):
+        return "debugging" if state["failing"] else "code_edit"
     if re.search(r"\bgit\s+clone\b", c):
         return "repository_clone"
     if re.search(r"\bgh\s+(api\s+[^|]*search|search)\b", c):
         return "github_search"
+    if re.search(r"\b(curl|wget)\b", c) and re.search(r"(localhost|127\.0\.0\.1|0\.0\.0\.0)(:\d+)?", c) and not re.search(r"https?://(?!localhost|127\.|0\.0)", c):
+        return "test_execution"  # exercising the agent's own server, not retrieval
     if re.search(r"\b(curl|wget)\b", c):
         if "stackexchange" in c or "stackoverflow" in c or "raw.githubusercontent" in c or "/blob/" in c:
             return "snippet_retrieval"
@@ -108,11 +115,6 @@ def _bash_kind(cmd, state):
         return "dependency_installation"
     if re.search(r"\b(cp|mv|rsync)\b[^\n]*\.retrieval", c):
         return "file_copy"
-    # code written through the shell (heredocs / tee / printf redirection) counts as code writing, not testing
-    if re.search(r"(cat|tee)\s+(-a\s+)?>{0,2}\s*['\"]?[\w./-]+\.(m?js|cjs|ts|json|html|css|md)['\"]?\s*<<|<<-?\s*['\"]?\w+['\"]?\s*>{1,2}\s*[\w./-]+\.(m?js|ts|html|css)", c):
-        return "debugging" if state["failing"] else "code_generation"
-    if re.search(r"\b(sed|perl)\s+-[a-z]*i", c):
-        return "debugging" if state["failing"] else "code_edit"
     if state["step"] <= 2 and re.search(r"\bcat\s+SPEC\.md|\bls\b", c) and not TEST_RE.search(c):
         return "planning"
     if TEST_RE.search(c):

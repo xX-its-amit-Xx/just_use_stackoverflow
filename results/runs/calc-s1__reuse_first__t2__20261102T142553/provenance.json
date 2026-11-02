@@ -18,11 +18,11 @@
  },
  "contributing_sources": [
   [
-   ".retrieval/repos/prianyu__calculator/dist/calculator.js",
+   ".retrieval/repos/prianyu__calculator/index.js",
    2
   ],
   [
-   ".retrieval/repos/prianyu__calculator/index.js",
+   ".retrieval/repos/prianyu__calculator/dist/calculator.js",
    2
   ]
  ],

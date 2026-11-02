@@ -1,0 +1,84 @@
+{
+ "external_exact_fraction": 0.05905511811023622,
+ "external_modified_fraction": 0.0984251968503937,
+ "external_fraction": 0.15748031496062992,
+ "line_classes": {
+  "nontrivial": 254,
+  "trivial": 89,
+  "exact": 15,
+  "modified": 25,
+  "generated": 214
+ },
+ "corpus_sources": 29,
+ "corpus_sources_contributing": 12,
+ "corpus_lines": 3076,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 3015,
+  "tool_result": 61
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/celaldrg__calculator/src/parser.js",
+   22
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/tokenizer.js",
+   11
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/ui.js",
+   5
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/main.js",
+   4
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/functions.js",
+   3
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/ui-support.test.js",
+   3
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/calculator.test.js",
+   2
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/errors.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/keys.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/engine.test.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/test/tokenizer.test.js",
+   1
+  ],
+  [
+   ".retrieval/repos/celaldrg__calculator/src/format.js",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 20,
+   "trivial": 5
+  },
+  "src/calc.js": {
+   "exact": 15,
+   "modified": 24,
+   "generated": 194,
+   "trivial": 84
+  }
+ },
+ "final_functional_loc": 339
+}

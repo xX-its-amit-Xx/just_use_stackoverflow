@@ -1,0 +1,62 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 855,
+  "trivial": 180,
+  "exact": 0,
+  "modified": 0,
+  "generated": 855
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/search.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 68,
+   "trivial": 24
+  },
+  "src/csv.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 23,
+   "trivial": 8
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 629,
+   "trivial": 129
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 0
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 122,
+   "trivial": 19
+  },
+  "src/static/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 8,
+   "trivial": 0
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 0
+  }
+ },
+ "final_functional_loc": 1015
+}

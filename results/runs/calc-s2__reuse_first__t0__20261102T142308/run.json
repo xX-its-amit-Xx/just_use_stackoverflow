@@ -24,12 +24,12 @@
  "inference_cost_attributed_usd": 0.227609,
  "harness_reported_cost_usd": 0.22760910000000004,
  "search_api_cost_usd": 0.0,
- "compute_cost_usd_estimate": 0.004515,
- "total_execution_cost_usd": 0.232124,
- "elapsed_s": 203.16,
+ "compute_cost_usd_estimate": 0.004528,
+ "total_execution_cost_usd": 0.232137,
+ "elapsed_s": 203.76,
  "agent_elapsed_s": 202.28,
  "orchestrator_observed_s": 203.68,
- "eval_s": 0.88,
+ "eval_s": 1.48,
  "active_s": 205.38,
  "api_s": 76.04,
  "hidden_tests": 89,
@@ -40,6 +40,7 @@
  "functional_loc": 355,
  "functional_chars": 9951,
  "normalized_loc": 332,
+ "minified_vendor_bytes": 0,
  "test_loc": 6,
  "comment_lines": 4,
  "blank_lines": 15,
@@ -129,11 +130,11 @@
   },
   "contributing_sources": [
    [
-    ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
+    ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
     12
    ],
    [
-    ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
+    ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
     12
    ],
    [
