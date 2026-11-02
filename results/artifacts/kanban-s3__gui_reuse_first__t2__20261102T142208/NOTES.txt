@@ -1,0 +1,1 @@
+Notes: GUI search on GitHub ('kanban node http rest wip limit' -> 0 results; 'kanban api nodejs' -> 82 results, all Express/Mongo/framework-based, none stdlib-only with roles/WIP/activity). Nothing usable; implemented from scratch. No code reused.

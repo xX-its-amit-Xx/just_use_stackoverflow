@@ -1,0 +1,178 @@
+{
+ "run_id": "kanban-s3__reuse_first__t2__20261102T141959",
+ "task_id": "kanban-s3",
+ "strategy": "reuse_first",
+ "trial": 2,
+ "tier": "S3",
+ "family": "kanban",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 5,
+ "model_invocations": 5,
+ "input_tokens": 10,
+ "output_tokens": 12623,
+ "cached_input_tokens": 57471,
+ "cache_creation_tokens": 16939,
+ "reasoning_tokens": 99,
+ "total_tokens": 12633,
+ "total_tokens_incl_cache": 87043,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.199753,
+ "inference_cost_attributed_usd": 0.199753,
+ "harness_reported_cost_usd": 0.19975310000000002,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.001804,
+ "total_execution_cost_usd": 0.201558,
+ "elapsed_s": 81.2,
+ "agent_elapsed_s": 78.35,
+ "eval_s": 2.85,
+ "active_s": 76.57,
+ "api_s": 69.59,
+ "hidden_tests": 27,
+ "hidden_pass": 27,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 391,
+ "test_loc": 32,
+ "comment_lines": 6,
+ "blank_lines": 16,
+ "retrieval": {
+  "search_queries": 4,
+  "search_results_examined": 8,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 77,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 77,
+  "generated_loc": 391,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": 0.0,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 2,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.5
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 4,
+  "retrieval_invocations": 2,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "8c3d351f94294572"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 14
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui.js",
+    "line": 19
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 3,
+   "max_file_loc": 359,
+   "mean_file_loc": 130.3,
+   "functions": 76,
+   "loc_per_function": 5.1,
+   "duplicate_line_ratio": 0.0731
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": false,
+   "issues": [
+    "no license recorded for n/a",
+    "third-party code used but no THIRD_PARTY_NOTICES.md / NOTICE file"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 342,
+   "trivial": 55,
+   "exact": 0,
+   "modified": 0,
+   "generated": 342
+  },
+  "corpus_sources": 2,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 77,
+  "corpus_lines_by_kind": {
+   "tool_result": 77
+  },
+  "contributing_sources": [],
+  "final_functional_loc": 391
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 10,
+    "outputTokens": 12623,
+    "cacheReadInputTokens": 57471,
+    "cacheCreationInputTokens": 16939,
+    "webSearchRequests": 0,
+    "costUSD": 0.19975310000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 99,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 16939,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 10,
+    "output": 12623,
+    "cr": 57471,
+    "cw": 16939
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "github_search": 2,
+  "code_generation": 1,
+  "other": 1
+ }
+}

@@ -365,7 +365,8 @@ def process(run_dir, copy=True):
         "active_s": round(active_s, 2), "api_s": round((hr.get("duration_api_ms") or 0) / 1000, 2),
         "hidden_tests": q_tests, "hidden_pass": hid["pass"], "hidden_fail": hid["fail"],
         "own_tests": own["tests"], "own_pass": own["pass"],
-        "functional_loc": loc_info["functional_loc"], "test_loc": loc_info["test_loc"], "comment_lines": loc_info["comment_lines"],
+        "functional_loc": loc_info["functional_loc"], "functional_chars": loc_info["functional_chars"],
+        "normalized_loc": round(loc_info["functional_chars"] / 30), "test_loc": loc_info["test_loc"], "comment_lines": loc_info["comment_lines"],
         "blank_lines": loc_info["blank_lines"],
     })
     run["retrieval"] = retrieval_metrics(events, tool_index, ws, run_dir, prov)

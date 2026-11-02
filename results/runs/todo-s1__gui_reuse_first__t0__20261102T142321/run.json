@@ -1,0 +1,177 @@
+{
+ "run_id": "todo-s1__gui_reuse_first__t0__20261102T142321",
+ "task_id": "todo-s1",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S1",
+ "family": "todo",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 7,
+ "model_invocations": 7,
+ "input_tokens": 14,
+ "output_tokens": 4319,
+ "cached_input_tokens": 74226,
+ "cache_creation_tokens": 7770,
+ "reasoning_tokens": 115,
+ "total_tokens": 4333,
+ "total_tokens_incl_cache": 86329,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.081721,
+ "inference_cost_attributed_usd": 0.081721,
+ "harness_reported_cost_usd": 0.0817206,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.001,
+ "total_execution_cost_usd": 0.08272,
+ "elapsed_s": 44.98,
+ "agent_elapsed_s": 44.18,
+ "eval_s": 0.8,
+ "active_s": 44.51,
+ "api_s": 32.87,
+ "hidden_tests": 13,
+ "hidden_pass": 13,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 164,
+ "test_loc": 5,
+ "comment_lines": 0,
+ "blank_lines": 4,
+ "retrieval": {
+  "search_queries": 1,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 164,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 1,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 1,
+  "screenshots": 1,
+  "screenshot_tokens_estimate": 1365,
+  "screenshot_tokens_viewed_estimate": 1365,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 0,
+  "gui_action_time_s": 4.43,
+  "browser_session_span_s": 37.02,
+  "visual_reasoning_calls": 1,
+  "visual_reasoning_cost_usd": 0.008467
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 5,
+  "retrieval_invocations": 2,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "00c65e9261a2e6f2"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 113,
+   "mean_file_loc": 82.0,
+   "functions": 25,
+   "loc_per_function": 6.6,
+   "duplicate_line_ratio": 0.0394
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 127,
+   "trivial": 37,
+   "exact": 0,
+   "modified": 0,
+   "generated": 127
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 164
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 14,
+    "outputTokens": 4319,
+    "cacheReadInputTokens": 74226,
+    "cacheCreationInputTokens": 7770,
+    "webSearchRequests": 0,
+    "costUSD": 0.0817206,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 115,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 7770,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 14,
+    "output": 4319,
+    "cr": 74226,
+    "cw": 7770
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 1,
+  "screenshot": 1,
+  "other": 2,
+  "code_generation": 2
+ }
+}

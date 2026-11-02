@@ -1,6 +1,8 @@
 """Functional line-of-code counting.
 
 Functional LOC = non-blank, non-comment-only lines in source files (js/mjs/cjs/ts/jsx/tsx/css/html/py).
+Also reported: functional_chars (non-whitespace characters on functional lines) and
+normalized_loc = functional_chars / 30, a formatting-independent size (≈ LOC of conventionally formatted JS).
 Separately reported: test LOC (tests/**, *.test.*), comment lines, blank lines. Excluded entirely:
 node_modules, .retrieval, .gui, .telemetry, .git, lock files, generated/minified bundles (*.min.*, dist/, build/).
 """
@@ -9,6 +11,27 @@ import re
 
 SRC_EXT = {".js", ".mjs", ".cjs", ".ts", ".jsx", ".tsx", ".css", ".html", ".htm", ".py"}
 EXCLUDE_DIRS = {"node_modules", ".retrieval", ".gui", ".telemetry", ".git", "dist", "build", "coverage"}
+
+
+def functional_chars(text, ext):
+    """Non-whitespace characters on functional lines (formatting-independent size measure)."""
+    n = 0
+    in_block = False
+    for raw in text.splitlines():
+        s = raw.strip()
+        if not s:
+            continue
+        if in_block:
+            if "*/" in s:
+                in_block = False
+            continue
+        if ext != ".py" and s.startswith("/*") and "*/" not in s:
+            in_block = True
+            continue
+        if s.startswith("//" if ext != ".py" else "#") or s.startswith("<!--"):
+            continue
+        n += sum(1 for ch in s if not ch.isspace())
+    return n
 
 
 def classify_lines(text, ext):
@@ -65,7 +88,7 @@ def is_test_path(rel):
 
 
 def count_tree(root):
-    out = {"functional_loc": 0, "test_loc": 0, "comment_lines": 0, "blank_lines": 0, "src_files": 0, "test_files": 0,
+    out = {"functional_chars": 0, "functional_loc": 0, "test_loc": 0, "comment_lines": 0, "blank_lines": 0, "src_files": 0, "test_files": 0,
            "boilerplate_files": 0, "per_file": {}}
     for d, dirs, files in os.walk(root):
         dirs[:] = [x for x in dirs if x not in EXCLUDE_DIRS]
@@ -91,6 +114,7 @@ def count_tree(root):
                 out["test_files"] += 1
             else:
                 out["functional_loc"] += f
+                out["functional_chars"] += functional_chars(text, ext)
                 out["src_files"] += 1
                 out["per_file"][rel] = f
     return out

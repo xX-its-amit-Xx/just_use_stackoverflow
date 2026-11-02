@@ -1,0 +1,32 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 114,
+  "trivial": 36,
+  "exact": 0,
+  "modified": 0,
+  "generated": 114
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/todo.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 83,
+   "trivial": 29
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 31,
+   "trivial": 7
+  }
+ },
+ "final_functional_loc": 150
+}

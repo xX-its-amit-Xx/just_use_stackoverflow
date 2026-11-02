@@ -1,0 +1,45 @@
+{
+ "external_exact_fraction": 0.472,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.472,
+ "line_classes": {
+  "nontrivial": 125,
+  "trivial": 50,
+  "exact": 59,
+  "modified": 0,
+  "generated": 66
+ },
+ "corpus_sources": 1,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 81,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 81
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1793629229770.txt",
+   59
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 58,
+   "trivial": 28
+  },
+  "src/marked.js": {
+   "exact": 59,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 21
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 8,
+   "trivial": 1
+  }
+ },
+ "final_functional_loc": 164
+}

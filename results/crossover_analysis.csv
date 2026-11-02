@@ -1,31 +1,101 @@
-family,tier,task_id,strategy,metric,quality_adjusted,reuse_mean,generate_mean,ratio,ratio_ci95_lo,ratio_ci95_hi,n_reuse,n_generate,reuse_cheaper,functional_loc_generate,functional_loc_reuse
-calculator,S1,calc-s1,reuse_first,tokens,False,57566.0,28908.0,1.9913518749135188,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,tokens,True,57566.0,28908.0,1.9913518749135188,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,tokens_uncached,False,2516.0,2091.0,1.2032520325203253,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,tokens_uncached,True,2516.0,2091.0,1.2032520325203253,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,inference_usd,False,0.059422,0.044058,1.3487221389985928,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,inference_usd,True,0.059422,0.044058,1.3487221389985928,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,execution_usd,False,0.060101,0.044475,1.3513434513771783,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,execution_usd,True,0.060101,0.044475,1.3513434513771783,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,wall_clock_s,False,30.57,18.79,1.626929217668973,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,reuse_first,wall_clock_s,True,30.57,18.79,1.626929217668973,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,tokens,False,32997.0,28908.0,1.1414487339144874,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,tokens,True,32997.0,28908.0,1.1414487339144874,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,tokens_uncached,False,2258.0,2091.0,1.0798660927785748,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,tokens_uncached,True,2258.0,2091.0,1.0798660927785748,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,inference_usd,False,0.048308,0.044058,1.0964637523264786,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,inference_usd,True,0.048308,0.044058,1.0964637523264786,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,execution_usd,False,0.048944,0.044475,1.1004834176503653,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,execution_usd,True,0.048944,0.044475,1.1004834176503653,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,wall_clock_s,False,28.63,18.79,1.523682810005322,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,hybrid,wall_clock_s,True,28.63,18.79,1.523682810005322,,,1,1,False,103.0,102.0
-calculator,S1,calc-s1,gui_reuse_first,tokens,False,73804.0,28908.0,2.5530648955306487,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,tokens,True,73804.0,28908.0,2.5530648955306487,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,tokens_uncached,False,3917.0,2091.0,1.8732663797226208,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,tokens_uncached,True,3917.0,2091.0,1.8732663797226208,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,inference_usd,False,0.090304,0.044058,2.04966180943302,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,inference_usd,True,0.090304,0.044058,2.04966180943302,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,execution_usd,False,0.091192,0.044475,2.0504103428892635,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,execution_usd,True,0.091192,0.044475,2.0504103428892635,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,wall_clock_s,False,39.96,18.79,2.126663118680149,,,1,1,False,103.0,96.0
-calculator,S1,calc-s1,gui_reuse_first,wall_clock_s,True,39.96,18.79,2.126663118680149,,,1,1,False,103.0,96.0
+family,tier,task_id,strategy,metric,quality_adjusted,reuse_mean,generate_mean,ratio,ratio_ci95_lo,ratio_ci95_hi,n_reuse,n_generate,reuse_cheaper,functional_loc_generate,functional_loc_reuse,fit_slope,fit_intercept,n_points,crossover_loc_estimate,crossover_within_observed_range,interpretation
+calculator,S1,calc-s1,reuse_first,tokens,False,57566.0,28983.0,1.986198806196736,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,tokens,True,57566.0,28983.0,1.986198806196736,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,tokens_uncached,False,2516.0,2132.5,1.1798358733880423,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,tokens_uncached,True,2516.0,2132.5,1.1798358733880423,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,inference_usd,False,0.059422,0.0408825,1.453482541429707,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,inference_usd,True,0.059422,0.0408825,1.453482541429707,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,execution_usd,False,0.0601,0.0413595,1.453112344201453,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,execution_usd,True,0.0601,0.0413595,1.453112344201453,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,wall_clock_s,False,30.51,21.48,1.420391061452514,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,reuse_first,wall_clock_s,True,30.51,21.48,1.420391061452514,,,1.0,2.0,False,104.0,102.0,,,,,,
+calculator,S1,calc-s1,hybrid,tokens,False,32734.0,28983.0,1.129420694890108,1.1174547456810517,1.1414487339144874,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,tokens,True,32734.0,28983.0,1.129420694890108,1.1174547456810517,1.1414487339144874,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,tokens_uncached,False,2135.5,2132.5,1.001406799531067,0.9259429622815087,1.0798660927785748,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,tokens_uncached,True,2135.5,2132.5,1.001406799531067,0.9259429622815087,1.0798660927785748,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,inference_usd,False,0.042143,0.0408825,1.0308322631932978,0.8166053838122476,1.281141432625242,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,inference_usd,True,0.042143,0.0408825,1.0308322631932978,0.8166053838122476,1.281141432625242,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,execution_usd,False,0.042704,0.0413595,1.0325076463690324,0.8198803849267019,1.2797897654472714,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,execution_usd,True,0.042704,0.0413595,1.0325076463690324,0.8198803849267019,1.2797897654472714,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,wall_clock_s,False,25.240000000000002,21.48,1.1750465549348232,0.9063794531897266,1.5196599362380447,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,hybrid,wall_clock_s,True,25.240000000000002,21.48,1.1750465549348232,0.9063794531897266,1.5196599362380447,2.0,2.0,False,104.0,88.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,tokens,False,64105.0,28983.0,2.211813821895594,1.8723243168834744,2.5530648955306487,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,tokens,True,64105.0,28983.0,2.211813821895594,1.8723243168834744,2.5530648955306487,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,tokens_uncached,False,3261.0,2132.5,1.5291910902696366,1.1982520699172032,1.8732663797226208,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,tokens_uncached,True,3261.0,2132.5,1.5291910902696366,1.1982520699172032,1.8732663797226208,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,inference_usd,False,0.0716725,0.0408825,1.7531339815324405,1.203890326387943,2.3948868910281913,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,inference_usd,True,0.0716725,0.0408825,1.7531339815324405,1.203890326387943,2.3948868910281913,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,execution_usd,False,0.0725095,0.0413595,1.7531522383007532,1.2102257397247953,2.384567110320843,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,execution_usd,True,0.0725095,0.0413595,1.7531522383007532,1.2102257397247953,2.384567110320843,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,wall_clock_s,False,37.675,21.48,1.7539571694599625,1.4639602319801162,2.1259298618490967,2.0,2.0,False,104.0,100.0,,,,,,
+calculator,S1,calc-s1,gui_reuse_first,wall_clock_s,True,37.675,21.48,1.7539571694599625,1.4639602319801162,2.1259298618490967,2.0,2.0,False,104.0,100.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,tokens,False,87043.0,68134.0,1.277526638682596,,,1.0,1.0,False,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,tokens,True,87043.0,68134.0,1.277526638682596,,,1.0,1.0,False,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,tokens_uncached,False,12633.0,14146.0,0.8930439700268628,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,tokens_uncached,True,12633.0,14146.0,0.8930439700268628,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,inference_usd,False,0.199753,0.215333,0.9276469468218991,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,inference_usd,True,0.199753,0.215333,0.9276469468218991,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,execution_usd,False,0.201558,0.217148,0.928205647760974,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,execution_usd,True,0.201558,0.217148,0.928205647760974,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,wall_clock_s,False,81.2,81.67,0.9942451328517203,,,1.0,1.0,True,482.0,391.0,,,,,,
+kanban,S3,kanban-s3,reuse_first,wall_clock_s,True,81.2,81.67,0.9942451328517203,,,1.0,1.0,True,482.0,391.0,,,,,,
+todo,S1,todo-s1,reuse_first,tokens,False,63073.0,32445.0,1.9439975342887965,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,tokens,True,63073.0,32445.0,1.9439975342887965,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,tokens_uncached,False,3936.0,3468.0,1.1349480968858132,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,tokens_uncached,True,3936.0,3468.0,1.1349480968858132,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,inference_usd,False,0.070575,0.057567499999999994,1.2259521431363183,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,inference_usd,True,0.070575,0.057567499999999994,1.2259521431363183,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,execution_usd,False,0.071455,0.058147500000000005,1.2288576465024292,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,execution_usd,True,0.071455,0.058147500000000005,1.2288576465024292,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,wall_clock_s,False,39.62,26.08,1.5191717791411044,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,reuse_first,wall_clock_s,True,39.62,26.08,1.5191717791411044,,,1.0,2.0,False,165.0,155.0,,,,,,
+todo,S1,todo-s1,hybrid,tokens,False,35764.0,32445.0,1.1022961935583295,,,1.0,2.0,False,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,tokens,True,35764.0,32445.0,1.1022961935583295,,,1.0,2.0,False,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,tokens_uncached,False,3375.0,3468.0,0.9731833910034602,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,tokens_uncached,True,3375.0,3468.0,0.9731833910034602,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,inference_usd,False,0.056441,0.057567499999999994,0.9804316671733183,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,inference_usd,True,0.056441,0.057567499999999994,0.9804316671733183,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,execution_usd,False,0.056963,0.058147500000000005,0.979629390773464,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,execution_usd,True,0.056963,0.058147500000000005,0.979629390773464,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,wall_clock_s,False,23.51,26.08,0.9014570552147241,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,hybrid,wall_clock_s,True,23.51,26.08,0.9014570552147241,,,1.0,2.0,True,165.0,156.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,tokens,False,81393.5,32445.0,2.5086608106025583,1.812891344383057,3.210244506344785,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,tokens,True,81393.5,32445.0,2.5086608106025583,1.812891344383057,3.210244506344785,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,tokens_uncached,False,4577.0,3468.0,1.3197808535178777,1.1791383219954648,1.46537558685446,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,tokens_uncached,True,4577.0,3468.0,1.3197808535178777,1.1791383219954648,1.46537558685446,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,inference_usd,False,0.08724299999999999,0.057567499999999994,1.5154905111390975,1.2966023403818518,1.7412098865621086,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,inference_usd,True,0.08724299999999999,0.057567499999999994,1.5154905111390975,1.2966023403818518,1.7412098865621086,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,execution_usd,False,0.0882005,0.058147500000000005,1.5168407928113847,1.2969286741687114,1.7440384615384614,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,execution_usd,True,0.0882005,0.058147500000000005,1.5168407928113847,1.2969286741687114,1.7440384615384614,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,wall_clock_s,False,43.125,26.08,1.6535659509202456,1.3283788454891117,2.0585449849332758,2.0,2.0,False,165.0,164.0,,,,,,
+todo,S1,todo-s1,gui_reuse_first,wall_clock_s,True,43.125,26.08,1.6535659509202456,1.3283788454891117,2.0585449849332758,2.0,2.0,False,165.0,164.0,,,,,,
+ALL (log-log fit),fit,,gui_reuse_first,execution_usd,False,,,,,,,,,,,-0.3136913993986018,0.8765456413548841,2.0,622.7200828375851,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,execution_usd,True,,,,,,,,,,,-0.3136913993986018,0.8765456413548841,2.0,622.7200828375851,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,inference_usd,False,,,,,,,,,,,-0.3155983811005494,0.8803875643973624,2.0,616.001832277391,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,inference_usd,True,,,,,,,,,,,-0.3155983811005494,0.8803875643973624,2.0,616.001832277391,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,tokens,False,,,,,,,,,,,0.2728521463179995,-0.2056033081295334,2.0,5.669356617124196,False,reuse gets relatively more expensive as size grows
+ALL (log-log fit),fit,,gui_reuse_first,tokens,True,,,,,,,,,,,0.2728521463179995,-0.2056033081295334,2.0,5.669356617124196,False,reuse gets relatively more expensive as size grows
+ALL (log-log fit),fit,,gui_reuse_first,tokens_uncached,False,,,,,,,,,,,-0.31908077987767247,0.8280583299091172,2.0,393.67421948940756,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,tokens_uncached,True,,,,,,,,,,,-0.31908077987767247,0.8280583299091172,2.0,393.67421948940756,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,wall_clock_s,False,,,,,,,,,,,-0.12769960434163702,0.5015933433314965,2.0,8470.639319756616,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,gui_reuse_first,wall_clock_s,True,,,,,,,,,,,-0.12769960434163702,0.5015933433314965,2.0,8470.639319756616,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,execution_usd,False,,,,,,,,,,,-0.11390073007147093,0.24363484648898054,2.0,137.72424574766993,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,execution_usd,True,,,,,,,,,,,-0.11390073007147093,0.24363484648898054,2.0,137.72424574766993,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,inference_usd,False,,,,,,,,,,,-0.10860866475530451,0.23225530047487217,2.0,137.54985608707466,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,inference_usd,True,,,,,,,,,,,-0.10860866475530451,0.23225530047487217,2.0,137.54985608707466,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,tokens,False,,,,,,,,,,,-0.0526685042455753,0.15908987024380772,2.0,1048.548077348007,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,tokens,True,,,,,,,,,,,-0.0526685042455753,0.15908987024380772,2.0,1048.548077348007,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,tokens_uncached,False,,,,,,,,,,,-0.061939686166915364,0.12554494794765406,2.0,106.38742118145267,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,tokens_uncached,True,,,,,,,,,,,-0.061939686166915364,0.12554494794765406,2.0,106.38742118145267,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,wall_clock_s,False,,,,,,,,,,,-0.5742563437424469,1.228349264176915,2.0,137.72919997322765,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,hybrid,wall_clock_s,True,,,,,,,,,,,-0.5742563437424469,1.228349264176915,2.0,137.72919997322765,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,execution_usd,False,,,,,,,,,,,-0.2868900063040949,0.7346750155994475,3.0,363.768177667509,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,execution_usd,True,,,,,,,,,,,-0.2868900063040949,0.7346750155994475,3.0,363.768177667509,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,inference_usd,False,,,,,,,,,,,-0.28706016412772056,0.7346744019514033,3.0,362.49716292287496,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,inference_usd,True,,,,,,,,,,,-0.28706016412772056,0.7346744019514033,3.0,362.49716292287496,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,tokens,False,,,,,,,,,,,-0.3060613446419128,0.9367624763117235,3.0,1150.0102069771835,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,tokens,True,,,,,,,,,,,-0.3060613446419128,0.9367624763117235,3.0,1150.0102069771835,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,tokens_uncached,False,,,,,,,,,,,-0.18900232562383873,0.4617020615819447,3.0,277.2285745051876,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,tokens_uncached,True,,,,,,,,,,,-0.18900232562383873,0.4617020615819447,3.0,277.2285745051876,True,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,wall_clock_s,False,,,,,,,,,,,-0.2612957149496256,0.7130127345240991,3.0,535.4980017029171,False,reuse gets relatively cheaper as size grows
+ALL (log-log fit),fit,,reuse_first,wall_clock_s,True,,,,,,,,,,,-0.2612957149496256,0.7130127345240991,3.0,535.4980017029171,False,reuse gets relatively cheaper as size grows
