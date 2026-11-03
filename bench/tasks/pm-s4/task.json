@@ -1,3 +1,1 @@
-{"task_id": "pm-s4", "family": "kanban", "tier": "S4", "target_loc": [10000, 20000],
- "entry_points": ["src/server.js", "src/main.js", "public/"], "reuse_potential_prior": "medium-high (Jira/Taiga/Plane/Focalboard-like OSS exists, but stacks differ)",
- "pilot_status": "specified, not executed in pilot (budget/time); harness supports it"}
+{"task_id": "pm-s4", "family": "kanban", "tier": "S4", "target_loc": [10000, 20000], "entry_points": ["src/server.js", "src/main.js", "public/"], "reuse_potential_prior": "medium-high (Jira/Taiga/Plane/Focalboard-like OSS exists, but stacks differ)"}

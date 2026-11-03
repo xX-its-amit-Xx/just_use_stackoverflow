@@ -1,3 +1,1 @@
-{"task_id": "diagram-s5", "family": "diagram", "tier": "S5", "target_loc": [30000, 50000],
- "entry_points": ["src/core/index.js", "src/server.js", "public/"], "reuse_potential_prior": "high for components (routing, layout, CRDT, SVG export, mxGraph import) / low as a whole",
- "pilot_status": "specified, not executed in pilot (budget/time); harness supports it"}
+{"task_id": "diagram-s5", "family": "diagram", "tier": "S5", "target_loc": [30000, 50000], "entry_points": ["src/core/index.js", "src/server.js", "public/"], "reuse_potential_prior": "high for components (routing, layout, CRDT, SVG export, mxGraph import) / low as a whole"}

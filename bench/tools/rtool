@@ -22,6 +22,12 @@ import urllib.request
 TEL_DIR = os.environ.get("BENCH_TELEMETRY_DIR", os.path.join(os.getcwd(), ".telemetry"))
 RET_DIR = os.path.join(os.getcwd(), ".retrieval")
 UA = "lazy-agent-experiment-rtool/1.0"
+# The benchmark's own repository holds the hidden evaluation suites: never surface or acquire it.
+BLOCKED = ("just_use_stackoverflow",)
+
+
+def blocked(s):
+    return any(b in (s or "").lower() for b in BLOCKED)
 
 
 def _ctx():
@@ -82,6 +88,7 @@ def gh_search(args, kind):
     d = json.loads(p.stdout)
     items = d.get("items", [])
     out, urls = [], []
+    items = [it for it in items if not blocked(it.get("full_name") or it.get("repository", {}).get("full_name"))]
     for it in items:
         if kind == "repo":
             out.append({"full_name": it["full_name"], "url": it["html_url"], "stars": it.get("stargazers_count"),
@@ -174,6 +181,8 @@ def npm_fetch(args):
 
 
 def clone(args):
+    if blocked(args[0]):
+        raise RuntimeError("repository not available in this benchmark")
     ref = opt(args, "--ref")
     repo = args[0].replace("https://github.com/", "").rstrip("/").removesuffix(".git")
     dest = os.path.join(RET_DIR, "repos", repo.replace("/", "__"))
@@ -196,6 +205,8 @@ def clone(args):
 
 def fetch(args):
     url = args[0]
+    if blocked(url):
+        raise RuntimeError("source not available in this benchmark")
     m = None
     if url.startswith("https://github.com/") and "/blob/" in url:  # convert blob -> raw
         m = url.replace("https://github.com/", "https://raw.githubusercontent.com/").replace("/blob/", "/", 1)

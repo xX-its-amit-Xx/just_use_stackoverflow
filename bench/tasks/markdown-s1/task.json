@@ -1,0 +1,2 @@
+{"task_id": "markdown-s1", "family": "markdown", "tier": "S1", "target_loc": [100, 300],
+ "entry_points": ["src/markdown.js"], "reuse_potential_prior": "very high (snarkdown, micromark subsets, many tutorial renderers)"}

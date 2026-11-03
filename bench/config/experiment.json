@@ -1,17 +1,113 @@
 {
-  "experiment_id": "size-dependent-retrieval-economics-v1",
-  "agent_harness": "claude-code-cli (headless: claude -p --output-format stream-json)",
-  "model": "claude-sonnet-5-5",
-  "effort": "medium",
-  "permission_mode": "auto",
-  "max_wall_clock_s": {"S1": 1800, "S2": 3600, "S3": 5400, "S4": 10800, "S5": 21600},
-  "max_budget_usd":   {"S1": 3,    "S2": 8,    "S3": 25,   "S4": 80,    "S5": 200},
-  "success_threshold": 0.9,
-  "strategies": {
-    "generate_first": {"tools": ["Bash","Read","Write","Edit","Glob","Grep"], "env_tools": []},
-    "reuse_first":    {"tools": ["Bash","Read","Write","Edit","Glob","Grep","WebSearch","WebFetch"], "env_tools": ["rtool"]},
-    "hybrid":         {"tools": ["Bash","Read","Write","Edit","Glob","Grep","WebSearch","WebFetch"], "env_tools": ["rtool"]},
-    "gui_reuse_first":{"tools": ["Bash","Read","Write","Edit","Glob","Grep"], "env_tools": ["gui"]}
+ "experiment_id": "size-dependent-retrieval-economics-v2-multimodel",
+ "agent_harness": "claude-code-cli (headless: claude -p --output-format stream-json)",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "permission_mode": "auto",
+ "max_wall_clock_s": {
+  "S1": 1800,
+  "S2": 3600,
+  "S3": 5400,
+  "S4": 10800,
+  "S5": 21600
+ },
+ "max_budget_usd": {
+  "S1": 3,
+  "S2": 8,
+  "S3": 25,
+  "S4": 80,
+  "S5": 200
+ },
+ "success_threshold": 0.9,
+ "strategies": {
+  "generate_first": {
+   "tools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep"
+   ],
+   "env_tools": []
   },
-  "disabled_tools_note": "Task/Agent (subagents) are disabled in every condition so all model invocations appear in one transcript."
+  "reuse_first": {
+   "tools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "env_tools": [
+    "rtool"
+   ]
+  },
+  "hybrid": {
+   "tools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "env_tools": [
+    "rtool"
+   ]
+  },
+  "gui_reuse_first": {
+   "tools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep"
+   ],
+   "env_tools": [
+    "gui"
+   ]
+  }
+ },
+ "disabled_tools_note": "Task/Agent (subagents) are disabled in every condition so all model invocations appear in one transcript.",
+ "models": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5",
+  "claude-opus-5-5"
+ ],
+ "model_tag": {
+  "claude-haiku-5-5": "haiku",
+  "claude-sonnet-5-5": "sonnet",
+  "claude-opus-5-5": "opus"
+ },
+ "max_budget_usd_by_model": {
+  "claude-haiku-5-5": {
+   "S1": 1,
+   "S2": 3,
+   "S3": 6,
+   "S4": 15,
+   "S5": 40
+  },
+  "claude-sonnet-5-5": {
+   "S1": 3,
+   "S2": 8,
+   "S3": 25,
+   "S4": 80,
+   "S5": 150
+  },
+  "claude-opus-5-5": {
+   "S1": 6,
+   "S2": 16,
+   "S3": 50,
+   "S4": 150,
+   "S5": 300
+  }
+ },
+ "trials_per_cell": 5
 }

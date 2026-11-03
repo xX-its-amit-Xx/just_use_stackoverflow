@@ -164,13 +164,21 @@ def license_check(app_dir, prov):
     return {"provenance_entries": len(entries), "notices_file": notices, "issues": issues, "compliant": not issues}
 
 
-def contamination_check(tool_index):
-    """Flag any access to benchmark-private paths (hidden tests) from inside the agent."""
+def contamination_check(tool_index, run_dir=None):
+    """Flag any contact with benchmark-private material: the local repo path, or the public benchmark
+    repository appearing in a tool input, a tool result (search hits, fetched pages) or a GUI URL."""
     hits = []
     for tid, t in tool_index.items():
         blob = json.dumps(t["input"])
-        if "/bench/tasks/" in blob or "hidden/" in blob and "tasks" in blob or "just_use_stackoverflow" in blob:
-            hits.append(t["input"])
+        if "/bench/tasks/" in blob or ("hidden/" in blob and "tasks" in blob) or "just_use_stackoverflow" in blob.lower():
+            hits.append({"where": "tool_input", "input": t["input"]})
+        elif "just_use_stackoverflow" in (t["result"].get("text") or "").lower():
+            hits.append({"where": "tool_result", "input": t["input"]})
+    gp = os.path.join(run_dir, "gui.jsonl") if run_dir else None
+    if gp and os.path.exists(gp):
+        for l in open(gp):
+            if "just_use_stackoverflow" in l.lower():
+                hits.append({"where": "gui", "line": l[:200]})
     return hits
 
 
@@ -353,6 +361,12 @@ def process(run_dir, copy=True):
             tok[k] += e[k] or 0
         tok["reasoning_tokens"] += e["reasoning_tokens"] or 0
     inference = sum(e["estimated_cost_usd"] for e in events)
+    # Sensitivity metric independent of prompt-cache hits: every input token priced as uncached input.
+    nocache = 0.0
+    for e in events:
+        prompt = e["input_tokens"] + e["cached_input_tokens"] + e["cache_creation_tokens"]
+        rt = pricing.rates(e["model"], prompt)
+        nocache += (prompt * rt["input"] + e["output_tokens"] * rt["output"]) / 1e6
     attributed = sum(e["estimated_cost_usd"] for e in events if e["measurement_confidence"] == "actual")
     pc = pricing.config()
     search_cost = tok["web_search_requests"] * pc["server_tools"]["web_search_per_request"]
@@ -372,7 +386,7 @@ def process(run_dir, copy=True):
         "total_tokens": tok["input_tokens"] + tok["output_tokens"],
         "total_tokens_incl_cache": tok["input_tokens"] + tok["output_tokens"] + tok["cached_input_tokens"] + tok["cache_creation_tokens"],
         "web_search_requests": tok["web_search_requests"],
-        "inference_cost_usd": round(inference, 6), "inference_cost_attributed_usd": round(attributed, 6),
+        "inference_cost_usd": round(inference, 6), "inference_cost_nocache_usd": round(nocache, 6), "inference_cost_attributed_usd": round(attributed, 6),
         "harness_reported_cost_usd": hr.get("total_cost_usd"),
         "search_api_cost_usd": round(search_cost, 6), "compute_cost_usd_estimate": round(compute_cost, 6),
         "total_execution_cost_usd": round(inference + search_cost + compute_cost, 6),
@@ -392,7 +406,7 @@ def process(run_dir, copy=True):
     run["quality"] = {
         "security_findings": security_scan(art), "dependencies": dependency_check(art), "maintainability": maintainability(art, loc_info),
         "license": license_check(art, prov), "syntax_errors": node_check(art), "human_interventions": 0,
-        "contamination": contamination_check(tool_index), "permission_denials": permission_denials(tool_index), "hidden_failed_names": hid.get("failed_names", []),
+        "contamination": contamination_check(tool_index, run_dir), "permission_denials": permission_denials(tool_index), "hidden_failed_names": hid.get("failed_names", []),
     }
     run["provenance"] = prov_small
     run["reconciliation"] = recon

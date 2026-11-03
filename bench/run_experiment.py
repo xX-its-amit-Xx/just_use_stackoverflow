@@ -23,18 +23,19 @@ REPO = os.path.dirname(HERE)
 STRATS = ["generate_first", "reuse_first", "hybrid", "gui_reuse_first"]
 
 
-def done(task, strat, trial):
-    for rj in glob.glob(os.path.join(REPO, "results", "runs", f"{task}__{strat}__t{trial}__*", "run.json")):
-        if not json.load(open(rj)).get("excluded"):
+def done(task, strat, trial, model):
+    for rj in glob.glob(os.path.join(REPO, "results", "runs", f"{task}__{strat}__*", "run.json")):
+        r = json.load(open(rj))
+        if r.get("model") == model and int(r.get("trial")) == trial and not r.get("excluded"):
             return True
     return False
 
 
-def one(task, strat, trial):
+def one(task, strat, trial, model):
     """Run the trial and its evaluation in separate processes (no GIL coupling between concurrent trials)."""
     import subprocess
     t0 = time.time()
-    p = subprocess.run([sys.executable, "-m", "harness.run_trial", task, strat, str(trial)], cwd=HERE, capture_output=True, text=True)
+    p = subprocess.run([sys.executable, "-m", "harness.run_trial", task, strat, str(trial), model], cwd=HERE, capture_output=True, text=True)
     if p.returncode:
         raise RuntimeError(p.stderr[-800:])
     info = json.loads(p.stdout.strip().splitlines()[-1])
@@ -56,9 +57,11 @@ def main():
     ap.add_argument("--parallel", type=int, default=4)
     ap.add_argument("--seed", type=int, default=20261102)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--models", default="claude-sonnet-5-5")
     a = ap.parse_args()
     strats = STRATS if a.strategies == "all" else a.strategies.split(",")
-    plan = [(t, s, k) for t in a.tasks.split(",") for s in strats for k in range(a.first_trial, a.first_trial + a.trials)]
+    plan = [(t, s, k, m) for m in a.models.split(",") for t in a.tasks.split(",") for s in strats
+            for k in range(a.first_trial, a.first_trial + a.trials)]
     plan = [p for p in plan if not done(*p)]
     random.Random(a.seed).shuffle(plan)
     log = os.path.join(REPO, "results", "execution_log.jsonl")
@@ -75,7 +78,7 @@ def main():
                 res = fu.result()
             except Exception as e:  # keep going; failures are recorded
                 res = {"error": repr(e)[:500]}
-            res.update(task=p[0], strategy=p[1], trial=p[2], ts=time.time())
+            res.update(task=p[0], strategy=p[1], trial=p[2], model=p[3], ts=time.time())
             print(json.dumps(res), flush=True)
             with open(log, "a") as f:
                 f.write(json.dumps(res) + "\n")

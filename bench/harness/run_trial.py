@@ -67,7 +67,9 @@ def run(task_id, strategy, trial, runs_root=None, model=None):
     task = json.load(open(os.path.join(BENCH, "tasks", task_id, "task.json")))
     tier = task["tier"]
     model = model or EXP["model"]
-    run_id = f"{task_id}__{strategy}__t{trial}__{time.strftime('%Y%m%dT%H%M%S')}"
+    tag = EXP.get("model_tag", {}).get(model, model)
+    run_id = f"{task_id}__{strategy}__{tag}__t{trial}__{time.strftime('%Y%m%dT%H%M%S')}"
+    budget = EXP.get("max_budget_usd_by_model", {}).get(model, EXP["max_budget_usd"])[tier]
     work = os.path.join(runs_root or default_runs_root(), run_id)
     ws = os.path.join(work, "ws")
     os.makedirs(work)
@@ -93,12 +95,12 @@ def run(task_id, strategy, trial, runs_root=None, model=None):
            "--append-system-prompt", system_prompt(strategy),
            "--disable-slash-commands", "--strict-mcp-config", "--setting-sources", "",
            "--permission-mode", EXP["permission_mode"],
-           "--max-budget-usd", str(EXP["max_budget_usd"][tier])]
+           "--max-budget-usd", str(budget)]
     meta = {"run_id": run_id, "task_id": task_id, "strategy": strategy, "trial": trial, "tier": tier,
             "family": task["family"], "model": model, "effort": EXP["effort"], "session_id": session_id,
             "workspace": ws, "cmd": [c if len(c) < 300 else c[:80] + "...<system prompt>" for c in cmd],
             "claude_code_version": subprocess.run(["claude", "--version"], capture_output=True, text=True).stdout.strip(),
-            "max_budget_usd": EXP["max_budget_usd"][tier], "max_wall_clock_s": EXP["max_wall_clock_s"][tier],
+            "max_budget_usd": budget, "max_wall_clock_s": EXP["max_wall_clock_s"][tier],
             "protocol_sha": protocol_sha(task_id, strategy)}
     t_assign = time.time()
     meta["t_assigned"] = t_assign
@@ -144,5 +146,5 @@ def run(task_id, strategy, trial, runs_root=None, model=None):
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    rid, out, ws = run(a[0], a[1], int(a[2]))
+    rid, out, ws = run(a[0], a[1], int(a[2]), model=a[3] if len(a) > 3 else None)
     print(json.dumps({"run_id": rid, "out": out, "workspace": ws}))

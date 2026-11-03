@@ -1,0 +1,2 @@
+{"task_id": "markdown-s3", "family": "markdown", "tier": "S3", "target_loc": [2000, 5000],
+ "entry_points": ["src/markdown.js", "src/server.js", "src/main.js"], "reuse_potential_prior": "high for the renderer (markdown-it, marked), low-medium for wiki/history/diff/search"}
