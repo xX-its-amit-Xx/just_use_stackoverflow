@@ -3,7 +3,7 @@
 ## 1. Agent and configuration (frozen)
 
 - **Harness:** Claude Code CLI in headless mode (`claude -p --output-format stream-json --verbose`), one fresh session per trial (`--session-id <uuid>`).
-- **Model:** `claude-sonnet-5-5`, `--effort medium`, the same for all strategies (`bench/config/experiment.json`). Sonnet 5.5 was chosen for the pilot for cost. To rerun on another model, change `model` and add its prices to `pricing.json`. The harness refuses to price unknown models.
+- **Models (v2):** `claude-haiku-5-5`, `claude-sonnet-5-5` and `claude-opus-5-5`, all at `--effort medium`, crossed with every task and strategy. Execution order is randomized across models and strategies. Per-run budgets scale by model (`max_budget_usd_by_model`). The v1 pilot used Sonnet only; its Sonnet trials 0–2 on unchanged tasks count as trials of the v2 design, because the agent-visible inputs are identical. The harness refuses to price unknown models.
 - **Isolation:**
   - `--setting-sources ""`, `--strict-mcp-config` and `--disable-slash-commands` remove user settings, MCP servers and skills.
   - Subagents (`Task`) are disabled, so every model call appears in one transcript.
@@ -89,13 +89,15 @@
 - **Other checks:** the agent's own tests, `node --check` syntax, pattern-based security scan, declared runtime dependencies (`npm audit` if any), maintainability proxies (file sizes, LOC per function, duplicate-line ratio), license compliance (provenance entries, copyleft, missing notices, undeclared reuse), protocol compliance, and contamination (any tool input referencing the benchmark repo or hidden tests).
 - **Validation:** the markdown suite was checked against markdown-it 14 used as an oracle: 54/56 pass, and the two remaining differences are deliberate spec choices.
 
-## 7. Crossover
+## 7. Crossover and statistics
 
-- For each task, strategy and metric: `ratio = mean(reuse) / mean(generate)`, with a bootstrap 95% CI when at least 2 trials exist.
-- A pooled log-log regression `log ratio ~ log LOC` gives a crossover estimate (ratio = 1), flagged as extrapolated when it falls outside the observed LOC range.
-- Crossovers are computed separately for tokens, inference dollars, execution dollars and wall-clock.
+- **Per-cell ratio:** `mean(reuse) / mean(generate)` for each model × task × strategy × metric, with a bootstrap 95% CI. Each cell also gets a Welch t-test on log cost, Holm-corrected across all cells of a metric (`cell_tests.csv`).
+- **Regression** (`regression.csv`): per model and pooled, `log(cost) ~ C(task) + Σ_s [is_s + is_s·(log size − mean)]` with HC3 standard errors. Task fixed effects absorb size and family main effects. `β_s` is the strategy's log-ratio at the mean task size; `γ_s` is how that ratio changes with size. Crossover = `exp(mean − β/γ)`. CIs come from 200 bootstrap resamples of runs within task × strategy cells.
+- **Family/size confound:** reuse potential is a property of a family, so each fit is repeated for all families, markdown only (sizes S1–S3 within one family) and excluding markdown.
+- **Metrics:** weighted cost, cache-independent cost (all input priced uncached, to remove cross-run cache luck), total tokens and wall-clock. They are reported separately.
+- **Success:** Wilson 95% intervals for success rates. Quality-adjusted ratios divide cost by pass rate.
 
-## 8. Known limitations
+## 8. Known limitations (and what v2 did about each)
 
 - **One model family, one harness.** Results describe Claude Sonnet 5.5 inside Claude Code, not agents in general.
 - **The GUI condition is a Playwright-driven headless Chromium.** The agent sees screenshots and acts by coordinates, keys and clipboard. This is genuine GUI interaction, but it is not the native Anthropic computer-use tool, which this harness does not expose. Stack Overflow serves a Cloudflare challenge (HTTP 403) to the headless browser, so GUI discovery is effectively GitHub-only. Every failed navigation is logged.
@@ -109,3 +111,10 @@
 - `kanban-s3` "web UI served": the check originally required the literal `/api/auth/login` in the served JS. Three correct UIs built paths through a prefixing helper (`api('POST','/auth/login')`) and failed. The check now matches `auth/login`, `/boards` and `move`. Every stored artifact was re-evaluated.
 - `pm-s4` (spec v1, used by all executed S4 runs) said auth and error conventions were "identical to kanban-s3", but agents never see that spec. It also did not define `GET /api/projects/:id`, and the webhook delivery `status` field was ambiguous. Three tests failed in ≥9/12 runs for those reasons alone. The tests now accept every reasonable reading (`/me` returning `{user}` or the bare user; 403 or 404 for a guest; delivery status as HTTP code or a success word). The spec was clarified for future runs (v2, which changes `protocol_sha`). All S4 artifacts were re-evaluated.
 - Minified files (`*.min.*`) are excluded from functional LOC as generated/vendored artifacts. One markdown reuse run vendored a 120 KB minified markdown-it build, plus 65 LOC of glue. Its provenance and external-code share still count the vendored file (see `provenance.json`).
+
+## 10. Protocol v2 changes
+
+- **New tasks:** `markdown-s1` (CommonMark subset) and `markdown-s3` (Markdown wiki: renderer + versioned pages, LCS diff, search, backlinks, SPA). The markdown family now spans S1–S3. The `markdown-s1` hidden suite was validated against markdown-it 14 (26/26). `markdown-s3` was validated against a reference implementation written for this purpose (31/31). The reference is kept outside the public repository.
+- **Self-contained specs:** the `pm-s4` and `diagram-s5` specs no longer refer to other tasks' specs. Op shapes, exports, `pendingOps` semantics and auth conventions are written out. Old `pm-s4` Sonnet runs (spec v1) moved to `results/runs_superseded_pm_s4_spec_v1/`.
+- **Contamination guard:** the benchmark repository is public. `rtool` refuses to return, clone or fetch it. The contamination check scans tool inputs, tool outputs and GUI URLs for it.
+- **Cost:** a cache-independent cost metric was added.

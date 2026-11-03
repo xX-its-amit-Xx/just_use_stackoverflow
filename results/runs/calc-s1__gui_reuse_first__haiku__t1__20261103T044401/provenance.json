@@ -1,0 +1,32 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 138,
+  "trivial": 89,
+  "exact": 0,
+  "modified": 0,
+  "generated": 138
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/calc.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 124,
+   "trivial": 78
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 14,
+   "trivial": 11
+  }
+ },
+ "final_functional_loc": 217
+}

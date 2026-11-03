@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "none",
+    "license": "n/a",
+    "files_or_snippet": "none (no code reused)",
+    "local_paths": ["src/calc.js", "src/cli.js", "tests/unit/calc.test.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "N/A. Written from scratch. Notes: GUI reuse-first search was performed on github.com (repository search for 'math expression parser javascript recursive descent', 'shunting-yard javascript exponent', and 'expression evaluator' with stars sort). The only close candidate found was DylanLindsell/simple-mathematical-expression-evaluator (https://github.com/DylanLindsell/simple-mathematical-expression-evaluator). Its page showed no license, so its code was NOT copied; it was only viewed in the browser. Further searches were blocked by GitHub HTTP 429 rate limiting, and no permissively licensed usable implementation was found, so the implementation was written from scratch. No third-party notices are required."
+  }
+]

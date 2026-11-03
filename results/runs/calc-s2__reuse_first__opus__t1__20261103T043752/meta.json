@@ -1,0 +1,109 @@
+{
+ "run_id": "calc-s2__reuse_first__opus__t1__20261103T043752",
+ "task_id": "calc-s2",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S2",
+ "family": "calculator",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "session_id": "304b2cd6-3737-47a4-a203-bc7a399da319",
+ "workspace": "/tmp/claude-0/-home-user-just-use-stackoverflow/0aee327b-dad0-5786-a62e-e964dcee381e/scratchpad/work/calc-s2__reuse_first__opus__t1__20261103T043752/ws",
+ "cmd": [
+  "claude",
+  "-p",
+  "Implement the application specified in SPEC.md, following the benchmark rules in your instructions.",
+  "--output-format",
+  "stream-json",
+  "--verbose",
+  "--model",
+  "claude-opus-5-5",
+  "--effort",
+  "medium",
+  "--session-id",
+  "304b2cd6-3737-47a4-a203-bc7a399da319",
+  "--tools",
+  "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch",
+  "--append-system-prompt",
+  "You are a participant agent in a controlled software-engineering benchmark. Work...<system prompt>",
+  "--disable-slash-commands",
+  "--strict-mcp-config",
+  "--setting-sources",
+  "",
+  "--permission-mode",
+  "auto",
+  "--max-budget-usd",
+  "16"
+ ],
+ "claude_code_version": "2.1.317 (Claude Code)",
+ "max_budget_usd": 16,
+ "max_wall_clock_s": 3600,
+ "protocol_sha": "e4895d9e748a003d",
+ "t_assigned": 1793680672.80691,
+ "t_agent_end": 1793680842.3053374,
+ "agent_elapsed_s": 169.49842739105225,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_result": {
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 165663,
+  "duration_api_ms": 156016,
+  "num_turns": 11,
+  "total_cost_usd": 0.6551966,
+  "usage": {
+   "input_tokens": 22,
+   "cache_creation_input_tokens": 30886,
+   "cache_read_input_tokens": 228303,
+   "output_tokens": 18118,
+   "output_tokens_details": {
+    "thinking_tokens": 3950
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 30886,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 900,
+     "cache_read_input_tokens": 35591,
+     "cache_creation_input_tokens": 1176,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1176
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "modelUsage": {
+   "claude-opus-5-5": {
+    "inputTokens": 22,
+    "outputTokens": 18118,
+    "cacheReadInputTokens": 228303,
+    "cacheCreationInputTokens": 30886,
+    "webSearchRequests": 0,
+    "costUSD": 0.6551966,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 3950,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 30886,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "stop_reason": "end_turn"
+ },
+ "transcript_found": true
+}

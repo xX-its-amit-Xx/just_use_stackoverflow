@@ -1,0 +1,191 @@
+{
+ "external_exact_fraction": 0.8376364120308757,
+ "external_modified_fraction": 0.01304232100079851,
+ "external_fraction": 0.8506787330316742,
+ "line_classes": {
+  "nontrivial": 3757,
+  "trivial": 3925,
+  "exact": 3147,
+  "modified": 49,
+  "generated": 561
+ },
+ "corpus_sources": 127,
+ "corpus_sources_contributing": 78,
+ "corpus_lines": 29096,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 29096
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/dist/markdown-it.js",
+   3184
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/dist/index.cjs.js",
+   1761
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/list.mjs",
+   267
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/table.mjs",
+   232
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/reference.mjs",
+   232
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/link.mjs",
+   190
+  ],
+  [
+   ".retrieval/npm/linkify-it@5.0.0/package/build/index.cjs.js",
+   187
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/image.mjs",
+   183
+  ],
+  [
+   ".retrieval/npm/linkify-it@5.0.0/package/index.mjs",
+   182
+  ],
+  [
+   ".retrieval/npm/entities@4.5.0/package/lib/esm/decode.js",
+   169
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/lheading.mjs",
+   168
+  ],
+  [
+   ".retrieval/npm/mdurl@2.0.0/package/build/index.cjs.js",
+   166
+  ],
+  [
+   ".retrieval/npm/entities@4.5.0/package/lib/decode.js",
+   148
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/autolink.mjs",
+   142
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/blockquote.mjs",
+   142
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/fence.mjs",
+   136
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/common/utils.mjs",
+   134
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/entity.mjs",
+   134
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/html_inline.mjs",
+   130
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/punycode.js",
+   121
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/punycode.es6.js",
+   121
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/text.mjs",
+   116
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/hr.mjs",
+   115
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_core/smartquotes.mjs",
+   105
+  ],
+  [
+   ".retrieval/npm/mdurl@2.0.0/package/lib/parse.mjs",
+   97
+  ],
+  [
+   ".retrieval/npm/linkify-it@5.0.0/package/README.md",
+   96
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/ruler.mjs",
+   81
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/renderer.mjs",
+   79
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/state_block.mjs",
+   78
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/strikethrough.mjs",
+   75
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 3,
+   "modified": 12,
+   "generated": 80,
+   "trivial": 35
+  },
+  "src/server.js": {
+   "exact": 3,
+   "modified": 34,
+   "generated": 262,
+   "trivial": 124
+  },
+  "src/diff.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 28,
+   "trivial": 22
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 2,
+   "modified": 1,
+   "generated": 123,
+   "trivial": 30
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 12,
+   "trivial": 13
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 49,
+   "trivial": 23
+  },
+  "src/vendor/markdown-it.cjs": {
+   "exact": 3139,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 3677
+  }
+ },
+ "final_functional_loc": 5666
+}

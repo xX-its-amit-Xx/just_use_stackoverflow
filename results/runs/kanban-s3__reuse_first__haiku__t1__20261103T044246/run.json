@@ -1,0 +1,270 @@
+{
+ "run_id": "kanban-s3__reuse_first__haiku__t1__20261103T044246",
+ "task_id": "kanban-s3",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S3",
+ "family": "kanban",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 18,
+ "model_invocations": 18,
+ "input_tokens": 36,
+ "output_tokens": 46040,
+ "cached_input_tokens": 642890,
+ "cache_creation_tokens": 56021,
+ "reasoning_tokens": 17115,
+ "total_tokens": 46076,
+ "total_tokens_incl_cache": 744987,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.040657,
+ "inference_cost_nocache_usd": 0.092915,
+ "inference_cost_attributed_usd": 0.040657,
+ "harness_reported_cost_usd": 0.04065670000000001,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.004471,
+ "total_execution_cost_usd": 0.045128,
+ "elapsed_s": 201.22,
+ "agent_elapsed_s": 196.99,
+ "orchestrator_observed_s": 198.25,
+ "eval_s": 4.22,
+ "active_s": 199.91,
+ "api_s": 184.1,
+ "hidden_tests": 27,
+ "hidden_pass": 27,
+ "hidden_fail": 0,
+ "own_tests": 9,
+ "own_pass": 9,
+ "functional_loc": 857,
+ "functional_chars": 33406,
+ "normalized_loc": 1114,
+ "minified_vendor_bytes": 0,
+ "test_loc": 238,
+ "comment_lines": 32,
+ "blank_lines": 116,
+ "retrieval": {
+  "search_queries": 8,
+  "search_results_examined": 31,
+  "repositories_inspected": 1,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 13227,
+  "cloned_repo_lines": 14471,
+  "retrieved_loc_incorporated": 11,
+  "retrieved_loc_modified": 70,
+  "retrieved_loc_discarded": 13146,
+  "generated_loc": 776,
+  "modified_loc": 70,
+  "integration_modifications": 0,
+  "external_fraction": 0.0942,
+  "search_to_use_conversion": 0.3898,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 3,
+  "retrieval_failures": 2,
+  "retrieval_failure_rate": 0.6667
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 5,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "3c62029ff48b7aed"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 5,
+   "max_file_loc": 545,
+   "mean_file_loc": 171.4,
+   "functions": 111,
+   "loc_per_function": 7.7,
+   "duplicate_line_ratio": 0.1097
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [
+    "9% of non-trivial lines match retrieved material but PROVENANCE.json is empty"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.012658227848101266,
+  "external_modified_fraction": 0.08157524613220815,
+  "external_fraction": 0.09423347398030943,
+  "line_classes": {
+   "nontrivial": 711,
+   "trivial": 167,
+   "exact": 9,
+   "modified": 58,
+   "generated": 644
+  },
+  "corpus_sources": 59,
+  "corpus_sources_contributing": 23,
+  "corpus_lines": 13227,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 13026,
+   "tool_result": 201
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/pages/Dashboard.jsx",
+    41
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Task/TaskModal.jsx",
+    35
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Board/TaskCard.jsx",
+    34
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Board/KanbanBoard.jsx",
+    24
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/index.html",
+    11
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Board/Column.jsx",
+    9
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/github.js",
+    8
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/index.js",
+    7
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/tasks.js",
+    6
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Heatmap/Heatmap.jsx",
+    5
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Pomodoro/PomodoroTimer.jsx",
+    4
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/context/BoardContext.jsx",
+    4
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/pages/Analytics.jsx",
+    4
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/utils/lastVisit.js",
+    3
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/hooks/usePomodoro.js",
+    3
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/pages/Login.jsx",
+    3
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/auth.js",
+    2
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/ai.js",
+    2
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/sprints.js",
+    2
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/hooks/useGithubStars.js",
+    2
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/middleware/responseTime.js",
+    1
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/hooks/useSuggestTags.jsx",
+    1
+   ],
+   [
+    ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/middleware/auth.js",
+    1
+   ]
+  ],
+  "final_functional_loc": 857
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 36,
+    "outputTokens": 46040,
+    "cacheReadInputTokens": 642890,
+    "cacheCreationInputTokens": 56021,
+    "webSearchRequests": 0,
+    "costUSD": 0.04065670000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 17115,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 56021,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 36,
+    "output": 46040,
+    "cr": 642890,
+    "cw": 56021
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 4,
+  "github_search": 2,
+  "web_search": 1,
+  "repository_inspection": 2,
+  "code_generation": 6,
+  "code_edit": 1,
+  "test_execution": 1
+ }
+}

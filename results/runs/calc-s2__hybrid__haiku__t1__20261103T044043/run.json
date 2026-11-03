@@ -1,0 +1,169 @@
+{
+ "run_id": "calc-s2__hybrid__haiku__t1__20261103T044043",
+ "task_id": "calc-s2",
+ "strategy": "hybrid",
+ "trial": 1,
+ "tier": "S2",
+ "family": "calculator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 13,
+ "model_invocations": 12,
+ "input_tokens": 24,
+ "output_tokens": 45613,
+ "cached_input_tokens": 484397,
+ "cache_creation_tokens": 53716,
+ "reasoning_tokens": 29466,
+ "total_tokens": 45637,
+ "total_tokens_incl_cache": 583750,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.038396,
+ "inference_cost_nocache_usd": 0.07662,
+ "inference_cost_attributed_usd": 0.038396,
+ "harness_reported_cost_usd": 0.03839607,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.004402,
+ "total_execution_cost_usd": 0.042798,
+ "elapsed_s": 198.1,
+ "agent_elapsed_s": 197.46,
+ "orchestrator_observed_s": 198.79,
+ "eval_s": 0.64,
+ "active_s": 196.89,
+ "api_s": 192.94,
+ "hidden_tests": 89,
+ "hidden_pass": 89,
+ "hidden_fail": 0,
+ "own_tests": 13,
+ "own_pass": 13,
+ "functional_loc": 557,
+ "functional_chars": 13442,
+ "normalized_loc": 448,
+ "minified_vendor_bytes": 0,
+ "test_loc": 122,
+ "comment_lines": 15,
+ "blank_lines": 64,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 557,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 3,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "e4895d9e748a003d"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 504,
+   "mean_file_loc": 278.5,
+   "functions": 73,
+   "loc_per_function": 7.6,
+   "duplicate_line_ratio": 0.0885
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 384,
+   "trivial": 188,
+   "exact": 0,
+   "modified": 0,
+   "generated": 384
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 557
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 24,
+    "outputTokens": 45613,
+    "cacheReadInputTokens": 484397,
+    "cacheCreationInputTokens": 53716,
+    "webSearchRequests": 0,
+    "costUSD": 0.03839607,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 29466,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 53716,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 24,
+    "output": 45613,
+    "cr": 484397,
+    "cw": 53716
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 4,
+  "code_generation": 5,
+  "code_edit": 1,
+  "test_execution": 1
+ }
+}

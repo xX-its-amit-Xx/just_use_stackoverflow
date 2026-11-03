@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Wiki</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1><a href="#">Markdown Wiki</a></h1>
+  <form id="search-form" role="search">
+    <input id="search" type="search" placeholder="Search pages…" aria-label="Search">
+  </form>
+  <button id="new-page" type="button">New page</button>
+</header>
+<div id="layout">
+  <aside id="sidebar">
+    <label>Tag filter
+      <select id="tag-filter"><option value="">All tags</option></select>
+    </label>
+    <label>Sort
+      <select id="sort"><option value="title">Title</option><option value="updated">Recently updated</option></select>
+    </label>
+    <ul id="page-list"></ul>
+    <section id="search-results" hidden>
+      <h2>Search results</h2>
+      <ul id="results-list"></ul>
+    </section>
+  </aside>
+  <main id="main">
+    <section id="editor-view">
+      <div class="meta-row">
+        <input id="slug" placeholder="slug (a-z, 0-9, - _)" aria-label="Slug">
+        <input id="title" placeholder="Title" aria-label="Title">
+        <input id="tags" placeholder="tags, comma separated" aria-label="Tags">
+      </div>
+      <div class="toolbar">
+        <button id="save" type="button">Save</button>
+        <button id="history-btn" type="button">History</button>
+        <button id="delete" type="button">Delete</button>
+        <a id="view-link" href="#" target="_blank">View</a>
+        <span id="status" role="status"></span>
+      </div>
+      <div id="conflict" hidden class="conflict">
+        This page was changed elsewhere (current version <span id="conflict-version"></span>).
+        <button id="conflict-reload" type="button">Load latest (discard mine)</button>
+        <button id="conflict-overwrite" type="button">Overwrite with mine</button>
+      </div>
+      <div class="split">
+        <textarea id="body" spellcheck="false" aria-label="Markdown"></textarea>
+        <div id="preview" class="markdown-body"></div>
+      </div>
+      <section id="side-panels">
+        <div><h3>Table of contents</h3><ul id="toc"></ul></div>
+        <div><h3>Backlinks</h3><ul id="backlinks"></ul></div>
+      </section>
+    </section>
+    <section id="history-view" hidden>
+      <h2>History <button id="history-close" type="button">Close</button></h2>
+      <ul id="history-list"></ul>
+      <div class="diff-controls">
+        From <select id="diff-from"></select> to <select id="diff-to"></select>
+        <button id="diff-btn" type="button">Show diff</button>
+      </div>
+      <pre id="diff"></pre>
+    </section>
+  </main>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

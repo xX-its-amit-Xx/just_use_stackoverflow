@@ -1,0 +1,32 @@
+[
+ {
+  "path": ".retrieval/npm/entities@4.5.0",
+  "files": 68,
+  "bytes": 412892
+ },
+ {
+  "path": ".retrieval/npm/linkify-it@5.0.0",
+  "files": 6,
+  "bytes": 55391
+ },
+ {
+  "path": ".retrieval/npm/markdown-it@14.1.0",
+  "files": 60,
+  "bytes": 767399
+ },
+ {
+  "path": ".retrieval/npm/mdurl@2.0.0",
+  "files": 9,
+  "bytes": 37524
+ },
+ {
+  "path": ".retrieval/npm/punycode.js@2.3.1",
+  "files": 5,
+  "bytes": 33517
+ },
+ {
+  "path": ".retrieval/npm/uc.micro@2.1.0",
+  "files": 11,
+  "bytes": 13257
+ }
+]

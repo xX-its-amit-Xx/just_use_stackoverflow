@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://stackoverflow.com/a/1293163",
+    "license": "CC BY-SA (Stack Overflow)",
+    "files_or_snippet": "CSVToArray regex-based CSV parser answer to 'How to parse CSV data?' (question 1293147)",
+    "local_paths": ["src/csv.js"],
+    "lines_used_estimate": 20,
+    "how_adapted": "Converted to ES module function parseCSV, fixed zero-length-match infinite loop; added toCSV writer (new code). Everything else (server, UI) is new code: GitHub searches (e.g. oldboyxx/jira_clone, React/TS) found no stdlib-only candidate compatible with this API."
+  }
+]

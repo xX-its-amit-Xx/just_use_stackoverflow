@@ -1,0 +1,48 @@
+{
+ "external_exact_fraction": 0.008583690987124463,
+ "external_modified_fraction": 0.004291845493562232,
+ "external_fraction": 0.012875536480686695,
+ "line_classes": {
+  "nontrivial": 233,
+  "trivial": 92,
+  "exact": 2,
+  "modified": 1,
+  "generated": 230
+ },
+ "corpus_sources": 43,
+ "corpus_sources_contributing": 3,
+ "corpus_lines": 3683,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 3620,
+  "tool_result": 63
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/luisguarana__todo-cli/todo.js",
+   3
+  ],
+  [
+   ".retrieval/repos/luisguarana__todo-cli/.planning/milestones/v1.0-phases/02-hardening/02-REVIEW.md",
+   2
+  ],
+  [
+   ".retrieval/repos/luisguarana__todo-cli/.planning/phases/02-hardening/02-REVIEW.md",
+   2
+  ]
+ ],
+ "per_file": {
+  "src/todo.js": {
+   "exact": 1,
+   "modified": 1,
+   "generated": 151,
+   "trivial": 58
+  },
+  "src/cli.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 79,
+   "trivial": 34
+  }
+ },
+ "final_functional_loc": 322
+}

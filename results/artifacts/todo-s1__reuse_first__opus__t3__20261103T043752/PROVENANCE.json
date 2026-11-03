@@ -1,0 +1,9 @@
+[
+  {"source_url": "https://github.com/MohamedBakrr/taskninja--todo-CLI-app-", "license": "MIT",
+   "files_or_snippet": "src/utils/validators.js (validatePriority, validateDueDate), src/utils/taskService.js (loadTasks, saveTasks, getNextId)",
+   "local_paths": ["src/todo.js", "src/cli.js"], "lines_used_estimate": 30,
+   "how_adapted": "Converted async fs/promises to sync fs, priorities changed to low/normal/high, errors use TodoError, date validation made strict, next id persisted in file so ids are never reused; command layout reused for CLI"},
+  {"source_url": "https://stackoverflow.com/a/11611388", "license": "CC BY-SA",
+   "files_or_snippet": "regex + Date construction approach to date validation", "local_paths": ["src/todo.js"],
+   "lines_used_estimate": 6, "how_adapted": "Implemented as YYYY-MM-DD regex plus Date.UTC round-trip check"}
+]

@@ -1,0 +1,186 @@
+{
+ "run_id": "markdown-s1__gui_reuse_first__sonnet__t2__20261103T044226",
+ "task_id": "markdown-s1",
+ "strategy": "gui_reuse_first",
+ "trial": 2,
+ "tier": "S1",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 6,
+ "model_invocations": 6,
+ "input_tokens": 12,
+ "output_tokens": 6219,
+ "cached_input_tokens": 60805,
+ "cache_creation_tokens": 12024,
+ "reasoning_tokens": 215,
+ "total_tokens": 6231,
+ "total_tokens_incl_cache": 79060,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.116391,
+ "inference_cost_nocache_usd": 0.207872,
+ "inference_cost_attributed_usd": 0.116391,
+ "harness_reported_cost_usd": 0.1163905,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.001125,
+ "total_execution_cost_usd": 0.117515,
+ "elapsed_s": 50.62,
+ "agent_elapsed_s": 50.33,
+ "orchestrator_observed_s": 51.35,
+ "eval_s": 0.29,
+ "active_s": 49.08,
+ "api_s": 41.34,
+ "hidden_tests": 26,
+ "hidden_pass": 26,
+ "hidden_fail": 0,
+ "own_tests": 1,
+ "own_pass": 1,
+ "functional_loc": 199,
+ "functional_chars": 6935,
+ "normalized_loc": 231,
+ "minified_vendor_bytes": 0,
+ "test_loc": 5,
+ "comment_lines": 5,
+ "blank_lines": 4,
+ "retrieval": {
+  "search_queries": 1,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 199,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 1,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 1,
+  "screenshots": 1,
+  "screenshot_tokens_estimate": 1365,
+  "screenshot_tokens_viewed_estimate": 1365,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 0,
+  "gui_action_time_s": 4.05,
+  "browser_session_span_s": 44.22,
+  "visual_reasoning_calls": 1,
+  "visual_reasoning_cost_usd": 0.058513
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 4,
+  "retrieval_invocations": 2,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "3b2e23c8ad6e21d3"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 1,
+   "max_file_loc": 199,
+   "mean_file_loc": 199.0,
+   "functions": 32,
+   "loc_per_function": 6.2,
+   "duplicate_line_ratio": 0.0131
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": false,
+   "issues": [
+    "no license recorded for https://github.com/search?q=minimal+markdown+parser+javascript&type=repositories",
+    "third-party code used but no THIRD_PARTY_NOTICES.md / NOTICE file"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 153,
+   "trivial": 51,
+   "exact": 0,
+   "modified": 0,
+   "generated": 153
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 199
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 12,
+    "outputTokens": 6219,
+    "cacheReadInputTokens": 60805,
+    "cacheCreationInputTokens": 12024,
+    "webSearchRequests": 0,
+    "costUSD": 0.1163905,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 215,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 12024,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 12,
+    "output": 6219,
+    "cr": 60805,
+    "cw": 12024
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 1,
+  "screenshot": 1,
+  "code_generation": 1,
+  "other": 2
+ }
+}

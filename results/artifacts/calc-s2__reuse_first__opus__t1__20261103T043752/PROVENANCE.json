@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/expr-eval/v/2.0.2 (https://github.com/silentmatt/expr-eval, dist/index.mjs)",
+    "license": "MIT",
+    "files_or_snippet": "TokenStream tokenizer: constructor/newToken/next, isWhitespace, isRadixInteger, isNumber, isName (dist/index.mjs lines ~539-910)",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 110,
+    "how_adapted": "Converted to an ES class; removed string/comment/bracket/named-op/const scanning; isName restricted to ASCII [A-Za-z_][A-Za-z0-9_]*; exponent only scanned after a valid mantissa; added single-char operator scanning; errors raised as CalcError with position. Parser (with implicit multiplication and the spec precedence), evaluator, built-ins, calculator state and REPL are new code written for this project, since expr-eval's grammar differs."
+  }
+]

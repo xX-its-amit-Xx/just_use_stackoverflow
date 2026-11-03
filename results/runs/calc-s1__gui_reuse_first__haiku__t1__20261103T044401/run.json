@@ -1,0 +1,183 @@
+{
+ "run_id": "calc-s1__gui_reuse_first__haiku__t1__20261103T044401",
+ "task_id": "calc-s1",
+ "strategy": "gui_reuse_first",
+ "trial": 1,
+ "tier": "S1",
+ "family": "calculator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 30,
+ "model_invocations": 20,
+ "input_tokens": 40,
+ "output_tokens": 13679,
+ "cached_input_tokens": 378596,
+ "cache_creation_tokens": 26655,
+ "reasoning_tokens": 4388,
+ "total_tokens": 13719,
+ "total_tokens_incl_cache": 418970,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.01596,
+ "inference_cost_nocache_usd": 0.047369,
+ "inference_cost_attributed_usd": 0.01596,
+ "harness_reported_cost_usd": 0.01596046,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.002369,
+ "total_execution_cost_usd": 0.018329,
+ "elapsed_s": 106.59,
+ "agent_elapsed_s": 105.95,
+ "orchestrator_observed_s": 107.05,
+ "eval_s": 0.64,
+ "active_s": 106.81,
+ "api_s": 79.17,
+ "hidden_tests": 58,
+ "hidden_pass": 58,
+ "hidden_fail": 0,
+ "own_tests": 9,
+ "own_pass": 9,
+ "functional_loc": 217,
+ "functional_chars": 4530,
+ "normalized_loc": 151,
+ "minified_vendor_bytes": 0,
+ "test_loc": 68,
+ "comment_lines": 10,
+ "blank_lines": 26,
+ "retrieval": {
+  "search_queries": 6,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 217,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 6,
+  "retrieval_failures": 2,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": {
+  "browser_navigations": 6,
+  "screenshots": 7,
+  "screenshot_tokens_estimate": 9555,
+  "screenshot_tokens_viewed_estimate": 6825,
+  "clicks": 1,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 2,
+  "gui_action_time_s": 12.03,
+  "browser_session_span_s": 99.43,
+  "visual_reasoning_calls": 5,
+  "visual_reasoning_cost_usd": 0.003214
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 16,
+  "retrieval_invocations": 14,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "dfdcc2e42fdb9ae3"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 192,
+   "mean_file_loc": 108.5,
+   "functions": 33,
+   "loc_per_function": 6.6,
+   "duplicate_line_ratio": 0.0362
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 138,
+   "trivial": 89,
+   "exact": 0,
+   "modified": 0,
+   "generated": 138
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 217
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 40,
+    "outputTokens": 13679,
+    "cacheReadInputTokens": 378596,
+    "cacheCreationInputTokens": 26655,
+    "webSearchRequests": 0,
+    "costUSD": 0.01596046,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 4388,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 26655,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 40,
+    "output": 13679,
+    "cr": 378596,
+    "cw": 26655
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 2,
+  "screenshot": 7,
+  "computer_use": 6,
+  "code_generation": 4
+ }
+}

@@ -1,0 +1,349 @@
+{
+ "run_id": "markdown-s3__hybrid__opus__t1__20261103T044022",
+ "task_id": "markdown-s3",
+ "strategy": "hybrid",
+ "trial": 1,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 14,
+ "model_invocations": 14,
+ "input_tokens": 28,
+ "output_tokens": 27937,
+ "cached_input_tokens": 300135,
+ "cache_creation_tokens": 34640,
+ "reasoning_tokens": 5153,
+ "total_tokens": 27965,
+ "total_tokens_incl_cache": 362740,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.895999,
+ "inference_cost_nocache_usd": 1.897952,
+ "inference_cost_attributed_usd": 0.895999,
+ "harness_reported_cost_usd": 0.895999,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.006059,
+ "total_execution_cost_usd": 0.902058,
+ "elapsed_s": 272.66,
+ "agent_elapsed_s": 271.81,
+ "orchestrator_observed_s": 272.88,
+ "eval_s": 0.85,
+ "active_s": 277.45,
+ "api_s": 263.83,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 3,
+ "own_pass": 3,
+ "functional_loc": 5666,
+ "functional_chars": 188117,
+ "normalized_loc": 6271,
+ "minified_vendor_bytes": 0,
+ "test_loc": 78,
+ "comment_lines": 2016,
+ "blank_lines": 215,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 6,
+  "clone_attempts_failed": 1,
+  "files_inspected": 1,
+  "files_copied": 3,
+  "snippets_retrieved": 1,
+  "retrieved_loc": 29096,
+  "cloned_repo_lines": 26359,
+  "retrieved_loc_incorporated": 4746,
+  "retrieved_loc_modified": 74,
+  "retrieved_loc_discarded": 24276,
+  "generated_loc": 846,
+  "modified_loc": 74,
+  "integration_modifications": 0,
+  "external_fraction": 0.8507,
+  "search_to_use_conversion": 0.6142,
+  "repository_acquisition_s": 2.64,
+  "retrieval_actions": 2,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.5
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 5,
+  "retrieval_invocations": 2,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 25
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 27
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 39
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 40
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 53
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 105
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 107
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 107
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 110
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 117
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 123
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 8,
+   "max_file_loc": 4814,
+   "mean_file_loc": 708.2,
+   "functions": 968,
+   "loc_per_function": 5.9,
+   "duplicate_line_ratio": 0.2095
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.8376364120308757,
+  "external_modified_fraction": 0.01304232100079851,
+  "external_fraction": 0.8506787330316742,
+  "line_classes": {
+   "nontrivial": 3757,
+   "trivial": 3925,
+   "exact": 3147,
+   "modified": 49,
+   "generated": 561
+  },
+  "corpus_sources": 127,
+  "corpus_sources_contributing": 78,
+  "corpus_lines": 29096,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 29096
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/dist/markdown-it.js",
+    3184
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/dist/index.cjs.js",
+    1761
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/list.mjs",
+    267
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/table.mjs",
+    232
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/reference.mjs",
+    232
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/link.mjs",
+    190
+   ],
+   [
+    ".retrieval/npm/linkify-it@5.0.0/package/build/index.cjs.js",
+    187
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/image.mjs",
+    183
+   ],
+   [
+    ".retrieval/npm/linkify-it@5.0.0/package/index.mjs",
+    182
+   ],
+   [
+    ".retrieval/npm/entities@4.5.0/package/lib/esm/decode.js",
+    169
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/lheading.mjs",
+    168
+   ],
+   [
+    ".retrieval/npm/mdurl@2.0.0/package/build/index.cjs.js",
+    166
+   ],
+   [
+    ".retrieval/npm/entities@4.5.0/package/lib/decode.js",
+    148
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/autolink.mjs",
+    142
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/blockquote.mjs",
+    142
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/fence.mjs",
+    136
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/common/utils.mjs",
+    134
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/entity.mjs",
+    134
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/html_inline.mjs",
+    130
+   ],
+   [
+    ".retrieval/npm/punycode.js@2.3.1/package/punycode.js",
+    121
+   ],
+   [
+    ".retrieval/npm/punycode.js@2.3.1/package/punycode.es6.js",
+    121
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/text.mjs",
+    116
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/hr.mjs",
+    115
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_core/smartquotes.mjs",
+    105
+   ],
+   [
+    ".retrieval/npm/mdurl@2.0.0/package/lib/parse.mjs",
+    97
+   ],
+   [
+    ".retrieval/npm/linkify-it@5.0.0/package/README.md",
+    96
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/ruler.mjs",
+    81
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/renderer.mjs",
+    79
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/state_block.mjs",
+    78
+   ],
+   [
+    ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/strikethrough.mjs",
+    75
+   ]
+  ],
+  "final_functional_loc": 5666
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 28,
+    "outputTokens": 27937,
+    "cacheReadInputTokens": 300135,
+    "cacheCreationInputTokens": 34640,
+    "webSearchRequests": 0,
+    "costUSD": 0.895999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 5153,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 34640,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 28,
+    "output": 27937,
+    "cr": 300135,
+    "cw": 34640
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 2,
+  "repository_clone": 1,
+  "file_copy": 3,
+  "code_generation": 6,
+  "snippet_retrieval": 1
+ }
+}

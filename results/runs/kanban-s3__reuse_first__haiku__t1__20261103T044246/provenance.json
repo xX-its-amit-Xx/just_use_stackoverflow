@@ -1,0 +1,146 @@
+{
+ "external_exact_fraction": 0.012658227848101266,
+ "external_modified_fraction": 0.08157524613220815,
+ "external_fraction": 0.09423347398030943,
+ "line_classes": {
+  "nontrivial": 711,
+  "trivial": 167,
+  "exact": 9,
+  "modified": 58,
+  "generated": 644
+ },
+ "corpus_sources": 59,
+ "corpus_sources_contributing": 23,
+ "corpus_lines": 13227,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 13026,
+  "tool_result": 201
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/pages/Dashboard.jsx",
+   41
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Task/TaskModal.jsx",
+   35
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Board/TaskCard.jsx",
+   34
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Board/KanbanBoard.jsx",
+   24
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/index.html",
+   11
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Board/Column.jsx",
+   9
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/github.js",
+   8
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/index.js",
+   7
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/tasks.js",
+   6
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Heatmap/Heatmap.jsx",
+   5
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/components/Pomodoro/PomodoroTimer.jsx",
+   4
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/context/BoardContext.jsx",
+   4
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/pages/Analytics.jsx",
+   4
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/utils/lastVisit.js",
+   3
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/hooks/usePomodoro.js",
+   3
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/pages/Login.jsx",
+   3
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/auth.js",
+   2
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/ai.js",
+   2
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/routes/sprints.js",
+   2
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/hooks/useGithubStars.js",
+   2
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/middleware/responseTime.js",
+   1
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/client/src/hooks/useSuggestTags.jsx",
+   1
+  ],
+  [
+   ".retrieval/repos/anoopcodehack__DevBoard/devboard/server/middleware/auth.js",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/server.js": {
+   "exact": 1,
+   "modified": 35,
+   "generated": 433,
+   "trivial": 92
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 7,
+   "modified": 8,
+   "generated": 155,
+   "trivial": 52
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 29,
+   "trivial": 5
+  },
+  "src/public/index.html": {
+   "exact": 1,
+   "modified": 15,
+   "generated": 22,
+   "trivial": 17
+  }
+ },
+ "final_functional_loc": 857
+}

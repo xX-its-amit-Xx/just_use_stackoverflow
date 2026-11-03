@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://registry.npmjs.org/markdown-it/-/markdown-it-14.1.0.tgz (https://github.com/markdown-it/markdown-it)",
+    "license": "MIT (bundle also contains mdurl MIT, uc.micro MIT, entities BSD-2-Clause, linkify-it MIT, punycode.js MIT)",
+    "files_or_snippet": "dist/markdown-it.js (self-contained UMD bundle)",
+    "local_paths": ["src/vendor/markdown-it.cjs"],
+    "lines_used_estimate": 6963,
+    "how_adapted": "Copied verbatim, renamed to .cjs and loaded via createRequire. src/markdown.js configures it (html:false, link validation replaced by scheme check -> '#', <s> rendered as <del>) and adds wiki-link inline rule, GitHub-style heading ids and toc."
+  }
+]

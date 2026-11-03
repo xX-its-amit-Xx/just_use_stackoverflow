@@ -1,0 +1,34 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/commonmark/v/0.31.2 (https://github.com/commonmark/commonmark.js)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "lib/blocks.js, lib/inlines.js, lib/node.js, lib/common.js, lib/from-code-point.js, lib/render/html.js, lib/render/renderer.js",
+    "local_paths": ["src/cm/blocks.js", "src/cm/inlines.js", "src/cm/node.js", "src/cm/common.js", "src/cm/from-code-point.js", "src/cm/html.js", "src/cm/renderer.js"],
+    "lines_used_estimate": 2900,
+    "how_adapted": "Vendored as ES modules; import paths rewired to local entities/mdurl replacements. Added GFM table block (delimiter-row detection, row splitting with \\| escapes, alignment) and strikethrough (~ / ~~ delimiters in emphasis processing). Disabled HTML block starts; inline raw HTML rendered escaped. Replaced URL safety check with always-on javascript/vbscript/file/data filter (-> '#') allowing data:image/png|gif|jpeg|webp. Added table/strikethrough renderers and heading id attribute."
+  },
+  {
+    "source_url": "https://www.npmjs.com/package/mdurl/v/1.0.1 (https://github.com/markdown-it/mdurl)",
+    "license": "MIT",
+    "files_or_snippet": "encode.js",
+    "local_paths": ["src/cm/mdurl-encode.js"],
+    "lines_used_estimate": 90,
+    "how_adapted": "Copied verbatim; module.exports replaced with ES default export."
+  },
+  {
+    "source_url": "https://html.spec.whatwg.org/entities.json",
+    "license": "CC-BY-4.0",
+    "files_or_snippet": "HTML named character reference table (data)",
+    "local_paths": ["src/cm/entities-data.js"],
+    "lines_used_estimate": 2125,
+    "how_adapted": "Generated a compact JS object mapping entity names (with trailing ';') to characters; used by a small hand-written decodeHTMLStrict replacement in src/cm/entities.js."
+  },
+  {
+    "source_url": "https://spec.commonmark.org/0.31.2/spec.json",
+    "license": "CC-BY-SA-4.0",
+    "files_or_snippet": "CommonMark spec examples (used only as a local conformance check, not shipped)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Not included in deliverable; used to verify all non-raw-HTML spec examples pass."
+  }
+]

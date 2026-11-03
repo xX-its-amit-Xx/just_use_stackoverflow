@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kanban</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Kanban</h1>
+    <div id="userbar" hidden>
+      <span id="whoami"></span>
+      <button id="logout-btn" type="button">Log out</button>
+    </div>
+  </header>
+  <main>
+    <p id="status" role="status"></p>
+
+    <section id="auth-view" hidden>
+      <form id="login-form" class="card-form">
+        <h2>Log in</h2>
+        <label>Username <input name="username" autocomplete="username" required></label>
+        <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Log in</button>
+        <button type="button" class="link" data-switch="register">Need an account?</button>
+      </form>
+      <form id="register-form" class="card-form" hidden>
+        <h2>Register</h2>
+        <label>Username <input name="username" autocomplete="username" pattern="[a-zA-Z0-9_]{3,32}" required></label>
+        <label>Display name <input name="displayName" autocomplete="name"></label>
+        <label>Password (8+ chars) <input name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+        <button type="submit">Create account</button>
+        <button type="button" class="link" data-switch="login">Have an account?</button>
+      </form>
+    </section>
+
+    <section id="boards-view" hidden>
+      <form id="new-board-form" class="inline-form">
+        <input name="name" placeholder="New board name" maxlength="100" required>
+        <button type="submit">Create board</button>
+      </form>
+      <ul id="board-list"></ul>
+    </section>
+
+    <section id="board-view" hidden>
+      <div class="board-header">
+        <button type="button" id="back-btn" class="link">&larr; All boards</button>
+        <h2 id="board-name"></h2>
+        <span id="board-role"></span>
+      </div>
+      <p id="board-desc"></p>
+      <div id="columns"></div>
+    </section>
+  </main>
+  <script src="/static/app.js" type="module"></script>
+</body>
+</html>

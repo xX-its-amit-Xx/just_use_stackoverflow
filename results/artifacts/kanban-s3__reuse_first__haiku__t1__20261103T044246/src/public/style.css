@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f2f4f7; color: #1d2330; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; background: #22324a; color: #fff; }
+header h1 { margin: 0; font-size: 1.25rem; }
+main { padding: 1.25rem; }
+button { cursor: pointer; padding: 0.35rem 0.7rem; border: 1px solid #9aa5b8; border-radius: 4px; background: #fff; }
+button.link { border: none; background: none; color: #2a6df4; padding: 0; }
+input, select { padding: 0.35rem; border: 1px solid #b7c0cf; border-radius: 4px; }
+#status { min-height: 1.2em; }
+#status.error { color: #b00020; }
+.card-form { display: flex; flex-direction: column; gap: 0.5rem; max-width: 320px; background: #fff; padding: 1rem; border-radius: 6px; }
+.card-form label { display: flex; flex-direction: column; font-size: 0.9rem; }
+.inline-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.muted { color: #6b7385; }
+#board-list { list-style: none; padding: 0; }
+.board-item { background: #fff; padding: 0.6rem 0.8rem; margin-bottom: 0.4rem; border-radius: 6px; }
+.board-header { display: flex; align-items: center; gap: 1rem; }
+.board-header h2 { margin: 0; }
+#columns { display: flex; gap: 1rem; align-items: flex-start; overflow-x: auto; padding-bottom: 1rem; }
+.column { min-width: 260px; max-width: 280px; background: #e3e8f0; border-radius: 6px; padding: 0.6rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.col-header { display: flex; justify-content: space-between; }
+.wip.full { color: #b00020; font-weight: bold; }
+.cards { display: flex; flex-direction: column; gap: 0.5rem; min-height: 40px; border-radius: 4px; }
+.cards.drop { outline: 2px dashed #2a6df4; }
+.card { background: #fff; border-radius: 4px; padding: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+.card[draggable="true"] { cursor: grab; }
+.card-title { font-weight: 600; }
+.card-desc { font-size: 0.85rem; color: #4a5366; margin-top: 0.2rem; }
+.card-meta { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.3rem; font-size: 0.8rem; }
+.label { color: #fff; padding: 0 0.4rem; border-radius: 3px; }
+.due { color: #6b7385; }
+.card-actions { display: flex; gap: 0.25rem; margin-top: 0.4rem; }
+.add-card { display: flex; gap: 0.3rem; }
+.add-card input { flex: 1; min-width: 0; }

@@ -1,0 +1,167 @@
+{
+ "run_id": "markdown-s1__hybrid__sonnet__t3__20261103T044350",
+ "task_id": "markdown-s1",
+ "strategy": "hybrid",
+ "trial": 3,
+ "tier": "S1",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 4,
+ "model_invocations": 4,
+ "input_tokens": 8,
+ "output_tokens": 7365,
+ "cached_input_tokens": 44377,
+ "cache_creation_tokens": 8966,
+ "reasoning_tokens": 242,
+ "total_tokens": 7373,
+ "total_tokens_incl_cache": 60716,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.113968,
+ "inference_cost_nocache_usd": 0.180352,
+ "inference_cost_attributed_usd": 0.113968,
+ "harness_reported_cost_usd": 0.1139677,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.001122,
+ "total_execution_cost_usd": 0.11509,
+ "elapsed_s": 50.49,
+ "agent_elapsed_s": 50.16,
+ "orchestrator_observed_s": 51.37,
+ "eval_s": 0.33,
+ "active_s": 49.44,
+ "api_s": 47.04,
+ "hidden_tests": 26,
+ "hidden_pass": 26,
+ "hidden_fail": 0,
+ "own_tests": 1,
+ "own_pass": 1,
+ "functional_loc": 285,
+ "functional_chars": 9220,
+ "normalized_loc": 307,
+ "minified_vendor_bytes": 0,
+ "test_loc": 5,
+ "comment_lines": 5,
+ "blank_lines": 7,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 285,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 2,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "3b2e23c8ad6e21d3"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 1,
+   "max_file_loc": 285,
+   "mean_file_loc": 285.0,
+   "functions": 48,
+   "loc_per_function": 5.9,
+   "duplicate_line_ratio": 0.0276
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 217,
+   "trivial": 73,
+   "exact": 0,
+   "modified": 0,
+   "generated": 217
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 285
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 8,
+    "outputTokens": 7365,
+    "cacheReadInputTokens": 44377,
+    "cacheCreationInputTokens": 8966,
+    "webSearchRequests": 0,
+    "costUSD": 0.1139677,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 242,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 8966,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 8,
+    "output": 7365,
+    "cr": 44377,
+    "cw": 8966
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "code_generation": 1,
+  "other": 2
+ }
+}

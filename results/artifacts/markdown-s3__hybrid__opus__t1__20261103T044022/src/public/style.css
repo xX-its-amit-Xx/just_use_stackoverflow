@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.5 system-ui, sans-serif; color: #222; }
+header { display: flex; gap: 1rem; align-items: center; padding: .5rem 1rem; background: #2d3e50; color: #fff; }
+header h1 { font-size: 1.2rem; margin: 0; } header a { color: #fff; text-decoration: none; }
+#search { padding: .3rem; width: 18rem; }
+#layout { display: flex; min-height: calc(100vh - 50px); }
+#sidebar { width: 260px; padding: 1rem; border-right: 1px solid #ddd; background: #f7f7f7; }
+#sidebar label { display: block; margin-bottom: .5rem; }
+#page-list, #results-list { list-style: none; padding: 0; }
+#page-list li, #results-list li { padding: .25rem 0; cursor: pointer; }
+#page-list li.active { font-weight: bold; }
+.tag { font-size: .75rem; background: #dde; border-radius: 3px; padding: 0 .3rem; margin-left: .25rem; }
+#main { flex: 1; padding: 1rem; min-width: 0; }
+.meta-row { display: flex; gap: .5rem; } .meta-row input { flex: 1; padding: .3rem; }
+.toolbar { margin: .5rem 0; display: flex; gap: .5rem; align-items: center; }
+.split { display: flex; gap: 1rem; height: 60vh; }
+#body { flex: 1; font: 14px/1.4 ui-monospace, monospace; padding: .5rem; resize: none; }
+#preview { flex: 1; overflow: auto; border: 1px solid #ddd; padding: .5rem 1rem; }
+#side-panels { display: flex; gap: 2rem; }
+.conflict { background: #fee; border: 1px solid #d99; padding: .5rem; }
+a.wikilink.missing { color: #c33; }
+mark { background: #ff6; }
+#diff .add { background: #dfd; display: block; } #diff .del { background: #fdd; display: block; } #diff .same { display: block; }
+pre { background: #f4f4f4; padding: .5rem; overflow: auto; }
+.wiki-page main { max-width: 50rem; margin: 0 auto; padding: 1rem; } .wiki-page nav { padding: .5rem 1rem; }
