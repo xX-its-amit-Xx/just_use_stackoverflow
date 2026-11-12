@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://stackoverflow.com/a/41563966",
+    "license": "CC BY-SA 4.0 (Stack Overflow user contribution)",
+    "files_or_snippet": "csvToArray state-machine RFC 4180 parser (question 8493195)",
+    "local_paths": ["src/csv.js"],
+    "lines_used_estimate": 20,
+    "how_adapted": "Adapted parser loop: added BOM strip, blank-line skipping, physical line-number tracking for error reporting, and returned {line, cells}; added csvCell/csvLine writer (new code). Rest of application (server, search, UI) is newly written glue: searches on GitHub (gh-search), npm and Stack Overflow found no usable zero-dependency project-manager implementation, so all other code was written from scratch."
+  }
+]

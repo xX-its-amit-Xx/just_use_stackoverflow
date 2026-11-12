@@ -1,0 +1,68 @@
+{
+ "external_exact_fraction": 0.3283236994219653,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.3283236994219653,
+ "line_classes": {
+  "nontrivial": 865,
+  "trivial": 286,
+  "exact": 284,
+  "modified": 0,
+  "generated": 581
+ },
+ "corpus_sources": 4,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 876,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 437,
+  "gui_clipboard": 439
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/kards_main.css",
+   284
+  ],
+  [
+   ".gui/clipboard_history/1793681111109.txt",
+   284
+  ]
+ ],
+ "per_file": {
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 434,
+   "trivial": 102
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 4,
+   "trivial": 0
+  },
+  "src/static/app.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 18,
+   "trivial": 5
+  },
+  "src/static/kards.css": {
+   "exact": 284,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 137
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 112,
+   "trivial": 36
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 13,
+   "trivial": 6
+  }
+ },
+ "final_functional_loc": 1130
+}

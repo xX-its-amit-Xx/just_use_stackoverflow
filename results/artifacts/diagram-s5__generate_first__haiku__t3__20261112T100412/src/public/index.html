@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>diagram-s5</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <section id="login" class="screen hidden">
+    <h1>diagram-s5</h1>
+    <form id="loginForm">
+      <input name="username" placeholder="username" autocomplete="username" required>
+      <input name="password" type="password" placeholder="password" autocomplete="current-password" required>
+      <button type="submit">Sign in</button>
+      <button type="button" id="registerBtn">Register</button>
+      <p id="loginError" class="error"></p>
+    </form>
+  </section>
+
+  <section id="dash" class="screen hidden">
+    <header class="bar"><strong>diagram-s5</strong><span class="grow"></span><span id="whoami"></span><button id="logoutBtn">Sign out</button></header>
+    <div class="dash-body">
+      <form id="newDocForm"><input name="title" placeholder="New diagram title"><button type="submit">Create</button></form>
+      <ul id="docList"></ul>
+    </div>
+  </section>
+
+  <section id="editor" class="screen hidden">
+    <header class="bar toolbar">
+      <a href="#" id="backBtn">&larr; Docs</a>
+      <span id="docTitle" class="doc-title"></span>
+      <span class="sep"></span>
+      <button data-tool="select" title="Select (V)">Select</button>
+      <button data-tool="rect" title="Rectangle (R)">Rect</button>
+      <button data-tool="ellipse" title="Ellipse (E)">Ellipse</button>
+      <button data-tool="diamond" title="Diamond (D)">Diamond</button>
+      <button data-tool="text" title="Text (T)">Text</button>
+      <button data-tool="line" title="Line (L)">Line</button>
+      <button data-tool="image" title="Image placeholder (I)">Image</button>
+      <button data-tool="connector" title="Connector (C)">Connector</button>
+      <span class="sep"></span>
+      <button id="undoBtn" title="Ctrl+Z">Undo</button>
+      <button id="redoBtn" title="Ctrl+Y">Redo</button>
+      <button id="deleteBtn" title="Delete">Delete</button>
+      <button id="dupBtn" title="Ctrl+D">Duplicate</button>
+      <span class="sep"></span>
+      <select id="alignSel">
+        <option value="">Align…</option>
+        <option value="left">Left</option><option value="center">Center</option><option value="right">Right</option>
+        <option value="top">Top</option><option value="middle">Middle</option><option value="bottom">Bottom</option>
+      </select>
+      <select id="distSel">
+        <option value="">Distribute…</option>
+        <option value="horizontal">Horizontal</option><option value="vertical">Vertical</option>
+      </select>
+      <select id="layoutSel">
+        <option value="">Auto-layout…</option>
+        <option value="layered:TB">Layered (top→bottom)</option>
+        <option value="layered:LR">Layered (left→right)</option>
+        <option value="grid">Grid</option>
+      </select>
+      <span class="sep"></span>
+      <button id="zoomIn">+</button><button id="zoomOut">−</button><button id="zoomFit">Fit</button>
+      <label><input type="checkbox" id="snapChk" checked> Snap</label>
+      <span class="sep"></span>
+      <button id="importBtn">Import draw.io</button>
+      <button id="svgBtn">Export SVG</button>
+      <button id="jsonBtn">Export JSON</button>
+      <span id="conn" class="pill">offline</span>
+    </header>
+    <div class="main">
+      <aside class="side left">
+        <h3>Layers <button id="addLayerBtn">+</button></h3>
+        <ul id="layers"></ul>
+        <h3>Versions <button id="saveVersionBtn">Save</button></h3>
+        <ul id="versions"></ul>
+      </aside>
+      <div class="stage" id="stage">
+        <svg id="canvas" xmlns="http://www.w3.org/2000/svg"></svg>
+        <svg id="minimap" xmlns="http://www.w3.org/2000/svg" width="180" height="120"></svg>
+      </div>
+      <aside class="side right">
+        <h3>Properties</h3>
+        <div id="props">
+          <label>Fill <input type="color" id="pFill"></label>
+          <label>Stroke <input type="color" id="pStroke"></label>
+          <label>Font size <input type="number" id="pFont" min="6" max="200"></label>
+          <label>Opacity <input type="range" id="pOpacity" min="0" max="1" step="0.05"></label>
+          <label>Text <input type="text" id="pText"></label>
+        </div>
+        <h3>Comments</h3>
+        <form id="commentForm"><input name="text" placeholder="Comment on selection"><button type="submit">Add</button></form>
+        <ul id="comments"></ul>
+      </aside>
+    </div>
+    <footer class="bar"><span id="status"></span></footer>
+  </section>
+
+  <input type="file" id="importFile" accept=".xml,.drawio" class="hidden">
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

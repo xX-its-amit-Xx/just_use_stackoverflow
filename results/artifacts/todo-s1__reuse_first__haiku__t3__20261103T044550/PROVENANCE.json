@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://github.com/rajveeerr/CLI-Todo",
+    "license": "MIT (Copyright (c) 2024 Rajveer Singh)",
+    "files_or_snippet": "CLIBasedTodo.js: fileContents()/writefileContents() JSON read/write pattern (readFileSync + JSON.parse, JSON.stringify + writeFileSync, missing-file fallback)",
+    "local_paths": ["src/todo.js (TodoStore._load and TodoStore._save)"],
+    "lines_used_estimate": 8,
+    "how_adapted": "Only the idea of loading a JSON file if it exists and rewriting it synchronously on each mutation was taken. Rewritten from scratch: the store file is {nextId, items} to keep ids monotonic across removal and reload, writes go through a temp file + rename, and the code is not otherwise copied. Its commander/chalk dependencies and data model were not used."
+  },
+  {
+    "source_url": "https://github.com/yuvrajnode/cli-todo-app",
+    "license": "MIT",
+    "files_or_snippet": "index.js (inspected only)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Inspected as a candidate; not reused. Requires commander and chalk and uses a line-based text file, which does not fit the spec."
+  }
+]

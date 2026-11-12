@@ -1,0 +1,285 @@
+{
+ "run_id": "pm-s4__gui_reuse_first__haiku__t4__20261112T100412",
+ "task_id": "pm-s4",
+ "strategy": "gui_reuse_first",
+ "trial": 4,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 70,
+ "model_invocations": 58,
+ "input_tokens": 116,
+ "output_tokens": 143433,
+ "cached_input_tokens": 4774076,
+ "cache_creation_tokens": 180959,
+ "reasoning_tokens": 72160,
+ "total_tokens": 143549,
+ "total_tokens_incl_cache": 5098584,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.563083,
+ "inference_cost_nocache_usd": 2.294399,
+ "inference_cost_attributed_usd": 0.563083,
+ "harness_reported_cost_usd": 0.5630834199999999,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.014692,
+ "total_execution_cost_usd": 0.577775,
+ "elapsed_s": 661.13,
+ "agent_elapsed_s": 657.78,
+ "orchestrator_observed_s": 659.26,
+ "eval_s": 3.35,
+ "active_s": 701.58,
+ "api_s": 611.93,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 15,
+ "own_pass": 15,
+ "functional_loc": 2293,
+ "functional_chars": 79419,
+ "normalized_loc": 2647,
+ "minified_vendor_bytes": 0,
+ "test_loc": 384,
+ "comment_lines": 68,
+ "blank_lines": 173,
+ "retrieval": {
+  "search_queries": 5,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 3,
+  "files_copied": 1,
+  "snippets_retrieved": 1,
+  "retrieved_loc": 63,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 26,
+  "retrieved_loc_modified": 18,
+  "retrieved_loc_discarded": 19,
+  "generated_loc": 2249,
+  "modified_loc": 18,
+  "integration_modifications": 0,
+  "external_fraction": 0.0195,
+  "search_to_use_conversion": 1.0,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 10,
+  "retrieval_failures": 2,
+  "retrieval_failure_rate": 0.2
+ },
+ "gui": {
+  "browser_navigations": 10,
+  "screenshots": 12,
+  "screenshot_tokens_estimate": 16380,
+  "screenshot_tokens_viewed_estimate": 16380,
+  "clicks": 5,
+  "text_selections": 2,
+  "copy_operations": 2,
+  "paste_operations": 1,
+  "failed_navigations": 2,
+  "gui_action_time_s": 21.5,
+  "browser_session_span_s": 647.33,
+  "visual_reasoning_calls": 12,
+  "visual_reasoning_cost_usd": 0.008979
+ },
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 25,
+  "retrieval_invocations": 26,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 73
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 76
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 123
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 125
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 133
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 162
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 216
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 232
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 253
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 274
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 317
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 403
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 415
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 444
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 564
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 567
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 577
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 9,
+   "max_file_loc": 1315,
+   "mean_file_loc": 254.8,
+   "functions": 254,
+   "loc_per_function": 9.0,
+   "duplicate_line_ratio": 0.1188
+  },
+  "license": {
+   "provenance_entries": 2,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [
+   {
+    "action_type": "other",
+    "reason": "Code from External",
+    "step": 31
+   }
+  ],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.011474469305794608,
+  "external_modified_fraction": 0.008032128514056224,
+  "external_fraction": 0.019506597819850834,
+  "line_classes": {
+   "nontrivial": 1743,
+   "trivial": 612,
+   "exact": 20,
+   "modified": 14,
+   "generated": 1709
+  },
+  "corpus_sources": 1,
+  "corpus_sources_contributing": 1,
+  "corpus_lines": 63,
+  "corpus_lines_by_kind": {
+   "gui_clipboard": 63
+  },
+  "contributing_sources": [
+   [
+    ".gui/clipboard_history/1794477945257.txt",
+    34
+   ]
+  ],
+  "final_functional_loc": 2293
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 116,
+    "outputTokens": 143433,
+    "cacheReadInputTokens": 4774076,
+    "cacheCreationInputTokens": 180959,
+    "webSearchRequests": 0,
+    "costUSD": 0.5630834199999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 72160,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 180959,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 116,
+    "output": 143433,
+    "cr": 4774076,
+    "cw": 180959
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 7,
+  "computer_use": 12,
+  "screenshot": 13,
+  "file_copy": 2,
+  "code_generation": 8,
+  "code_edit": 6,
+  "test_execution": 9
+ }
+}

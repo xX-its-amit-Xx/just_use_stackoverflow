@@ -1,0 +1,44 @@
+{
+ "external_exact_fraction": 0.1349206349206349,
+ "external_modified_fraction": 0.023809523809523808,
+ "external_fraction": 0.15873015873015872,
+ "line_classes": {
+  "nontrivial": 126,
+  "trivial": 52,
+  "exact": 17,
+  "modified": 3,
+  "generated": 106
+ },
+ "corpus_sources": 10,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 896,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 557,
+  "tool_result": 339
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.mjs",
+   20
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.js",
+   20
+  ]
+ ],
+ "per_file": {
+  "src/search.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 88,
+   "trivial": 38
+  },
+  "src/vendor/csv.js": {
+   "exact": 17,
+   "modified": 1,
+   "generated": 18,
+   "trivial": 14
+  }
+ },
+ "final_functional_loc": 170
+}

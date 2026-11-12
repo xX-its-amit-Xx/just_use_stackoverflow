@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/search?q=recursive+descent+calculator+javascript+language%3AJavaScript+license%3Amit&type=repositories&s=stars&o=desc",
+    "license": "none (search performed via GUI browser; no usable licensed candidate found)",
+    "files_or_snippet": "No files reused. Searched GitHub via the browser with several queries (arithmetic expression evaluator, expression parser recursive descent, safe expression evaluator license:mit, recursive descent calculator license:mit). Reviewed https://github.com/DylanLindsell/simple-mathematical-expression-evaluator (recursive descent JavaScript calculator, calculator.js) but it has no LICENSE file, so its code was NOT copied. Other hits (eval-estree-expression, typescript-expression-language, numenor, eel) are large general-purpose libraries with different semantics and were not adopted.",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Not applicable: nothing reused. src/calc.js and src/cli.js were written from scratch for this spec (notes: no usable existing implementation was found, so the deliverable is original code)."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/formulakit",
+    "license": "MIT",
+    "files_or_snippet": "formulakit@0.1.0 dist/index.js: src/lexer.ts tokenize(), src/parser.ts Parser (Pratt parser, BP table, right-assoc ^ via bp-1, unary operand at BP 65); package.json repository https://github.com/trananhtung/formulakit",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 90,
+    "how_adapted": "Retained the Pratt parser structure and binding-power scheme (^ right-assoc above unary above */% above +-). Removed comparison, logical, ternary, identifier, function-call and builtin support; replaced the number lexer with the spec's integer/decimal/exponent grammar; made all errors CalcError with 0-based positions; added explicit errors for missing operands, unbalanced parentheses, division/remainder by zero and non-finite results; added the evaluator over a small AST."
+  }
+]

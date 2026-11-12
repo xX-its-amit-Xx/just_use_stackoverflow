@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pm-s4 · Project manager</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header id="topbar" hidden>
+    <strong class="brand">pm-s4</strong>
+    <select id="wsSelect" title="Workspace"></select>
+    <select id="projSelect" title="Project"></select>
+    <nav>
+      <a href="#/board">Board</a>
+      <a href="#/backlog">Backlog</a>
+      <a href="#/sprint">Sprint report</a>
+      <a href="#/settings">Settings</a>
+    </nav>
+    <form id="searchForm" class="search">
+      <input id="searchInput" type="search" placeholder='search: status:"In Progress" label:x -type:bug' aria-label="Search">
+    </form>
+    <button id="notifBtn" type="button" class="bell">🔔 <span id="unreadCount">0</span></button>
+    <span id="whoami"></span>
+    <button id="logoutBtn" type="button">Log out</button>
+  </header>
+  <div id="notifPanel" class="panel" hidden></div>
+  <div id="flash" role="status" hidden></div>
+  <main id="app"></main>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

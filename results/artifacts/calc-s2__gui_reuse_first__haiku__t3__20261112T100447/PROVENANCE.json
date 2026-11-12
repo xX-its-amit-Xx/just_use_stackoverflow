@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval/blob/master/src/token-stream.js (raw: https://raw.githubusercontent.com/silentmatt/expr-eval/master/src/token-stream.js)",
+    "license": "MIT (Copyright (c) 2015 Matthew Crumley; see https://github.com/silentmatt/expr-eval/blob/master/LICENSE.txt)",
+    "files_or_snippet": "src/token-stream.js (upstream src/token-stream.js, 453 lines)",
+    "local_paths": ["src/token-stream.js"],
+    "lines_used_estimate": 230,
+    "how_adapted": "Acquired via the browser (open raw file, Ctrl+A, gui copy, gui paste). Kept the tokenizer methods isWhitespace, isRadixInteger, isNumber, isName, isOperator, isParen, isComma, isSemicolon, newToken and next() structure. Adaptations: removed the parser-object dependency (constructor now takes only the expression; isOperatorEnabled checks removed); import paths given .js extensions for Node ESM; removed string, bracket, named-operator, constant and /* */ comment handling (not in this spec; constants are resolved by the evaluator so pi/e/tau arrive as TNAME tokens); parseError now throws CalcError(msg, position); removed getCoordinates; operator set reduced to + - * / % ^ ! =."
+  },
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval/blob/master/src/token.js (raw: https://raw.githubusercontent.com/silentmatt/expr-eval/master/src/token.js)",
+    "license": "MIT (Copyright (c) 2015 Matthew Crumley; see https://github.com/silentmatt/expr-eval/blob/master/LICENSE.txt)",
+    "files_or_snippet": "src/token.js (upstream src/token.js, 19 lines)",
+    "local_paths": ["src/token.js"],
+    "lines_used_estimate": 19,
+    "how_adapted": "Copied verbatim via the browser (raw view, Ctrl+A, gui copy, gui paste). Token type constants and Token(type, value, index) class used unchanged."
+  }
+]

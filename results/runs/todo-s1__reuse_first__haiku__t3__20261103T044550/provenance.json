@@ -1,0 +1,48 @@
+{
+ "external_exact_fraction": 0.008733624454148471,
+ "external_modified_fraction": 0.026200873362445413,
+ "external_fraction": 0.034934497816593885,
+ "line_classes": {
+  "nontrivial": 229,
+  "trivial": 101,
+  "exact": 2,
+  "modified": 6,
+  "generated": 221
+ },
+ "corpus_sources": 16,
+ "corpus_sources_contributing": 3,
+ "corpus_lines": 877,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 688,
+  "tool_result": 189
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/yuvrajnode__cli-todo-app/index.js",
+   4
+  ],
+  [
+   ".retrieval/repos/rajveeerr__CLI-Todo/CLIBasedTodo.js",
+   3
+  ],
+  [
+   "tool_result:toolu_01WA2KBZxCzzm59Zesyhifn2",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/todo.js": {
+   "exact": 1,
+   "modified": 2,
+   "generated": 148,
+   "trivial": 59
+  },
+  "src/cli.js": {
+   "exact": 1,
+   "modified": 4,
+   "generated": 73,
+   "trivial": 42
+  }
+ },
+ "final_functional_loc": 322
+}

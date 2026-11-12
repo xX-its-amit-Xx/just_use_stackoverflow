@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://cdn.jsdelivr.net/npm/marked@15.0.12/lib/marked.esm.js",
+    "license": "MIT (Copyright (c) 2018+ MarkedJS, 2011-2018 Christopher Jeffrey)",
+    "files_or_snippet": "marked v15.0.12 ESM build (lib/marked.esm.js), whole file; repo https://github.com/markedjs/marked found via GitHub repository search in the browser",
+    "local_paths": ["src/vendor/marked.esm.js"],
+    "lines_used_estimate": 2188,
+    "how_adapted": "Copied whole file through the GUI browser (select all, copy, paste). Patched: escape regexes/table no longer escape the apostrophe; block html() and inline tag() tokenizers return nothing, so raw HTML falls through as escaped text; 'html' alternatives removed from paragraph, table, setext-heading and list-item interruption regexes; GFM task-list detection and bare-URL (url) autolinks disabled. src/markdown.js adds renderer overrides (CommonMark-style hr/br/img/code output, entity decoding, URL scheme sanitisation, percent-encoding), heading-id/TOC/slugify glue; src/cli.js is new glue code."
+  }
+]

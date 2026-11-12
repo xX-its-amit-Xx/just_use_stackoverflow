@@ -1,0 +1,13 @@
+[
+  {"source_url": "https://www.npmjs.com/package/commonmark/v/0.31.2 (https://github.com/commonmark/commonmark.js)", "license": "BSD-2-Clause",
+   "files_or_snippet": "lib/blocks.js, lib/common.js, lib/from-code-point.js, lib/inlines.js, lib/node.js, lib/render/html.js, lib/render/renderer.js, LICENSE",
+   "local_paths": ["src/vendor/commonmark/"], "lines_used_estimate": 2900,
+   "how_adapted": "Copied verbatim; import paths rewritten to vendored mdurl/entities; added a disableHtml option that skips HTML-block starts and inline HTML tags so raw HTML is escaped as text. src/markdown.js is new glue wrapping Parser + HtmlRenderer."},
+  {"source_url": "https://www.npmjs.com/package/mdurl/v/1.0.1 (https://github.com/markdown-it/mdurl)", "license": "MIT",
+   "files_or_snippet": "encode.js, LICENSE", "local_paths": ["src/vendor/mdurl/"], "lines_used_estimate": 98,
+   "how_adapted": "Converted module.exports to ES default export."},
+  {"source_url": "https://www.npmjs.com/package/entities/v/3.0.1 (https://github.com/fb55/entities)", "license": "BSD-2-Clause",
+   "files_or_snippet": "lib/maps/entities.json, lib/decode_codepoint.js (decodeMap + decodeCodePoint), LICENSE",
+   "local_paths": ["src/vendor/entities/entities-map.js", "src/vendor/entities/index.js", "src/vendor/entities/LICENSE"], "lines_used_estimate": 60,
+   "how_adapted": "entities.json wrapped as an ES module; decodeCodePoint copied; decodeHTMLStrict reimplemented as a regex + map lookup instead of the generated binary trie."}
+]

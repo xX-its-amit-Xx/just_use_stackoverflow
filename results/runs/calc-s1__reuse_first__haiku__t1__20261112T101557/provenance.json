@@ -1,0 +1,52 @@
+{
+ "external_exact_fraction": 0.2440944881889764,
+ "external_modified_fraction": 0.13385826771653545,
+ "external_fraction": 0.3779527559055118,
+ "line_classes": {
+  "nontrivial": 127,
+  "trivial": 91,
+  "exact": 31,
+  "modified": 17,
+  "generated": 79
+ },
+ "corpus_sources": 15,
+ "corpus_sources_contributing": 4,
+ "corpus_lines": 4940,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 4815,
+  "tool_result": 125
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/formulakit@0.1.0/package/dist/index.cjs",
+   43
+  ],
+  [
+   ".retrieval/npm/formulakit@0.1.0/package/dist/index.js",
+   43
+  ],
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
+   7
+  ],
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
+   7
+  ]
+ ],
+ "per_file": {
+  "src/calc.js": {
+   "exact": 31,
+   "modified": 17,
+   "generated": 70,
+   "trivial": 88
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 9,
+   "trivial": 3
+  }
+ },
+ "final_functional_loc": 201
+}

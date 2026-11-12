@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "none",
+    "license": "n/a",
+    "files_or_snippet": "none reused; notes: GUI-only search performed before writing src/. Searched github.com repositories for 'todo store nodejs cli json file', 'todo list library json persist node cli license:mit' (0 results), 'todo cli nodejs' and 'todo store \"no dependencies\" node' (0 results). GitHub code search ('class TodoStore' language:JavaScript) required sign-in and returned nothing usable. Candidates inspected visually (umairjaffar-dev/cli_todo_app, khyati-2010/cli-todo, ARYANTYAGI1/CLI-Todo-App, Balaji-R-05/todo-cli, mshsheikh/CLI-todo-list-mshsheikh, stevescruz/task-master, h-sifat/productivity-timer) were full CLI apps depending on Commander/Chalk/Inquirer, not a dependency-free TodoStore matching SPEC.md; none was copied.",
+    "local_paths": ["src/todo.js", "src/cli.js", "tests/unit/todo.test.js", "tests/unit/cli.test.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "No existing implementation was usable. src/todo.js, src/cli.js and the unit tests were written from scratch to SPEC.md."
+  }
+]

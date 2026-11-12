@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Wiki</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <h2>Wiki</h2>
+    <input id="search" type="search" placeholder="Search…" autocomplete="off">
+    <ul id="search-results" class="list"></ul>
+    <div class="row">
+      <select id="tag-filter"><option value="">All tags</option></select>
+      <select id="sort"><option value="title">Title</option><option value="updated">Updated</option></select>
+    </div>
+    <ul id="page-list" class="list"></ul>
+    <button id="new-page">+ New page</button>
+  </aside>
+  <main id="main">
+    <div id="toolbar">
+      <input id="slug" placeholder="slug" pattern="[a-z0-9][a-z0-9_-]*">
+      <input id="title" placeholder="Title">
+      <input id="tags" placeholder="tags, comma separated">
+      <button id="save">Save</button>
+      <button id="history-btn">History</button>
+      <button id="delete">Delete</button>
+      <a id="view-link" target="_blank">View</a>
+      <span id="status"></span>
+    </div>
+    <div id="editor-wrap">
+      <textarea id="editor" spellcheck="false" placeholder="Write Markdown here…"></textarea>
+      <article id="preview" class="markdown-body"></article>
+    </div>
+    <section id="history" hidden>
+      <h3>History</h3>
+      <ul id="history-list" class="list"></ul>
+      <div class="row">From <select id="diff-from"></select> to <select id="diff-to"></select>
+        <button id="diff-btn">Diff</button><button id="revert-btn">Revert to "from"</button></div>
+      <pre id="diff"></pre>
+    </section>
+    <section id="backlinks-panel"><h3>Backlinks</h3><ul id="backlinks" class="list"></ul></section>
+  </main>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

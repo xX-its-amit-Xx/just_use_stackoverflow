@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f2f4f7; color: #1d2330; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #1f4e79; color: #fff; }
+header a { color: #fff; text-decoration: none; }
+h1 { margin: 0; font-size: 20px; }
+#userbar button { margin-left: 8px; }
+main { padding: 16px 20px; }
+#msg { margin: 8px 20px 0; min-height: 0; }
+#msg.error { background: #fde2e1; color: #8a1c17; padding: 8px 12px; border-radius: 4px; }
+#msg.info { background: #e2f1e4; color: #1d5a28; padding: 8px 12px; border-radius: 4px; }
+button { padding: 5px 10px; border: 1px solid #aab; background: #fff; border-radius: 4px; cursor: pointer; }
+button.primary { background: #1f6fb5; color: #fff; border-color: #1f6fb5; }
+input, select { padding: 6px; border: 1px solid #aab; border-radius: 4px; }
+form.inline { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+.card-panel { background: #fff; border-radius: 6px; padding: 16px; max-width: 360px; margin: 24px auto; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.card-panel form { display: flex; flex-direction: column; gap: 8px; }
+.boards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.boards li { background: #fff; padding: 12px; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
+.boards a { font-weight: 600; color: #1f4e79; }
+.muted { color: #667; font-size: 13px; }
+.board-meta { margin-bottom: 12px; }
+.columns { display: flex; gap: 12px; align-items: flex-start; overflow-x: auto; padding-bottom: 8px; }
+.column { background: #e4e8ee; border-radius: 6px; padding: 10px; min-width: 260px; width: 260px; flex: 0 0 260px; }
+.column h3 { margin: 0 0 8px; font-size: 15px; display: flex; justify-content: space-between; }
+.column.drop-target { outline: 2px dashed #1f6fb5; }
+.column.over-limit h3 { color: #a11; }
+.card { background: #fff; border-radius: 4px; padding: 8px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.15); cursor: grab; }
+.card .title { font-weight: 600; }
+.card .labels span { display: inline-block; padding: 1px 6px; border-radius: 3px; color: #fff; font-size: 11px; margin: 2px 2px 0 0; }
+.card .actions { margin-top: 6px; display: flex; gap: 4px; }
+.card .actions button { font-size: 12px; padding: 2px 6px; }
+.add-card { display: flex; gap: 4px; margin-top: 6px; }
+.add-card input { flex: 1; min-width: 0; }

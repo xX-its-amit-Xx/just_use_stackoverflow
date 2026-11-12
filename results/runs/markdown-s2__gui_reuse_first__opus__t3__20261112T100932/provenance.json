@@ -1,0 +1,45 @@
+{
+ "external_exact_fraction": 0.8957312806158153,
+ "external_modified_fraction": 0.010496850944716585,
+ "external_fraction": 0.9062281315605318,
+ "line_classes": {
+  "nontrivial": 1429,
+  "trivial": 953,
+  "exact": 1280,
+  "modified": 15,
+  "generated": 134
+ },
+ "corpus_sources": 2,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 2210,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 2210
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1794478225916.txt",
+   1295
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 7,
+   "modified": 10,
+   "generated": 111,
+   "trivial": 53
+  },
+  "src/cli.js": {
+   "exact": 1,
+   "modified": 2,
+   "generated": 12,
+   "trivial": 8
+  },
+  "src/vendor/marked.esm.js": {
+   "exact": 1272,
+   "modified": 3,
+   "generated": 11,
+   "trivial": 892
+  }
+ },
+ "final_functional_loc": 2293
+}

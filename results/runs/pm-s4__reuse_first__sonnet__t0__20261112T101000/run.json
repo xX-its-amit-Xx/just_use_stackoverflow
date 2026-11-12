@@ -1,0 +1,233 @@
+{
+ "run_id": "pm-s4__reuse_first__sonnet__t0__20261112T101000",
+ "task_id": "pm-s4",
+ "strategy": "reuse_first",
+ "trial": 0,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 13,
+ "model_invocations": 12,
+ "input_tokens": 24,
+ "output_tokens": 46033,
+ "cached_input_tokens": 259721,
+ "cache_creation_tokens": 57738,
+ "reasoning_tokens": 7439,
+ "total_tokens": 46057,
+ "total_tokens_incl_cache": 363516,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.717302,
+ "inference_cost_nocache_usd": 1.095296,
+ "inference_cost_attributed_usd": 0.717302,
+ "harness_reported_cost_usd": 0.7173021,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.006488,
+ "total_execution_cost_usd": 0.72379,
+ "elapsed_s": 291.95,
+ "agent_elapsed_s": 289.79,
+ "orchestrator_observed_s": 290.74,
+ "eval_s": 2.15,
+ "active_s": 290.3,
+ "api_s": 279.14,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 5,
+ "own_pass": 5,
+ "functional_loc": 980,
+ "functional_chars": 60053,
+ "normalized_loc": 2002,
+ "minified_vendor_bytes": 0,
+ "test_loc": 116,
+ "comment_lines": 28,
+ "blank_lines": 38,
+ "retrieval": {
+  "search_queries": 5,
+  "search_results_examined": 11,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 3,
+  "retrieved_loc": 978,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 6,
+  "retrieved_loc_modified": 3,
+  "retrieved_loc_discarded": 969,
+  "generated_loc": 971,
+  "modified_loc": 3,
+  "integration_modifications": 0,
+  "external_fraction": 0.0095,
+  "search_to_use_conversion": 0.2857,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 6,
+  "retrieval_failures": 2,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 6,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 23
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 46
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 67
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 80
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 87
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 96
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 112
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 117
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 125
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 153
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 7,
+   "max_file_loc": 709,
+   "mean_file_loc": 140.0,
+   "functions": 195,
+   "loc_per_function": 5.0,
+   "duplicate_line_ratio": 0.0533
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.005917159763313609,
+  "external_modified_fraction": 0.0035502958579881655,
+  "external_fraction": 0.009467455621301775,
+  "line_classes": {
+   "nontrivial": 845,
+   "trivial": 158,
+   "exact": 5,
+   "modified": 3,
+   "generated": 837
+  },
+  "corpus_sources": 7,
+  "corpus_sources_contributing": 2,
+  "corpus_lines": 978,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 710,
+   "tool_result": 268
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/snippets/so_8493195.md",
+    8
+   ],
+   [
+    "tool_result:toolu_018cFhvHmRveNcJibcNrpocz",
+    5
+   ]
+  ],
+  "final_functional_loc": 980
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 24,
+    "outputTokens": 46033,
+    "cacheReadInputTokens": 259721,
+    "cacheCreationInputTokens": 57738,
+    "webSearchRequests": 0,
+    "costUSD": 0.7173021,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 7439,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 57738,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 24,
+    "output": 46033,
+    "cr": 259721,
+    "cw": 57738
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "github_search": 1,
+  "web_search": 2,
+  "snippet_retrieval": 3,
+  "code_generation": 4,
+  "other": 1
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.004545454545454545,
+ "external_fraction": 0.004545454545454545,
+ "line_classes": {
+  "nontrivial": 220,
+  "trivial": 93,
+  "exact": 0,
+  "modified": 1,
+  "generated": 219
+ },
+ "corpus_sources": 2,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 83,
+ "corpus_lines_by_kind": {
+  "tool_result": 83
+ },
+ "contributing_sources": [
+  [
+   "tool_result:toolu_014pKwfeAv9Pv2NxNsncKWzt",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/todo.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 148,
+   "trivial": 59
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 71,
+   "trivial": 34
+  }
+ },
+ "final_functional_loc": 311
+}

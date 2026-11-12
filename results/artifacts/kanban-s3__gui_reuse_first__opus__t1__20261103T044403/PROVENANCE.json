@@ -1,0 +1,11 @@
+[
+  {
+    "source_url": "https://github.com/waterrmalann/kards/blob/main/css/main.css",
+    "license": "MIT (Copyright (c) 2021 Alan)",
+    "files_or_snippet": "css/main.css (entire file)",
+    "local_paths": ["src/static/kards.css"],
+    "lines_used_estimate": 495,
+    "how_adapted": "Copied verbatim (plus a one-line attribution header comment) through the browser (raw view, copy/paste). Used as the base stylesheet for the web UI (.container, #cards-container, .parent-card column/card styles); overrides are in src/static/app.css (own code).",
+    "notes": "Backend (src/server.js, src/main.js) and UI logic (src/static/app.js, index.html, app.css) written from scratch: GitHub searches for framework-free Node Kanban backends found only Express/MongoDB-based projects, and the vanilla-JS UI candidate scazzy/kanban-board has no license."
+  }
+]

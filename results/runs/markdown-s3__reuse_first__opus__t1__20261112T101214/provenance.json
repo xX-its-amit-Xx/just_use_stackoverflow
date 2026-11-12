@@ -1,0 +1,92 @@
+{
+ "external_exact_fraction": 0.03247574862927035,
+ "external_modified_fraction": 0.1703922395613665,
+ "external_fraction": 0.20286798819063687,
+ "line_classes": {
+  "nontrivial": 2371,
+  "trivial": 1394,
+  "exact": 77,
+  "modified": 404,
+  "generated": 1890
+ },
+ "corpus_sources": 9,
+ "corpus_sources_contributing": 5,
+ "corpus_lines": 8950,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 8808,
+  "tool_result": 142
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+   472
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+   430
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+   21
+  ],
+  [
+   ".retrieval/snippets/raw.githubusercontent.com%2FFlet%2Fgithub-slugger%2Fmaster%2Findex.js",
+   3
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/README.md",
+   3
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 8,
+   "modified": 10,
+   "generated": 87,
+   "trivial": 33
+  },
+  "src/server.js": {
+   "exact": 2,
+   "modified": 21,
+   "generated": 220,
+   "trivial": 69
+  },
+  "src/diff.js": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 22,
+   "trivial": 14
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 4,
+   "trivial": 0
+  },
+  "src/public/app.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 14,
+   "trivial": 15
+  },
+  "src/public/app.js": {
+   "exact": 2,
+   "modified": 2,
+   "generated": 103,
+   "trivial": 24
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 37,
+   "trivial": 12
+  },
+  "src/vendor/markdown-it.mjs": {
+   "exact": 65,
+   "modified": 368,
+   "generated": 1403,
+   "trivial": 1227
+  }
+ },
+ "final_functional_loc": 3642
+}

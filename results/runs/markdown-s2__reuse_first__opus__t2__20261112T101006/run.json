@@ -1,0 +1,295 @@
+{
+ "run_id": "markdown-s2__reuse_first__opus__t2__20261112T101006",
+ "task_id": "markdown-s2",
+ "strategy": "reuse_first",
+ "trial": 2,
+ "tier": "S2",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 15,
+ "model_invocations": 14,
+ "input_tokens": 28,
+ "output_tokens": 12076,
+ "cached_input_tokens": 257563,
+ "cache_creation_tokens": 25374,
+ "reasoning_tokens": 2786,
+ "total_tokens": 12104,
+ "total_tokens_incl_cache": 295041,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.496137,
+ "inference_cost_nocache_usd": 1.37338,
+ "inference_cost_attributed_usd": 0.496137,
+ "harness_reported_cost_usd": 0.49613660000000004,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.002788,
+ "total_execution_cost_usd": 0.498924,
+ "elapsed_s": 125.44,
+ "agent_elapsed_s": 124.85,
+ "orchestrator_observed_s": 125.63,
+ "eval_s": 0.59,
+ "active_s": 133.51,
+ "api_s": 116.36,
+ "hidden_tests": 56,
+ "hidden_pass": 56,
+ "hidden_fail": 0,
+ "own_tests": 8,
+ "own_pass": 8,
+ "functional_loc": 5691,
+ "functional_chars": 184303,
+ "normalized_loc": 6143,
+ "minified_vendor_bytes": 0,
+ "test_loc": 34,
+ "comment_lines": 1653,
+ "blank_lines": 155,
+ "retrieval": {
+  "search_queries": 5,
+  "search_results_examined": 18,
+  "repositories_inspected": 0,
+  "repositories_cloned": 7,
+  "clone_attempts_failed": 5,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 17543,
+  "cloned_repo_lines": 22205,
+  "retrieved_loc_incorporated": 5590,
+  "retrieved_loc_modified": 13,
+  "retrieved_loc_discarded": 11940,
+  "generated_loc": 88,
+  "modified_loc": 13,
+  "integration_modifications": 0,
+  "external_fraction": 0.9846,
+  "search_to_use_conversion": 0.5,
+  "repository_acquisition_s": 3.76,
+  "retrieval_actions": 4,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.25
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 10,
+  "retrieval_invocations": 9,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "d826b43b89393f66"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 19,
+   "max_file_loc": 3339,
+   "mean_file_loc": 299.5,
+   "functions": 703,
+   "loc_per_function": 8.1,
+   "duplicate_line_ratio": 0.1896
+  },
+  "license": {
+   "provenance_entries": 7,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.9823008849557522,
+  "external_modified_fraction": 0.002275600505689001,
+  "external_fraction": 0.9845764854614412,
+  "line_classes": {
+   "nontrivial": 3955,
+   "trivial": 3389,
+   "exact": 3885,
+   "modified": 9,
+   "generated": 61
+  },
+  "corpus_sources": 68,
+  "corpus_sources_contributing": 34,
+  "corpus_lines": 17543,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 17450,
+   "tool_result": 93
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+    2356
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+    2334
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode.js",
+    573
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/decode.ts",
+    426
+   ],
+   [
+    ".retrieval/npm/linkify-it@6.1.0/package/build/index.mjs",
+    322
+   ],
+   [
+    ".retrieval/npm/linkify-it@6.1.0/package/build/index.cjs.js",
+    307
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/build/index.cjs.js",
+    241
+   ],
+   [
+    ".retrieval/npm/punycode.js@2.3.1/package/punycode.es6.js",
+    189
+   ],
+   [
+    ".retrieval/npm/punycode.js@2.3.1/package/punycode.js",
+    187
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/encode.js",
+    144
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/parse.mjs",
+    128
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/encode.ts",
+    97
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/escape.js",
+    91
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/internal/decode-data-format.js",
+    82
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/decode.mjs",
+    78
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/encode.mjs",
+    65
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/internal/decode-data-format.ts",
+    58
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/escape.ts",
+    55
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/index.js",
+    39
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/format.mjs",
+    32
+   ],
+   [
+    ".retrieval/npm/github-slugger@2.0.0/package/index.js",
+    18
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode-codepoint.js",
+    18
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/index.ts",
+    17
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/decode-codepoint.ts",
+    11
+   ],
+   [
+    ".retrieval/npm/uc.micro@3.0.0/package/build/index.cjs.js",
+    7
+   ],
+   [
+    ".retrieval/npm/uc.micro@3.0.0/package/build/index.mjs",
+    7
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+    5
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/index.mjs",
+    4
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/index.d.ts",
+    3
+   ],
+   [
+    ".retrieval/npm/punycode.js@2.3.1/package/README.md",
+    2
+   ]
+  ],
+  "final_functional_loc": 5691
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 28,
+    "outputTokens": 12076,
+    "cacheReadInputTokens": 257563,
+    "cacheCreationInputTokens": 25374,
+    "webSearchRequests": 0,
+    "costUSD": 0.49613660000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 2786,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 25374,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 28,
+    "output": 12076,
+    "cr": 257563,
+    "cw": 25374
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 2,
+  "web_search": 1,
+  "repository_inspection": 5,
+  "repository_clone": 2,
+  "code_edit": 1,
+  "code_generation": 2
+ }
+}

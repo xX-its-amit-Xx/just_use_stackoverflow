@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/d3/d3-dsv (npm d3-dsv@3.0.2, dist/d3-dsv.mjs)",
+    "license": "ISC",
+    "files_or_snippet": "dsv() parseRows tokenizer and formatValue quoting logic",
+    "local_paths": ["src/csv.js"],
+    "lines_used_estimate": 45,
+    "how_adapted": "Reduced to comma delimiter, converted to ES module exports, CRLF row output per RFC 4180, BOM stripping, unterminated-quote detection; used for CSV export/import."
+  },
+  {
+    "source_url": "https://stackoverflow.com/a/16261693 (question https://stackoverflow.com/q/16261635)",
+    "license": "CC BY-SA 3.0",
+    "files_or_snippet": "Regex /(?:[^\\s\"]+|\"[^\"]*\")+/g to split on whitespace while keeping quoted substrings together",
+    "local_paths": ["src/server.js (parseQuery)"],
+    "lines_used_estimate": 1,
+    "how_adapted": "Used as the tokenizer of the search query language; added unbalanced-quote validation, leading '-' negation and field:value parsing."
+  },
+  {
+    "source_url": "notes",
+    "license": "n/a",
+    "files_or_snippet": "GitHub repository search for Jira/issue-tracker clones found no permissively licensed Node stdlib candidate (results unlicensed, MPL-2.0 .NET, or framework-based). The rest of the server, SPA and tests were written for this project.",
+    "local_paths": ["src/server.js", "src/main.js", "src/static/*"],
+    "lines_used_estimate": 0,
+    "how_adapted": "Original code"
+  }
+]

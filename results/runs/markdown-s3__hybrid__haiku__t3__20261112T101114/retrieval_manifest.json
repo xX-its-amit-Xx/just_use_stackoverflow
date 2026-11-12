@@ -1,0 +1,12 @@
+[
+ {
+  "path": ".retrieval/npm/commonmark@0.31.2",
+  "files": 16,
+  "bytes": 673094
+ },
+ {
+  "path": ".retrieval/npm/entities@9.0.0",
+  "files": 43,
+  "bytes": 327668
+ }
+]

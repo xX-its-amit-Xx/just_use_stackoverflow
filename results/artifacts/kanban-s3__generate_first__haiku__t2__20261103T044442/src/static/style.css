@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f2f4f7; color: #1d2330; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; background: #2c3e66; color: #fff; }
+header a { color: #fff; text-decoration: none; }
+h1 { margin: 0; font-size: 1.3rem; }
+main { padding: 1.25rem; }
+button { cursor: pointer; border: none; border-radius: 4px; padding: 0.35rem 0.7rem; background: #3d5fa8; color: #fff; }
+button.secondary { background: #dfe4ee; color: #1d2330; }
+button.danger { background: #b03a3a; }
+input, textarea { padding: 0.35rem; border: 1px solid #b8c0cf; border-radius: 4px; font: inherit; width: 100%; }
+form { display: flex; flex-direction: column; gap: 0.4rem; max-width: 22rem; }
+.card-box { background: #fff; border-radius: 6px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); max-width: 26rem; }
+.error { color: #b03a3a; min-height: 1.2em; }
+.boards { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+.boards a { display: block; padding: 0.9rem 1rem; background: #fff; border-radius: 6px; color: #1d2330; text-decoration: none; min-width: 12rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.board { display: flex; gap: 0.8rem; align-items: flex-start; overflow-x: auto; padding-bottom: 1rem; }
+.column { background: #e4e8f0; border-radius: 6px; padding: 0.6rem; width: 16rem; min-height: 8rem; flex-shrink: 0; }
+.column h2 { font-size: 1rem; margin: 0.2rem 0 0.5rem; display: flex; justify-content: space-between; }
+.column.drop-target { outline: 2px dashed #3d5fa8; }
+.count-over { color: #b03a3a; }
+.task { background: #fff; border-radius: 4px; padding: 0.5rem; margin-bottom: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,.1); cursor: grab; }
+.task .title { font-weight: 600; word-break: break-word; }
+.task .meta { font-size: 0.8rem; color: #5a6478; margin-top: 0.2rem; }
+.task .moves { display: flex; gap: 0.3rem; margin-top: 0.4rem; }
+.task .moves button { padding: 0.15rem 0.4rem; font-size: 0.8rem; }
+.add-card { margin-top: 0.4rem; }
+.add-card input { margin-bottom: 0.3rem; }
+#toast { position: fixed; bottom: 1rem; right: 1rem; background: #1d2330; color: #fff; padding: 0.5rem 0.9rem; border-radius: 4px; display: none; }
+#toast.show { display: block; }

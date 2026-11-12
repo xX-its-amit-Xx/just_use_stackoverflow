@@ -1,0 +1,156 @@
+{
+ "run_id": "pm-s4__reuse_first__opus__t4__20261112T101453",
+ "task_id": "pm-s4",
+ "strategy": "reuse_first",
+ "trial": 4,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 143,
+ "timed_out": false,
+ "harness_subtype": null,
+ "num_turns": null,
+ "model_invocations": 10,
+ "input_tokens": 20,
+ "output_tokens": 13113,
+ "cached_input_tokens": 170330,
+ "cache_creation_tokens": 22957,
+ "reasoning_tokens": 8059,
+ "total_tokens": 13133,
+ "total_tokens_incl_cache": 206420,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.480062,
+ "inference_cost_nocache_usd": 1.035488,
+ "inference_cost_attributed_usd": 0.480062,
+ "harness_reported_cost_usd": null,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.003953,
+ "total_execution_cost_usd": 0.484015,
+ "elapsed_s": 177.87,
+ "agent_elapsed_s": 177.43,
+ "orchestrator_observed_s": 177.43,
+ "eval_s": 0.43,
+ "active_s": 12.15,
+ "api_s": 0.0,
+ "hidden_tests": 1,
+ "hidden_pass": 0,
+ "hidden_fail": 1,
+ "own_tests": 1,
+ "own_pass": 0,
+ "functional_loc": 170,
+ "functional_chars": 5425,
+ "normalized_loc": 181,
+ "minified_vendor_bytes": 0,
+ "test_loc": 14,
+ "comment_lines": 8,
+ "blank_lines": 10,
+ "retrieval": {
+  "search_queries": 8,
+  "search_results_examined": 32,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 896,
+  "cloned_repo_lines": 648,
+  "retrieved_loc_incorporated": 23,
+  "retrieved_loc_modified": 4,
+  "retrieved_loc_discarded": 869,
+  "generated_loc": 143,
+  "modified_loc": 4,
+  "integration_modifications": 0,
+  "external_fraction": 0.1587,
+  "search_to_use_conversion": 0.2,
+  "repository_acquisition_s": 1.24,
+  "retrieval_actions": 3,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 5,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 125,
+   "mean_file_loc": 85.0,
+   "functions": 25,
+   "loc_per_function": 6.8,
+   "duplicate_line_ratio": 0.0238
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [
+    "16% of non-trivial lines match retrieved material but PROVENANCE.json is empty"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": [
+   "/home/user/just_use_stackoverflow/bench/tasks/pm-s4/hidden/pm_s4.test.js"
+  ]
+ },
+ "provenance": {
+  "external_exact_fraction": 0.1349206349206349,
+  "external_modified_fraction": 0.023809523809523808,
+  "external_fraction": 0.15873015873015872,
+  "line_classes": {
+   "nontrivial": 126,
+   "trivial": 52,
+   "exact": 17,
+   "modified": 3,
+   "generated": 106
+  },
+  "corpus_sources": 10,
+  "corpus_sources_contributing": 2,
+  "corpus_lines": 896,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 557,
+   "tool_result": 339
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.mjs",
+    20
+   ],
+   [
+    ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.js",
+    20
+   ]
+  ],
+  "final_functional_loc": 170
+ },
+ "reconciliation": {},
+ "action_counts": {
+  "planning": 1,
+  "other": 2,
+  "github_search": 1,
+  "web_search": 1,
+  "repository_clone": 1,
+  "repository_inspection": 2,
+  "code_generation": 2
+ }
+}

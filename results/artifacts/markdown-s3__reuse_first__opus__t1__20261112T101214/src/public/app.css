@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.5 system-ui, sans-serif; color: #222; }
+#app { display: flex; height: 100vh; }
+#sidebar { width: 260px; border-right: 1px solid #ddd; padding: 10px; overflow: auto; background: #fafafa; }
+#sidebar input, #sidebar select, #sidebar button { width: 100%; margin: 4px 0; }
+.row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.list { list-style: none; padding: 0; margin: 4px 0; }
+.list li { padding: 3px 4px; cursor: pointer; border-radius: 3px; }
+.list li:hover, .list li.active { background: #e6eefc; }
+.tag { font-size: 11px; background: #eee; border-radius: 8px; padding: 0 6px; margin-left: 4px; }
+#main { flex: 1; display: flex; flex-direction: column; overflow: auto; padding: 10px; }
+#toolbar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+#toolbar #title { flex: 1; min-width: 160px; }
+#status { color: #666; font-size: 13px; }
+#status.error { color: #b00; }
+#editor-wrap { display: flex; gap: 10px; flex: 1; min-height: 300px; margin-top: 8px; }
+#editor { flex: 1; font: 14px/1.5 ui-monospace, monospace; padding: 8px; resize: none; }
+#preview { flex: 1; overflow: auto; border: 1px solid #eee; padding: 8px 14px; }
+.wiki-page main { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+.wiki-page header { padding: 8px 16px; border-bottom: 1px solid #ddd; }
+a.wikilink.missing { color: #c33; }
+mark { background: #ffe58a; }
+#diff { background: #f6f8fa; padding: 8px; overflow: auto; }
+#diff .add { background: #e6ffed; display: block; }
+#diff .del { background: #ffeef0; display: block; }
+.markdown-body table { border-collapse: collapse; }
+.markdown-body td, .markdown-body th { border: 1px solid #ccc; padding: 3px 8px; }
+.markdown-body pre { background: #f6f8fa; padding: 8px; overflow: auto; }
+.markdown-body blockquote { border-left: 4px solid #ddd; margin-left: 0; padding-left: 12px; color: #555; }

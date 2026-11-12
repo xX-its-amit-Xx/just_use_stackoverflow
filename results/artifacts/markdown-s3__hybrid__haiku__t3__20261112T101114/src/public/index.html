@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markdown Wiki</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h1><a href="#/">Wiki</a></h1>
+    <form id="search-form">
+      <input id="search" type="search" placeholder="Search…" autocomplete="off">
+    </form>
+    <div class="row">
+      <select id="tag-filter"><option value="">All tags</option></select>
+      <select id="sort">
+        <option value="title">Title</option>
+        <option value="updated">Recently updated</option>
+      </select>
+    </div>
+    <button id="new-page" type="button">New page</button>
+    <ul id="page-list"></ul>
+  </aside>
+  <main id="main">
+    <div id="notice" hidden></div>
+    <section id="view"></section>
+  </main>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

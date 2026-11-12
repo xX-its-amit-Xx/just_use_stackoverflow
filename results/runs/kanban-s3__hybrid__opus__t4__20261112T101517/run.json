@@ -1,0 +1,146 @@
+{
+ "run_id": "kanban-s3__hybrid__opus__t4__20261112T101517",
+ "task_id": "kanban-s3",
+ "strategy": "hybrid",
+ "trial": 4,
+ "tier": "S3",
+ "family": "kanban",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 143,
+ "timed_out": false,
+ "harness_subtype": null,
+ "num_turns": null,
+ "model_invocations": 4,
+ "input_tokens": 8,
+ "output_tokens": 18716,
+ "cached_input_tokens": 44248,
+ "cache_creation_tokens": 18575,
+ "reasoning_tokens": 1960,
+ "total_tokens": 18724,
+ "total_tokens_incl_cache": 81547,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.531802,
+ "inference_cost_nocache_usd": 0.625644,
+ "inference_cost_attributed_usd": 0.531802,
+ "harness_reported_cost_usd": null,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.003507,
+ "total_execution_cost_usd": 0.535309,
+ "elapsed_s": 157.81,
+ "agent_elapsed_s": 153.24,
+ "orchestrator_observed_s": 153.24,
+ "eval_s": 4.58,
+ "active_s": 0.79,
+ "api_s": 0.0,
+ "hidden_tests": 27,
+ "hidden_pass": 27,
+ "hidden_fail": 0,
+ "own_tests": 1,
+ "own_pass": 1,
+ "functional_loc": 833,
+ "functional_chars": 31852,
+ "normalized_loc": 1062,
+ "minified_vendor_bytes": 0,
+ "test_loc": 13,
+ "comment_lines": 13,
+ "blank_lines": 61,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 833,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 2,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "3c62029ff48b7aed"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/index.html",
+    "line": 128
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/index.html",
+    "line": 155
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 3,
+   "max_file_loc": 624,
+   "mean_file_loc": 277.7,
+   "functions": 121,
+   "loc_per_function": 6.9,
+   "duplicate_line_ratio": 0.1021
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 656,
+   "trivial": 190,
+   "exact": 0,
+   "modified": 0,
+   "generated": 656
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 833
+ },
+ "reconciliation": {},
+ "action_counts": {
+  "planning": 1,
+  "code_generation": 3
+ }
+}

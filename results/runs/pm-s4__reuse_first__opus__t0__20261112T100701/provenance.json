@@ -1,0 +1,84 @@
+{
+ "external_exact_fraction": 0.014253563390847712,
+ "external_modified_fraction": 0.020255063765941484,
+ "external_fraction": 0.0345086271567892,
+ "line_classes": {
+  "nontrivial": 1333,
+  "trivial": 289,
+  "exact": 19,
+  "modified": 27,
+  "generated": 1287
+ },
+ "corpus_sources": 13,
+ "corpus_sources_contributing": 6,
+ "corpus_lines": 852,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 709,
+  "tool_result": 143
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.js",
+   31
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.mjs",
+   31
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/bin/dsv2json.js",
+   10
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/bin/json2dsv.js",
+   9
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/bin/dsv2dsv.js",
+   9
+  ],
+  [
+   ".retrieval/snippets/so_16261635.md",
+   5
+  ]
+ ],
+ "per_file": {
+  "src/csv.js": {
+   "exact": 19,
+   "modified": 1,
+   "generated": 14,
+   "trivial": 12
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 26,
+   "generated": 968,
+   "trivial": 215
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 4,
+   "trivial": 0
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 282,
+   "trivial": 56
+  },
+  "src/static/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 12,
+   "trivial": 1
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 5
+  }
+ },
+ "final_functional_loc": 1582
+}

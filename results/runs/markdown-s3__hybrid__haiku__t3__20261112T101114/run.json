@@ -1,0 +1,321 @@
+{
+ "run_id": "markdown-s3__hybrid__haiku__t3__20261112T101114",
+ "task_id": "markdown-s3",
+ "strategy": "hybrid",
+ "trial": 3,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 143,
+ "timed_out": false,
+ "harness_subtype": null,
+ "num_turns": null,
+ "model_invocations": 38,
+ "input_tokens": 76,
+ "output_tokens": 75763,
+ "cached_input_tokens": 1912387,
+ "cache_creation_tokens": 104427,
+ "reasoning_tokens": 41209,
+ "total_tokens": 75839,
+ "total_tokens_incl_cache": 2092653,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.128503,
+ "inference_cost_nocache_usd": 0.392054,
+ "inference_cost_attributed_usd": 0.128503,
+ "harness_reported_cost_usd": null,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.008852,
+ "total_execution_cost_usd": 0.137355,
+ "elapsed_s": 398.35,
+ "agent_elapsed_s": 396.95,
+ "orchestrator_observed_s": 396.95,
+ "eval_s": 1.4,
+ "active_s": 30.65,
+ "api_s": 0.0,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 1,
+ "own_pass": 1,
+ "functional_loc": 4508,
+ "functional_chars": 130094,
+ "normalized_loc": 4336,
+ "minified_vendor_bytes": 0,
+ "test_loc": 13,
+ "comment_lines": 731,
+ "blank_lines": 406,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 10,
+  "repositories_inspected": 0,
+  "repositories_cloned": 2,
+  "clone_attempts_failed": 1,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 17923,
+  "cloned_repo_lines": 18891,
+  "retrieved_loc_incorporated": 3274,
+  "retrieved_loc_modified": 82,
+  "retrieved_loc_discarded": 14567,
+  "generated_loc": 1152,
+  "modified_loc": 82,
+  "integration_modifications": 0,
+  "external_fraction": 0.7445,
+  "search_to_use_conversion": 0.5714,
+  "repository_acquisition_s": 4.49,
+  "retrieval_actions": 3,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 21,
+  "retrieval_invocations": 11,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 43
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 54
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 64
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 93
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 96
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 126
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 149
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 188
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 207
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 221
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 242
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 246
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 256
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 264
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 286
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 297
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 17,
+   "max_file_loc": 970,
+   "mean_file_loc": 265.2,
+   "functions": 599,
+   "loc_per_function": 7.5,
+   "duplicate_line_ratio": 0.1426
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [
+    "74% of non-trivial lines match retrieved material but PROVENANCE.json is empty"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.7263747118867303,
+  "external_modified_fraction": 0.018109976950938425,
+  "external_fraction": 0.7444846888376687,
+  "line_classes": {
+   "nontrivial": 3037,
+   "trivial": 2202,
+   "exact": 2206,
+   "modified": 55,
+   "generated": 776
+  },
+  "corpus_sources": 42,
+  "corpus_sources_contributing": 24,
+  "corpus_lines": 17923,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 17923
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+    1544
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode.js",
+    580
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+    578
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+    576
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/decode.ts",
+    426
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+    231
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+    195
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/internal/decode-data-format.js",
+    84
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+    65
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+    64
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/internal/decode-data-format.ts",
+    60
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+    45
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+    40
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode-codepoint.js",
+    18
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/encode.js",
+    16
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/escape.js",
+    15
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/README.md",
+    14
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+    14
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/decode-codepoint.ts",
+    11
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/escape.ts",
+    9
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/index.js",
+    7
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/encode.ts",
+    3
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode.d.ts",
+    2
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/generated/decode-data-html.js",
+    1
+   ]
+  ],
+  "final_functional_loc": 4508
+ },
+ "reconciliation": {},
+ "action_counts": {
+  "planning": 1,
+  "other": 18,
+  "repository_clone": 3,
+  "repository_inspection": 8,
+  "code_edit": 2,
+  "code_generation": 6
+ }
+}

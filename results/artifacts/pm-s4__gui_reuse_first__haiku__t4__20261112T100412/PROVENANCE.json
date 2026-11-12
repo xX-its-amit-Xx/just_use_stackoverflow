@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://github.com/htdangkhoa/pure-http/blob/master/lib/utils.js",
+    "license": "MIT",
+    "files_or_snippet": "lib/utils.js lines 1-60 (regexToParams, regexToString) of htdangkhoa/pure-http, which embeds regexparam v2.0.2 by Luke Edwards (https://github.com/lukeed/regexparam, MIT). Acquired via the browser: GitHub file view -> Raw -> select all -> gui copy/paste.",
+    "local_paths": ["src/vendor/regexparam.js"],
+    "lines_used_estimate": 55,
+    "how_adapted": "Copied the two path-to-regex functions verbatim in logic; wrote them as ES module named exports (export function regexToParams / regexToString) instead of the CJS module.exports block; dropped the unused defineProperty/defineGetter helpers and the CJS-only wrapper; kept the original MIT copyright header. Used by src/server.js for route matching with :param segments. License text in src/THIRD_PARTY_NOTICES.md."
+  },
+  {
+    "source_url": "none (written from scratch)",
+    "license": "n/a (original work for this project)",
+    "files_or_snippet": "src/server.js, src/store.js, src/search.js, src/csv.js, src/main.js, src/public/index.html, src/public/app.js, src/public/app.css, tests/unit/api.test.js",
+    "local_paths": ["src/server.js", "src/store.js", "src/search.js", "src/csv.js", "src/main.js", "src/public/index.html", "src/public/app.js", "src/public/app.css", "tests/unit/api.test.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "No existing implementation was reused for this application. GUI search performed through the browser on github.com: (1) 'node http kanban jira clone single file server json' -> 0 repository results; (2) 'kanban board nodejs zero-dependency server' -> 0 repository results; (3) 'kanban language:JavaScript' sorted by stars -> Wekan and Planka (full Meteor/Docker applications with heavy dependencies, not stdlib-only, not a JSON-file REST API); (4) 'rfc4180 csv parser javascript' -> only martsinlabs/csv-pipe (TypeScript, streaming; not adaptable to this plain ES-module codebase, so the CSV module was written from the RFC); (5) 'node http router zero dependencies language:JavaScript' -> htdangkhoa/pure-http (MIT, Express-style CJS framework; its router.js was inspected but its CJS structure and middleware model did not fit, so only its embedded regexparam helper was reused, see entry above). Therefore the domain logic (accounts, RBAC, workflows, sprints, search language, webhooks, audit, SPA) was written from scratch as the spec requires; the router, request parsing and persistence are small original code."
+  }
+]

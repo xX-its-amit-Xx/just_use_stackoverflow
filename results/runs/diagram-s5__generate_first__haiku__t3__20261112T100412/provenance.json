@@ -1,0 +1,110 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 2521,
+  "trivial": 999,
+  "exact": 0,
+  "modified": 0,
+  "generated": 2521
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 355,
+   "trivial": 126
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 9,
+   "trivial": 1
+  },
+  "src/server/store.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 115,
+   "trivial": 42
+  },
+  "src/server/ws.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 87,
+   "trivial": 37
+  },
+  "src/public/app.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 22,
+   "trivial": 12
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 675,
+   "trivial": 263
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 81,
+   "trivial": 19
+  },
+  "src/core/svg.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 54,
+   "trivial": 38
+  },
+  "src/core/geometry.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 97,
+   "trivial": 29
+  },
+  "src/core/drawio.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 123,
+   "trivial": 58
+  },
+  "src/core/index.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 12,
+   "trivial": 7
+  },
+  "src/core/layout.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 107,
+   "trivial": 37
+  },
+  "src/core/errors.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 2
+  },
+  "src/core/routing.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 193,
+   "trivial": 70
+  },
+  "src/core/document.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 586,
+   "trivial": 258
+  }
+ },
+ "final_functional_loc": 3416
+}

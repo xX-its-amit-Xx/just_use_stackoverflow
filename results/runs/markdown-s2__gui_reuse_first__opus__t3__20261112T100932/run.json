@@ -1,0 +1,214 @@
+{
+ "run_id": "markdown-s2__gui_reuse_first__opus__t3__20261112T100932",
+ "task_id": "markdown-s2",
+ "strategy": "gui_reuse_first",
+ "trial": 3,
+ "tier": "S2",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 26,
+ "model_invocations": 25,
+ "input_tokens": 50,
+ "output_tokens": 20384,
+ "cached_input_tokens": 667319,
+ "cache_creation_tokens": 46542,
+ "reasoning_tokens": 7644,
+ "total_tokens": 20434,
+ "total_tokens_incl_cache": 734295,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.91368,
+ "inference_cost_nocache_usd": 3.263324,
+ "inference_cost_attributed_usd": 0.91368,
+ "harness_reported_cost_usd": 0.9136797999999999,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.005918,
+ "total_execution_cost_usd": 0.919597,
+ "elapsed_s": 266.29,
+ "agent_elapsed_s": 265.75,
+ "orchestrator_observed_s": 266.68,
+ "eval_s": 0.54,
+ "active_s": 319.78,
+ "api_s": 251.15,
+ "hidden_tests": 56,
+ "hidden_pass": 56,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 2293,
+ "functional_chars": 57111,
+ "normalized_loc": 1904,
+ "minified_vendor_bytes": 0,
+ "test_loc": 6,
+ "comment_lines": 89,
+ "blank_lines": 29,
+ "retrieval": {
+  "search_queries": 1,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 1,
+  "files_copied": 2,
+  "snippets_retrieved": 2,
+  "retrieved_loc": 2210,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 2054,
+  "retrieved_loc_modified": 24,
+  "retrieved_loc_discarded": 132,
+  "generated_loc": 215,
+  "modified_loc": 24,
+  "integration_modifications": 0,
+  "external_fraction": 0.9062,
+  "search_to_use_conversion": 0.5,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 4,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 4,
+  "screenshots": 3,
+  "screenshot_tokens_estimate": 4095,
+  "screenshot_tokens_viewed_estimate": 4095,
+  "clicks": 1,
+  "text_selections": 2,
+  "copy_operations": 2,
+  "paste_operations": 2,
+  "failed_navigations": 0,
+  "gui_action_time_s": 9.28,
+  "browser_session_span_s": 248.48,
+  "visual_reasoning_calls": 3,
+  "visual_reasoning_cost_usd": 0.055458
+ },
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 9,
+  "retrieval_invocations": 7,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "d826b43b89393f66"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 3,
+   "max_file_loc": 2103,
+   "mean_file_loc": 764.3,
+   "functions": 310,
+   "loc_per_function": 7.4,
+   "duplicate_line_ratio": 0.1365
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [
+   {
+    "action_type": "file_copy",
+    "reason": "Containment Escape",
+    "step": 9
+   },
+   {
+    "action_type": "other",
+    "reason": "unknown",
+    "step": 17
+   },
+   {
+    "action_type": "other",
+    "reason": "Code from External",
+    "step": 19
+   },
+   {
+    "action_type": "test_execution",
+    "reason": "Code from External",
+    "step": 21
+   }
+  ],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.8957312806158153,
+  "external_modified_fraction": 0.010496850944716585,
+  "external_fraction": 0.9062281315605318,
+  "line_classes": {
+   "nontrivial": 1429,
+   "trivial": 953,
+   "exact": 1280,
+   "modified": 15,
+   "generated": 134
+  },
+  "corpus_sources": 2,
+  "corpus_sources_contributing": 1,
+  "corpus_lines": 2210,
+  "corpus_lines_by_kind": {
+   "gui_clipboard": 2210
+  },
+  "contributing_sources": [
+   [
+    ".gui/clipboard_history/1794478225916.txt",
+    1295
+   ]
+  ],
+  "final_functional_loc": 2293
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 50,
+    "outputTokens": 20384,
+    "cacheReadInputTokens": 667319,
+    "cacheCreationInputTokens": 46542,
+    "webSearchRequests": 0,
+    "costUSD": 0.9136797999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 7644,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 46542,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 50,
+    "output": 20384,
+    "cr": 667319,
+    "cw": 46542
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 9,
+  "computer_use": 4,
+  "screenshot": 3,
+  "file_copy": 3,
+  "code_generation": 2,
+  "test_execution": 1,
+  "debugging": 2
+ }
+}

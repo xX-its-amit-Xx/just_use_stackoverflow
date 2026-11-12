@@ -1,0 +1,23 @@
+/* Overrides on top of the vendored kards.css (MIT). */
+body { overflow-y: auto; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 0 1rem; color: white; }
+#title { margin: 0.6rem 0; cursor: pointer; }
+#userbox { display: flex; gap: .5rem; align-items: center; }
+.panel { background: #f3f3f3; border-radius: .5rem; padding: 1rem; margin: 1rem auto; max-width: 26rem; }
+.panel h2 { margin-top: 0; }
+.panel input, .panel textarea { display: block; width: 100%; margin-bottom: .5rem; padding: .4rem; border-radius: .3rem; border: 1px solid #aaa; color: black; }
+button { background: var(--primary-color-light); color: white; border: 0; border-radius: .3rem; padding: .35rem .7rem; cursor: pointer; }
+button.secondary { background: #8a97a8; }
+button.small { padding: .1rem .4rem; font-size: .8rem; }
+.board-list { list-style: none; padding: 0; }
+.board-list li { background: white; margin-bottom: .5rem; padding: .6rem; border-radius: .4rem; cursor: pointer; display: flex; justify-content: space-between; }
+.board-list li:hover { background: #e6f2fb; }
+.parent-card > ul { min-height: 2rem; }
+.parent-card > ul > li { flex-direction: column; align-items: stretch; gap: .3rem; cursor: grab; }
+.parent-card.drag-over { outline: 3px dashed var(--primary-color-light); }
+.card-actions { display: flex; gap: .3rem; justify-content: flex-end; }
+.wip { font-size: .8rem; color: #555; }
+.label-chip { display: inline-block; padding: 0 .4rem; border-radius: .3rem; color: white; font-size: .75rem; margin-right: .2rem; }
+.add-card input { width: 100%; color: black; background: white; }
+#alerts .alert { background: #c0392b; color: white; padding: .5rem 1rem; border-radius: .3rem; margin: .5rem; }
+#alerts { position: fixed; bottom: 1rem; right: 1rem; }
