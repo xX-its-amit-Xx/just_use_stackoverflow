@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval/blob/master/src/token-stream.js",
+    "license": "MIT",
+    "files_or_snippet": "TokenStream.prototype.next / isWhitespace / isRadixInteger / isNumber / isName scanning routines",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 110,
+    "how_adapted": "Acquired via browser (raw view, copy/paste). Converted to an ES class; removed strings, comments, named ops, brackets and option handling; tokens are {type,value,pos}; added uppercase 0X/0B and a punctuation scanner; errors throw CalcError with position. Parser (recursive descent with implicit multiplication), evaluator, angle modes, user functions, history and REPL were written new as glue."
+  }
+]

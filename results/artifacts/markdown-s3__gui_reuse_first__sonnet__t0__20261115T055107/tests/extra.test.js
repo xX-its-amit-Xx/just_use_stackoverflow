@@ -1,0 +1,21 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path';
+import { createServer } from '../src/server.js';
+test('flow', async () => {
+  const srv = createServer({ dataDir: fs.mkdtempSync(path.join(os.tmpdir(), 'wiki-')) }); await new Promise(r => srv.listen(0, r));
+  const b = `http://127.0.0.1:${srv.address().port}`;
+  const j = (u, m = 'GET', body) => fetch(b + u, { method: m, headers: { 'content-type': 'application/json' }, body: body && JSON.stringify(body) });
+  await j('/api/pages/a', 'PUT', { title: 'A', body: 'one\ntwo\n[[B]]', tags: ['X', 'x'] });
+  await j('/api/pages/b', 'PUT', { title: 'B', body: 'hello' });
+  assert.equal((await j('/api/pages/a', 'PUT', { title: 'A', body: 'one\n2\n[[B]]', baseVersion: 5 })).status, 409);
+  assert.equal((await j('/api/pages/a', 'PUT', { title: 'A', body: 'one\n2\n[[B]]', baseVersion: 1 })).status, 200);
+  assert.deepEqual((await (await j('/api/pages/b')).json()).backlinks, ['a']);
+  const d = await (await j('/api/pages/a/diff?from=1&to=2')).json();
+  assert.deepEqual(d.lines.map(l => l.op), [' ', '-', '+', ' ']);
+  const s = await (await j('/api/search?q=HELLO')).json();
+  assert.equal(s[0].snippet, '<mark>hello</mark>');
+  assert.equal((await j('/api/pages/a/revert', 'POST', { version: 1 })).status, 200);
+  assert.equal((await j('/wiki/zzz')).status, 404);
+  srv.close();
+});

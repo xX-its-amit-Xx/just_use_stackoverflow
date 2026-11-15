@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval/blob/master/src/token-stream.js",
+    "license": "MIT",
+    "files_or_snippet": "TokenStream scanning methods: next, newToken, isWhitespace, isRadixInteger, isNumber, isName (structure), isOperator (structure)",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 110,
+    "how_adapted": "Converted from prototype functions to an ES class; removed strings/comments/brackets/named ops/consts; added uppercase 0X/0B, exponent only after a valid mantissa, error throwing as CalcError with position, names restricted to [A-Za-z_][A-Za-z0-9_]*. Parser (recursive descent with implicit multiplication and spec precedence), evaluator, builtins, calculator state and REPL were written new because expr-eval's precedence/grammar differs from the spec."
+  }
+]

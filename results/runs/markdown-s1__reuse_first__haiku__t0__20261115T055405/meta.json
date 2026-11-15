@@ -1,0 +1,109 @@
+{
+ "run_id": "markdown-s1__reuse_first__haiku__t0__20261115T055405",
+ "task_id": "markdown-s1",
+ "strategy": "reuse_first",
+ "trial": 0,
+ "tier": "S1",
+ "family": "markdown",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "session_id": "9b014d44-a63e-474d-9fff-c3a7e1abbebf",
+ "workspace": "/tmp/claude-0/-home-user-just-use-stackoverflow/0aee327b-dad0-5786-a62e-e964dcee381e/scratchpad/work/markdown-s1__reuse_first__haiku__t0__20261115T055405/ws",
+ "cmd": [
+  "claude",
+  "-p",
+  "Implement the application specified in SPEC.md, following the benchmark rules in your instructions.",
+  "--output-format",
+  "stream-json",
+  "--verbose",
+  "--model",
+  "claude-haiku-5-5",
+  "--effort",
+  "medium",
+  "--session-id",
+  "9b014d44-a63e-474d-9fff-c3a7e1abbebf",
+  "--tools",
+  "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch",
+  "--append-system-prompt",
+  "You are a participant agent in a controlled software-engineering benchmark. Work...<system prompt>",
+  "--disable-slash-commands",
+  "--strict-mcp-config",
+  "--setting-sources",
+  "",
+  "--permission-mode",
+  "auto",
+  "--max-budget-usd",
+  "1"
+ ],
+ "claude_code_version": "2.1.325 (Claude Code)",
+ "max_budget_usd": 1,
+ "max_wall_clock_s": 1800,
+ "protocol_sha": "3b2e23c8ad6e21d3",
+ "t_assigned": 1794722045.9070516,
+ "t_agent_end": 1794722128.0762901,
+ "agent_elapsed_s": 82.1692385673523,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_result": {
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 81251,
+  "duration_api_ms": 76549,
+  "num_turns": 18,
+  "total_cost_usd": 0.013735120000000002,
+  "usage": {
+   "input_tokens": 34,
+   "cache_creation_input_tokens": 23430,
+   "cache_read_input_tokens": 352672,
+   "output_tokens": 11038,
+   "output_tokens_details": {
+    "thinking_tokens": 3601
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 23430,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 815,
+     "cache_read_input_tokens": 31425,
+     "cache_creation_input_tokens": 1674,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1674
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "modelUsage": {
+   "claude-haiku-5-5": {
+    "inputTokens": 34,
+    "outputTokens": 11038,
+    "cacheReadInputTokens": 352672,
+    "cacheCreationInputTokens": 23430,
+    "webSearchRequests": 0,
+    "costUSD": 0.013735120000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 3601,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 23430,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "stop_reason": "end_turn"
+ },
+ "transcript_found": true
+}

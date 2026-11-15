@@ -1,0 +1,184 @@
+{
+ "external_exact_fraction": 0.9851024208566108,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.9851024208566108,
+ "line_classes": {
+  "nontrivial": 1611,
+  "trivial": 1159,
+  "exact": 1587,
+  "modified": 0,
+  "generated": 24
+ },
+ "corpus_sources": 45,
+ "corpus_sources_contributing": 22,
+ "corpus_lines": 14722,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 14600,
+  "tool_result": 122
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+   1520
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+   561
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+   545
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+   219
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+   170
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+   59
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+   54
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+   46
+  ],
+  [
+   ".retrieval/npm/mdurl@1.0.1/package/encode.js",
+   39
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+   36
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/index.js",
+   12
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/decode_codepoint.js",
+   10
+  ],
+  [
+   ".retrieval/npm/mdurl@1.0.1/package/decode.js",
+   9
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/encode.js",
+   9
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/generated/decode-data-xml.js",
+   8
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/generated/decode-data-html.js",
+   8
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+   8
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/index.js",
+   8
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/decode.js",
+   8
+  ],
+  [
+   ".retrieval/npm/entities@3.0.1/package/lib/encode-trie.js",
+   8
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/README.md",
+   7
+  ],
+  [
+   ".retrieval/npm/mdurl@1.0.1/package/format.js",
+   2
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 6
+  },
+  "src/vendor/mdurl/encode.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 34
+  },
+  "src/vendor/entities/decode.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 10,
+   "trivial": 15
+  },
+  "src/vendor/entities/entities-map.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 1
+  },
+  "src/vendor/commonmark/from-code-point.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 23
+  },
+  "src/vendor/commonmark/inlines.js": {
+   "exact": 542,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 378
+  },
+  "src/vendor/commonmark/common.js": {
+   "exact": 51,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 46
+  },
+  "src/vendor/commonmark/index.js": {
+   "exact": 5,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 9
+  },
+  "src/vendor/commonmark/node.js": {
+   "exact": 200,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 88
+  },
+  "src/vendor/commonmark/blocks.js": {
+   "exact": 524,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 415
+  },
+  "src/vendor/commonmark/render/renderer.js": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 39
+  },
+  "src/vendor/commonmark/render/html.js": {
+   "exact": 162,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 105
+  }
+ },
+ "final_functional_loc": 2485
+}

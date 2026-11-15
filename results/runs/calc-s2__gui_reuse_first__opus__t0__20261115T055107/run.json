@@ -1,0 +1,199 @@
+{
+ "run_id": "calc-s2__gui_reuse_first__opus__t0__20261115T055107",
+ "task_id": "calc-s2",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S2",
+ "family": "calculator",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 16,
+ "model_invocations": 16,
+ "input_tokens": 32,
+ "output_tokens": 17712,
+ "cached_input_tokens": 322916,
+ "cache_creation_tokens": 34528,
+ "reasoning_tokens": 3174,
+ "total_tokens": 17744,
+ "total_tokens_incl_cache": 375188,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.695175,
+ "inference_cost_nocache_usd": 1.784144,
+ "inference_cost_attributed_usd": 0.695175,
+ "harness_reported_cost_usd": 0.6951752,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.003917,
+ "total_execution_cost_usd": 0.699092,
+ "elapsed_s": 176.25,
+ "agent_elapsed_s": 175.9,
+ "orchestrator_observed_s": 177.18,
+ "eval_s": 0.35,
+ "active_s": 188.29,
+ "api_s": 162.6,
+ "hidden_tests": 89,
+ "hidden_pass": 89,
+ "hidden_fail": 0,
+ "own_tests": 6,
+ "own_pass": 6,
+ "functional_loc": 587,
+ "functional_chars": 15328,
+ "normalized_loc": 511,
+ "minified_vendor_bytes": 0,
+ "test_loc": 46,
+ "comment_lines": 17,
+ "blank_lines": 50,
+ "retrieval": {
+  "search_queries": 3,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 2,
+  "files_copied": 2,
+  "snippets_retrieved": 2,
+  "retrieved_loc": 864,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 52,
+  "retrieved_loc_modified": 7,
+  "retrieved_loc_discarded": 805,
+  "generated_loc": 528,
+  "modified_loc": 7,
+  "integration_modifications": 0,
+  "external_fraction": 0.0998,
+  "search_to_use_conversion": 0.5,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 5,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 5,
+  "screenshots": 3,
+  "screenshot_tokens_estimate": 4095,
+  "screenshot_tokens_viewed_estimate": 4095,
+  "clicks": 0,
+  "text_selections": 2,
+  "copy_operations": 2,
+  "paste_operations": 2,
+  "failed_navigations": 0,
+  "gui_action_time_s": 8.57,
+  "browser_session_span_s": 169.42,
+  "visual_reasoning_calls": 3,
+  "visual_reasoning_cost_usd": 0.058161
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 8,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "e4895d9e748a003d"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 542,
+   "mean_file_loc": 293.5,
+   "functions": 101,
+   "loc_per_function": 5.8,
+   "duplicate_line_ratio": 0.076
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.08788598574821853,
+  "external_modified_fraction": 0.011876484560570071,
+  "external_fraction": 0.0997624703087886,
+  "line_classes": {
+   "nontrivial": 421,
+   "trivial": 183,
+   "exact": 37,
+   "modified": 5,
+   "generated": 379
+  },
+  "corpus_sources": 4,
+  "corpus_sources_contributing": 2,
+  "corpus_lines": 864,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 431,
+   "gui_clipboard": 433
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/token-stream.js",
+    42
+   ],
+   [
+    ".gui/clipboard_history/1794721902426.txt",
+    42
+   ]
+  ],
+  "final_functional_loc": 587
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 32,
+    "outputTokens": 17712,
+    "cacheReadInputTokens": 322916,
+    "cacheCreationInputTokens": 34528,
+    "webSearchRequests": 0,
+    "costUSD": 0.6951752,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 3174,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 34528,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 32,
+    "output": 17712,
+    "cr": 322916,
+    "cw": 34528
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 3,
+  "screenshot": 3,
+  "file_copy": 1,
+  "repository_inspection": 2,
+  "code_generation": 3,
+  "test_execution": 1,
+  "debugging": 1,
+  "other": 1
+ }
+}

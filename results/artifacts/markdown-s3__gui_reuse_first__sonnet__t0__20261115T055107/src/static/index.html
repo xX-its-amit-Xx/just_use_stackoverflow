@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Markdown Wiki</title>
+<style>body{font:14px sans-serif;margin:0;display:flex;height:100vh}aside{width:240px;padding:8px;border-right:1px solid #ccc;overflow:auto}main{flex:1;display:flex;flex-direction:column;padding:8px;overflow:auto}
+textarea{width:100%;height:240px;font-family:monospace}#preview,#extra{border:1px solid #ddd;padding:6px;margin-top:6px}.missing{color:#b00}.add{background:#dfd}.del{background:#fdd}pre{white-space:pre-wrap}</style></head>
+<body><aside><input id="q" placeholder="search"> <select id="tag"><option value="">all tags</option></select><ul id="list"></ul><button id="new">New page</button></aside>
+<main><div><input id="slug" placeholder="slug"> <input id="title" placeholder="title"> <input id="tags" placeholder="tags, comma separated"> <button id="save">Save</button> <span id="msg"></span></div>
+<textarea id="body"></textarea><div id="preview"></div><div id="extra"><h4>Backlinks</h4><ul id="backlinks"></ul><h4>History</h4><ul id="history"></ul><pre id="diff"></pre></div></main>
+<script src="/static/app.js"></script></body></html>

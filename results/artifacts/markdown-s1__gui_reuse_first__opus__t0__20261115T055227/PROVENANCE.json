@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/tree/master/lib",
+    "license": "BSD-2-Clause (from-code-point.js: MIT, Mathias Bynens)",
+    "files_or_snippet": "lib/index.js, lib/blocks.js, lib/inlines.js, lib/node.js, lib/common.js, lib/from-code-point.js, lib/render/renderer.js, lib/render/html.js",
+    "local_paths": ["src/commonmark/index.js", "src/commonmark/blocks.js", "src/commonmark/inlines.js", "src/commonmark/node.js", "src/commonmark/common.js", "src/commonmark/from-code-point.js", "src/commonmark/render/renderer.js", "src/commonmark/render/html.js"],
+    "lines_used_estimate": 3020,
+    "how_adapted": "Acquired via browser (raw.githubusercontent.com, Ctrl+A / copy / paste). Imports of npm packages 'entities' and 'mdurl/encode.js' redirected to local files; XmlRenderer export removed; added a parser option `noHtml` that disables HTML block start and inline raw HTML tags so raw HTML is escaped as text. Changes marked with ADAPTED comments."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/mdurl/blob/master/lib/encode.mjs",
+    "license": "MIT",
+    "files_or_snippet": "lib/encode.mjs",
+    "local_paths": ["src/commonmark/mdurl-encode.js"],
+    "lines_used_estimate": 88,
+    "how_adapted": "Acquired via browser; copied verbatim (dependency of commonmark.js common.js normalizeURI)."
+  },
+  {
+    "source_url": "https://github.com/developit/snarkdown/blob/main/src/index.js",
+    "license": "MIT",
+    "files_or_snippet": "src/index.js (inspected only)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Inspected as a candidate during search but rejected (not CommonMark-conformant); no code used."
+  }
+]

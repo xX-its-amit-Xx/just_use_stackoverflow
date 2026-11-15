@@ -1,0 +1,27 @@
+[
+ {
+  "path": ".retrieval/npm/commonmark@0.31.2",
+  "files": 16,
+  "bytes": 673094
+ },
+ {
+  "path": ".retrieval/npm/entities@3.0.1",
+  "files": 27,
+  "bytes": 171119
+ },
+ {
+  "path": ".retrieval/npm/entities@4.5.0",
+  "files": 68,
+  "bytes": 412892
+ },
+ {
+  "path": ".retrieval/npm/mdurl@1.0.1",
+  "files": 9,
+  "bytes": 22039
+ },
+ {
+  "path": ".retrieval/npm/mdurl@2.0.0",
+  "files": 9,
+  "bytes": 37524
+ }
+]

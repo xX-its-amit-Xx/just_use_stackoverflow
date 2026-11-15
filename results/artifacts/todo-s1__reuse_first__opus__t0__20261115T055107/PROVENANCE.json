@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/MohamedBakrr/taskninja--todo-CLI-app-",
+    "license": "MIT",
+    "files_or_snippet": "src/utils/validators.js (validatePriority/validateDueDate/ALLOWED_PRIORITIES), src/utils/taskService.js (loadTasks ENOENT handling, saveTasks, getNextId)",
+    "local_paths": ["src/todo.js"],
+    "lines_used_estimate": 25,
+    "how_adapted": "Converted async fs/promises to sync fs, configurable file path, priorities changed to low/normal/high, strict YYYY-MM-DD real-date check replacing Date.parse, TodoError instead of Error, persisted nextId so ids are never reused. Store class, list filtering/sorting, stats and CLI are new code."
+  }
+]

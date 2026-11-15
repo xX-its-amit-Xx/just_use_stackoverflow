@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/commonmark/v/0.31.2 (repo: https://github.com/commonmark/commonmark.js)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "npm commonmark@0.31.2 lib/*.js and lib/render/*.js (blocks, common, from-code-point, index, inlines, node, render/html, render/renderer, render/xml); LICENSE",
+    "local_paths": ["src/vendor/commonmark/"],
+    "lines_used_estimate": 4400,
+    "how_adapted": "Copied verbatim except two import lines in common.js and inlines.js, rewritten to point at the vendored mdurl and entities bridge. Used as the CommonMark parser and HTML renderer. Glue in src/markdown.js subclasses HtmlRenderer to escape raw HTML (inline and block) instead of passing it through, per SPEC."
+  },
+  {
+    "source_url": "https://www.npmjs.com/package/mdurl/v/1.0.1 (repo: https://github.com/markdown-it/mdurl)",
+    "license": "MIT",
+    "files_or_snippet": "npm mdurl@1.0.1 encode.js, decode.js, format.js, parse.js, index.js; LICENSE",
+    "local_paths": ["src/vendor/mdurl/"],
+    "lines_used_estimate": 700,
+    "how_adapted": "Copied verbatim. Added package.json with {\"type\":\"commonjs\"} so the CJS files load under the ESM project. Used by commonmark for URL encoding."
+  },
+  {
+    "source_url": "https://www.npmjs.com/package/entities/v/3.0.1 (repo: https://github.com/fb55/entities)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "npm entities@3.0.1 lib/ (all .js and generated/maps data); LICENSE; .d.ts files removed",
+    "local_paths": ["src/vendor/entities/"],
+    "lines_used_estimate": 3000,
+    "how_adapted": "Copied verbatim, minus TypeScript declaration files. Added package.json with {\"type\":\"commonjs\"}. src/vendor/entities-shim.js is new glue that loads it via createRequire and re-exports decodeHTMLStrict as an ES module binding."
+  }
+]

@@ -1,0 +1,8 @@
+[
+ {"source_url":"https://www.npmjs.com/package/markdown-it/v/14.1.0","license":"MIT","files_or_snippet":"index.mjs, lib/**","local_paths":["src/vendor/markdown-it"],"lines_used_estimate":6000,"how_adapted":"Vendored verbatim; bare imports (mdurl, punycode.js, entities, uc.micro, linkify-it) rewritten to relative vendor paths. src/markdown.js configures it (html:false so raw HTML is escaped, xhtmlOut, <del> for strikethrough, unsafe-URL rewriting to '#', heading ids/toc)."},
+ {"source_url":"https://www.npmjs.com/package/entities/v/4.5.0","license":"BSD-2-Clause","files_or_snippet":"lib/esm/**/*.js","local_paths":["src/vendor/entities"],"lines_used_estimate":1500,"how_adapted":"Vendored verbatim (ESM build, .d.ts/.map removed)."},
+ {"source_url":"https://www.npmjs.com/package/mdurl/v/2.0.0","license":"MIT","files_or_snippet":"index.mjs, lib/*","local_paths":["src/vendor/mdurl"],"lines_used_estimate":500,"how_adapted":"Vendored verbatim."},
+ {"source_url":"https://www.npmjs.com/package/uc.micro/v/2.1.0","license":"MIT","files_or_snippet":"index.mjs, categories/, properties/","local_paths":["src/vendor/uc.micro"],"lines_used_estimate":20,"how_adapted":"Vendored verbatim."},
+ {"source_url":"https://www.npmjs.com/package/linkify-it/v/5.0.0","license":"MIT","files_or_snippet":"index.mjs, lib/re.mjs","local_paths":["src/vendor/linkify-it"],"lines_used_estimate":800,"how_adapted":"Vendored; uc.micro import rewritten to relative path (linkify is disabled at runtime but required by markdown-it's module graph)."},
+ {"source_url":"https://www.npmjs.com/package/punycode.js/v/2.3.1","license":"MIT","files_or_snippet":"punycode.es6.js","local_paths":["src/vendor/punycode"],"lines_used_estimate":440,"how_adapted":"Vendored verbatim."}
+]

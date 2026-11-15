@@ -1,0 +1,612 @@
+{
+ "external_exact_fraction": 0.9799498746867168,
+ "external_modified_fraction": 0.002506265664160401,
+ "external_fraction": 0.9824561403508771,
+ "line_classes": {
+  "nontrivial": 3591,
+  "trivial": 3922,
+  "exact": 3519,
+  "modified": 9,
+  "generated": 63
+ },
+ "corpus_sources": 127,
+ "corpus_sources_contributing": 98,
+ "corpus_lines": 23971,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 23878,
+  "tool_result": 93
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/dist/markdown-it.js",
+   1872
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/dist/index.cjs.js",
+   1802
+  ],
+  [
+   ".retrieval/npm/linkify-it@5.0.0/package/build/index.cjs.js",
+   329
+  ],
+  [
+   ".retrieval/npm/linkify-it@5.0.0/package/index.mjs",
+   268
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/list.mjs",
+   259
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/table.mjs",
+   248
+  ],
+  [
+   ".retrieval/npm/mdurl@2.0.0/package/build/index.cjs.js",
+   246
+  ],
+  [
+   ".retrieval/npm/entities@4.5.0/package/lib/esm/decode.js",
+   243
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/reference.mjs",
+   208
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/punycode.es6.js",
+   189
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/common/utils.mjs",
+   188
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/punycode.js",
+   187
+  ],
+  [
+   ".retrieval/npm/entities@4.5.0/package/lib/decode.js",
+   187
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/blockquote.mjs",
+   175
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/link.mjs",
+   164
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/image.mjs",
+   154
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/renderer.mjs",
+   132
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/lheading.mjs",
+   131
+  ],
+  [
+   ".retrieval/npm/mdurl@2.0.0/package/lib/parse.mjs",
+   129
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/state_block.mjs",
+   124
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_core/smartquotes.mjs",
+   118
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/index.mjs",
+   117
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/ruler.mjs",
+   110
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/autolink.mjs",
+   108
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/parser_inline.mjs",
+   104
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/text.mjs",
+   98
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/strikethrough.mjs",
+   93
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/fence.mjs",
+   91
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_core/linkify.mjs",
+   91
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/state_inline.mjs",
+   86
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 1,
+   "modified": 6,
+   "generated": 49,
+   "trivial": 25
+  },
+  "src/cli.js": {
+   "exact": 2,
+   "modified": 2,
+   "generated": 7,
+   "trivial": 4
+  },
+  "src/vendor/mdurl/index.mjs": {
+   "exact": 4,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 6
+  },
+  "src/vendor/mdurl/lib/encode.mjs": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/mdurl/lib/parse.mjs": {
+   "exact": 128,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 148
+  },
+  "src/vendor/mdurl/lib/decode.mjs": {
+   "exact": 52,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/mdurl/lib/format.mjs": {
+   "exact": 13,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/markdown-it/index.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/markdown-it/lib/renderer.mjs": {
+   "exact": 116,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 155
+  },
+  "src/vendor/markdown-it/lib/ruler.mjs": {
+   "exact": 86,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 213
+  },
+  "src/vendor/markdown-it/lib/parser_core.mjs": {
+   "exact": 27,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 26
+  },
+  "src/vendor/markdown-it/lib/parser_block.mjs": {
+   "exact": 61,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 52
+  },
+  "src/vendor/markdown-it/lib/parser_inline.mjs": {
+   "exact": 84,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 85
+  },
+  "src/vendor/markdown-it/lib/index.mjs": {
+   "exact": 108,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 392
+  },
+  "src/vendor/markdown-it/lib/token.mjs": {
+   "exact": 41,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 126
+  },
+  "src/vendor/markdown-it/lib/helpers/parse_link_title.mjs": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 29
+  },
+  "src/vendor/markdown-it/lib/helpers/index.mjs": {
+   "exact": 6,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 3
+  },
+  "src/vendor/markdown-it/lib/helpers/parse_link_destination.mjs": {
+   "exact": 33,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 28
+  },
+  "src/vendor/markdown-it/lib/helpers/parse_link_label.mjs": {
+   "exact": 21,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 19
+  },
+  "src/vendor/markdown-it/lib/common/utils.mjs": {
+   "exact": 135,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 125
+  },
+  "src/vendor/markdown-it/lib/common/html_blocks.mjs": {
+   "exact": 3,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 63
+  },
+  "src/vendor/markdown-it/lib/common/html_re.mjs": {
+   "exact": 16,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 1
+  },
+  "src/vendor/markdown-it/lib/presets/commonmark.mjs": {
+   "exact": 15,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 60
+  },
+  "src/vendor/markdown-it/lib/presets/default.mjs": {
+   "exact": 10,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 27
+  },
+  "src/vendor/markdown-it/lib/presets/zero.mjs": {
+   "exact": 12,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 45
+  },
+  "src/vendor/markdown-it/lib/rules_core/replacements.mjs": {
+   "exact": 41,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 40
+  },
+  "src/vendor/markdown-it/lib/rules_core/state_core.mjs": {
+   "exact": 9,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/markdown-it/lib/rules_core/smartquotes.mjs": {
+   "exact": 97,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 61
+  },
+  "src/vendor/markdown-it/lib/rules_core/inline.mjs": {
+   "exact": 6,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/markdown-it/lib/rules_core/text_join.mjs": {
+   "exact": 19,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 17
+  },
+  "src/vendor/markdown-it/lib/rules_core/normalize.mjs": {
+   "exact": 6,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 6
+  },
+  "src/vendor/markdown-it/lib/rules_core/linkify.mjs": {
+   "exact": 71,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 40
+  },
+  "src/vendor/markdown-it/lib/rules_core/block.mjs": {
+   "exact": 8,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/markdown-it/lib/rules_block/reference.mjs": {
+   "exact": 104,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 76
+  },
+  "src/vendor/markdown-it/lib/rules_block/list.mjs": {
+   "exact": 144,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 122
+  },
+  "src/vendor/markdown-it/lib/rules_block/paragraph.mjs": {
+   "exact": 23,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 12
+  },
+  "src/vendor/markdown-it/lib/rules_block/code.mjs": {
+   "exact": 12,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 11
+  },
+  "src/vendor/markdown-it/lib/rules_block/blockquote.mjs": {
+   "exact": 86,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 85
+  },
+  "src/vendor/markdown-it/lib/rules_block/fence.mjs": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 30
+  },
+  "src/vendor/markdown-it/lib/rules_block/html_block.mjs": {
+   "exact": 35,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 18
+  },
+  "src/vendor/markdown-it/lib/rules_block/heading.mjs": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 10
+  },
+  "src/vendor/markdown-it/lib/rules_block/state_block.mjs": {
+   "exact": 95,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 83
+  },
+  "src/vendor/markdown-it/lib/rules_block/table.mjs": {
+   "exact": 122,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 55
+  },
+  "src/vendor/markdown-it/lib/rules_block/hr.mjs": {
+   "exact": 20,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 9
+  },
+  "src/vendor/markdown-it/lib/rules_block/lheading.mjs": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 24
+  },
+  "src/vendor/markdown-it/lib/rules_inline/autolink.mjs": {
+   "exact": 41,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 12
+  },
+  "src/vendor/markdown-it/lib/rules_inline/strikethrough.mjs": {
+   "exact": 62,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 38
+  },
+  "src/vendor/markdown-it/lib/rules_inline/newline.mjs": {
+   "exact": 18,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 15
+  },
+  "src/vendor/markdown-it/lib/rules_inline/emphasis.mjs": {
+   "exact": 53,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 44
+  },
+  "src/vendor/markdown-it/lib/rules_inline/backticks.mjs": {
+   "exact": 30,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 16
+  },
+  "src/vendor/markdown-it/lib/rules_inline/link.mjs": {
+   "exact": 66,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 51
+  },
+  "src/vendor/markdown-it/lib/rules_inline/state_inline.mjs": {
+   "exact": 65,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 31
+  },
+  "src/vendor/markdown-it/lib/rules_inline/balance_pairs.mjs": {
+   "exact": 48,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 52
+  },
+  "src/vendor/markdown-it/lib/rules_inline/text.mjs": {
+   "exact": 42,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 27
+  },
+  "src/vendor/markdown-it/lib/rules_inline/image.mjs": {
+   "exact": 62,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 56
+  },
+  "src/vendor/markdown-it/lib/rules_inline/html_inline.mjs": {
+   "exact": 29,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 12
+  },
+  "src/vendor/markdown-it/lib/rules_inline/linkify.mjs": {
+   "exact": 32,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 8
+  },
+  "src/vendor/markdown-it/lib/rules_inline/escape.mjs": {
+   "exact": 31,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 19
+  },
+  "src/vendor/markdown-it/lib/rules_inline/fragments_join.mjs": {
+   "exact": 16,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 17
+  },
+  "src/vendor/markdown-it/lib/rules_inline/entity.mjs": {
+   "exact": 30,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 11
+  },
+  "src/vendor/uc.micro/index.mjs": {
+   "exact": 7,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/uc.micro/categories/S/regex.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/uc.micro/categories/Z/regex.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/uc.micro/categories/P/regex.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/uc.micro/categories/Cf/regex.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/uc.micro/categories/Cc/regex.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/uc.micro/properties/Any/regex.mjs": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/entities/decode.js": {
+   "exact": 225,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 271
+  },
+  "src/vendor/entities/decode_codepoint.js": {
+   "exact": 16,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 55
+  },
+  "src/vendor/entities/index.js": {
+   "exact": 44,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 55
+  },
+  "src/vendor/entities/encode.js": {
+   "exact": 31,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 38
+  },
+  "src/vendor/entities/escape.js": {
+   "exact": 49,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 67
+  },
+  "src/vendor/entities/generated/decode-data-html.js": {
+   "exact": 3,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/entities/generated/encode-html.js": {
+   "exact": 4,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 6
+  },
+  "src/vendor/entities/generated/decode-data-xml.js": {
+   "exact": 3,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/punycode/punycode.es6.js": {
+   "exact": 160,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 228
+  },
+  "src/vendor/linkify-it/index.mjs": {
+   "exact": 235,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 308
+  },
+  "src/vendor/linkify-it/lib/re.mjs": {
+   "exact": 70,
+   "modified": 1,
+   "generated": 0,
+   "trivial": 64
+  }
+ },
+ "final_functional_loc": 5074
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "path": ".retrieval/dev/fuzz.mjs",
+  "files": 0,
+  "bytes": 0
+ },
+ {
+  "path": ".retrieval/dev/fuzz2.mjs",
+  "files": 0,
+  "bytes": 0
+ },
+ {
+  "path": ".retrieval/dev/fuzz3.mjs",
+  "files": 0,
+  "bytes": 0
+ },
+ {
+  "path": ".retrieval/dev/fuzz4.mjs",
+  "files": 0,
+  "bytes": 0
+ },
+ {
+  "path": ".retrieval/dev/perf.mjs",
+  "files": 0,
+  "bytes": 0
+ },
+ {
+  "path": ".retrieval/npm/commonmark@0.31.2",
+  "files": 16,
+  "bytes": 673094
+ }
+]

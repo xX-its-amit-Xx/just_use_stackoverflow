@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/commonmark (v0.31.2)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "dist/commonmark.js — used ONLY as a local reference oracle for differential fuzz testing during development (scripts under .retrieval/dev); no code copied into src",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Not vendored or adapted; src/markdown.js was written from scratch following the CommonMark 0.31 spec."
+  }
+]

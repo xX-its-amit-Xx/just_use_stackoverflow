@@ -1,0 +1,68 @@
+{
+ "external_exact_fraction": 0.058823529411764705,
+ "external_modified_fraction": 0.0392156862745098,
+ "external_fraction": 0.09803921568627451,
+ "line_classes": {
+  "nontrivial": 408,
+  "trivial": 200,
+  "exact": 24,
+  "modified": 16,
+  "generated": 368
+ },
+ "corpus_sources": 32,
+ "corpus_sources_contributing": 8,
+ "corpus_lines": 5019,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 4874,
+  "tool_result": 145
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/token-stream.js",
+   29
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/evaluate.js",
+   9
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/parser-state.js",
+   7
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/expression-to-string.js",
+   5
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/test/operators.js",
+   3
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/contains.js",
+   2
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/simplify.js",
+   2
+  ],
+  [
+   ".retrieval/repos/silentmatt__expr-eval/src/get-symbols.js",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 21,
+   "trivial": 8
+  },
+  "src/calc.js": {
+   "exact": 24,
+   "modified": 13,
+   "generated": 347,
+   "trivial": 192
+  }
+ },
+ "final_functional_loc": 591
+}

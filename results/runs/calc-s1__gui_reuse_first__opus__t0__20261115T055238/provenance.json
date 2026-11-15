@@ -1,0 +1,44 @@
+{
+ "external_exact_fraction": 0.07954545454545454,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.07954545454545454,
+ "line_classes": {
+  "nontrivial": 88,
+  "trivial": 47,
+  "exact": 7,
+  "modified": 0,
+  "generated": 81
+ },
+ "corpus_sources": 4,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 206,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 102,
+  "gui_clipboard": 104
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/ExpEval.js",
+   7
+  ],
+  [
+   ".gui/clipboard_history/1794721989872.txt",
+   7
+  ]
+ ],
+ "per_file": {
+  "src/calc.js": {
+   "exact": 7,
+   "modified": 0,
+   "generated": 74,
+   "trivial": 44
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 3
+  }
+ },
+ "final_functional_loc": 128
+}

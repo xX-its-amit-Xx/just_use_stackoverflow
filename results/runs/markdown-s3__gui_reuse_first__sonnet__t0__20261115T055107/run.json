@@ -1,0 +1,227 @@
+{
+ "run_id": "markdown-s3__gui_reuse_first__sonnet__t0__20261115T055107",
+ "task_id": "markdown-s3",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 7,
+ "model_invocations": 7,
+ "input_tokens": 14,
+ "output_tokens": 27123,
+ "cached_input_tokens": 111224,
+ "cache_creation_tokens": 35323,
+ "reasoning_tokens": 5307,
+ "total_tokens": 27137,
+ "total_tokens_incl_cache": 173684,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.423672,
+ "inference_cost_nocache_usd": 0.564352,
+ "inference_cost_attributed_usd": 0.423672,
+ "harness_reported_cost_usd": 0.42367240000000006,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.003825,
+ "total_execution_cost_usd": 0.427498,
+ "elapsed_s": 172.13,
+ "agent_elapsed_s": 171.63,
+ "orchestrator_observed_s": 173.05,
+ "eval_s": 0.5,
+ "active_s": 171.01,
+ "api_s": 164.63,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 714,
+ "functional_chars": 30962,
+ "normalized_loc": 1032,
+ "minified_vendor_bytes": 0,
+ "test_loc": 34,
+ "comment_lines": 12,
+ "blank_lines": 26,
+ "retrieval": {
+  "search_queries": 1,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 714,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 1,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 1,
+  "screenshots": 1,
+  "screenshot_tokens_estimate": 1365,
+  "screenshot_tokens_viewed_estimate": 1365,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 0,
+  "gui_action_time_s": 3.15,
+  "browser_session_span_s": 166.58,
+  "visual_reasoning_calls": 1,
+  "visual_reasoning_cost_usd": 0.173547
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 4,
+  "retrieval_invocations": 2,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 8
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 12
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 14
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 18
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 19
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 21
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 40
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 45
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 5,
+   "max_file_loc": 486,
+   "mean_file_loc": 142.8,
+   "functions": 153,
+   "loc_per_function": 4.7,
+   "duplicate_line_ratio": 0.023
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": false,
+   "issues": [
+    "no license recorded for https://github.com/search?q=commonmark+javascript+markdown+parser&type=repositories",
+    "third-party code used but no THIRD_PARTY_NOTICES.md / NOTICE file"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 565,
+   "trivial": 161,
+   "exact": 0,
+   "modified": 0,
+   "generated": 565
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 714
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 14,
+    "outputTokens": 27123,
+    "cacheReadInputTokens": 111224,
+    "cacheCreationInputTokens": 35323,
+    "webSearchRequests": 0,
+    "costUSD": 0.42367240000000006,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 5307,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 35323,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 14,
+    "output": 27123,
+    "cr": 111224,
+    "cw": 35323
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 1,
+  "screenshot": 1,
+  "code_generation": 3,
+  "other": 1
+ }
+}

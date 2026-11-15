@@ -1,0 +1,216 @@
+{
+ "run_id": "calc-s2__reuse_first__opus__t0__20261115T055732",
+ "task_id": "calc-s2",
+ "strategy": "reuse_first",
+ "trial": 0,
+ "tier": "S2",
+ "family": "calculator",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 11,
+ "model_invocations": 11,
+ "input_tokens": 22,
+ "output_tokens": 18355,
+ "cached_input_tokens": 237385,
+ "cache_creation_tokens": 31202,
+ "reasoning_tokens": 2820,
+ "total_tokens": 18377,
+ "total_tokens_incl_cache": 286964,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.664281,
+ "inference_cost_nocache_usd": 1.441536,
+ "inference_cost_attributed_usd": 0.664281,
+ "harness_reported_cost_usd": 0.6642809999999999,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.003639,
+ "total_execution_cost_usd": 0.66792,
+ "elapsed_s": 163.77,
+ "agent_elapsed_s": 163.31,
+ "orchestrator_observed_s": 164.2,
+ "eval_s": 0.46,
+ "active_s": 163.32,
+ "api_s": 155.99,
+ "hidden_tests": 89,
+ "hidden_pass": 88,
+ "hidden_fail": 1,
+ "own_tests": 7,
+ "own_pass": 7,
+ "functional_loc": 591,
+ "functional_chars": 14611,
+ "normalized_loc": 487,
+ "minified_vendor_bytes": 0,
+ "test_loc": 63,
+ "comment_lines": 17,
+ "blank_lines": 38,
+ "retrieval": {
+  "search_queries": 6,
+  "search_results_examined": 29,
+  "repositories_inspected": 1,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 5019,
+  "cloned_repo_lines": 5648,
+  "retrieved_loc_incorporated": 35,
+  "retrieved_loc_modified": 23,
+  "retrieved_loc_discarded": 4961,
+  "generated_loc": 533,
+  "modified_loc": 23,
+  "integration_modifications": 0,
+  "external_fraction": 0.098,
+  "search_to_use_conversion": 0.25,
+  "repository_acquisition_s": 1.35,
+  "retrieval_actions": 3,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 7,
+  "retrieval_invocations": 4,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "e4895d9e748a003d"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "eval_or_function_ctor",
+    "file": "src/calc.js",
+    "line": 3
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 560,
+   "mean_file_loc": 295.5,
+   "functions": 90,
+   "loc_per_function": 6.6,
+   "duplicate_line_ratio": 0.0907
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": [
+   "no eval"
+  ]
+ },
+ "provenance": {
+  "external_exact_fraction": 0.058823529411764705,
+  "external_modified_fraction": 0.0392156862745098,
+  "external_fraction": 0.09803921568627451,
+  "line_classes": {
+   "nontrivial": 408,
+   "trivial": 200,
+   "exact": 24,
+   "modified": 16,
+   "generated": 368
+  },
+  "corpus_sources": 32,
+  "corpus_sources_contributing": 8,
+  "corpus_lines": 5019,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 4874,
+   "tool_result": 145
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/token-stream.js",
+    29
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/evaluate.js",
+    9
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/parser-state.js",
+    7
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/expression-to-string.js",
+    5
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/test/operators.js",
+    3
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/contains.js",
+    2
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/simplify.js",
+    2
+   ],
+   [
+    ".retrieval/repos/silentmatt__expr-eval/src/get-symbols.js",
+    1
+   ]
+  ],
+  "final_functional_loc": 591
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 22,
+    "outputTokens": 18355,
+    "cacheReadInputTokens": 237385,
+    "cacheCreationInputTokens": 31202,
+    "webSearchRequests": 0,
+    "costUSD": 0.6642809999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 2820,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 31202,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 22,
+    "output": 18355,
+    "cr": 237385,
+    "cw": 31202
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "github_search": 2,
+  "repository_clone": 1,
+  "repository_inspection": 1,
+  "other": 2,
+  "code_generation": 2,
+  "test_execution": 1,
+  "debugging": 1
+ }
+}

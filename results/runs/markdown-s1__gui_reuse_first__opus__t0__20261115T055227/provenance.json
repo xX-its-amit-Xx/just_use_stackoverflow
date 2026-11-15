@@ -1,0 +1,162 @@
+{
+ "external_exact_fraction": 0.968955223880597,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.968955223880597,
+ "line_classes": {
+  "nontrivial": 1675,
+  "trivial": 1196,
+  "exact": 1623,
+  "modified": 0,
+  "generated": 52
+ },
+ "corpus_sources": 26,
+ "corpus_sources_contributing": 18,
+ "corpus_lines": 6041,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 3014,
+  "gui_clipboard": 3027
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/cm/inlines.js",
+   581
+  ],
+  [
+   ".gui/clipboard_history/1794721983754.txt",
+   581
+  ],
+  [
+   ".gui/clipboard_history/1794721982139.txt",
+   560
+  ],
+  [
+   ".retrieval/cm/blocks.js",
+   560
+  ],
+  [
+   ".gui/clipboard_history/1794721985373.txt",
+   219
+  ],
+  [
+   ".retrieval/cm/node.js",
+   219
+  ],
+  [
+   ".retrieval/cm/render/html.js",
+   171
+  ],
+  [
+   ".gui/clipboard_history/1794721993408.txt",
+   171
+  ],
+  [
+   ".retrieval/cm/common.js",
+   59
+  ],
+  [
+   ".gui/clipboard_history/1794721987019.txt",
+   59
+  ],
+  [
+   ".retrieval/cm/from-code-point.js",
+   46
+  ],
+  [
+   ".gui/clipboard_history/1794721988605.txt",
+   46
+  ],
+  [
+   ".gui/clipboard_history/1794722005843.txt",
+   40
+  ],
+  [
+   ".retrieval/mdurl-encode.js",
+   40
+  ],
+  [
+   ".gui/clipboard_history/1794721991778.txt",
+   36
+  ],
+  [
+   ".retrieval/cm/render/renderer.js",
+   36
+  ],
+  [
+   ".gui/clipboard_history/1794721980496.txt",
+   12
+  ],
+  [
+   ".retrieval/cm/index.js",
+   12
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 6,
+   "trivial": 4
+  },
+  "src/commonmark/from-code-point.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 23
+  },
+  "src/commonmark/inlines.js": {
+   "exact": 562,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 409
+  },
+  "src/commonmark/common.js": {
+   "exact": 51,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 46
+  },
+  "src/commonmark/entities.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 40,
+   "trivial": 12
+  },
+  "src/commonmark/mdurl-encode.js": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/commonmark/index.js": {
+   "exact": 5,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 10
+  },
+  "src/commonmark/node.js": {
+   "exact": 200,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 88
+  },
+  "src/commonmark/blocks.js": {
+   "exact": 539,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 426
+  },
+  "src/commonmark/render/renderer.js": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 39
+  },
+  "src/commonmark/render/html.js": {
+   "exact": 163,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 106
+  }
+ },
+ "final_functional_loc": 2567
+}

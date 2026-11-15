@@ -1,0 +1,44 @@
+{
+ "external_exact_fraction": 0.08788598574821853,
+ "external_modified_fraction": 0.011876484560570071,
+ "external_fraction": 0.0997624703087886,
+ "line_classes": {
+  "nontrivial": 421,
+  "trivial": 183,
+  "exact": 37,
+  "modified": 5,
+  "generated": 379
+ },
+ "corpus_sources": 4,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 864,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 431,
+  "gui_clipboard": 433
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/token-stream.js",
+   42
+  ],
+  [
+   ".gui/clipboard_history/1794721902426.txt",
+   42
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 34,
+   "trivial": 11
+  },
+  "src/calc.js": {
+   "exact": 37,
+   "modified": 4,
+   "generated": 345,
+   "trivial": 172
+  }
+ },
+ "final_functional_loc": 587
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/spyannis/jsExpeval/blob/main/ExpEval.js",
+    "license": "MIT",
+    "files_or_snippet": "ExpEval.js (evaluateExpression recursive-descent parser: peek/get/getNumber/factor/term/expression)",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 40,
+    "how_adapted": "Acquired via browser copy/paste of the raw file. Kept the recursive-descent structure and peek/get helpers; converted to ES module; replaced NaN error returns with CalcError carrying positions; added ^ (right-assoc), %, unary precedence level, scientific-notation number scanning without internal whitespace, trailing-input checks, division/remainder by zero and non-finite result checks. CLI written new."
+  }
+]
