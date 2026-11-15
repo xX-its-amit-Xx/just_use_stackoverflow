@@ -31,21 +31,80 @@ def done(task, strat, trial, model):
     return False
 
 
+import re
+import shutil
+import subprocess
+import threading
+
+LIMIT_RE = re.compile(r"hit your [^\"]{0,40}limit|usage limit|rate limit|overloaded|API Error", re.I)
+_gate = threading.Lock()
+
+
+def infra_failure(out):
+    """A run interrupted by the provider (usage/rate limit, API error) is not a trial outcome: detect it."""
+    try:
+        meta = json.load(open(os.path.join(out, "meta.json")))
+    except Exception:
+        return "no meta"
+    hr = meta.get("harness_result") or {}
+    tp = os.path.join(out, "transcript.jsonl")
+    if os.path.exists(tp):
+        for line in open(tp):
+            if '"<synthetic>"' in line:
+                m = LIMIT_RE.search(line)
+                if m:
+                    return m.group(0)
+    if not hr:
+        return None if meta.get("timed_out") else "no result record"
+    if hr.get("is_error") and not (hr.get("total_cost_usd") or 0):
+        return "error before any model call"
+    return None
+
+
+def wait_for_capacity():
+    """Block (one prober at a time) until a 1-token probe call succeeds."""
+    with _gate:
+        while True:
+            env = {k: v for k, v in os.environ.items() if k not in ("CLAUDE_CODE_SESSION_ID", "CLAUDE_CODE_REMOTE_SESSION_ID", "CLAUDE_EFFORT")}
+            p = subprocess.run(["claude", "-p", "Reply with OK", "--model", "claude-haiku-5-5", "--output-format", "json", "--tools", "",
+                                "--disable-slash-commands", "--strict-mcp-config", "--setting-sources", ""], capture_output=True, text=True, env=env, timeout=300,
+                               cwd="/tmp")
+            try:
+                ok = not json.loads(p.stdout).get("is_error")
+            except Exception:
+                ok = False
+            if ok:
+                return
+            print(json.dumps({"event": "waiting_for_capacity", "ts": time.time(), "detail": p.stdout[-200:]}), flush=True)
+            time.sleep(600)
+
+
 def one(task, strat, trial, model):
-    """Run the trial and its evaluation in separate processes (no GIL coupling between concurrent trials)."""
-    import subprocess
+    """Run the trial and its evaluation in separate processes. Provider-side interruptions are retried, never scored."""
     t0 = time.time()
-    p = subprocess.run([sys.executable, "-m", "harness.run_trial", task, strat, str(trial), model], cwd=HERE, capture_output=True, text=True)
-    if p.returncode:
-        raise RuntimeError(p.stderr[-800:])
-    info = json.loads(p.stdout.strip().splitlines()[-1])
-    rid, out = info["run_id"], info["out"]
+    attempt = 0
+    while True:
+        attempt += 1
+        p = subprocess.run([sys.executable, "-m", "harness.run_trial", task, strat, str(trial), model], cwd=HERE, capture_output=True, text=True)
+        if p.returncode:
+            raise RuntimeError(p.stderr[-800:])
+        info = json.loads(p.stdout.strip().splitlines()[-1])
+        rid, out = info["run_id"], info["out"]
+        why = infra_failure(out)
+        if not why:
+            break
+        shutil.rmtree(out, ignore_errors=True)
+        with open(os.path.join(REPO, "results", "execution_log.jsonl"), "a") as f:
+            f.write(json.dumps({"ts": time.time(), "event": "infra_retry", "run_id": rid, "reason": why, "attempt": attempt}) + "\n")
+        if attempt >= 200:
+            raise RuntimeError(f"gave up after {attempt} provider interruptions: {why}")
+        wait_for_capacity()
     e = subprocess.run([sys.executable, "-m", "harness.evaluate", out], cwd=HERE, capture_output=True, text=True, timeout=3600)
     if e.returncode:
         raise RuntimeError(f"evaluate failed for {rid}: {e.stderr[-800:]}")
     r = json.load(open(os.path.join(out, "run.json")))
     return {"run_id": rid, "minutes": round((time.time() - t0) / 60, 1), "pass": f"{r['hidden_pass']}/{r['hidden_tests']}",
-            "loc": r["functional_loc"], "usd": r["inference_cost_usd"]}
+            "loc": r["functional_loc"], "usd": r["inference_cost_usd"], "attempts": attempt}
 
 
 def main():
@@ -63,7 +122,11 @@ def main():
     plan = [(t, s, k, m) for m in a.models.split(",") for t in a.tasks.split(",") for s in strats
             for k in range(a.first_trial, a.first_trial + a.trials)]
     plan = [p for p in plan if not done(*p)]
-    random.Random(a.seed).shuffle(plan)
+    # Randomized complete blocks: all cells of trial k (shuffled) before trial k+1, so the data set is
+    # balanced across models/strategies/tasks at whatever point execution stops.
+    rnd = random.Random(a.seed)
+    rnd.shuffle(plan)
+    plan.sort(key=lambda p: p[2])
     log = os.path.join(REPO, "results", "execution_log.jsonl")
     with open(log, "a") as f:
         f.write(json.dumps({"ts": time.time(), "event": "plan", "seed": a.seed, "order": plan}) + "\n")
