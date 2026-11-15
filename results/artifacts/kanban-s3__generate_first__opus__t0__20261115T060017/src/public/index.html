@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanban</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header>
+  <h1><a href="#" id="home-link">Kanban</a></h1>
+  <div id="userbar" hidden><span id="whoami"></span> <button id="logout-btn">Log out</button></div>
+</header>
+<main>
+  <section id="auth-view" hidden>
+    <div class="auth-box">
+      <h2>Log in</h2>
+      <form id="login-form">
+        <input name="username" placeholder="Username" required autocomplete="username">
+        <input name="password" type="password" placeholder="Password" required autocomplete="current-password">
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+    <div class="auth-box">
+      <h2>Register</h2>
+      <form id="register-form">
+        <input name="username" placeholder="Username (a-z, 0-9, _)" required>
+        <input name="displayName" placeholder="Display name (optional)">
+        <input name="password" type="password" placeholder="Password (min 8 chars)" required autocomplete="new-password">
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="boards-view" hidden>
+    <h2>Your boards</h2>
+    <ul id="board-list"></ul>
+    <form id="new-board-form" class="inline">
+      <input name="name" placeholder="New board name" required maxlength="100">
+      <button type="submit">Create board</button>
+    </form>
+  </section>
+
+  <section id="board-view" hidden>
+    <div class="board-head">
+      <h2 id="board-title"></h2>
+      <span id="board-role" class="role"></span>
+    </div>
+    <p id="board-desc"></p>
+    <div id="columns" class="columns"></div>
+    <form id="new-column-form" class="inline">
+      <input name="name" placeholder="New column name" required maxlength="100">
+      <input name="wipLimit" type="number" min="1" placeholder="WIP limit">
+      <button type="submit">Add column</button>
+    </form>
+  </section>
+  <div id="error" role="alert" hidden></div>
+</main>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

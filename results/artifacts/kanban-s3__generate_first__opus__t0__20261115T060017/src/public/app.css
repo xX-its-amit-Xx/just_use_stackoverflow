@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f2f4f7; color: #222; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: #2d5be3; color: #fff; }
+header a { color: #fff; text-decoration: none; }
+header h1 { margin: 0; font-size: 20px; }
+main { padding: 16px; }
+.auth-box { display: inline-block; vertical-align: top; background: #fff; padding: 16px; margin: 8px; border-radius: 6px; width: 300px; }
+.auth-box input, .auth-box button { display: block; width: 100%; margin: 6px 0; padding: 6px; }
+form.inline { margin-top: 12px; display: flex; gap: 6px; }
+#board-list li { margin: 4px 0; }
+.columns { display: flex; gap: 12px; align-items: flex-start; overflow-x: auto; }
+.column { background: #e3e7ee; border-radius: 6px; padding: 8px; width: 260px; flex: none; min-height: 80px; }
+.column.drag-over { outline: 2px dashed #2d5be3; }
+.column h3 { margin: 0 0 8px; font-size: 15px; display: flex; justify-content: space-between; }
+.column .wip-full { color: #c0392b; }
+.card { background: #fff; border-radius: 4px; padding: 6px 8px; margin-bottom: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.15); cursor: grab; }
+.card .title { font-weight: 600; }
+.card .meta { font-size: 12px; color: #666; }
+.card .actions { margin-top: 4px; display: flex; gap: 4px; }
+.card .actions button { font-size: 11px; padding: 1px 6px; }
+.label-chip { display: inline-block; font-size: 11px; color: #fff; border-radius: 3px; padding: 0 4px; margin-right: 3px; }
+.column form input { width: 100%; padding: 4px; }
+.role { font-size: 12px; background: #ddd; border-radius: 3px; padding: 2px 6px; margin-left: 8px; }
+.board-head { display: flex; align-items: center; }
+#error { position: fixed; bottom: 16px; right: 16px; background: #c0392b; color: #fff; padding: 8px 12px; border-radius: 4px; }
