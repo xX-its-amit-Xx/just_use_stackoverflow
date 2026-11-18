@@ -103,6 +103,12 @@ def one(task, strat, trial, model):
     if e.returncode:
         raise RuntimeError(f"evaluate failed for {rid}: {e.stderr[-800:]}")
     r = json.load(open(os.path.join(out, "run.json")))
+    final = os.path.join(REPO, "results", "runs", rid)
+    if os.path.abspath(out) != final:
+        shutil.move(out, final)
+        sa = os.path.join(REPO, "results", ".inprogress_artifacts", rid)
+        if os.path.isdir(sa):
+            shutil.move(sa, os.path.join(REPO, "results", "artifacts", rid))
     return {"run_id": rid, "minutes": round((time.time() - t0) / 60, 1), "pass": f"{r['hidden_pass']}/{r['hidden_tests']}",
             "loc": r["functional_loc"], "usd": r["inference_cost_usd"], "attempts": attempt}
 

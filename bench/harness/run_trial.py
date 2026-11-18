@@ -74,7 +74,8 @@ def run(task_id, strategy, trial, runs_root=None, model=None):
     ws = os.path.join(work, "ws")
     os.makedirs(work)
     bindir = build_workspace(task_id, strategy, ws)
-    out = os.path.join(REPO, "results", "runs", run_id)
+    # in-progress runs live in a gitignored staging area; the orchestrator moves them to results/runs after evaluation
+    out = os.path.join(REPO, "results", ".inprogress", run_id)
     os.makedirs(out)
     session_id = str(uuid.uuid4())
     tel = os.path.join(ws, ".telemetry")

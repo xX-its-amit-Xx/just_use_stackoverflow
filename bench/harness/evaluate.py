@@ -333,7 +333,8 @@ def process(run_dir, copy=True):
     meta = json.load(open(os.path.join(run_dir, "meta.json")))
     ws = meta["workspace"]
     task_dir = os.path.join(BENCH, "tasks", meta["task_id"])
-    art = os.path.join(REPO, "results", "artifacts", meta["run_id"])
+    staging = os.sep + ".inprogress" + os.sep in os.path.abspath(run_dir) + os.sep
+    art = os.path.join(REPO, "results", ".inprogress_artifacts" if staging else "artifacts", meta["run_id"])
     if copy or not os.path.exists(art):
         copy_artifact(ws, art)
     json.dump(retrieval_manifest(ws), open(os.path.join(run_dir, "retrieval_manifest.json"), "w"), indent=1)
