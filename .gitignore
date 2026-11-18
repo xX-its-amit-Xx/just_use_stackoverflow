@@ -3,3 +3,4 @@ __pycache__/
 node_modules/
 results/.inprogress/
 results/.inprogress_artifacts/
+results/execution_log.jsonl
