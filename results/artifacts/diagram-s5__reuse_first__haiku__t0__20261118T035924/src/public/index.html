@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>diagram-s5</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div id="login" class="overlay">
+    <form id="loginForm" class="card">
+      <h2>diagram-s5</h2>
+      <label>Username <input id="lUser" autocomplete="username" required></label>
+      <label>Password <input id="lPass" type="password" autocomplete="current-password" required></label>
+      <div class="row">
+        <button type="submit" id="loginBtn">Log in</button>
+        <button type="button" id="registerBtn">Register</button>
+      </div>
+      <p id="loginError" class="error"></p>
+    </form>
+  </div>
+
+  <div id="app" hidden>
+    <header>
+      <strong class="brand">diagram-s5</strong>
+      <select id="docSelect" title="Documents"></select>
+      <button id="newDoc">New</button>
+      <input id="title" placeholder="Title" size="18">
+      <span class="spacer"></span>
+      <button id="undo" title="Ctrl+Z">Undo</button>
+      <button id="redo" title="Ctrl+Y">Redo</button>
+      <button id="importBtn">Import draw.io</button>
+      <input type="file" id="importFile" accept=".xml,.drawio" hidden>
+      <button id="exportSvg">Export SVG</button>
+      <button id="exportJson">Export JSON</button>
+      <span id="status" class="status"></span>
+      <span id="user" class="muted"></span>
+      <button id="logout">Log out</button>
+    </header>
+
+    <div id="main">
+      <nav id="tools">
+        <button data-tool="select" title="Select (V)">Select</button>
+        <button data-tool="rect" title="Rectangle (R)">Rect</button>
+        <button data-tool="ellipse" title="Ellipse (E)">Ellipse</button>
+        <button data-tool="diamond" title="Diamond (D)">Diamond</button>
+        <button data-tool="text" title="Text (T)">Text</button>
+        <button data-tool="line" title="Line (L)">Line</button>
+        <button data-tool="image" title="Image (I)">Image</button>
+        <button data-tool="connector" title="Straight connector (C)">Connector</button>
+        <button data-tool="orthogonal" title="Orthogonal connector (O)">Ortho</button>
+      </nav>
+
+      <div id="stage">
+        <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#333"></path>
+            </marker>
+          </defs>
+          <g id="viewport">
+            <g id="content"></g>
+            <g id="overlay"></g>
+          </g>
+        </svg>
+        <svg id="minimap" xmlns="http://www.w3.org/2000/svg" width="200" height="130"></svg>
+        <div id="zoomInfo" class="muted"></div>
+      </div>
+
+      <aside id="side">
+        <section>
+          <h3>Arrange</h3>
+          <div class="row wrap">
+            <button data-align="left">Left</button>
+            <button data-align="center">Centre</button>
+            <button data-align="right">Right</button>
+            <button data-align="top">Top</button>
+            <button data-align="middle">Middle</button>
+            <button data-align="bottom">Bottom</button>
+            <button data-dist="horizontal">Distribute H</button>
+            <button data-dist="vertical">Distribute V</button>
+          </div>
+          <div class="row">
+            <select id="layoutKind">
+              <option value="layered-TB">Layered (top-bottom)</option>
+              <option value="layered-LR">Layered (left-right)</option>
+              <option value="grid">Grid</option>
+            </select>
+            <input id="layoutSpacing" type="number" value="50" min="0" step="5" size="4">
+            <button id="layoutBtn">Auto-layout</button>
+          </div>
+        </section>
+        <section id="props"></section>
+        <section id="layers"></section>
+        <section>
+          <h3>Versions</h3>
+          <div class="row"><button id="saveVersion">Save version</button><button id="refreshVersions">Refresh</button></div>
+          <ul id="versionList" class="list"></ul>
+        </section>
+        <section>
+          <h3>Comments</h3>
+          <label class="muted"><input type="checkbox" id="allComments"> show all</label>
+          <form id="commentForm" class="col">
+            <textarea id="commentBody" rows="2" placeholder="Comment on the selected element"></textarea>
+            <button type="submit">Add comment</button>
+          </form>
+          <ul id="commentList" class="list"></ul>
+        </section>
+        <section>
+          <h3>Share</h3>
+          <div class="row">
+            <input id="shareUser" placeholder="username" size="12">
+            <select id="shareRole"><option value="editor">editor</option><option value="viewer">viewer</option></select>
+            <button id="shareBtn">Share</button>
+          </div>
+          <div id="members" class="muted"></div>
+        </section>
+      </aside>
+    </div>
+    <div id="toast" hidden></div>
+  </div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

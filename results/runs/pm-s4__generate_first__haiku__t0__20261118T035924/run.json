@@ -1,0 +1,250 @@
+{
+ "run_id": "pm-s4__generate_first__haiku__t0__20261118T035924",
+ "task_id": "pm-s4",
+ "strategy": "generate_first",
+ "trial": 0,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 19,
+ "model_invocations": 12,
+ "input_tokens": 24,
+ "output_tokens": 140361,
+ "cached_input_tokens": 1060692,
+ "cache_creation_tokens": 146850,
+ "reasoning_tokens": 77243,
+ "total_tokens": 140385,
+ "total_tokens_incl_cache": 1347927,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.292352,
+ "inference_cost_nocache_usd": 0.712494,
+ "inference_cost_attributed_usd": 0.292352,
+ "harness_reported_cost_usd": 0.29235194000000003,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.011845,
+ "total_execution_cost_usd": 0.304197,
+ "elapsed_s": 533.05,
+ "agent_elapsed_s": 530.29,
+ "orchestrator_observed_s": 532.16,
+ "eval_s": 2.76,
+ "active_s": 529.18,
+ "api_s": 514.5,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 12,
+ "own_pass": 12,
+ "functional_loc": 2441,
+ "functional_chars": 89176,
+ "normalized_loc": 2973,
+ "minified_vendor_bytes": 0,
+ "test_loc": 399,
+ "comment_lines": 52,
+ "blank_lines": 208,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 2441,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 3,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 119
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 137
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 148
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 212
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 234
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 287
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 367
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 433
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 464
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 631
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 650
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 654
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 665
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 736
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 831
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 909
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 9,
+   "max_file_loc": 1234,
+   "mean_file_loc": 271.2,
+   "functions": 290,
+   "loc_per_function": 8.4,
+   "duplicate_line_ratio": 0.1004
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 1902,
+   "trivial": 576,
+   "exact": 0,
+   "modified": 0,
+   "generated": 1902
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 2441
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 24,
+    "outputTokens": 140361,
+    "cacheReadInputTokens": 1060692,
+    "cacheCreationInputTokens": 146850,
+    "webSearchRequests": 0,
+    "costUSD": 0.29235194000000003,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 77243,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 146850,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 24,
+    "output": 140361,
+    "cr": 1060692,
+    "cw": 146850
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 3,
+  "code_generation": 5,
+  "code_edit": 1,
+  "test_execution": 2
+ }
+}

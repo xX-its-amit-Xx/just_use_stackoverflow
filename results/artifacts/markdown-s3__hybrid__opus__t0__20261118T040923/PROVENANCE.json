@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/markdown-it/v/15.0.3 (https://github.com/markdown-it/markdown-it)",
+    "license": "MIT",
+    "files_or_snippet": "package/dist/browser/markdown-it.esm.min.mjs (self-contained ESM bundle including mdurl, uc.micro, entities, linkify-it, punycode.js) and LICENSE",
+    "local_paths": ["src/vendor/markdown-it.mjs", "src/vendor/markdown-it.LICENSE"],
+    "lines_used_estimate": 4000,
+    "how_adapted": "Vendored unmodified except removal of the sourceMappingURL comment. Wrapped by src/markdown.js, which configures html:false (raw HTML escaped), adds a wiki-link inline rule, heading-id/TOC core rule, URL scheme sanitising core rule, and renders strikethrough as <del>."
+  }
+]

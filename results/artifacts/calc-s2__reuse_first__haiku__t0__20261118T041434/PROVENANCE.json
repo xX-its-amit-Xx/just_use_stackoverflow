@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/expr-eval/v/2.0.2",
+    "license": "MIT (Copyright (c) 2015 Matthew Crumley)",
+    "files_or_snippet": "npm expr-eval@2.0.2: dist/index.mjs, TokenStream (Token constructor, positional next(), isRadixInteger, isName/isNumber scanning conventions); repo https://github.com/silentmatt/expr-eval",
+    "local_paths": ["src/calc.js (function tokenize, token shape {type,value,index}); src/THIRD_PARTY_NOTICES.md"],
+    "lines_used_estimate": 40,
+    "how_adapted": "Only the token-stream design was reused: positional tokens {type,value,index}, 0x/0b radix-integer scanning, identifier scanning and a lexer that reports errors by index. Re-written for this grammar (added e/E exponents, error tokens reported lazily, no operators/strings/brackets from expr-eval). The parser (implicit multiplication, precedence levels, lookahead for function definitions), evaluator, angle modes, user functions, REPL and formatting are new code written for SPEC.md. Retrieval sources also inspected but not used: GitHub Serkanbyx/basic-calculator (MIT; only + - * /, not used), GitHub Motardo/calc (GPL-3.0; not used), npm mathjs (Apache-2.0; too large, not used), npm expr-eval (used as above), Stack Overflow search returned no results."
+  }
+]

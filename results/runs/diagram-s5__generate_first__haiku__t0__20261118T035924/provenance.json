@@ -1,0 +1,110 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 2375,
+  "trivial": 892,
+  "exact": 0,
+  "modified": 0,
+  "generated": 2375
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/ws.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 63,
+   "trivial": 30
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 416,
+   "trivial": 143
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 2
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 615,
+   "trivial": 227
+  },
+  "src/static/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 15,
+   "trivial": 11
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 79,
+   "trivial": 20
+  },
+  "src/core/svg.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 76,
+   "trivial": 22
+  },
+  "src/core/fractional.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 16,
+   "trivial": 13
+  },
+  "src/core/geometry.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 110,
+   "trivial": 33
+  },
+  "src/core/drawio.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 103,
+   "trivial": 41
+  },
+  "src/core/index.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 6,
+   "trivial": 1
+  },
+  "src/core/layout.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 126,
+   "trivial": 48
+  },
+  "src/core/errors.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 3
+  },
+  "src/core/routing.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 139,
+   "trivial": 50
+  },
+  "src/core/document.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 599,
+   "trivial": 248
+  }
+ },
+ "final_functional_loc": 3159
+}

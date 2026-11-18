@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markdown-s3</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<aside id="sidebar">
+  <div class="side-top">
+    <a href="#/" class="brand">markdown-s3</a>
+    <button id="new-page" type="button">New page</button>
+  </div>
+  <input id="search" type="search" placeholder="Search pages…" autocomplete="off">
+  <div class="filters">
+    <select id="tag-filter" aria-label="Tag filter"><option value="">All tags</option></select>
+    <select id="sort" aria-label="Sort">
+      <option value="title">Title</option>
+      <option value="updated">Recently updated</option>
+    </select>
+  </div>
+  <ul id="list"></ul>
+</aside>
+<main id="main">
+  <div id="status" role="status"></div>
+  <div id="content"><p class="muted">Loading…</p></div>
+</main>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kanban-s3</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header>
+    <h1>kanban-s3</h1>
+    <span id="whoami"></span>
+    <button id="logout-btn" hidden>Log out</button>
+  </header>
+  <p id="flash" role="alert"></p>
+
+  <section id="auth-view" hidden>
+    <div class="auth-forms">
+      <form id="login-form">
+        <h2>Log in</h2>
+        <label>Username <input name="username" autocomplete="username" required></label>
+        <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Log in</button>
+      </form>
+      <form id="register-form">
+        <h2>Register</h2>
+        <label>Username <input name="username" autocomplete="username" pattern="[a-zA-Z0-9_]{3,32}" required></label>
+        <label>Display name <input name="displayName" autocomplete="name"></label>
+        <label>Password (8+ chars) <input name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="boards-view" hidden>
+    <h2>Your boards</h2>
+    <ul id="board-list"></ul>
+    <form id="new-board-form">
+      <h3>New board</h3>
+      <label>Name <input name="name" maxlength="100" required></label>
+      <label>Description <input name="description" maxlength="500"></label>
+      <label>Columns (comma-separated) <input name="columns" placeholder="To Do, In Progress, Done"></label>
+      <button type="submit">Create board</button>
+    </form>
+  </section>
+
+  <section id="board-view" hidden>
+    <p><a href="#" id="back-link">&larr; All boards</a></p>
+    <h2 id="board-title"></h2>
+    <p id="board-desc"></p>
+    <div id="columns"></div>
+  </section>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

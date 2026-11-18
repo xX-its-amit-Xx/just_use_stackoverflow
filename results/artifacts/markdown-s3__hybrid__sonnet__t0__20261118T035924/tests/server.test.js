@@ -1,0 +1,24 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path';
+import { createServer } from '../src/server.js';
+test('versions, conflict, diff, search, backlinks', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'wiki-'));
+  const srv = createServer({ dataDir: dir }); await new Promise(r => srv.listen(0, r));
+  const base = `http://127.0.0.1:${srv.address().port}`;
+  const j = (m, u, b) => fetch(base + u, { method: m, headers: { 'content-type': 'application/json' }, body: b && JSON.stringify(b) });
+  assert.equal((await j('PUT', '/api/pages/a', { title: 'A', body: 'x\ny', tags: ['B', 'b'] })).status, 201);
+  assert.equal((await j('PUT', '/api/pages/b', { title: 'B', body: 'see [[A]] foo' })).status, 201);
+  assert.equal((await j('PUT', '/api/pages/a', { title: 'A', body: 'x\nz', baseVersion: 1 })).status, 200);
+  const c = await j('PUT', '/api/pages/a', { title: 'A', body: 'q', baseVersion: 1 });
+  assert.equal(c.status, 409); assert.equal((await c.json()).currentVersion, 2);
+  const d = await (await j('GET', '/api/pages/a/diff?from=1&to=2')).json();
+  assert.deepEqual(d.lines, [{ op: ' ', text: 'x' }, { op: '-', text: 'y' }, { op: '+', text: 'z' }]);
+  assert.deepEqual((await (await j('GET', '/api/pages/a')).json()).backlinks, ['b']);
+  const s = await (await j('GET', '/api/search?q=FOO')).json();
+  assert.equal(s[0].snippet, 'see [[A]] <mark>foo</mark>');
+  assert.equal((await j('GET', '/api/search?q=%20')).status, 400);
+  srv.close();
+  const srv2 = createServer({ dataDir: dir });
+  assert.ok(srv2);
+});

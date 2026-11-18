@@ -1,0 +1,361 @@
+{
+ "run_id": "markdown-s3__hybrid__haiku__t0__20261118T041357",
+ "task_id": "markdown-s3",
+ "strategy": "hybrid",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 43,
+ "model_invocations": 40,
+ "input_tokens": 80,
+ "output_tokens": 77622,
+ "cached_input_tokens": 2400614,
+ "cache_creation_tokens": 107204,
+ "reasoning_tokens": 33363,
+ "total_tokens": 77702,
+ "total_tokens_incl_cache": 2585520,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.147857,
+ "inference_cost_nocache_usd": 0.623006,
+ "inference_cost_attributed_usd": 0.147857,
+ "harness_reported_cost_usd": 0.14785666000000003,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.007894,
+ "total_execution_cost_usd": 0.15575,
+ "elapsed_s": 355.21,
+ "agent_elapsed_s": 354.52,
+ "orchestrator_observed_s": 355.44,
+ "eval_s": 0.69,
+ "active_s": 362.09,
+ "api_s": 346.9,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 11,
+ "own_pass": 11,
+ "functional_loc": 4905,
+ "functional_chars": 137588,
+ "normalized_loc": 4586,
+ "minified_vendor_bytes": 0,
+ "test_loc": 131,
+ "comment_lines": 757,
+ "blank_lines": 456,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 10,
+  "repositories_inspected": 0,
+  "repositories_cloned": 3,
+  "clone_attempts_failed": 1,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 19002,
+  "cloned_repo_lines": 20184,
+  "retrieved_loc_incorporated": 3475,
+  "retrieved_loc_modified": 121,
+  "retrieved_loc_discarded": 15406,
+  "generated_loc": 1309,
+  "modified_loc": 121,
+  "integration_modifications": 0,
+  "external_fraction": 0.7331,
+  "search_to_use_conversion": 0.5577,
+  "repository_acquisition_s": 2.92,
+  "retrieval_actions": 3,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 10,
+  "retrieval_invocations": 7,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 42
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 53
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 58
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 150
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 167
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 179
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 186
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 221
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 222
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 223
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 224
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 264
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 301
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 305
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 20,
+   "max_file_loc": 955,
+   "mean_file_loc": 245.2,
+   "functions": 644,
+   "loc_per_function": 7.6,
+   "duplicate_line_ratio": 0.1515
+  },
+  "license": {
+   "provenance_entries": 3,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.7084460474902314,
+  "external_modified_fraction": 0.0246468289750526,
+  "external_fraction": 0.7330928764652841,
+  "line_classes": {
+   "nontrivial": 3327,
+   "trivial": 2334,
+   "exact": 2357,
+   "modified": 82,
+   "generated": 888
+  },
+  "corpus_sources": 52,
+  "corpus_sources_contributing": 29,
+  "corpus_lines": 19002,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 19002
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+    1683
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode.js",
+    592
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+    588
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+    578
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/decode.ts",
+    430
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+    235
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+    208
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+    182
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/build/index.cjs.js",
+    86
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/internal/decode-data-format.js",
+    83
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+    62
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/internal/decode-data-format.ts",
+    59
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/encode.mjs",
+    52
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+    51
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+    50
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/parse.mjs",
+    44
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/decode.mjs",
+    35
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/encode.js",
+    34
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/escape.js",
+    33
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/escape.ts",
+    18
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode-codepoint.js",
+    18
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/README.md",
+    14
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/lib/index.js",
+    14
+   ],
+   [
+    ".retrieval/.retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+    13
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/decode-codepoint.ts",
+    11
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/src/encode.ts",
+    6
+   ],
+   [
+    ".retrieval/npm/mdurl@2.1.0/package/lib/format.mjs",
+    4
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/decode.d.ts",
+    2
+   ],
+   [
+    ".retrieval/npm/entities@9.0.0/package/dist/generated/decode-data-html.js",
+    1
+   ]
+  ],
+  "final_functional_loc": 4905
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 80,
+    "outputTokens": 77622,
+    "cacheReadInputTokens": 2400614,
+    "cacheCreationInputTokens": 107204,
+    "webSearchRequests": 0,
+    "costUSD": 0.14785666000000003,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 33363,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 107204,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 80,
+    "output": 77622,
+    "cr": 2400614,
+    "cw": 107204
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 15,
+  "repository_clone": 3,
+  "repository_inspection": 4,
+  "code_edit": 7,
+  "code_generation": 9,
+  "test_execution": 1
+ }
+}

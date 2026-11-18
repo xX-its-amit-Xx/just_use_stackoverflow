@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/search?q=kanban+nodejs+language%3AJavaScript&type=repositories&s=stars&o=desc (also: /search?q=trello+kanban+api+%22node%3Ahttp%22+OR+%22no+dependencies%22+language%3AJavaScript, /search?q=zero+dependency+router+%22node%3Ahttp%22+rest+api, /search?q=%22node%3Ahttp%22+%22scrypt%22+%22Bearer%22 code search)",
+    "license": "n/a",
+    "files_or_snippet": "none",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "No code reused. Browser search via GitHub UI found no usable zero-dependency node:http kanban/REST implementation: code search required sign-in (not available), and repository hits were framework apps (React/MongoDB, Prisma/Express). sosyfy/trello-backend (https://github.com/sosyfy/trello-backend) was opened and inspected visually, but it is Prisma-based and does not match the node:http, no-dependency constraint, so nothing was copied. All code in src/ was written from scratch. Notes: searched and found nothing usable -> written from scratch."
+  }
+]

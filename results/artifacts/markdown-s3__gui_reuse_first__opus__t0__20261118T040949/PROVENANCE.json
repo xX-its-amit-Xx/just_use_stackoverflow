@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.js (repo: https://github.com/markdown-it/markdown-it)",
+    "license": "MIT (bundle also contains MIT-licensed mdurl, uc.micro, linkify-it, entities (BSD-2-Clause) and punycode.js (MIT))",
+    "files_or_snippet": "dist/markdown-it.js (full UMD bundle)",
+    "local_paths": ["src/vendor/markdown-it.cjs"],
+    "lines_used_estimate": 6963,
+    "how_adapted": "INTENDED: vendored unmodified, loaded via createRequire from src/markdown.js, configured with commonmark preset + table + strikethrough, html:false; custom renderer rules for <del>, URL scheme sanitising, heading ids, and a [[wiki link]] inline rule. STATUS: the file was copied in the browser, but pasting it into the workspace was blocked by the session's permission classifier, so it is NOT present yet."
+  }
+]

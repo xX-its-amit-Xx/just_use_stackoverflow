@@ -1,0 +1,53 @@
+[
+  {
+    "source_url": "https://github.com/dagrejs/dagre (dist/dagre.esm.js, package @dagrejs/dagre 3.1.4-pre; fetched via rtool clone)",
+    "license": "MIT",
+    "files_or_snippet": "dist/dagre.esm.js (entire minified ESM bundle, graphlib included), dist/dagre.esm.js.LEGAL.txt, LICENSE",
+    "local_paths": [
+      "src/vendor/dagre.esm.js",
+      "src/vendor/dagre.esm.LEGAL.txt",
+      "src/vendor/dagre.LICENSE"
+    ],
+    "lines_used_estimate": 3,
+    "how_adapted": "Vendored verbatim, unmodified. Used by src/core/document.js (layout('layered')) as a Sugiyama-style layered layout: rankdir/nodesep/ranksep set from the operation options, node centres converted to top-left positions."
+  },
+  {
+    "source_url": "https://github.com/rocicorp/fractional-indexing (src/index.js, v4.0.0; fetched via rtool clone)",
+    "license": "CC0-1.0",
+    "files_or_snippet": "src/index.js (entire file) and LICENSE",
+    "local_paths": [
+      "src/vendor/fractional-indexing.js",
+      "src/vendor/fractional-indexing.LICENSE"
+    ],
+    "lines_used_estimate": 587,
+    "how_adapted": "Vendored verbatim, unmodified. generateKeyBetween() provides the fractional z-order keys used by reorder, add and paste in src/core/document.js. A small wrapper (between) in document.js guards equal or inverted keys."
+  },
+  {
+    "source_url": "https://github.com/jgraph/drawio-mcp (shared/mx-xml.js; fetched via rtool clone)",
+    "license": "Apache-2.0",
+    "files_or_snippet": "shared/mx-xml.js: parseAttrs, unescapeXml (XML entity decoding), <object>/<UserObject> wrapper handling in parseCells, and mxGeometry/Array points parsing; LICENSE",
+    "local_paths": [
+      "src/core/drawio.js",
+      "src/vendor/drawio-mcp.LICENSE"
+    ],
+    "lines_used_estimate": 60,
+    "how_adapted": "Re-implemented in src/core/drawio.js as a standalone importer. Only the regex-based parsing approach and helper logic were adapted. The mxGraph headless model (mx-model.js), the write-back pass and all other modules were not used. Mapping to this project's element/connector model (shape types, style mapping, layers, relative geometry, html label stripping) is new code."
+  },
+  {
+    "source_url": "none - written from scratch (no retrieved source covered these components)",
+    "license": "project (this repository)",
+    "files_or_snippet": "src/core/document.js (CRDT write/stamp model, undo/redo history, operations, queries, toSVG, restore), src/core/geometry.js (rotation-aware hit tests, boundary anchors, obstacle-avoiding orthogonal router with bend-penalised Dijkstra, snap), src/ws.js (RFC 6455 framing on node:http), src/server.js (auth, op log, long-poll, versions, comments, exports), src/public/* (editor UI)",
+    "local_paths": [
+      "src/core/document.js",
+      "src/core/geometry.js",
+      "src/ws.js",
+      "src/server.js",
+      "src/main.js",
+      "src/public/index.html",
+      "src/public/app.js",
+      "src/public/styles.css"
+    ],
+    "lines_used_estimate": 0,
+    "how_adapted": "Searches run under the reuse-first protocol: GitHub repository search, GitHub code search, npm search and Stack Overflow question search (no relevant Stack Overflow answers were found, none were copied). Candidates for the CRDT, orthogonal routing and WebSocket server were absent or unsuitable: the npm 'ws' package was considered but rejected because the spec requires node:http with no runtime npm dependencies. These parts were therefore written new."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/zjambor/kanban-board/blob/main/styles.css",
+    "license": "MIT",
+    "files_or_snippet": "styles.css (entire file)",
+    "local_paths": ["src/static/styles.css"],
+    "lines_used_estimate": 540,
+    "how_adapted": "Copied verbatim via browser raw view (copy/paste) with an attribution header; a few extra layout rules for auth/board-list views are added inline in src/static/index.html."
+  },
+  {
+    "source_url": "https://github.com/zjambor/kanban-board/blob/main/app.js",
+    "license": "MIT",
+    "files_or_snippet": "app.js: toast(), buildBoard()/cardHtml()/renderAll() structure, getDragAfterElement() and dragstart/dragover/drop/dragend handlers",
+    "local_paths": ["src/static/app.js"],
+    "lines_used_estimate": 75,
+    "how_adapted": "Translated Hungarian strings to English; replaced Supabase calls and fixed status columns with dynamic board columns loaded from /api/boards/:id; drop handler now calls POST /api/cards/:id/move with target columnId and DOM-derived position; added login/register, board list/creation and move buttons as glue."
+  },
+  {
+    "source_url": "(none — written from scratch)",
+    "license": "n/a",
+    "files_or_snippet": "Backend REST API",
+    "local_paths": ["src/server.js", "src/main.js", "src/static/index.html"],
+    "lines_used_estimate": 0,
+    "how_adapted": "NOTE: GitHub repository searches (kanban + node:http / vanilla node / REST API with MIT license) found only Express/Mongo/Postgres/Supabase-based or client-only projects, none usable under the standard-library-only constraint, so the server was written from scratch."
+  }
+]

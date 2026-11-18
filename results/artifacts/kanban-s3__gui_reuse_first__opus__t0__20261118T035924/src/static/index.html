@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kanban</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <style>
+    .auth-box, .boards-box { max-width: 420px; margin: 3rem auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .boards-box { max-width: 640px; }
+    .board-list { list-style: none; margin: 1rem 0; display: flex; flex-direction: column; gap: .5rem; }
+    .board-list li { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .7rem 1rem; cursor: pointer; display: flex; justify-content: space-between; }
+    .board-list li:hover { border-color: var(--blue); }
+    .row { display: flex; gap: .5rem; margin-top: .75rem; }
+    .row input { flex: 1; padding: .55rem .7rem; background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 8px; }
+    .move-btns { display: flex; gap: .25rem; margin-top: .4rem; }
+    .move-btns button { font-size: .75rem; }
+    .muted { color: var(--muted); font-size: .85rem; }
+    .board { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-title"><h1>Kanban <span class="accent">S3</span></h1></div>
+    <div class="header-actions">
+      <span id="user-chip" class="user-chip hidden"></span>
+      <button id="btn-boards" class="btn btn-ghost hidden">Boards</button>
+      <button id="btn-logout" class="btn btn-ghost hidden">Log out</button>
+    </div>
+  </header>
+
+  <main id="view-auth" class="auth-box hidden">
+    <h2>Sign in</h2>
+    <p id="auth-error" class="login-error hidden"></p>
+    <form id="auth-form">
+      <div class="form-group"><label for="username">Username</label><input type="text" id="username" autocomplete="username" required></div>
+      <div class="form-group"><label for="password">Password</label><input type="password" id="password" autocomplete="current-password" required></div>
+      <div class="modal-footer">
+        <button type="button" id="btn-register" class="btn btn-ghost">Register</button>
+        <button type="submit" class="btn btn-primary">Log in</button>
+      </div>
+    </form>
+  </main>
+
+  <main id="view-boards" class="boards-box hidden">
+    <h2>Your boards</h2>
+    <ul id="board-list" class="board-list"></ul>
+    <form id="board-form" class="row">
+      <input id="board-name" placeholder="New board name" maxlength="100" required>
+      <button class="btn btn-primary" type="submit">Create board</button>
+    </form>
+  </main>
+
+  <section id="view-board" class="hidden">
+    <div style="padding: 1rem 1.5rem 0"><h2 id="board-title"></h2><p id="board-role" class="muted"></p></div>
+    <main id="board" class="board"></main>
+  </section>
+
+  <div id="toast-container" class="toast-container"></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

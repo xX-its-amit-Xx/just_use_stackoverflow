@@ -1,0 +1,271 @@
+{
+ "run_id": "markdown-s3__hybrid__opus__t0__20261118T040923",
+ "task_id": "markdown-s3",
+ "strategy": "hybrid",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 18,
+ "model_invocations": 18,
+ "input_tokens": 36,
+ "output_tokens": 28463,
+ "cached_input_tokens": 420125,
+ "cache_creation_tokens": 36574,
+ "reasoning_tokens": 4495,
+ "total_tokens": 28499,
+ "total_tokens_incl_cache": 485198,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.946021,
+ "inference_cost_nocache_usd": 2.3962,
+ "inference_cost_attributed_usd": 0.946021,
+ "harness_reported_cost_usd": 0.946021,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.00563,
+ "total_execution_cost_usd": 0.951651,
+ "elapsed_s": 253.35,
+ "agent_elapsed_s": 252.74,
+ "orchestrator_observed_s": 253.75,
+ "eval_s": 0.61,
+ "active_s": 258.36,
+ "api_s": 248.42,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 4,
+ "own_pass": 4,
+ "functional_loc": 3744,
+ "functional_chars": 126375,
+ "normalized_loc": 4212,
+ "minified_vendor_bytes": 0,
+ "test_loc": 98,
+ "comment_lines": 114,
+ "blank_lines": 59,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 8740,
+  "cloned_repo_lines": 12824,
+  "retrieved_loc_incorporated": 111,
+  "retrieved_loc_modified": 646,
+  "retrieved_loc_discarded": 7983,
+  "generated_loc": 2987,
+  "modified_loc": 646,
+  "integration_modifications": 0,
+  "external_fraction": 0.2021,
+  "search_to_use_conversion": 0.6667,
+  "repository_acquisition_s": 0.35,
+  "retrieval_actions": 1,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 4,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 22
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 26
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 31
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 32
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 41
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 54
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 54
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 54
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 63
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 63
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 94
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 96
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 96
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 103
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 112
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/ui/app.js",
+    "line": 114
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 8,
+   "max_file_loc": 2956,
+   "mean_file_loc": 468.0,
+   "functions": 529,
+   "loc_per_function": 7.1,
+   "duplicate_line_ratio": 0.0778
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.02962962962962963,
+  "external_modified_fraction": 0.17242798353909464,
+  "external_fraction": 0.20205761316872428,
+  "line_classes": {
+   "nontrivial": 2430,
+   "trivial": 1428,
+   "exact": 72,
+   "modified": 419,
+   "generated": 1939
+  },
+  "corpus_sources": 6,
+  "corpus_sources_contributing": 4,
+  "corpus_lines": 8740,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 8740
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+    486
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+    444
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+    16
+   ],
+   [
+    ".retrieval/npm/markdown-it@15.0.3/package/README.md",
+    3
+   ]
+  ],
+  "final_functional_loc": 3744
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 36,
+    "outputTokens": 28463,
+    "cacheReadInputTokens": 420125,
+    "cacheCreationInputTokens": 36574,
+    "webSearchRequests": 0,
+    "costUSD": 0.946021,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 4495,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 36574,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 36,
+    "output": 28463,
+    "cr": 420125,
+    "cw": 36574
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 3,
+  "repository_clone": 1,
+  "file_copy": 1,
+  "repository_inspection": 3,
+  "code_edit": 1,
+  "code_generation": 8
+ }
+}

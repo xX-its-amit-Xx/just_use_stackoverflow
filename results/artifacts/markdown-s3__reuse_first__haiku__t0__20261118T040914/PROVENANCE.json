@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/commonmark (version 0.31.2; repository https://github.com/commonmark/commonmark.js)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "dist/commonmark.js of npm package commonmark@0.31.2 (single UMD bundle of lib/*.js), plus its LICENSE file",
+    "local_paths": ["src/vendor/commonmark.cjs", "src/vendor/COMMONMARK-LICENSE.txt", "src/THIRD_PARTY_NOTICES.md"],
+    "lines_used_estimate": 10207,
+    "how_adapted": "Copied verbatim and renamed to .cjs so Node loads it as CommonJS inside this type:module package; no edits to its contents. Used via its public Parser / Node / HtmlRenderer API from src/markdown.js. All markdown-s3 extensions (GFM tables, ~~strikethrough~~, wiki links, escaped raw HTML, safe URL schemes, GitHub-style heading slugs, toc) are our own code in src/markdown.js built on that API. Chosen because the spec names commonmark.js as the reference CommonMark output; it has no runtime dependencies in this bundle."
+  },
+  {
+    "source_url": "none (original code; no reusable implementation found)",
+    "license": "project license (original work)",
+    "files_or_snippet": "src/server.js, src/main.js, src/public/index.html, src/public/static/app.js, src/public/static/style.css, tests/unit/*.test.js",
+    "local_paths": ["src/server.js", "src/main.js", "src/public/index.html", "src/public/static/app.js", "src/public/static/style.css", "tests/unit/markdown.test.js", "tests/unit/server.test.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "Written from scratch. Retrieval searches for a wiki/page-history server (GitHub repository and code search, npm search 'myers line diff', Stack Overflow 'github style heading slug' and 'LCS line diff javascript') returned no usable implementation of the page store, version history, search snippets, or the LCS line diff. The LCS diff (src/server.js diffLines) and the slugify rule were written by hand; the diff was checked against the spec's ordering rule. Candidates considered and not adopted: npm 'diff' (BSD-3-Clause, not vendored because its output format differs from the spec), npm 'fast-myers-diff' (MIT, not vendored for the same reason)."
+  }
+]

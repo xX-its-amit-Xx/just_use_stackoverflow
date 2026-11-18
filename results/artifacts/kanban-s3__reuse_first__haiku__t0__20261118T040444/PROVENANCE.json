@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/rou3",
+    "license": "MIT",
+    "files_or_snippet": "rou3@1.0.0 dist/index.mjs (inspected only)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Retrieved via rtool npm-fetch and inspected as a router candidate. Rejected: about 2,200 lines of radix-tree and escape-handling code, far more than the spec's route table needs. No code was copied; src/router.js is original."
+  },
+  {
+    "source_url": "https://nodejs.org/api/crypto.html#cryptoscryptsyncpassword-salt-keylen-options",
+    "license": "Node.js documentation (MIT for code samples)",
+    "files_or_snippet": "crypto.scryptSync API reference, consulted via WebSearch (no Stack Overflow thread found)",
+    "local_paths": ["src/auth.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "Only the documented API signature was used. The salt-per-user and timingSafeEqual pattern is standard usage; the code in src/auth.js was written from scratch."
+  }
+]

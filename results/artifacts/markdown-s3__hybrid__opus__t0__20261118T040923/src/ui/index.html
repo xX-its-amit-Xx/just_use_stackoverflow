@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Wiki</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="app">
+<aside id="sidebar">
+  <h2>Wiki</h2>
+  <input id="search" type="search" placeholder="Search…" autocomplete="off">
+  <div id="search-results"></div>
+  <label>Tag <select id="tag-filter"><option value="">(all)</option></select></label>
+  <label>Sort <select id="sort"><option value="title">Title</option><option value="updated">Updated</option></select></label>
+  <ul id="page-list"></ul>
+  <button id="new-page">+ New page</button>
+</aside>
+<main>
+  <div id="toolbar">
+    <input id="slug" placeholder="slug" size="16">
+    <input id="title" placeholder="Title" size="30">
+    <input id="tags" placeholder="tags, comma separated" size="24">
+    <button id="save">Save</button>
+    <button id="delete">Delete</button>
+    <button id="history-btn">History</button>
+    <a id="view-link" href="#" target="_blank">View</a>
+    <span id="status"></span>
+  </div>
+  <div id="conflict" hidden>
+    <p>Conflict: this page was changed elsewhere (current version <span id="conflict-version"></span>).</p>
+    <button id="conflict-reload">Load latest (discard mine)</button>
+    <button id="conflict-overwrite">Overwrite with mine</button>
+  </div>
+  <div id="workspace">
+    <textarea id="editor" spellcheck="false" placeholder="Write Markdown…"></textarea>
+    <div id="preview" class="markdown-body"></div>
+  </div>
+  <section id="panels">
+    <div><h3>Table of contents</h3><ul id="toc"></ul></div>
+    <div><h3>Backlinks</h3><ul id="backlinks"></ul></div>
+  </section>
+  <section id="history" hidden>
+    <h3>History</h3>
+    <ul id="history-list"></ul>
+    <div>From <select id="diff-from"></select> to <select id="diff-to"></select> <button id="diff-btn">Diff</button></div>
+    <pre id="diff-output"></pre>
+  </section>
+</main>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+ "run_id": "markdown-s3__hybrid__sonnet__t0__20261118T035924",
+ "task_id": "markdown-s3",
+ "strategy": "hybrid",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 1,
+ "model_invocations": 18,
+ "input_tokens": 36,
+ "output_tokens": 15910,
+ "cached_input_tokens": 350398,
+ "cache_creation_tokens": 26034,
+ "reasoning_tokens": 1429,
+ "total_tokens": 15946,
+ "total_tokens_incl_cache": 392378,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.298348,
+ "inference_cost_nocache_usd": 0.912036,
+ "inference_cost_attributed_usd": 0.298348,
+ "harness_reported_cost_usd": 0.29834780000000005,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 8.2e-05,
+ "total_execution_cost_usd": 0.29843,
+ "elapsed_s": 3.69,
+ "agent_elapsed_s": 3.12,
+ "orchestrator_observed_s": 588.43,
+ "eval_s": 0.56,
+ "active_s": 335.56,
+ "api_s": 103.77,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 2,
+ "own_pass": 2,
+ "functional_loc": 393,
+ "functional_chars": 17725,
+ "normalized_loc": 591,
+ "minified_vendor_bytes": 124681,
+ "test_loc": 37,
+ "comment_lines": 2,
+ "blank_lines": 19,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 1,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 12824,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 393,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0.61,
+  "retrieval_actions": 1,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 1.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 9,
+  "retrieval_invocations": 6,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 19
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 36
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 46
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 5,
+   "max_file_loc": 226,
+   "mean_file_loc": 78.6,
+   "functions": 87,
+   "loc_per_function": 4.5,
+   "duplicate_line_ratio": 0.019
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 2152,
+   "trivial": 1306,
+   "exact": 0,
+   "modified": 0,
+   "generated": 2152
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 393
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 36,
+    "outputTokens": 15910,
+    "cacheReadInputTokens": 350398,
+    "cacheCreationInputTokens": 26034,
+    "webSearchRequests": 0,
+    "costUSD": 0.29834780000000005,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 1429,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 26034,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 36,
+    "output": 15910,
+    "cr": 350398,
+    "cw": 26034
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 4,
+  "repository_clone": 1,
+  "repository_inspection": 5,
+  "code_generation": 3,
+  "test_execution": 4
+ }
+}

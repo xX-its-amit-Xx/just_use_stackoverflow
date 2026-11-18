@@ -1,0 +1,56 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 2152,
+  "trivial": 1306,
+  "exact": 0,
+  "modified": 0,
+  "generated": 2152
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 78,
+   "trivial": 25
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 184,
+   "trivial": 42
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 0
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 38,
+   "trivial": 10
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 13,
+   "trivial": 2
+  },
+  "src/vendor/markdown-it.min.mjs": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 1836,
+   "trivial": 1227
+  }
+ },
+ "final_functional_loc": 393
+}

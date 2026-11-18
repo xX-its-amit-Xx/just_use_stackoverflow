@@ -1,0 +1,76 @@
+{
+ "external_exact_fraction": 0.997060058798824,
+ "external_modified_fraction": 0.00041999160016799666,
+ "external_fraction": 0.997480050398992,
+ "line_classes": {
+  "nontrivial": 7143,
+  "trivial": 2733,
+  "exact": 7122,
+  "modified": 3,
+  "generated": 18
+ },
+ "corpus_sources": 16,
+ "corpus_sources_contributing": 10,
+ "corpus_lines": 13235,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 13186,
+  "tool_result": 49
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+   7124
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+   529
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+   519
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+   217
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+   169
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+   147
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+   46
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+   40
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+   35
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/README.md",
+   11
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 18,
+   "trivial": 7
+  },
+  "src/commonmark.cjs": {
+   "exact": 7122,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2726
+  }
+ },
+ "final_functional_loc": 9497
+}

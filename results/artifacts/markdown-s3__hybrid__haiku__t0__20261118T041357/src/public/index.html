@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markdown-s3 wiki</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <strong>markdown-s3</strong>
+  <input id="search" type="search" placeholder="Search pages…" autocomplete="off">
+  <div id="search-results" class="search-results" hidden></div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <button id="new-page" type="button">+ New page</button>
+    <label>Tag
+      <select id="tag-filter"><option value="">All tags</option></select>
+    </label>
+    <label>Sort
+      <select id="sort">
+        <option value="title">Title</option>
+        <option value="updated">Recently updated</option>
+      </select>
+    </label>
+    <ul id="page-list" class="page-list"></ul>
+  </aside>
+
+  <main class="main">
+    <div id="new-slug-row" class="row" hidden>
+      <label>Slug <input id="new-slug" placeholder="my-page" autocomplete="off"></label>
+    </div>
+    <div class="row">
+      <input id="title" placeholder="Page title" autocomplete="off">
+      <input id="tags" placeholder="tags, comma separated" autocomplete="off">
+    </div>
+    <div class="row toolbar">
+      <button id="save" type="button">Save</button>
+      <button id="delete" type="button">Delete</button>
+      <span id="status" class="status"></span>
+      <a id="view-link" class="view-link" target="_blank" rel="noopener" hidden>Open standalone</a>
+    </div>
+    <div id="conflict" class="conflict" hidden>
+      <p>This page was changed by someone else (current version <span id="conflict-version"></span>).</p>
+      <button id="conflict-reload" type="button">Reload latest (discard my edits)</button>
+      <button id="conflict-overwrite" type="button">Overwrite with my version</button>
+    </div>
+    <div class="editor-wrap">
+      <textarea id="editor" spellcheck="false" placeholder="Write Markdown here. Use [[Page Title]] for wiki links."></textarea>
+      <div id="preview" class="preview"></div>
+    </div>
+
+    <section class="panels">
+      <details open>
+        <summary>Backlinks</summary>
+        <ul id="backlinks" class="link-list"></ul>
+      </details>
+      <details>
+        <summary>Outgoing links</summary>
+        <ul id="links" class="link-list"></ul>
+      </details>
+      <details>
+        <summary>Contents</summary>
+        <ul id="toc" class="toc"></ul>
+      </details>
+      <details id="history-panel">
+        <summary>History</summary>
+        <div class="history-controls">
+          <label>From <select id="diff-from"></select></label>
+          <label>To <select id="diff-to"></select></label>
+          <button id="diff-show" type="button">Show diff</button>
+          <button id="revert" type="button">Revert to “From” version</button>
+        </div>
+        <ul id="history" class="link-list"></ul>
+        <pre id="diff" class="diff"></pre>
+      </details>
+    </section>
+  </main>
+</div>
+<script src="/static/app.js" type="module"></script>
+</body>
+</html>

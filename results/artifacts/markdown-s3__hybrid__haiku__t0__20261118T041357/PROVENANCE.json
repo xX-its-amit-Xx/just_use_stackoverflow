@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://registry.npmjs.org/commonmark/-/commonmark-0.31.2.tgz (npm package commonmark@0.31.2; upstream https://github.com/commonmark/commonmark.js)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "package/lib/*.js and package/lib/render/*.js (blocks.js, inlines.js, node.js, common.js, from-code-point.js, index.js, render/html.js, render/renderer.js, render/xml.js); package/LICENSE",
+    "local_paths": "src/vendor/commonmark/ (*.js, render/*.js, LICENSE, package.json)",
+    "lines_used_estimate": 3341,
+    "how_adapted": "Copied verbatim, then locally modified: (1) GFM pipe tables added as a block type (table/table_row/table_cell, table block start and finalize in blocks.js; renderers in render/html.js); (2) ~~strikethrough~~ support (del node type, renderer, container registration in node.js); (3) reMaybeSpecial extended with '|' and ':' so table rows reach block starts; (4) processInlines also parses table_cell content; (5) safety: raw HTML rendered as escaped text (html_inline/html_block), unsafe link/image URLs (javascript:, vbscript:, file:, data: except data:image/png|gif|jpeg|webp;) replaced by '#'; (6) heading id attribute support (headingIds option via renderer.slugFor); (7) optional class attribute on links for wiki links (node.wikiClass); (8) imports rewritten to vendored entities/mdurl copies. Post-parse wiki-link and strikethrough passes are in src/markdown.js (own code)."
+  },
+  {
+    "source_url": "https://registry.npmjs.org/entities/-/entities-9.0.0.tgz (upstream https://github.com/fb55/entities)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "package/dist/decode.js, dist/decode-codepoint.js, dist/generated/decode-data-html.js, dist/internal/decode-data-format.js; package/LICENSE",
+    "local_paths": "src/vendor/entities/ (decode.js, decode-codepoint.js, generated/decode-data-html.js, internal/decode-data-format.js, LICENSE, package.json)",
+    "lines_used_estimate": 1448,
+    "how_adapted": "Copied the compiled ESM dist files needed for decodeHTMLStrict (used by commonmark's entity decoding) without modification; package.json added with type=module. Other entities files omitted."
+  },
+  {
+    "source_url": "https://registry.npmjs.org/mdurl/-/mdurl-2.1.0.tgz (upstream https://github.com/markdown-it/mdurl)",
+    "license": "MIT",
+    "files_or_snippet": "package/lib/encode.mjs; package/LICENSE",
+    "local_paths": "src/vendor/mdurl/ (encode.js, LICENSE, package.json)",
+    "lines_used_estimate": 89,
+    "how_adapted": "Copied verbatim (renamed to encode.js); used by commonmark for URL normalisation. package.json added with type=module."
+  }
+]

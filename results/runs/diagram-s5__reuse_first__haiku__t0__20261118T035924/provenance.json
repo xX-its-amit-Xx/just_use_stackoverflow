@@ -1,0 +1,222 @@
+{
+ "external_exact_fraction": 0.0991136180499597,
+ "external_modified_fraction": 0.13900080580177276,
+ "external_fraction": 0.23811442385173248,
+ "line_classes": {
+  "nontrivial": 2482,
+  "trivial": 1074,
+  "exact": 246,
+  "modified": 345,
+  "generated": 1891
+ },
+ "corpus_sources": 1242,
+ "corpus_sources_contributing": 910,
+ "corpus_lines": 141831,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 141230,
+  "tool_result": 601
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/rocicorp__fractional-indexing/src/index.js",
+   230
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer.ts",
+   157
+  ],
+  [
+   ".retrieval/repos/dagrejs__dagre/dist/dagre.js",
+   140
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer/text/labels.ts",
+   87
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/svg/builder.ts",
+   78
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/shared/grid-layout.js",
+   72
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer/bounds.ts",
+   67
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/stencil/xml.ts",
+   66
+  ],
+  [
+   ".retrieval/repos/dagrejs__dagre/demo.html",
+   63
+  ],
+  [
+   ".retrieval/repos/dagrejs__dagre/lib/layout.ts",
+   57
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/parser.ts",
+   52
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/shared/grid-lines.js",
+   48
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/shared/semantic/er.js",
+   38
+  ],
+  [
+   ".retrieval/repos/dagrejs__dagre/test/layout-test.ts",
+   38
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-app-server/test/semantic-tool.test.js",
+   38
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-tool-server/src/pages.js",
+   35
+  ],
+  [
+   ".retrieval/repos/dagrejs__dagre/lib/util.ts",
+   35
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-app-server/src/index.js",
+   35
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-tool-server/test/icon-resolver.test.js",
+   34
+  ],
+  [
+   ".retrieval/repos/dagrejs__dagre/test/console.html",
+   33
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer/shapes/misc/off-page-connector.ts",
+   33
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-tool-server/src/index.js",
+   32
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-app-server/test/semantic-keep.test.js",
+   32
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-app-server/test/semantic-er.test.js",
+   32
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-app-server/test/grid-layout.test.js",
+   31
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer/edge/dom.ts",
+   31
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer/text/xhtml.ts",
+   30
+  ],
+  [
+   ".retrieval/repos/markdown-viewer__drawio2svg/lib/renderer/shapes/tables/table.ts",
+   30
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/shared/semantic/boxes.js",
+   29
+  ],
+  [
+   ".retrieval/repos/jgraph__drawio-mcp/mcp-tool-server/test/elk-pass.test.js",
+   28
+  ]
+ ],
+ "per_file": {
+  "src/ws.js": {
+   "exact": 0,
+   "modified": 6,
+   "generated": 42,
+   "trivial": 17
+  },
+  "src/server.js": {
+   "exact": 3,
+   "modified": 78,
+   "generated": 300,
+   "trivial": 119
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 6,
+   "trivial": 2
+  },
+  "src/public/styles.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 25,
+   "trivial": 18
+  },
+  "src/public/app.js": {
+   "exact": 5,
+   "modified": 100,
+   "generated": 697,
+   "trivial": 217
+  },
+  "src/public/index.html": {
+   "exact": 3,
+   "modified": 20,
+   "generated": 64,
+   "trivial": 33
+  },
+  "src/vendor/fractional-indexing.js": {
+   "exact": 212,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 343
+  },
+  "src/vendor/dagre.esm.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2
+  },
+  "src/core/geometry.js": {
+   "exact": 4,
+   "modified": 25,
+   "generated": 122,
+   "trivial": 55
+  },
+  "src/core/drawio.js": {
+   "exact": 12,
+   "modified": 23,
+   "generated": 91,
+   "trivial": 50
+  },
+  "src/core/index.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 11,
+   "trivial": 5
+  },
+  "src/core/errors.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 4,
+   "trivial": 3
+  },
+  "src/core/document.js": {
+   "exact": 6,
+   "modified": 91,
+   "generated": 529,
+   "trivial": 210
+  }
+ },
+ "final_functional_loc": 3244
+}

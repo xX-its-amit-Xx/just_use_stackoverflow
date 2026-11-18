@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Wiki</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <h1><a href="#/">Wiki</a></h1>
+    <input id="search" type="search" placeholder="Search…" autocomplete="off">
+    <div id="search-results"></div>
+    <label>Tag <select id="tag-filter"><option value="">All</option></select></label>
+    <label>Sort <select id="sort"><option value="title">Title</option><option value="updated">Updated</option></select></label>
+    <ul id="page-list"></ul>
+    <button id="new-page">New page</button>
+  </aside>
+  <main id="main">
+    <div id="toolbar">
+      <input id="slug" placeholder="slug" pattern="[a-z0-9][a-z0-9_-]*">
+      <input id="title" placeholder="Title">
+      <input id="tags" placeholder="tags, comma separated">
+      <button id="save">Save</button>
+      <button id="history-btn">History</button>
+      <button id="delete">Delete</button>
+      <span id="status"></span>
+    </div>
+    <div id="editor-wrap">
+      <textarea id="editor" spellcheck="false" placeholder="Write Markdown…"></textarea>
+      <div id="preview" class="markdown-body"></div>
+    </div>
+    <section id="history" hidden>
+      <h2>History</h2>
+      <ul id="history-list"></ul>
+      <div id="diff"></div>
+    </section>
+    <section id="backlinks-panel">
+      <h2>Backlinks</h2>
+      <ul id="backlinks"></ul>
+    </section>
+  </main>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

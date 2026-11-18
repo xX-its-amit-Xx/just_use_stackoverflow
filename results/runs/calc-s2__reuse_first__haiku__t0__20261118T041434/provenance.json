@@ -1,0 +1,48 @@
+{
+ "external_exact_fraction": 0.012755102040816327,
+ "external_modified_fraction": 0.06377551020408163,
+ "external_fraction": 0.07653061224489796,
+ "line_classes": {
+  "nontrivial": 392,
+  "trivial": 234,
+  "exact": 5,
+  "modified": 25,
+  "generated": 362
+ },
+ "corpus_sources": 18,
+ "corpus_sources_contributing": 3,
+ "corpus_lines": 6097,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 6008,
+  "tool_result": 89
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
+   23
+  ],
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
+   23
+  ],
+  [
+   ".retrieval/repos/Serkanbyx__basic-calculator/script.js",
+   8
+  ]
+ ],
+ "per_file": {
+  "src/repl.js": {
+   "exact": 1,
+   "modified": 3,
+   "generated": 36,
+   "trivial": 19
+  },
+  "src/calc.js": {
+   "exact": 4,
+   "modified": 22,
+   "generated": 326,
+   "trivial": 215
+  }
+ },
+ "final_functional_loc": 590
+}

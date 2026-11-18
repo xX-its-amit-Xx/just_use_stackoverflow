@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; font: 13px system-ui, sans-serif; color: #222; }
+body { display: flex; flex-direction: column; }
+header#toolbar { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 8px; border-bottom: 1px solid #ccc; background: #fafafa; }
+.group { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+button, select, input { font: inherit; }
+button { padding: 3px 8px; cursor: pointer; }
+button.active { background: #cfe3ff; }
+.hidden { display: none !important; }
+#login-screen { padding: 24px; }
+#workspace { flex: 1; display: grid; grid-template-columns: 200px 1fr 240px; min-height: 0; }
+#left, #right { overflow: auto; padding: 6px 8px; border-right: 1px solid #ccc; }
+#right { border-right: none; border-left: 1px solid #ccc; }
+#left ul, #right ul { list-style: none; padding: 0; margin: 4px 0; }
+#left li, #right li { padding: 3px 0; border-bottom: 1px dotted #ddd; }
+#props label { display: block; margin: 4px 0; }
+#props input, #props select { width: 100%; }
+main { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: #f4f4f4; }
+#canvas { width: 100%; height: 100%; display: block; background: #fff; cursor: default; touch-action: none; user-select: none; }
+#minimap { position: absolute; right: 8px; bottom: 8px; width: 180px; height: 120px; background: #fff; border: 1px solid #aaa; }
+.handle { fill: #fff; stroke: #2a6fdb; }
+.rot { fill: #2a6fdb; }
+.marquee { fill: rgba(42, 111, 219, 0.1); stroke: #2a6fdb; stroke-dasharray: 4 3; }
+.sel { fill: none; stroke: #2a6fdb; stroke-dasharray: 3 2; }
+.cursor { font-size: 11px; fill: #c2185b; }
+.resolved { opacity: 0.5; }

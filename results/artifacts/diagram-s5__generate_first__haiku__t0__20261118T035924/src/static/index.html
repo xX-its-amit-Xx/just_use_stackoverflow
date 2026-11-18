@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>diagram-s5</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header id="toolbar">
+    <div id="auth" class="group">
+      <input id="username" placeholder="username" autocomplete="username">
+      <input id="password" type="password" placeholder="password" autocomplete="current-password">
+      <button id="login">Log in</button>
+      <button id="register">Register</button>
+      <span id="who"></span>
+    </div>
+    <div id="docbar" class="group hidden">
+      <select id="docs" title="Documents"></select>
+      <button id="newDoc">New</button>
+      <input id="shareUser" placeholder="share with user">
+      <select id="shareRole"><option value="editor">editor</option><option value="viewer">viewer</option></select>
+      <button id="share">Share</button>
+      <span id="status"></span>
+    </div>
+    <div id="tools" class="group hidden">
+      <button data-tool="select" title="Select (V)">Select</button>
+      <button data-tool="rect" title="Rectangle (R)">Rect</button>
+      <button data-tool="ellipse" title="Ellipse (E)">Ellipse</button>
+      <button data-tool="diamond" title="Diamond (D)">Diamond</button>
+      <button data-tool="text" title="Text (T)">Text</button>
+      <button data-tool="image" title="Image">Image</button>
+      <button data-tool="line" title="Line">Line</button>
+      <button data-tool="connector" title="Connector (C)">Connector</button>
+      <button id="undo" title="Ctrl+Z">Undo</button>
+      <button id="redo" title="Ctrl+Y">Redo</button>
+      <select id="alignMode">
+        <option value="left">Align left</option><option value="center">Align centre</option>
+        <option value="right">Align right</option><option value="top">Align top</option>
+        <option value="middle">Align middle</option><option value="bottom">Align bottom</option>
+      </select>
+      <button id="alignGo">Align</button>
+      <button id="distH">Distribute H</button>
+      <button id="distV">Distribute V</button>
+      <select id="layoutName">
+        <option value="layered-TB">Layered (TB)</option><option value="layered-LR">Layered (LR)</option><option value="grid">Grid</option>
+      </select>
+      <button id="layoutGo">Auto-layout</button>
+      <label class="file">Import draw.io<input id="importFile" type="file" accept=".xml,.drawio,text/xml"></label>
+      <button id="exportSvg">Export SVG</button>
+      <button id="exportJson">Export JSON</button>
+      <button id="zoomFit">Fit</button>
+    </div>
+  </header>
+  <div id="workspace" class="hidden">
+    <aside id="left">
+      <h3>Layers</h3>
+      <ul id="layers"></ul>
+      <button id="addLayer">Add layer</button>
+      <h3>Versions</h3>
+      <button id="saveVersion">Save version</button>
+      <ul id="versions"></ul>
+    </aside>
+    <main>
+      <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+        <g id="content"></g>
+        <g id="overlay"></g>
+        <g id="presence"></g>
+      </svg>
+      <svg id="minimap" xmlns="http://www.w3.org/2000/svg"></svg>
+    </main>
+    <aside id="right">
+      <h3>Properties</h3>
+      <div id="props" class="hidden">
+        <label>Fill <input id="pFill" type="color"></label>
+        <label>Stroke <input id="pStroke" type="color"></label>
+        <label>Stroke width <input id="pStrokeWidth" type="number" min="0" step="0.5"></label>
+        <label>Opacity <input id="pOpacity" type="number" min="0" max="1" step="0.1"></label>
+        <label>Font size <input id="pFontSize" type="number" min="1" step="1"></label>
+        <label>Text <input id="pText"></label>
+        <label>Move to layer <select id="pLayer"></select></label>
+        <button id="duplicate">Duplicate</button>
+        <button id="deleteSel">Delete</button>
+      </div>
+      <p id="noSel">Nothing selected.</p>
+      <h3>Comments</h3>
+      <div id="commentAdd">
+        <input id="commentText" placeholder="Comment on selection">
+        <button id="addComment">Comment</button>
+      </div>
+      <ul id="comments"></ul>
+    </aside>
+  </div>
+  <div id="login-screen">
+    <p>Log in or register to open diagrams.</p>
+  </div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

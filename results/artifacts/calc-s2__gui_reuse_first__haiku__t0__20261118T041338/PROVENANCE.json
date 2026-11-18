@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "none (search only)",
+    "license": "n/a",
+    "files_or_snippet": "No code reused. Browser (GitHub) searches run: 'javascript expression parser calculator shunting-yard' and 'recursive descent calculator javascript implicit multiplication MIT' (0 repository results).",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "NOTE: No usable existing implementation was found, so src/calc.js and src/repl.js were written from scratch. Inspected but NOT copied: https://github.com/Motardo/calc (GPL-3.0; minimal shunting-yard supporting only + - * / ^ with no functions, variables, unary operators, implicit multiplication or error positions). Its license and coverage made it unsuitable to vendor."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://registry.npmjs.org/commonmark/-/commonmark-0.31.2.tgz (package lib/ sources; upstream https://github.com/commonmark/commonmark.js)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "package/lib/*.js and package/lib/render/*.js (blocks.js, inlines.js, node.js, common.js, from-code-point.js, index.js, render/html.js, render/renderer.js, render/xml.js); LICENSE",
+    "local_paths": ["src/vendor/commonmark/blocks.js", "src/vendor/commonmark/inlines.js", "src/vendor/commonmark/node.js", "src/vendor/commonmark/common.js", "src/vendor/commonmark/from-code-point.js", "src/vendor/commonmark/index.js", "src/vendor/commonmark/render/html.js", "src/vendor/commonmark/render/renderer.js", "src/vendor/commonmark/render/xml.js", "src/vendor/commonmark/LICENSE"],
+    "lines_used_estimate": 3150,
+    "how_adapted": "Vendored as-is (ESM) with these local changes: imports rewritten to vendored modules (mdurl and entities); raw HTML block starts disabled and raw HTML rendered as escaped text (SPEC safety deviation); unsafe URL schemes replaced by '#' in html.js; GFM strikethrough added to inlines.js (tilde delimiter, processEmphasis branch, reMain includes ~); GFM tables added to blocks.js (convertTables, splitTableRow, parseDelimiterRow, run before processInlines; table_cell inline parsing); table/del/thead/tbody/tr/th/td renderers and heading id attribute added to render/html.js; new node types registered as containers in node.js."
+  },
+  {
+    "source_url": "https://registry.npmjs.org/mdurl/-/mdurl-1.0.1.tgz (encode.js)",
+    "license": "MIT",
+    "files_or_snippet": "package/encode.js",
+    "local_paths": ["src/vendor/commonmark/mdurl-encode.js", "src/vendor/licenses/mdurl-MIT.txt"],
+    "lines_used_estimate": 100,
+    "how_adapted": "Copied verbatim except for a header comment and CommonJS 'module.exports = encode' replaced by 'export default encode' so the ESM vendored commonmark code can import it."
+  },
+  {
+    "source_url": "https://registry.npmjs.org/entities/-/entities-3.0.1.tgz (lib/maps/entities.json)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "lib/maps/entities.json (HTML5 named entity table)",
+    "local_paths": ["src/vendor/entities-data.js", "src/vendor/licenses/entities-BSD-2-Clause.txt"],
+    "lines_used_estimate": 1,
+    "how_adapted": "The JSON data was converted into an ES module default export (single-line object literal). Decoding logic in src/vendor/entities.js is our own strict decoder (decodeHTMLStrict-compatible API) using this table; no entities source code was copied."
+  }
+]

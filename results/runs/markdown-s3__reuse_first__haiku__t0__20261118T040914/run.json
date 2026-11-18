@@ -1,0 +1,288 @@
+{
+ "run_id": "markdown-s3__reuse_first__haiku__t0__20261118T040914",
+ "task_id": "markdown-s3",
+ "strategy": "reuse_first",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 31,
+ "model_invocations": 30,
+ "input_tokens": 60,
+ "output_tokens": 85745,
+ "cached_input_tokens": 2019859,
+ "cache_creation_tokens": 106313,
+ "reasoning_tokens": 48878,
+ "total_tokens": 85805,
+ "total_tokens_incl_cache": 2211977,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.177439,
+ "inference_cost_nocache_usd": 0.806408,
+ "inference_cost_attributed_usd": 0.177439,
+ "harness_reported_cost_usd": 0.17743949000000003,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.008812,
+ "total_execution_cost_usd": 0.186252,
+ "elapsed_s": 396.55,
+ "agent_elapsed_s": 395.71,
+ "orchestrator_observed_s": 396.67,
+ "eval_s": 0.84,
+ "active_s": 407.25,
+ "api_s": 379.57,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 16,
+ "own_pass": 16,
+ "functional_loc": 10786,
+ "functional_chars": 278172,
+ "normalized_loc": 9272,
+ "minified_vendor_bytes": 0,
+ "test_loc": 247,
+ "comment_lines": 422,
+ "blank_lines": 509,
+ "retrieval": {
+  "search_queries": 10,
+  "search_results_examined": 35,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 13386,
+  "cloned_repo_lines": 13972,
+  "retrieved_loc_incorporated": 9516,
+  "retrieved_loc_modified": 43,
+  "retrieved_loc_discarded": 3827,
+  "generated_loc": 1227,
+  "modified_loc": 43,
+  "integration_modifications": 0,
+  "external_fraction": 0.8862,
+  "search_to_use_conversion": 0.6111,
+  "repository_acquisition_s": 0.91,
+  "retrieval_actions": 5,
+  "retrieval_failures": 3,
+  "retrieval_failure_rate": 0.6
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 12,
+  "retrieval_invocations": 9,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 60
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 73
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 91
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 127
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 168
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 172
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 192
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 217
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 253
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 275
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 314
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 353
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/static/app.js",
+    "line": 357
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 7,
+   "max_file_loc": 9469,
+   "mean_file_loc": 1540.9,
+   "functions": 613,
+   "loc_per_function": 17.6,
+   "duplicate_line_ratio": 0.2321
+  },
+  "license": {
+   "provenance_entries": 2,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.8822802027946086,
+  "external_modified_fraction": 0.003956967973290466,
+  "external_fraction": 0.8862371707678991,
+  "line_classes": {
+   "nontrivial": 8087,
+   "trivial": 3119,
+   "exact": 7135,
+   "modified": 32,
+   "generated": 920
+  },
+  "corpus_sources": 18,
+  "corpus_sources_contributing": 11,
+  "corpus_lines": 13386,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 13186,
+   "tool_result": 200
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+    7166
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+    535
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+    532
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+    219
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+    183
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+    150
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+    48
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+    47
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+    35
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/README.md",
+    11
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+    10
+   ]
+  ],
+  "final_functional_loc": 10786
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 60,
+    "outputTokens": 85745,
+    "cacheReadInputTokens": 2019859,
+    "cacheCreationInputTokens": 106313,
+    "webSearchRequests": 0,
+    "costUSD": 0.17743949000000003,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 48878,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 106313,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 60,
+    "output": 85745,
+    "cr": 2019859,
+    "cw": 106313
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 3,
+  "github_search": 2,
+  "repository_clone": 1,
+  "web_search": 1,
+  "repository_inspection": 5,
+  "code_generation": 10,
+  "code_edit": 2,
+  "test_execution": 4,
+  "debugging": 1
+ }
+}

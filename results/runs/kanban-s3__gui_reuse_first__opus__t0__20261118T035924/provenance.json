@@ -1,0 +1,70 @@
+{
+ "external_exact_fraction": 0.38910505836575876,
+ "external_modified_fraction": 0.05058365758754864,
+ "external_fraction": 0.4396887159533074,
+ "line_classes": {
+  "nontrivial": 1028,
+  "trivial": 274,
+  "exact": 400,
+  "modified": 52,
+  "generated": 576
+ },
+ "corpus_sources": 6,
+ "corpus_sources_contributing": 4,
+ "corpus_lines": 1821,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 909,
+  "gui_clipboard": 912
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/zjambor/styles.css",
+   374
+  ],
+  [
+   ".gui/clipboard_history/1794974413632.txt",
+   374
+  ],
+  [
+   ".retrieval/zjambor/app.js",
+   78
+  ],
+  [
+   ".gui/clipboard_history/1794974415544.txt",
+   78
+  ]
+ ],
+ "per_file": {
+  "src/server.js": {
+   "exact": 0,
+   "modified": 20,
+   "generated": 423,
+   "trivial": 116
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 0
+  },
+  "src/static/styles.css": {
+   "exact": 373,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 90
+  },
+  "src/static/app.js": {
+   "exact": 27,
+   "modified": 30,
+   "generated": 107,
+   "trivial": 53
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 41,
+   "trivial": 15
+  }
+ },
+ "final_functional_loc": 1265
+}
