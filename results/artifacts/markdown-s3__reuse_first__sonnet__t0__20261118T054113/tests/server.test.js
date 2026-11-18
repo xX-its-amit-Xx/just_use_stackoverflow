@@ -1,0 +1,33 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path';
+import { createServer } from '../src/server.js';
+import { render } from '../src/markdown.js';
+test('flow', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'wiki-'));
+  const srv = createServer({ dataDir: dir }); await new Promise(r => srv.listen(0, r));
+  const b = `http://127.0.0.1:${srv.address().port}`;
+  const j = (m, u, body) => fetch(b + u, { method: m, headers: { 'content-type': 'application/json' }, body: body && JSON.stringify(body) });
+  await j('PUT', '/api/pages/a', { title: 'A', body: 'x\ny\nz', tags: ['B', 'b'] });
+  assert.equal((await j('PUT', '/api/pages/b', { title: 'B', body: 'see [[A]] and [[zz]]' })).status, 201);
+  let p = await (await j('GET', '/api/pages/a')).json();
+  assert.deepEqual(p.backlinks, ['b']); assert.deepEqual(p.tags, ['b']);
+  assert.equal((await j('PUT', '/api/pages/a', { title: 'A', body: 'x\ny\nz', tags: ['b'] })).status, 200);
+  assert.equal((await j('PUT', '/api/pages/a', { title: 'A', body: 'x\nq\nz', baseVersion: 5 })).status, 409);
+  const u = await (await j('PUT', '/api/pages/a', { title: 'A', body: 'x\nq\nz', baseVersion: 1 })).json();
+  assert.equal(u.version, 2);
+  const d = await (await j('GET', '/api/pages/a/diff?from=1&to=2')).json();
+  assert.deepEqual(d.lines.map(l => l.op), [' ', '-', '+', ' ']);
+  const s = await (await j('GET', '/api/search?q=SEE')).json();
+  assert.match(s[0].snippet, /<mark>see<\/mark>/);
+  assert.equal((await j('GET', '/api/search?q=%20')).status, 400);
+  const w = await (await j('GET', '/wiki/b')).text();
+  assert.match(w, /class="wikilink missing"/);
+  assert.equal((await j('GET', '/')).status, 200);
+  srv.close();
+});
+test('markdown', () => {
+  assert.match(render('~~a~~ <i>'), /<del>a<\/del> &lt;i&gt;/);
+  assert.match(render('[x](javascript:1)'), /href="#"/);
+  assert.match(render('| a |\n|---|\n| 1 |'), /<table>/);
+});

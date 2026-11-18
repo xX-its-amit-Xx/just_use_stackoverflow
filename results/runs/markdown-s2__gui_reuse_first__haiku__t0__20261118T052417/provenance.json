@@ -1,0 +1,137 @@
+{
+ "external_exact_fraction": 0.8959823885525592,
+ "external_modified_fraction": 0.011557512383048982,
+ "external_fraction": 0.9075399009356081,
+ "line_classes": {
+  "nontrivial": 1817,
+  "trivial": 1296,
+  "exact": 1628,
+  "modified": 21,
+  "generated": 168
+ },
+ "corpus_sources": 13,
+ "corpus_sources_contributing": 9,
+ "corpus_lines": 2933,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 2933
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1794979501871.txt",
+   592
+  ],
+  [
+   ".gui/clipboard_history/1794979489281.txt",
+   581
+  ],
+  [
+   ".gui/clipboard_history/1794979500321.txt",
+   227
+  ],
+  [
+   ".gui/clipboard_history/1794979504980.txt",
+   182
+  ],
+  [
+   ".gui/clipboard_history/1794979498783.txt",
+   63
+  ],
+  [
+   ".gui/clipboard_history/1794979503426.txt",
+   46
+  ],
+  [
+   ".gui/clipboard_history/1794979680513.txt",
+   40
+  ],
+  [
+   ".gui/clipboard_history/1794979506601.txt",
+   39
+  ],
+  [
+   ".gui/clipboard_history/1794979508157.txt",
+   12
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 16,
+   "trivial": 9
+  },
+  "src/slug.js": {
+   "exact": 1,
+   "modified": 1,
+   "generated": 23,
+   "trivial": 18
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 13,
+   "trivial": 5
+  },
+  "src/upstream/from-code-point.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 23
+  },
+  "src/upstream/inlines.js": {
+   "exact": 558,
+   "modified": 2,
+   "generated": 9,
+   "trivial": 412
+  },
+  "src/upstream/common.js": {
+   "exact": 51,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 46
+  },
+  "src/upstream/entities.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 16,
+   "trivial": 10
+  },
+  "src/upstream/index.js": {
+   "exact": 5,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 9
+  },
+  "src/upstream/node.js": {
+   "exact": 200,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 89
+  },
+  "src/upstream/blocks.js": {
+   "exact": 547,
+   "modified": 12,
+   "generated": 57,
+   "trivial": 471
+  },
+  "src/upstream/mdurl/encode.mjs": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/upstream/render/renderer.js": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 39
+  },
+  "src/upstream/render/html.js": {
+   "exact": 162,
+   "modified": 6,
+   "generated": 29,
+   "trivial": 132
+  }
+ },
+ "final_functional_loc": 2796
+}

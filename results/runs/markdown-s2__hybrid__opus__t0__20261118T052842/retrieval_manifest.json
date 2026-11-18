@@ -1,0 +1,22 @@
+[
+ {
+  "path": ".retrieval/npm/commonmark@0.31.2",
+  "files": 16,
+  "bytes": 673094
+ },
+ {
+  "path": ".retrieval/npm/entities@2.2.0",
+  "files": 19,
+  "bytes": 57673
+ },
+ {
+  "path": ".retrieval/npm/mdurl@1.0.1",
+  "files": 9,
+  "bytes": 22039
+ },
+ {
+  "path": ".retrieval/snippets/spec.json",
+  "files": 0,
+  "bytes": 0
+ }
+]

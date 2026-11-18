@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Wiki</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Markdown Wiki</h1>
+  <input id="search" type="search" placeholder="Search…" aria-label="Search">
+  <button id="new-page">New page</button>
+</header>
+<main>
+  <aside>
+    <div id="tags"></div>
+    <div class="row"><label>Sort <select id="sort"><option value="title">Title</option><option value="updated">Updated</option></select></label></div>
+    <ul id="page-list" class="plain"></ul>
+    <div id="search-results"></div>
+  </aside>
+  <section>
+    <div class="row">
+      <input id="slug" type="text" placeholder="slug" aria-label="Slug">
+      <input id="title" type="text" placeholder="Title" aria-label="Title">
+    </div>
+    <div class="row">
+      <input id="tags-input" type="text" placeholder="tags, comma separated" aria-label="Tags">
+      <button id="save">Save</button>
+      <button id="delete">Delete</button>
+      <button id="history-btn">History</button>
+      <a id="view-link" href="#" target="_blank">View</a>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="editor">
+      <textarea id="body" aria-label="Markdown"></textarea>
+      <div id="preview" class="preview"></div>
+    </div>
+    <div id="history"></div>
+  </section>
+  <aside>
+    <h3>Table of contents</h3>
+    <ul id="toc" class="plain"></ul>
+    <h3>Backlinks</h3>
+    <ul id="backlinks" class="plain"></ul>
+    <h3>Links</h3>
+    <ul id="links" class="plain"></ul>
+  </aside>
+</main>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

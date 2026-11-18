@@ -1,0 +1,34 @@
+[
+  {
+    "source_url": "https://registry.npmjs.org/commonmark/-/commonmark-0.31.2.tgz (https://github.com/commonmark/commonmark.js)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "lib/blocks.js, lib/inlines.js, lib/common.js, lib/node.js, lib/from-code-point.js, lib/render/html.js, lib/render/renderer.js",
+    "local_paths": ["src/vendor/commonmark/"],
+    "lines_used_estimate": 2930,
+    "how_adapted": "Vendored as ES modules; import paths rewritten to local vendored deps. Added GFM pipe tables (block start, table block type, row/cell splitting with \\| escapes), GFM strikethrough (~ / ~~ delimiters in inline parser and processEmphasis), allowHtml option gate, extra container node types. HTML rendering overridden in src/markdown.js (raw HTML escaped, unsafe URL schemes -> #, heading ids, tables, del)."
+  },
+  {
+    "source_url": "https://registry.npmjs.org/mdurl/-/mdurl-1.0.1.tgz (https://github.com/markdown-it/mdurl)",
+    "license": "MIT",
+    "files_or_snippet": "encode.js",
+    "local_paths": ["src/vendor/mdurl-encode.js"],
+    "lines_used_estimate": 95,
+    "how_adapted": "module.exports replaced by ES default export; otherwise unchanged."
+  },
+  {
+    "source_url": "https://registry.npmjs.org/entities/-/entities-2.2.0.tgz (https://github.com/fb55/entities)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "lib/maps/entities.json (HTML5 named character reference table, data only)",
+    "local_paths": ["src/vendor/entities.js"],
+    "lines_used_estimate": 1,
+    "how_adapted": "JSON map embedded as a JS constant; strict decodeHTMLStrict() decoder written locally."
+  },
+  {
+    "source_url": "https://spec.commonmark.org/0.31.2/spec.json",
+    "license": "CC-BY-SA-4.0",
+    "files_or_snippet": "CommonMark spec examples, used only for local verification (not shipped)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Used as a test oracle in a scratch script; not copied into src or tests."
+  }
+]

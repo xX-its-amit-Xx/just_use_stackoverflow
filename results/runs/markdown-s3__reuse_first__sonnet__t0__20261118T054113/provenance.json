@@ -1,0 +1,104 @@
+{
+ "external_exact_fraction": 0.9416975145425701,
+ "external_modified_fraction": 0.001983077736647277,
+ "external_fraction": 0.9436805922792173,
+ "line_classes": {
+  "nontrivial": 7564,
+  "trivial": 2835,
+  "exact": 7123,
+  "modified": 15,
+  "generated": 426
+ },
+ "corpus_sources": 16,
+ "corpus_sources_contributing": 11,
+ "corpus_lines": 13245,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 13186,
+  "tool_result": 59
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+   7137
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+   531
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+   520
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+   217
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+   177
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+   152
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+   47
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+   40
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+   36
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/README.md",
+   11
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 1,
+   "modified": 11,
+   "generated": 161,
+   "trivial": 52
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 4,
+   "generated": 180,
+   "trivial": 38
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 0
+  },
+  "src/ui/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 61,
+   "trivial": 11
+  },
+  "src/ui/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 21,
+   "trivial": 8
+  },
+  "src/vendor/commonmark.cjs": {
+   "exact": 7122,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2726
+  }
+ },
+ "final_functional_loc": 10015
+}

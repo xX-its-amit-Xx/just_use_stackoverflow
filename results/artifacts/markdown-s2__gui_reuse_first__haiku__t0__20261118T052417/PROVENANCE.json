@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js (raw: https://raw.githubusercontent.com/commonmark/commonmark.js/master/lib/{blocks,inlines,common,node,from-code-point,index}.js and lib/render/{html,renderer}.js)",
+    "license": "BSD-2-Clause (Copyright (c) 2014, John MacFarlane)",
+    "files_or_snippet": "lib/blocks.js, lib/inlines.js, lib/common.js, lib/node.js, lib/from-code-point.js, lib/index.js, lib/render/html.js, lib/render/renderer.js",
+    "local_paths": "src/upstream/blocks.js, src/upstream/inlines.js, src/upstream/common.js, src/upstream/node.js, src/upstream/from-code-point.js, src/upstream/index.js, src/upstream/render/html.js, src/upstream/render/renderer.js; licence text in src/upstream/LICENSE-commonmark.txt",
+    "lines_used_estimate": 3025,
+    "how_adapted": "Acquired through the browser (GitHub search -> repo -> raw view -> copy/paste). Adaptations: (1) raw HTML disabled: html block start rule returns 0 and parseHtmlTag is no longer called for '<', so raw HTML becomes escaped text; (2) unsafe URL schemes (javascript/vbscript/file/data except data:image/png|gif|jpeg|webp;) are replaced by '#' for links and images; (3) GFM strikethrough: '~' added to the delimiter/text prefilters and processEmphasis, producing <del>; (4) GFM pipe tables: new 'table' leaf block (start rule on paragraph + delimiter row, rows/cells built at finalize, cells inline-parsed via processInlines), HTML renderer emits table/thead/tbody/tr/th/td with align; (5) heading id attribute when headingIds is set (slug of plain text, per-document Map); (6) prefilter regex extended with '|' and ':' so table delimiter rows reach the block starts; (7) XmlRenderer export removed from index.js (file not vendored); (8) imports rewritten to local modules: 'entities' -> ./entities.js, 'mdurl/encode.js' -> ./mdurl/encode.mjs."
+  },
+  {
+    "source_url": "https://github.com/fb55/entities (raw: https://raw.githubusercontent.com/fb55/entities/main/maps/entities.json and LICENSE)",
+    "license": "BSD-2-Clause (Felix Böhm)",
+    "files_or_snippet": "maps/entities.json (HTML5 named character reference table)",
+    "local_paths": "src/upstream/maps/entities.json; licence text in src/upstream/LICENSE-entities.txt; decoder written for this project in src/upstream/entities.js",
+    "lines_used_estimate": 1,
+    "how_adapted": "Acquired through the browser (repo tree -> maps/entities.json raw view -> copy/paste). The data table is used unchanged. The decodeHTMLStrict function in src/upstream/entities.js is project code replacing the 'entities' npm package API (strict, semicolon-terminated references, numeric references with U+FFFD for invalid code points)."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/mdurl (raw: https://raw.githubusercontent.com/markdown-it/mdurl/master/lib/encode.mjs and LICENSE)",
+    "license": "MIT (Copyright (c) 2015 Vitaly Puzrin, Alex Kocharin)",
+    "files_or_snippet": "lib/encode.mjs",
+    "local_paths": "src/upstream/mdurl/encode.mjs; licence text in src/upstream/LICENSE-mdurl.txt",
+    "lines_used_estimate": 89,
+    "how_adapted": "Acquired through the browser (repo lib/ -> encode.mjs raw view -> copy/paste), used unchanged; it replaces the 'mdurl' npm runtime dependency imported by commonmark.js common.js."
+  }
+]

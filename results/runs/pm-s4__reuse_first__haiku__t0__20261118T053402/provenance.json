@@ -1,0 +1,104 @@
+{
+ "external_exact_fraction": 0.0012853470437017994,
+ "external_modified_fraction": 0.015424164524421594,
+ "external_fraction": 0.016709511568123392,
+ "line_classes": {
+  "nontrivial": 1556,
+  "trivial": 388,
+  "exact": 2,
+  "modified": 24,
+  "generated": 1530
+ },
+ "corpus_sources": 11,
+ "corpus_sources_contributing": 5,
+ "corpus_lines": 955,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 557,
+  "tool_result": 398
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/bin/dsv2json.js",
+   17
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/bin/json2dsv.js",
+   14
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/bin/dsv2dsv.js",
+   14
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.mjs",
+   9
+  ],
+  [
+   ".retrieval/npm/d3-dsv@3.0.2/package/dist/d3-dsv.js",
+   9
+  ]
+ ],
+ "per_file": {
+  "src/store.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 17,
+   "trivial": 5
+  },
+  "src/util.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 41,
+   "trivial": 18
+  },
+  "src/query.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 96,
+   "trivial": 37
+  },
+  "src/csv.js": {
+   "exact": 2,
+   "modified": 1,
+   "generated": 37,
+   "trivial": 29
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 21,
+   "generated": 807,
+   "trivial": 194
+  },
+  "src/reports.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 55,
+   "trivial": 22
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 416,
+   "trivial": 74
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 39,
+   "trivial": 2
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 17,
+   "trivial": 6
+  }
+ },
+ "final_functional_loc": 1911
+}

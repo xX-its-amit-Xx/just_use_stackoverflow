@@ -1,0 +1,240 @@
+{
+ "run_id": "markdown-s3__generate_first__opus__t0__20261118T053400",
+ "task_id": "markdown-s3",
+ "strategy": "generate_first",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 17,
+ "model_invocations": 17,
+ "input_tokens": 34,
+ "output_tokens": 69748,
+ "cached_input_tokens": 971042,
+ "cache_creation_tokens": 79423,
+ "reasoning_tokens": 28132,
+ "total_tokens": 69782,
+ "total_tokens_incl_cache": 1120247,
+ "web_search_requests": 0,
+ "inference_cost_usd": 2.224688,
+ "inference_cost_nocache_usd": 5.596956,
+ "inference_cost_attributed_usd": 2.224688,
+ "harness_reported_cost_usd": 2.2246884000000002,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.013021,
+ "total_execution_cost_usd": 2.237709,
+ "elapsed_s": 585.95,
+ "agent_elapsed_s": 585.46,
+ "orchestrator_observed_s": 586.32,
+ "eval_s": 0.49,
+ "active_s": 585.92,
+ "api_s": 581.52,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 6,
+ "own_pass": 6,
+ "functional_loc": 1758,
+ "functional_chars": 54699,
+ "normalized_loc": 1823,
+ "minified_vendor_bytes": 0,
+ "test_loc": 124,
+ "comment_lines": 29,
+ "blank_lines": 127,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 1758,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 3,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 26
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 41
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 44
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 52
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 53
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 64
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 75
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 85
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 95
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 135
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 140
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 146
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 165
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 167
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 9,
+   "max_file_loc": 1055,
+   "mean_file_loc": 195.3,
+   "functions": 279,
+   "loc_per_function": 6.3,
+   "duplicate_line_ratio": 0.0739
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 1326,
+   "trivial": 461,
+   "exact": 0,
+   "modified": 0,
+   "generated": 1326
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 1758
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 34,
+    "outputTokens": 69748,
+    "cacheReadInputTokens": 971042,
+    "cacheCreationInputTokens": 79423,
+    "webSearchRequests": 0,
+    "costUSD": 2.2246884000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 28132,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 79423,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 34,
+    "output": 69748,
+    "cr": 971042,
+    "cw": 79423
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 2,
+  "code_generation": 9,
+  "code_edit": 1,
+  "other": 3,
+  "test_execution": 2
+ }
+}

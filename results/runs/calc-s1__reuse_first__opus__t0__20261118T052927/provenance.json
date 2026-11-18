@@ -1,0 +1,40 @@
+{
+ "external_exact_fraction": 0.07792207792207792,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.07792207792207792,
+ "line_classes": {
+  "nontrivial": 77,
+  "trivial": 38,
+  "exact": 6,
+  "modified": 0,
+  "generated": 71
+ },
+ "corpus_sources": 5,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 212,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 116,
+  "tool_result": 96
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/spyannis__jsExpeval/ExpEval.js",
+   6
+  ]
+ ],
+ "per_file": {
+  "src/calc.js": {
+   "exact": 6,
+   "modified": 0,
+   "generated": 64,
+   "trivial": 35
+  },
+  "src/cli.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 3
+  }
+ },
+ "final_functional_loc": 107
+}

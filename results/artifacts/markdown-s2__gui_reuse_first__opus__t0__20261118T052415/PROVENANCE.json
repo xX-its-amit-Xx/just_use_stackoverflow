@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://unpkg.com/commonmark@0.31.2/dist/commonmark.js",
+    "license": "BSD-2-Clause (commonmark.js, John MacFarlane); bundled mdurl (MIT), entities (BSD-2-Clause), from-code-point polyfill (MIT)",
+    "files_or_snippet": "dist/commonmark.js (full UMD bundle of commonmark.js 0.31.2) and LICENSE, copied via the browser (select-all / copy / paste)",
+    "local_paths": ["src/vendor/commonmark.cjs", "src/vendor/COMMONMARK_LICENSE.txt"],
+    "lines_used_estimate": 10200,
+    "how_adapted": "Used as the CommonMark parser and base HTML renderer. Patched in place to add GFM pipe tables (table block type, delimiter-row block start, row/cell nodes with alignment and \\| unescaping, inline parsing of cells) and GFM ~~strikethrough~~ (tilde delimiters producing del nodes). src/markdown.js subclasses HtmlRenderer to escape raw HTML, sanitise javascript:/vbscript:/file:/data: URLs to '#', add heading ids and render tables/del; slugify/toc/CLI are original glue code."
+  }
+]

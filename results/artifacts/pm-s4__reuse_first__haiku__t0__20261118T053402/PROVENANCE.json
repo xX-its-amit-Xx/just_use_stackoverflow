@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/d3-dsv (repo https://github.com/d3/d3-dsv, v3.0.2, file dist/d3-dsv.mjs)",
+    "license": "ISC",
+    "files_or_snippet": "dist/d3-dsv.mjs: parseRows() and its inner token() scanner (quoted-field handling, \"\" unescaping, CR/LF/CRLF EOL and EOF handling) and formatValue() quoting rule",
+    "local_paths": ["src/csv.js"],
+    "lines_used_estimate": 45,
+    "how_adapted": "Algorithm re-implemented (not copied verbatim) as a single-pass character state machine (parseCSV) plus formatCSV/formatValue with RFC 4180 quoting. Kept the ISC notice in src/THIRD_PARTY_NOTICES.md. Retrieved with rtool npm-fetch d3-dsv@3.0.2."
+  },
+  {
+    "source_url": "none (no reuse)",
+    "license": "n/a",
+    "files_or_snippet": "none",
+    "local_paths": ["src/server.js", "src/query.js", "src/reports.js", "src/store.js", "src/util.js", "src/main.js", "src/public/index.html", "src/public/app.js", "src/public/style.css", "tests/unit/api.test.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "NOTE: No usable existing implementation was found for the server, the query language, the sprint/burndown reporting or the SPA. Searches run: GitHub (gh-search: 'jira clone', 'kanban board issue tracker self-hosted', 'linear clone issue tracker', 'javascript search query language parser'); npm (npm-search: 'node http rest api json file store project management', 'search query parser key:value negation quoted phrases'); Stack Overflow (so-search: 'nodejs http server REST api routing without express', 'parse RFC 4180 CSV javascript quoted fields'). GitHub hits were framework apps (React/Next/Spring/Svelte) that do not match a stdlib-only node:http JSON API, and several had no license; npm and Stack Overflow yielded nothing usable. These parts were written from scratch."
+  }
+]

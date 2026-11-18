@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.5 system-ui, sans-serif; color: #222; }
+#app { display: flex; min-height: 100vh; }
+#sidebar { width: 260px; padding: 12px; background: #f5f5f7; border-right: 1px solid #ddd; }
+#sidebar input, #sidebar select { width: 100%; margin: 4px 0; }
+#sidebar ul { list-style: none; padding: 0; }
+#sidebar li { padding: 2px 0; cursor: pointer; }
+#sidebar li.active { font-weight: bold; }
+#search-results li { font-size: 13px; border-bottom: 1px solid #e3e3e3; }
+#main { flex: 1; padding: 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+#toolbar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+#editor-wrap { display: flex; gap: 10px; flex: 1; min-height: 400px; }
+#editor { flex: 1; font: 14px/1.4 ui-monospace, monospace; padding: 8px; }
+#preview { flex: 1; overflow: auto; border: 1px solid #ddd; padding: 8px 14px; }
+#conflict { background: #fff3cd; border: 1px solid #e0c060; padding: 8px; }
+#diff .add { background: #e6ffed; } #diff .del { background: #ffeef0; }
+a.wikilink.missing { color: #c00; }
+mark { background: #ff0; }
+table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3px 6px; }
+pre { background: #f6f8fa; padding: 8px; overflow: auto; }
+.wiki-page main { max-width: 860px; margin: 0 auto; padding: 16px; }

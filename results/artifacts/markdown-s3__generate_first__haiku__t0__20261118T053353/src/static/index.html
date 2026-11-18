@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Wiki</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="row">
+      <input id="search" type="search" placeholder="Search…" autocomplete="off">
+    </div>
+    <div class="row">
+      <select id="tag-filter"><option value="">All tags</option></select>
+      <select id="sort">
+        <option value="title">Title</option>
+        <option value="updated">Recently updated</option>
+      </select>
+    </div>
+    <div class="row"><a href="#/new" class="button">New page</a></div>
+    <ul id="page-list" class="list"></ul>
+    <ul id="search-results" class="list" hidden></ul>
+  </aside>
+
+  <main id="main">
+    <p id="status" class="muted"></p>
+
+    <section id="welcome" hidden>
+      <h1>Welcome</h1>
+      <p class="muted">Select a page from the list or create a new one.</p>
+    </section>
+
+    <section id="editor" hidden>
+      <div class="row head">
+        <h1 id="editor-title-heading"></h1>
+        <span id="version-label" class="muted"></span>
+      </div>
+      <div id="conflict" class="notice" hidden>
+        <p>This page was changed by someone else (current version <span id="conflict-version"></span>).</p>
+        <button id="conflict-reload" type="button">Reload latest</button>
+        <button id="conflict-overwrite" type="button">Overwrite with my version</button>
+      </div>
+      <form id="page-form">
+        <div class="row">
+          <label>Slug <input id="slug" type="text" required pattern="[a-z0-9][a-z0-9_-]*"></label>
+          <label class="grow">Title <input id="title" type="text" required maxlength="200"></label>
+        </div>
+        <div class="row">
+          <label class="grow">Tags (comma separated) <input id="tags" type="text"></label>
+        </div>
+        <div class="split">
+          <textarea id="body" spellcheck="false" aria-label="Markdown source"></textarea>
+          <div id="preview" class="preview" aria-label="Preview"></div>
+        </div>
+        <div class="row">
+          <button type="submit" id="save">Save</button>
+          <button type="button" id="delete" class="danger">Delete</button>
+        </div>
+      </form>
+
+      <section class="panel">
+        <h2>Links</h2>
+        <div class="row"><strong>Links to:</strong> <span id="links"></span></div>
+        <div class="row"><strong>Backlinks:</strong> <span id="backlinks"></span></div>
+      </section>
+
+      <section class="panel">
+        <h2>History</h2>
+        <ul id="history" class="list"></ul>
+        <div class="row">
+          <label>From <select id="diff-from"></select></label>
+          <label>To <select id="diff-to"></select></label>
+          <button type="button" id="diff-go">Show diff</button>
+        </div>
+        <pre id="diff" class="diff"></pre>
+      </section>
+    </section>
+  </main>
+</div>
+<script src="/static/app.js" type="module"></script>
+</body>
+</html>

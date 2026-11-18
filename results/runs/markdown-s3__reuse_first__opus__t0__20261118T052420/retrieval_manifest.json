@@ -1,0 +1,22 @@
+[
+ {
+  "path": ".retrieval/npm/commonmark@0.31.2",
+  "files": 16,
+  "bytes": 673094
+ },
+ {
+  "path": ".retrieval/npm/markdown-it@14.1.0",
+  "files": 60,
+  "bytes": 767399
+ },
+ {
+  "path": ".retrieval/snippets/raw.githubusercontent.com%2FFlet%2Fgithub-slugger%2Fmaster%2Findex.js",
+  "files": 0,
+  "bytes": 0
+ },
+ {
+  "path": ".retrieval/snippets/spec.commonmark.org%2F0.31.2%2Fspec.json",
+  "files": 0,
+  "bytes": 0
+ }
+]

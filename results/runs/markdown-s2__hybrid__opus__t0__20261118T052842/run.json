@@ -1,0 +1,261 @@
+{
+ "run_id": "markdown-s2__hybrid__opus__t0__20261118T052842",
+ "task_id": "markdown-s2",
+ "strategy": "hybrid",
+ "trial": 0,
+ "tier": "S2",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 29,
+ "model_invocations": 29,
+ "input_tokens": 58,
+ "output_tokens": 26376,
+ "cached_input_tokens": 1163074,
+ "cache_creation_tokens": 58643,
+ "reasoning_tokens": 9172,
+ "total_tokens": 26434,
+ "total_tokens_incl_cache": 1248151,
+ "web_search_requests": 0,
+ "inference_cost_usd": 1.229511,
+ "inference_cost_nocache_usd": 5.41462,
+ "inference_cost_attributed_usd": 1.229511,
+ "harness_reported_cost_usd": 1.2295107999999997,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.00626,
+ "total_execution_cost_usd": 1.235771,
+ "elapsed_s": 281.72,
+ "agent_elapsed_s": 281.24,
+ "orchestrator_observed_s": 282.29,
+ "eval_s": 0.48,
+ "active_s": 287.94,
+ "api_s": 274.7,
+ "hidden_tests": 56,
+ "hidden_pass": 56,
+ "hidden_fail": 0,
+ "own_tests": 9,
+ "own_pass": 9,
+ "functional_loc": 2846,
+ "functional_chars": 85094,
+ "normalized_loc": 2836,
+ "minified_vendor_bytes": 0,
+ "test_loc": 50,
+ "comment_lines": 279,
+ "blank_lines": 338,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 3,
+  "clone_attempts_failed": 0,
+  "files_inspected": 1,
+  "files_copied": 3,
+  "snippets_retrieved": 1,
+  "retrieved_loc": 19463,
+  "cloned_repo_lines": 15204,
+  "retrieved_loc_incorporated": 2505,
+  "retrieved_loc_modified": 45,
+  "retrieved_loc_discarded": 16913,
+  "generated_loc": 296,
+  "modified_loc": 45,
+  "integration_modifications": 0,
+  "external_fraction": 0.8959,
+  "search_to_use_conversion": 0.525,
+  "repository_acquisition_s": 0.64,
+  "retrieval_actions": 2,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 4,
+  "first_src_write_step": 6,
+  "retrieval_invocations": 3,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "d826b43b89393f66"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 11,
+   "max_file_loc": 983,
+   "mean_file_loc": 258.7,
+   "functions": 387,
+   "loc_per_function": 7.4,
+   "duplicate_line_ratio": 0.1691
+  },
+  "license": {
+   "provenance_entries": 4,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.8802168021680217,
+  "external_modified_fraction": 0.015718157181571817,
+  "external_fraction": 0.8959349593495934,
+  "line_classes": {
+   "nontrivial": 1845,
+   "trivial": 1280,
+   "exact": 1624,
+   "modified": 29,
+   "generated": 192
+  },
+  "corpus_sources": 40,
+  "corpus_sources_contributing": 21,
+  "corpus_lines": 19463,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 19463
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+    1587
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+    583
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+    568
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+    224
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+    194
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+    62
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+    60
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+    46
+   ],
+   [
+    ".retrieval/npm/mdurl@1.0.1/package/encode.js",
+    41
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+    38
+   ],
+   [
+    ".retrieval/npm/mdurl@1.0.1/package/decode.js",
+    11
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/README.md",
+    10
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+    10
+   ],
+   [
+    ".retrieval/npm/entities@2.2.0/package/lib/decode.js",
+    8
+   ],
+   [
+    ".retrieval/npm/entities@2.2.0/package/lib/decode_codepoint.js",
+    8
+   ],
+   [
+    ".retrieval/npm/entities@2.2.0/package/lib/encode.js",
+    7
+   ],
+   [
+    ".retrieval/npm/entities@2.2.0/package/lib/index.js",
+    7
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/index.js",
+    7
+   ],
+   [
+    ".retrieval/npm/mdurl@1.0.1/package/parse.js",
+    6
+   ],
+   [
+    ".retrieval/npm/mdurl@1.0.1/package/format.js",
+    3
+   ],
+   [
+    ".retrieval/npm/mdurl@1.0.1/package/index.js",
+    1
+   ]
+  ],
+  "final_functional_loc": 2846
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 58,
+    "outputTokens": 26376,
+    "cacheReadInputTokens": 1163074,
+    "cacheCreationInputTokens": 58643,
+    "webSearchRequests": 0,
+    "costUSD": 1.2295107999999997,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 9172,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 58643,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 58,
+    "output": 26376,
+    "cr": 1163074,
+    "cw": 58643
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 2,
+  "file_copy": 2,
+  "repository_inspection": 1,
+  "repository_clone": 1,
+  "code_edit": 3,
+  "other": 13,
+  "code_generation": 2,
+  "snippet_retrieval": 1,
+  "test_execution": 2,
+  "debugging": 2
+ }
+}

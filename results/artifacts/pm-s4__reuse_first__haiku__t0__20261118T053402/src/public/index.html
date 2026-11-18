@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pm-s4</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header id="topbar" hidden>
+    <strong class="brand">pm-s4</strong>
+    <select id="ws-select" title="Workspace"></select>
+    <select id="proj-select" title="Project"></select>
+    <nav id="nav"></nav>
+    <form id="search-form" class="search"><input id="search-input" placeholder='Search: status:"In Progress" type:bug -label:x "free text"'></form>
+    <button id="bell" class="ghost" type="button">Notifications <span id="bell-count"></span></button>
+    <a href="#/me" class="ghost-link">Account</a>
+  </header>
+  <div id="notif-panel" hidden></div>
+  <main id="app"></main>
+  <script src="/static/app.js" type="module"></script>
+</body>
+</html>

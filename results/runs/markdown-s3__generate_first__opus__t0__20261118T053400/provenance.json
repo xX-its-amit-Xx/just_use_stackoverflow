@@ -1,0 +1,74 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 1326,
+  "trivial": 461,
+  "exact": 0,
+  "modified": 0,
+  "generated": 1326
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/store.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 43,
+   "trivial": 20
+  },
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 776,
+   "trivial": 299
+  },
+  "src/entities.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 55,
+   "trivial": 4
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 221,
+   "trivial": 70
+  },
+  "src/diff.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 26,
+   "trivial": 15
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 6,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 140,
+   "trivial": 33
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 25,
+   "trivial": 1
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 34,
+   "trivial": 18
+  }
+ },
+ "final_functional_loc": 1758
+}

@@ -1,0 +1,192 @@
+{
+ "external_exact_fraction": 0.8674565996142188,
+ "external_modified_fraction": 0.008542298153761367,
+ "external_fraction": 0.8759988977679801,
+ "line_classes": {
+  "nontrivial": 3629,
+  "trivial": 3836,
+  "exact": 3148,
+  "modified": 31,
+  "generated": 450
+ },
+ "corpus_sources": 77,
+ "corpus_sources_contributing": 67,
+ "corpus_lines": 36015,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 35856,
+  "tool_result": 159
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/dist/markdown-it.js",
+   3168
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/dist/index.cjs.js",
+   1751
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/list.mjs",
+   264
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/reference.mjs",
+   231
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/table.mjs",
+   229
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/link.mjs",
+   191
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/image.mjs",
+   184
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/lheading.mjs",
+   168
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+   167
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/blockquote.mjs",
+   142
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/autolink.mjs",
+   141
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/entity.mjs",
+   136
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/fence.mjs",
+   136
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/html_inline.mjs",
+   130
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/common/utils.mjs",
+   127
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/hr.mjs",
+   115
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/text.mjs",
+   115
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+   97
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_core/smartquotes.mjs",
+   97
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+   93
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+   90
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/renderer.mjs",
+   81
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/ruler.mjs",
+   81
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_block/state_block.mjs",
+   77
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/strikethrough.mjs",
+   72
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/state_inline.mjs",
+   65
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/emphasis.mjs",
+   62
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/escape.mjs",
+   59
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/index.mjs",
+   56
+  ],
+  [
+   ".retrieval/npm/markdown-it@14.1.0/package/lib/rules_inline/backticks.mjs",
+   55
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 7,
+   "modified": 10,
+   "generated": 73,
+   "trivial": 29
+  },
+  "src/server.js": {
+   "exact": 2,
+   "modified": 16,
+   "generated": 215,
+   "trivial": 72
+  },
+  "src/diff.js": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 12,
+   "trivial": 8
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 100,
+   "trivial": 21
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 6,
+   "trivial": 15
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 39,
+   "trivial": 13
+  },
+  "src/vendor/markdown-it.cjs": {
+   "exact": 3139,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 3677
+  }
+ },
+ "final_functional_loc": 5447
+}

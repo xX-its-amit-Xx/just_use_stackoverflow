@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://www.npmjs.com/package/markdown-it/v/14.1.0 (https://github.com/markdown-it/markdown-it)",
+    "license": "MIT",
+    "files_or_snippet": "dist/markdown-it.js (self-contained UMD bundle incl. mdurl, uc.micro, entities, linkify-it, punycode.js) and LICENSE",
+    "local_paths": ["src/vendor/markdown-it.cjs", "src/vendor/markdown-it.LICENSE"],
+    "lines_used_estimate": 6963,
+    "how_adapted": "Vendored unmodified (renamed to .cjs, loaded via createRequire). src/markdown.js configures the 'commonmark' preset with table+strikethrough, overrides renderer rules (escape raw HTML, <del>, heading ids), replaces validateLink/normalizeLink to turn unsafe schemes into '#' (BAD_PROTO/GOOD_DATA regexes copied from markdown-it), and adds a wiki-link inline rule."
+  },
+  {
+    "source_url": "https://github.com/Flet/github-slugger/blob/master/index.js",
+    "license": "ISC",
+    "files_or_snippet": "BananaSlug.slug duplicate-counting loop and slug regex idea",
+    "local_paths": ["src/markdown.js"],
+    "lines_used_estimate": 10,
+    "how_adapted": "Re-expressed with a Map 'seen' argument and a simplified Unicode-property regex (keep letters, digits, space, '-', '_')."
+  },
+  {
+    "source_url": "https://www.npmjs.com/package/commonmark/v/0.31.2 and https://spec.commonmark.org/0.31.2/spec.json",
+    "license": "BSD-2-Clause / CC-BY-SA-4.0",
+    "files_or_snippet": "Used only during development (in .retrieval, not shipped) to compare renderer output against commonmark.js on all 652 spec examples.",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Not included in deliverable."
+  }
+]

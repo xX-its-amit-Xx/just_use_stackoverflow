@@ -1,0 +1,69 @@
+[
+  {
+    "source_url": "https://github.com/markdown-it/markdown-it (npm markdown-it@15.0.3, dist/markdown-it.mjs)",
+    "license": "MIT",
+    "files_or_snippet": "dist/markdown-it.mjs (whole bundled ESM build)",
+    "local_paths": [
+      "src/vendor/markdown-it/markdown-it.mjs",
+      "src/vendor/licenses/markdown-it.LICENSE"
+    ],
+    "lines_used_estimate": 3935,
+    "how_adapted": "Copied verbatim except the five bare import specifiers (mdurl, uc.micro, entities, linkify-it, punycode.js) rewritten to relative vendored paths. Parser core (CommonMark rules, table and strikethrough rules, renderer) used as-is; behaviour customised in src/markdown.js via the commonmark preset, html:false, enabling table+strikethrough, and overriding normalizeLink/validateLink."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/mdurl (npm mdurl@2.1.0)",
+    "license": "MIT",
+    "files_or_snippet": "index.mjs, lib/decode.mjs, lib/encode.mjs, lib/format.mjs, lib/parse.mjs",
+    "local_paths": [
+      "src/vendor/mdurl/index.mjs",
+      "src/vendor/mdurl/lib/",
+      "src/vendor/licenses/mdurl.LICENSE"
+    ],
+    "lines_used_estimate": 600,
+    "how_adapted": "Verbatim copy of ESM sources; no changes."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/uc.micro (npm uc.micro@3.0.0)",
+    "license": "MIT",
+    "files_or_snippet": "build/index.mjs",
+    "local_paths": [
+      "src/vendor/uc.micro/index.mjs",
+      "src/vendor/licenses/uc.micro.LICENSE"
+    ],
+    "lines_used_estimate": 120,
+    "how_adapted": "Verbatim copy of ESM build."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/linkify-it (npm linkify-it@6.1.0)",
+    "license": "MIT",
+    "files_or_snippet": "build/index.mjs",
+    "local_paths": [
+      "src/vendor/linkify-it/index.mjs",
+      "src/vendor/licenses/linkify-it.LICENSE"
+    ],
+    "lines_used_estimate": 900,
+    "how_adapted": "Copied; only the import specifier for uc.micro rewritten to a relative path."
+  },
+  {
+    "source_url": "https://github.com/fb55/entities (npm entities@9.0.0)",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "dist/*.js (index, decode, encode, escape, decode-codepoint, generated/, internal/)",
+    "local_paths": [
+      "src/vendor/entities/",
+      "src/vendor/licenses/entities.LICENSE"
+    ],
+    "lines_used_estimate": 3000,
+    "how_adapted": "Verbatim copy of compiled ESM dist; no changes."
+  },
+  {
+    "source_url": "https://github.com/mathiasbynens/punycode.js (npm punycode.js@2.3.1)",
+    "license": "MIT",
+    "files_or_snippet": "punycode.es6.js",
+    "local_paths": [
+      "src/vendor/punycode/index.js",
+      "src/vendor/licenses/punycode.js.LICENSE"
+    ],
+    "lines_used_estimate": 450,
+    "how_adapted": "Copied the ES-module build verbatim, renamed to index.js."
+  }
+]

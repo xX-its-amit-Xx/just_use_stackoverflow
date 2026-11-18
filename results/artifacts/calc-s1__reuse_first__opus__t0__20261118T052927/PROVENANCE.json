@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/spyannis/jsExpeval",
+    "license": "MIT",
+    "files_or_snippet": "ExpEval.js (evaluateExpression: peek/get helpers, factor/term/expression recursive-descent functions)",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 35,
+    "how_adapted": "Kept the recursive-descent skeleton (peek/get, term/expression loops). Replaced char-level scanning with a positional tokenizer (scientific notation, tabs), added power (^, right-assoc) and unary levels per SPEC precedence, % operator, CalcError with positions instead of NaN, division/remainder-by-zero, non-finite and trailing-token checks. Converted to ES module."
+  }
+]

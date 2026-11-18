@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval",
+    "license": "MIT",
+    "files_or_snippet": "src/token-stream.js (inspected in browser via GitHub blob view; no code copied)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Not adapted. Browser search (GitHub repository search for JavaScript math expression parsers) surfaced silentmatt/expr-eval as the closest candidate. Its tokenizer is tightly coupled to its own Parser/Token/operator-table framework and uses different unary-minus/precedence and error semantics than SPEC, so no code was copied. src/calc.js was written from scratch. Notes: no vendored code, so no src/THIRD_PARTY_NOTICES.md entry is needed."
+  }
+]
