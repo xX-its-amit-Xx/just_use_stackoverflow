@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/search?q=todo+cli+language%3AJavaScript&type=repositories",
+    "license": "n/a",
+    "files_or_snippet": "none (search only; candidates vesln/todo, klaudiosinani/taskbook, browser todo apps inspected and rejected)",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Nothing reused. NOTE: no usable implementation found (GitHub code search requires sign-in; repository candidates were CommonJS/dependency-bound/DOM apps with incompatible APIs or no license). src/todo.js and src/cli.js written from scratch."
+  }
+]

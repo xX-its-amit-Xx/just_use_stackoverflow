@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval",
+    "license": "MIT (Copyright (c) 2015 Matthew Crumley); fetched as npm expr-eval@2.0.2",
+    "files_or_snippet": "dist/index.mjs lines ~1197-1260 (ParserState.prototype.parseAddSub, parseTerm, parseFactor, parseExponential)",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 40,
+    "how_adapted": "Adapted the precedence chain structure (add/sub -> term -> unary -> power with right-associative ^ whose exponent may carry a sign) into a new Parser class over a new tokenizer; rewrote for ES module, CalcError with position, no function/variable support, and added finite-result and division/remainder-by-zero checks. Tokenizer, number parsing and error messages are original."
+  },
+  {
+    "source_url": "https://github.com/heokhe/node-calc",
+    "license": "MIT (LICENSE in repo; package @hkh12/node-calc)",
+    "files_or_snippet": "bin/cli.js (printExpression / argv handling)",
+    "local_paths": ["src/cli.js"],
+    "lines_used_estimate": 8,
+    "how_adapted": "Argument-list handling pattern (join argv, print result via console-style output, error message on failure) reimplemented for the spec: stderr 'Error: <message>' with exit code 1, usage message when no argument is given, ESM main-module guard. No other code reused; the library itself (string-slicing evaluator) was not used because it does not implement the spec's precedence (e.g. -2^2) or modulo/scientific notation."
+  }
+]

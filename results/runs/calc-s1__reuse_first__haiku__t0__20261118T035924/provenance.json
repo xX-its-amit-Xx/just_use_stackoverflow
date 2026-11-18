@@ -1,0 +1,48 @@
+{
+ "external_exact_fraction": 0.04065040650406504,
+ "external_modified_fraction": 0.07317073170731707,
+ "external_fraction": 0.11382113821138211,
+ "line_classes": {
+  "nontrivial": 123,
+  "trivial": 114,
+  "exact": 5,
+  "modified": 9,
+  "generated": 109
+ },
+ "corpus_sources": 27,
+ "corpus_sources_contributing": 3,
+ "corpus_lines": 8758,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 8589,
+  "tool_result": 169
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/bundle.js",
+   11
+  ],
+  [
+   ".retrieval/npm/expr-eval@2.0.2/package/dist/index.mjs",
+   11
+  ],
+  [
+   ".retrieval/repos/heokhe__node-calc/lib/tokenize.js",
+   3
+  ]
+ ],
+ "per_file": {
+  "src/calc.js": {
+   "exact": 4,
+   "modified": 9,
+   "generated": 93,
+   "trivial": 93
+  },
+  "src/cli.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 16,
+   "trivial": 21
+  }
+ },
+ "final_functional_loc": 206
+}
