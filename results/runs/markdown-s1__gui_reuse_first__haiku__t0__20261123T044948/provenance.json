@@ -1,0 +1,155 @@
+{
+ "external_exact_fraction": 0.9848238482384823,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.9848238482384823,
+ "line_classes": {
+  "nontrivial": 1845,
+  "trivial": 1383,
+  "exact": 1817,
+  "modified": 0,
+  "generated": 28
+ },
+ "corpus_sources": 17,
+ "corpus_sources_contributing": 12,
+ "corpus_lines": 3318,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 3318
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795409432288.txt",
+   582
+  ],
+  [
+   ".gui/clipboard_history/1795409419424.txt",
+   560
+  ],
+  [
+   ".gui/clipboard_history/1795409424983.txt",
+   219
+  ],
+  [
+   ".gui/clipboard_history/1795409436017.txt",
+   171
+  ],
+  [
+   ".gui/clipboard_history/1795409471598.txt",
+   128
+  ],
+  [
+   ".gui/clipboard_history/1795409467776.txt",
+   64
+  ],
+  [
+   ".gui/clipboard_history/1795409426786.txt",
+   59
+  ],
+  [
+   ".gui/clipboard_history/1795409465938.txt",
+   51
+  ],
+  [
+   ".gui/clipboard_history/1795409428634.txt",
+   48
+  ],
+  [
+   ".gui/clipboard_history/1795409437873.txt",
+   36
+  ],
+  [
+   ".gui/clipboard_history/1795409469672.txt",
+   18
+  ],
+  [
+   ".gui/clipboard_history/1795409430462.txt",
+   12
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 13,
+   "trivial": 13
+  },
+  "src/vendor/mdurl/encode.mjs": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/mdurl/parse.mjs": {
+   "exact": 128,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 148
+  },
+  "src/vendor/mdurl/decode.mjs": {
+   "exact": 52,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/mdurl/format.mjs": {
+   "exact": 13,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/entities/index.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 12,
+   "trivial": 6
+  },
+  "src/vendor/commonmark/from-code-point.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 23
+  },
+  "src/vendor/commonmark/inlines.js": {
+   "exact": 563,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 409
+  },
+  "src/vendor/commonmark/common.js": {
+   "exact": 51,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 46
+  },
+  "src/vendor/commonmark/index.js": {
+   "exact": 5,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 9
+  },
+  "src/vendor/commonmark/node.js": {
+   "exact": 200,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 88
+  },
+  "src/vendor/commonmark/blocks.js": {
+   "exact": 539,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 426
+  },
+  "src/vendor/commonmark/render/renderer.js": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 39
+  },
+  "src/vendor/commonmark/render/html.js": {
+   "exact": 163,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 106
+  }
+ },
+ "final_functional_loc": 2813
+}

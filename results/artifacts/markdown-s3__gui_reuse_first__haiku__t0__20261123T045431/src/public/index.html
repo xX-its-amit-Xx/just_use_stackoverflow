@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markdown-s3 wiki</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<aside id="sidebar">
+  <div class="sidebar-top">
+    <strong>Wiki</strong>
+    <button id="new-page" type="button">New page</button>
+  </div>
+  <form id="search-form">
+    <input id="search-box" type="search" placeholder="Search pages…" aria-label="Search">
+  </form>
+  <div class="filters">
+    <label>Tag
+      <select id="tag-filter"><option value="">All tags</option></select>
+    </label>
+    <label>Sort
+      <select id="sort-select">
+        <option value="title">Title</option>
+        <option value="updated">Recently updated</option>
+      </select>
+    </label>
+  </div>
+  <ul id="page-list"></ul>
+</aside>
+<main id="main">
+  <div id="notice" class="notice" hidden></div>
+  <div id="view"></div>
+</main>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

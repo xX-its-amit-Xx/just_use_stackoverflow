@@ -1,0 +1,215 @@
+{
+ "run_id": "pm-s4__gui_reuse_first__haiku__t0__20261123T044105",
+ "task_id": "pm-s4",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "segments": 3,
+ "resumed_after_limit": true,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 1,
+ "model_invocations": 30,
+ "input_tokens": 60,
+ "output_tokens": 123993,
+ "cached_input_tokens": 2586085,
+ "cache_creation_tokens": 144196,
+ "reasoning_tokens": 56074,
+ "total_tokens": 124053,
+ "total_tokens_incl_cache": 2854334,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.357246,
+ "inference_cost_nocache_usd": 1.409153,
+ "inference_cost_attributed_usd": 0.357246,
+ "harness_reported_cost_usd": 0.35724583,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.01137,
+ "total_execution_cost_usd": 0.368615,
+ "elapsed_s": 511.63,
+ "agent_elapsed_s": 509.04,
+ "orchestrator_observed_s": 512.34,
+ "eval_s": 2.6,
+ "active_s": 1457.09,
+ "api_s": 1427.34,
+ "hidden_tests": 18,
+ "hidden_pass": 17,
+ "hidden_fail": 1,
+ "own_tests": 12,
+ "own_pass": 12,
+ "functional_loc": 2376,
+ "functional_chars": 90477,
+ "normalized_loc": 3016,
+ "minified_vendor_bytes": 0,
+ "test_loc": 349,
+ "comment_lines": 51,
+ "blank_lines": 186,
+ "retrieval": {
+  "search_queries": 3,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 2376,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 6,
+  "retrieval_failures": 2,
+  "retrieval_failure_rate": 0.3333
+ },
+ "gui": {
+  "browser_navigations": 6,
+  "screenshots": 5,
+  "screenshot_tokens_estimate": 6825,
+  "screenshot_tokens_viewed_estimate": 5460,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 2,
+  "gui_action_time_s": 9.54,
+  "browser_session_span_s": 513.57,
+  "visual_reasoning_calls": 4,
+  "visual_reasoning_cost_usd": 0.028388
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 11,
+  "retrieval_invocations": 11,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 71
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 176
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 231
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 237
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 775
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 8,
+   "max_file_loc": 1372,
+   "mean_file_loc": 297.0,
+   "functions": 284,
+   "loc_per_function": 8.4,
+   "duplicate_line_ratio": 0.1213
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": [
+   "workspace key validation and uniqueness"
+  ]
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 1846,
+   "trivial": 576,
+   "exact": 0,
+   "modified": 0,
+   "generated": 1846
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 2376
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 60,
+    "outputTokens": 123993,
+    "thinkingTokens": 56074,
+    "cacheReadInputTokens": 2586085,
+    "cacheCreationInputTokens": 144196,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 144196,
+    "webSearchRequests": 0,
+    "costUSD": 0.35724583,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 60,
+    "output": 123993,
+    "cr": 2586085,
+    "cw": 144196
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 7,
+  "screenshot": 4,
+  "code_generation": 6,
+  "test_execution": 4,
+  "debugging": 4,
+  "other": 4
+ }
+}

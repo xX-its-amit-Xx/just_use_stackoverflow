@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanban</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; background: #f2f4f7; color: #1d2433; }
+  header { background: #1d2433; color: #fff; padding: 10px 16px; display: flex; gap: 12px; align-items: center; }
+  header button { background: #3b4a6b; color: #fff; border: 0; padding: 6px 10px; border-radius: 4px; cursor: pointer; }
+  main { padding: 16px; }
+  .card-box { background: #fff; border-radius: 6px; padding: 12px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.08); max-width: 480px; }
+  form { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+  input { padding: 6px; border: 1px solid #c3cad6; border-radius: 4px; }
+  button.primary { background: #2f6fed; color: #fff; border: 0; padding: 6px 10px; border-radius: 4px; cursor: pointer; }
+  .msg { color: #b00020; min-height: 1.2em; margin: 6px 0; }
+  .board { display: flex; gap: 12px; align-items: flex-start; overflow-x: auto; }
+  .column { background: #e4e8ef; border-radius: 6px; padding: 8px; width: 240px; min-height: 120px; flex: 0 0 auto; }
+  .column.drop { outline: 2px dashed #2f6fed; }
+  .column h3 { margin: 4px 0 8px; font-size: 15px; }
+  .wip { font-size: 12px; color: #6b7587; font-weight: normal; }
+  .cardi { background: #fff; border-radius: 4px; padding: 8px; margin-bottom: 6px; box-shadow: 0 1px 1px rgba(0,0,0,.1); cursor: grab; }
+  .cardi .title { font-weight: 600; }
+  .cardi .meta { font-size: 12px; color: #6b7587; }
+  .cardi .moves button { font-size: 11px; margin-right: 4px; }
+  a { color: #2f6fed; cursor: pointer; }
+  .hidden { display: none; }
+  ul.boards li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<header>
+  <strong>Kanban</strong>
+  <span id="who"></span>
+  <span style="flex:1"></span>
+  <button id="logout" class="hidden">Log out</button>
+</header>
+<main>
+  <div id="msg" class="msg" role="alert"></div>
+
+  <section id="auth" class="hidden">
+    <h2 id="auth-title">Log in</h2>
+    <form id="auth-form">
+      <input name="username" placeholder="username" required autocomplete="username">
+      <input name="password" type="password" placeholder="password" required autocomplete="current-password">
+      <input name="displayName" placeholder="display name (register only)" class="hidden">
+      <button class="primary" type="submit" id="auth-submit">Log in</button>
+    </form>
+    <a id="auth-toggle">Need an account? Register</a>
+  </section>
+
+  <section id="boards" class="hidden">
+    <h2>Your boards</h2>
+    <ul class="boards" id="board-list"></ul>
+    <form id="new-board">
+      <input name="name" placeholder="New board name" required maxlength="100">
+      <button class="primary" type="submit">Create board</button>
+    </form>
+  </section>
+
+  <section id="board" class="hidden">
+    <p><a id="back">&larr; All boards</a></p>
+    <h2 id="board-name"></h2>
+    <div class="board" id="columns"></div>
+    <form id="new-column">
+      <input name="name" placeholder="New column name" required maxlength="100">
+      <input name="wipLimit" type="number" min="1" placeholder="WIP limit (optional)">
+      <button class="primary" type="submit">Add column</button>
+    </form>
+  </section>
+</main>
+
+<script>
+(function () {
+  var state = { token: localStorage.getItem('kanban_token'), user: null, mode: 'login', boardId: null, board: null };
+  var $ = function (s) { return document.querySelector(s); };
+
+  function setMsg(text) { $('#msg').textContent = text || ''; }
+
+  function api(method, path, body) {
+    var headers = {};
+    if (body !== undefined) headers['content-type'] = 'application/json';
+    if (state.token) headers.authorization = 'Bearer ' + state.token;
+    return fetch(path, {
+      method: method,
+      headers: headers,
+      body: body !== undefined ? JSON.stringify(body) : undefined
+    }).then(function (res) {
+      if (res.status === 204) return null;
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        if (!res.ok) {
+          var err = new Error(data.message || data.error || ('HTTP ' + res.status));
+          err.status = res.status;
+          err.code = data.error;
+          throw err;
+        }
+        return data;
+      });
+    });
+  }
+
+  function show(id) {
+    ['auth', 'boards', 'board'].forEach(function (s) { $('#' + s).classList.toggle('hidden', s !== id); });
+    $('#logout').classList.toggle('hidden', !state.token);
+    $('#who').textContent = state.user ? 'Signed in as ' + (state.user.displayName || state.user.username) : '';
+  }
+
+  function el(tag, props, children) {
+    var n = document.createElement(tag);
+    if (props) Object.keys(props).forEach(function (k) {
+      if (k === 'text') n.textContent = props[k];
+      else if (k === 'on') Object.keys(props.on).forEach(function (ev) { n.addEventListener(ev, props.on[ev]); });
+      else n.setAttribute(k, props[k]);
+    });
+    (children || []).forEach(function (c) { if (c) n.appendChild(c); });
+    return n;
+  }
+
+  function fail(e) { setMsg(e.message || String(e)); }
+
+  // ---------- auth ----------
+  function renderAuth() {
+    var isLogin = state.mode === 'login';
+    $('#auth-title').textContent = isLogin ? 'Log in' : 'Register';
+    $('#auth-submit').textContent = isLogin ? 'Log in' : 'Register';
+    $('#auth-toggle').textContent = isLogin ? 'Need an account? Register' : 'Have an account? Log in';
+    $('#auth-form [name=displayName]').classList.toggle('hidden', isLogin);
+    show('auth');
+  }
+
+  $('#auth-toggle').addEventListener('click', function () {
+    state.mode = state.mode === 'login' ? 'register' : 'login';
+    setMsg('');
+    renderAuth();
+  });
+
+  $('#auth-form').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var f = ev.target;
+    var creds = { username: f.username.value, password: f.password.value };
+    var registering = state.mode === 'register';
+    var step;
+    if (registering) {
+      var reg = { username: creds.username, password: creds.password };
+      if (f.displayName.value) reg.displayName = f.displayName.value;
+      step = api('POST', '/api/auth/register', reg).then(function () { return api('POST', '/api/auth/login', creds); });
+    } else {
+      step = api('POST', '/api/auth/login', creds);
+    }
+    setMsg('');
+    step.then(function (data) {
+      state.token = data.token;
+      state.user = data.user;
+      localStorage.setItem('kanban_token', data.token);
+      state.mode = 'login';
+      f.reset();
+      route();
+    }).catch(fail);
+  });
+
+  $('#logout').addEventListener('click', function () {
+    api('POST', '/api/auth/logout').catch(function () {}).then(function () {
+      state.token = null;
+      state.user = null;
+      localStorage.removeItem('kanban_token');
+      window.location.hash = '';
+      renderAuth();
+    });
+  });
+
+  // ---------- boards list ----------
+  function renderBoards() {
+    show('boards');
+    var list = $('#board-list');
+    list.innerHTML = '';
+    api('GET', '/api/boards').then(function (boards) {
+      boards.forEach(function (b) {
+        list.appendChild(el('li', null, [
+          el('a', { href: '#/boards/' + encodeURIComponent(b.id), text: b.name }),
+          el('span', { text: ' (' + b.role + ')' })
+        ]));
+      });
+      if (!boards.length) list.appendChild(el('li', { text: 'No boards yet.' }));
+    }).catch(fail);
+  }
+
+  $('#new-board').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var name = ev.target.name.value;
+    api('POST', '/api/boards', { name: name }).then(function (b) {
+      ev.target.reset();
+      window.location.hash = '#/boards/' + encodeURIComponent(b.id);
+    }).catch(fail);
+  });
+
+  // ---------- board view ----------
+  function renderBoard(id) {
+    state.boardId = id;
+    api('GET', '/api/boards/' + encodeURIComponent(id)).then(function (b) {
+      state.board = b;
+      show('board');
+      $('#board-name').textContent = b.name;
+      drawColumns(b);
+    }).catch(function (e) {
+      show('board');
+      $('#board-name').textContent = '';
+      $('#columns').innerHTML = '';
+      fail(e);
+    });
+  }
+
+  function drawColumns(b) {
+    var wrap = $('#columns');
+    wrap.innerHTML = '';
+    b.columns.forEach(function (col, idx) {
+      var count = col.cards.length;
+      var head = el('h3', null, [
+        el('span', { text: col.name + ' ' }),
+        el('span', { class: 'wip', text: col.wipLimit ? count + '/' + col.wipLimit : String(count) })
+      ]);
+      var column = el('div', { class: 'column', 'data-column-id': col.id });
+      column.addEventListener('dragover', function (e) { e.preventDefault(); column.classList.add('drop'); });
+      column.addEventListener('dragleave', function () { column.classList.remove('drop'); });
+      column.addEventListener('drop', function (e) {
+        e.preventDefault();
+        column.classList.remove('drop');
+        var cardId = e.dataTransfer.getData('text/plain');
+        if (cardId) moveCard(cardId, col.id, undefined);
+      });
+      column.appendChild(head);
+
+      col.cards.forEach(function (c) {
+        var card = el('div', { class: 'cardi', draggable: 'true' }, [
+          el('div', { class: 'title', text: c.title }),
+          c.dueDate ? el('div', { class: 'meta', text: 'Due ' + c.dueDate }) : null,
+          el('div', { class: 'moves' }, [
+            idx > 0 ? el('button', { text: '◀', title: 'Move left', on: { click: function () { moveCard(c.id, b.columns[idx - 1].id); } } }) : null,
+            idx < b.columns.length - 1 ? el('button', { text: '▶', title: 'Move right', on: { click: function () { moveCard(c.id, b.columns[idx + 1].id); } } }) : null
+          ])
+        ]);
+        card.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', c.id); });
+        column.appendChild(card);
+      });
+
+      var addForm = el('form', null, [
+        el('input', { name: 'title', placeholder: 'New card', required: 'required', maxlength: '200' }),
+        el('button', { class: 'primary', type: 'submit', text: 'Add' })
+      ]);
+      addForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var title = addForm.title.value;
+        api('POST', '/api/columns/' + encodeURIComponent(col.id) + '/cards', { title: title }).then(function () {
+          renderBoard(state.boardId);
+        }).catch(fail);
+      });
+      column.appendChild(addForm);
+      wrap.appendChild(column);
+    });
+  }
+
+  function moveCard(cardId, columnId, position) {
+    var body = { columnId: columnId };
+    if (position !== undefined) body.position = position;
+    api('POST', '/api/cards/' + encodeURIComponent(cardId) + '/move', body).then(function () {
+      setMsg('');
+      renderBoard(state.boardId);
+    }).catch(fail);
+  }
+
+  $('#new-column').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var f = ev.target;
+    var body = { name: f.name.value };
+    if (f.wipLimit.value) body.wipLimit = Number(f.wipLimit.value);
+    api('POST', '/api/boards/' + encodeURIComponent(state.boardId) + '/columns', body).then(function () {
+      f.reset();
+      renderBoard(state.boardId);
+    }).catch(fail);
+  });
+
+  $('#back').addEventListener('click', function () { window.location.hash = ''; });
+
+  // ---------- routing ----------
+  function route() {
+    setMsg('');
+    if (!state.token) { state.mode = 'login'; return renderAuth(); }
+    if (!state.user) {
+      return api('GET', '/api/auth/me').then(function (d) {
+        state.user = d.user;
+        route();
+      }).catch(function () {
+        state.token = null;
+        localStorage.removeItem('kanban_token');
+        renderAuth();
+      });
+    }
+    var m = /^#\/boards\/(.+)$/.exec(window.location.hash);
+    if (m) return renderBoard(decodeURIComponent(m[1]));
+    renderBoards();
+  }
+
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>

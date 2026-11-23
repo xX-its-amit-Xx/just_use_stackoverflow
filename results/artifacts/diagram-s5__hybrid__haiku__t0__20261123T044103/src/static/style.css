@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; font-size: 14px; color: #222; height: 100vh; }
+.hidden { display: none !important; }
+.panel, #dashboard { max-width: 720px; margin: 40px auto; padding: 16px; }
+input, select, button { font: inherit; margin: 2px; padding: 4px 8px; }
+button { cursor: pointer; }
+.error { color: #b00020; min-height: 1em; }
+#dashboard header { display: flex; justify-content: space-between; align-items: center; }
+#doc-list li { padding: 6px 0; border-bottom: 1px solid #eee; cursor: pointer; }
+#editor { height: 100vh; display: flex; flex-direction: column; }
+#toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 4px; border-bottom: 1px solid #ddd; background: #fafafa; }
+#toolbar .group { display: inline-flex; gap: 2px; }
+#toolbar button.active { background: #cfe3ff; }
+#status { margin-left: auto; color: #555; }
+#main { flex: 1; display: grid; grid-template-columns: 200px 1fr 260px; min-height: 0; }
+#left, #right { overflow-y: auto; padding: 6px; border-right: 1px solid #ddd; }
+#right { border-right: none; border-left: 1px solid #ddd; }
+#left h3, #right h3 { margin: 10px 0 4px; font-size: 13px; text-transform: uppercase; color: #666; }
+#canvas-wrap { position: relative; overflow: hidden; background: #f4f4f4; }
+#canvas { width: 100%; height: 100%; display: block; background: #fff; touch-action: none; user-select: none; }
+#minimap { position: absolute; right: 8px; bottom: 8px; background: rgba(255,255,255,0.9); border: 1px solid #999; cursor: pointer; }
+#zoom { position: absolute; left: 8px; bottom: 8px; background: rgba(255,255,255,0.8); padding: 2px 6px; }
+#layers .layer { display: flex; align-items: center; gap: 4px; padding: 2px 0; }
+#layers .layer.current span { font-weight: bold; }
+#presence li { list-style: none; }
+#props label { display: block; margin: 3px 0; }
+#props input[type=text], #props input[type=number] { width: 120px; }
+.zorder button { margin: 2px 0; }
+#versions li, #comments li { list-style: none; border-bottom: 1px solid #eee; padding: 4px 0; }
+#comments .resolved { opacity: 0.5; }
+#toast { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 6px 12px; border-radius: 4px; display: none; }
+#toast.show { display: block; }
+label.file { display: inline-flex; align-items: center; gap: 4px; }

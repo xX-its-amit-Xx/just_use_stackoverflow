@@ -1,0 +1,293 @@
+{
+ "run_id": "markdown-s3__gui_reuse_first__haiku__t0__20261123T045431",
+ "task_id": "markdown-s3",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S3",
+ "family": "markdown",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "segments": 1,
+ "resumed_after_limit": false,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 54,
+ "model_invocations": 52,
+ "input_tokens": 104,
+ "output_tokens": 84313,
+ "cached_input_tokens": 3089556,
+ "cache_creation_tokens": 123265,
+ "reasoning_tokens": 39293,
+ "total_tokens": 84417,
+ "total_tokens_incl_cache": 3297238,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.233199,
+ "inference_cost_nocache_usd": 1.027761,
+ "inference_cost_attributed_usd": 0.233199,
+ "harness_reported_cost_usd": 0.23319894,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.009302,
+ "total_execution_cost_usd": 0.242501,
+ "elapsed_s": 418.59,
+ "agent_elapsed_s": 417.82,
+ "orchestrator_observed_s": 418.86,
+ "eval_s": 0.76,
+ "active_s": 420.81,
+ "api_s": 370.17,
+ "hidden_tests": 31,
+ "hidden_pass": 31,
+ "hidden_fail": 0,
+ "own_tests": 10,
+ "own_pass": 10,
+ "functional_loc": 3686,
+ "functional_chars": 84447,
+ "normalized_loc": 2815,
+ "minified_vendor_bytes": 0,
+ "test_loc": 167,
+ "comment_lines": 356,
+ "blank_lines": 443,
+ "retrieval": {
+  "search_queries": 4,
+  "search_results_examined": 0,
+  "repositories_inspected": 3,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 14,
+  "files_copied": 10,
+  "snippets_retrieved": 10,
+  "retrieved_loc": 2818,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 2422,
+  "retrieved_loc_modified": 61,
+  "retrieved_loc_discarded": 335,
+  "generated_loc": 1203,
+  "modified_loc": 61,
+  "integration_modifications": 0,
+  "external_fraction": 0.6735,
+  "search_to_use_conversion": 0.9,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 25,
+  "retrieval_failures": 2,
+  "retrieval_failure_rate": 0.08
+ },
+ "gui": {
+  "browser_navigations": 25,
+  "screenshots": 14,
+  "screenshot_tokens_estimate": 19110,
+  "screenshot_tokens_viewed_estimate": 15015,
+  "clicks": 0,
+  "text_selections": 10,
+  "copy_operations": 10,
+  "paste_operations": 10,
+  "failed_navigations": 2,
+  "gui_action_time_s": 37.39,
+  "browser_session_span_s": 414.68,
+  "visual_reasoning_calls": 11,
+  "visual_reasoning_cost_usd": 0.040806
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 23,
+  "retrieval_invocations": 25,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "acb43e84276da1f0"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 52
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 62
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 69
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 108
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 110
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 144
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 184
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 206
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 239
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 265
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 298
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 322
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 331
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 16,
+   "max_file_loc": 864,
+   "mean_file_loc": 230.4,
+   "functions": 493,
+   "loc_per_function": 7.5,
+   "duplicate_line_ratio": 0.1317
+  },
+  "license": {
+   "provenance_entries": 11,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.6570281124497992,
+  "external_modified_fraction": 0.01646586345381526,
+  "external_fraction": 0.6734939759036145,
+  "line_classes": {
+   "nontrivial": 2490,
+   "trivial": 1552,
+   "exact": 1636,
+   "modified": 41,
+   "generated": 813
+  },
+  "corpus_sources": 10,
+  "corpus_sources_contributing": 9,
+  "corpus_lines": 2818,
+  "corpus_lines_by_kind": {
+   "gui_clipboard": 2818
+  },
+  "contributing_sources": [
+   [
+    ".gui/clipboard_history/1795409717077.txt",
+    597
+   ],
+   [
+    ".gui/clipboard_history/1795409714006.txt",
+    571
+   ],
+   [
+    ".gui/clipboard_history/1795409718647.txt",
+    220
+   ],
+   [
+    ".gui/clipboard_history/1795409720196.txt",
+    192
+   ],
+   [
+    ".gui/clipboard_history/1795409706844.txt",
+    63
+   ],
+   [
+    ".gui/clipboard_history/1795409747742.txt",
+    53
+   ],
+   [
+    ".gui/clipboard_history/1795409715537.txt",
+    46
+   ],
+   [
+    ".gui/clipboard_history/1795409721733.txt",
+    37
+   ],
+   [
+    ".gui/clipboard_history/1795409723298.txt",
+    7
+   ]
+  ],
+  "final_functional_loc": 3686
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 104,
+    "outputTokens": 84313,
+    "cacheReadInputTokens": 3089556,
+    "cacheCreationInputTokens": 123265,
+    "webSearchRequests": 0,
+    "costUSD": 0.23319894,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 39293,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 123265,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 104,
+    "output": 84313,
+    "cr": 3089556,
+    "cw": 123265
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 13,
+  "screenshot": 12,
+  "file_copy": 3,
+  "other": 10,
+  "code_generation": 10,
+  "code_edit": 1,
+  "test_execution": 2
+ }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/Snowxdxaxd/clone-jira",
+    "license": "none stated (repository has no LICENSE file)",
+    "files_or_snippet": "none copied",
+    "local_paths": [],
+    "lines_used_estimate": 0,
+    "how_adapted": "Discovery note only (NOT reused). Found via browser GitHub repository search (queries: 'kanban jira clone nodejs' and 'kanban node:http zero-dependencies' returned no usable stdlib-only candidate). This repo was inspected visually in the browser: no LICENSE file, so no code was taken; it is also SQLite-based with a different API. Therefore all code in src/ was written from scratch; no vendored or adapted third-party code exists."
+  }
+]

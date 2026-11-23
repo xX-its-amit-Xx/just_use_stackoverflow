@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>diagram-s5</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div id="auth" class="overlay"><form id="authForm"><h2>diagram-s5</h2>
+  <input id="u" placeholder="username" autocomplete="username"><input id="p" type="password" placeholder="password" autocomplete="current-password">
+  <div><button id="login" type="submit">Log in</button><button id="register" type="button">Register</button></div><div id="authMsg" class="msg"></div></form></div>
+<div id="app" hidden>
+  <header id="toolbar">
+    <select id="docSel"></select><button id="newDoc">New</button><button id="shareBtn">Share</button>
+    <span class="sep"></span>
+    <button data-tool="select" title="Select (V)">⬚ Select</button><button data-tool="rect">▭</button><button data-tool="ellipse">◯</button>
+    <button data-tool="diamond">◇</button><button data-tool="text">T</button><button data-tool="line">╱</button><button data-tool="connector" title="Connector (C)">⤳</button>
+    <span class="sep"></span>
+    <button id="undo">↶</button><button id="redo">↷</button><button id="group">Group</button><button id="ungroup">Ungroup</button>
+    <button id="front">Front</button><button id="back">Back</button>
+    <span class="sep"></span>
+    <button data-align="left">⇤</button><button data-align="center">⇹</button><button data-align="right">⇥</button>
+    <button data-align="top">⤒</button><button data-align="middle">⇕</button><button data-align="bottom">⤓</button>
+    <button data-dist="horizontal">⇔ dist</button><button data-dist="vertical">⇳ dist</button>
+    <select id="layoutSel"><option value="">Layout…</option><option value="layered:TB">Layered ↓</option><option value="layered:LR">Layered →</option><option value="grid">Grid</option></select>
+    <span class="sep"></span>
+    <button id="importBtn">Import draw.io</button><input id="importFile" type="file" accept=".drawio,.xml" hidden>
+    <button id="exportSvg">SVG</button><button id="exportJson">JSON</button>
+    <span id="status"></span>
+  </header>
+  <main>
+    <aside id="left"><h4>Layers</h4><div id="layers"></div><button id="addLayer">+ Layer</button>
+      <h4>Versions</h4><button id="saveVersion">Save version</button><div id="versions"></div></aside>
+    <div id="stage"><svg id="canvas" xmlns="http://www.w3.org/2000/svg"><defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker>
+      <pattern id="gridp" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#e5e5e5"/></pattern></defs>
+      <g id="vp"><rect id="bg" x="-50000" y="-50000" width="100000" height="100000" fill="url(#gridp)"/><g id="content"></g><g id="overlay"></g></g></svg>
+      <svg id="minimap"></svg></div>
+    <aside id="right"><h4>Properties</h4><div id="props">
+      <label>Fill <input type="color" id="pFill"></label><label>Stroke <input type="color" id="pStroke"></label>
+      <label>Font size <input type="number" id="pFont" min="6" max="96"></label><label>Opacity <input type="range" id="pOpacity" min="0" max="1" step="0.05"></label></div>
+      <h4>Comments</h4><div id="comments"></div><textarea id="newComment" placeholder="Comment on selection"></textarea><button id="addComment">Comment</button></aside>
+  </main>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body></html>

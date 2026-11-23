@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PM</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header id="topbar" hidden>
+  <strong class="brand">PM</strong>
+  <select id="ws-select" title="Workspace"></select>
+  <select id="project-select" title="Project"></select>
+  <nav id="tabs">
+    <a href="#/board">Board</a><a href="#/backlog">Backlog</a><a href="#/reports">Reports</a><a href="#/settings">Settings</a>
+  </nav>
+  <form id="search-form"><input id="search-input" placeholder='Search e.g. status:"In Progress" -label:wontfix' size="40"></form>
+  <button id="notif-btn" type="button">🔔 <span id="notif-count"></span></button>
+  <span id="whoami"></span>
+  <button id="logout-btn" type="button">Log out</button>
+</header>
+<aside id="notif-panel" hidden></aside>
+<main id="app"></main>
+<div id="toast" hidden></div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

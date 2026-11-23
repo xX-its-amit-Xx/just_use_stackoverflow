@@ -1,0 +1,90 @@
+[
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/blocks.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/blocks.js (whole file, copied via browser raw view + clipboard)",
+    "local_paths": ["src/vendor/commonmark/blocks.js"],
+    "lines_used_estimate": 1044,
+    "how_adapted": "Unchanged copy. Used as the CommonMark block parser (Parser default export)."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/inlines.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/inlines.js (whole file)",
+    "local_paths": ["src/vendor/commonmark/inlines.js"],
+    "lines_used_estimate": 1083,
+    "how_adapted": "Only the import of decodeHTMLStrict was rewired from the npm 'entities' package to ../entities/decode.js. Otherwise unchanged."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/node.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/node.js (whole file)",
+    "local_paths": ["src/vendor/commonmark/node.js"],
+    "lines_used_estimate": 327,
+    "how_adapted": "Unchanged copy. AST node class; markdown.js creates text/custom_inline nodes with it."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/common.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/common.js (whole file)",
+    "local_paths": ["src/vendor/commonmark/common.js"],
+    "lines_used_estimate": 113,
+    "how_adapted": "Only the imports were rewired: mdurl/encode.js -> ../mdurl/encode.mjs and entities -> ../entities/decode.js. Otherwise unchanged."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/from-code-point.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/from-code-point.js (whole file)",
+    "local_paths": ["src/vendor/commonmark/from-code-point.js"],
+    "lines_used_estimate": 64,
+    "how_adapted": "Unchanged copy."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/render/html.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/render/html.js (whole file)",
+    "local_paths": ["src/vendor/commonmark/render/html.js"],
+    "lines_used_estimate": 303,
+    "how_adapted": "Unchanged copy. markdown.js overrides link, image, heading, html_inline and html_block on the renderer instance for the URL safety rules, heading ids and escaped raw HTML."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/render/renderer.js",
+    "license": "BSD-2-Clause (https://github.com/commonmark/commonmark.js/blob/master/LICENSE)",
+    "files_or_snippet": "lib/render/renderer.js (whole file)",
+    "local_paths": ["src/vendor/commonmark/render/renderer.js"],
+    "lines_used_estimate": 74,
+    "how_adapted": "Unchanged copy. Base renderer used by render/html.js."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/mdurl/blob/master/lib/encode.mjs",
+    "license": "MIT (https://github.com/markdown-it/mdurl/blob/master/LICENSE)",
+    "files_or_snippet": "lib/encode.mjs (whole file)",
+    "local_paths": ["src/vendor/mdurl/encode.mjs"],
+    "lines_used_estimate": 89,
+    "how_adapted": "Unchanged copy. Percent-encodes link destinations inside commonmark.js common.js (normalizeURI)."
+  },
+  {
+    "source_url": "https://github.com/fb55/entities/blob/main/maps/entities.json",
+    "license": "BSD-2-Clause (https://github.com/fb55/entities/blob/main/LICENSE)",
+    "files_or_snippet": "maps/entities.json (whole file, 2125 named entities)",
+    "local_paths": ["src/vendor/entities/entities.json"],
+    "lines_used_estimate": 1,
+    "how_adapted": "Unchanged data file, loaded as JSON by src/vendor/entities/decode.js."
+  },
+  {
+    "source_url": "https://github.com/fb55/entities/blob/main/LICENSE",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "Name-based decodeHTMLStrict contract only (no code copied)",
+    "local_paths": ["src/vendor/entities/decode.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "decode.js is written from scratch (about 20 lines). It reimplements the strict decodeHTMLStrict behaviour (named refs need ';', unknown names kept, invalid numeric refs become U+FFFD) on top of the copied entities.json. Included here because it replaces the npm package's function; no source text was copied."
+  },
+  {
+    "source_url": "none (written from scratch)",
+    "license": "n/a (project code)",
+    "files_or_snippet": "src/markdown.js, src/server.js, src/diff.js, src/main.js, src/public/*, tests/unit/*",
+    "local_paths": ["src/markdown.js", "src/server.js", "src/diff.js", "src/main.js", "src/public/index.html", "src/public/app.js", "src/public/app.css", "tests/unit/markdown.test.js", "tests/unit/server.test.js"],
+    "lines_used_estimate": 0,
+    "how_adapted": "Notes: the reuse-first search (browser GitHub search) found no usable implementation of the wiki server, page store, versioning/history, LCS line diff, search, or editor UI, so these were written from scratch. Found but not used: a diff viewer (sidcore-dev/diffview, 0 stars, a textarea-based UI) and no wiki project matched the spec. The markdown glue (GFM tables and strikethrough as AST/pre-pass transforms, wiki-link pass, GitHub slugs, safety rules) is also project code on top of the vendored commonmark.js."
+  }
+]

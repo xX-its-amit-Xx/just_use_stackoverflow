@@ -1,0 +1,169 @@
+{
+ "run_id": "markdown-s2__generate_first__opus__t0__20261123T044819",
+ "task_id": "markdown-s2",
+ "strategy": "generate_first",
+ "trial": 0,
+ "tier": "S2",
+ "family": "markdown",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "segments": 1,
+ "resumed_after_limit": false,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 7,
+ "model_invocations": 7,
+ "input_tokens": 14,
+ "output_tokens": 44136,
+ "cached_input_tokens": 214429,
+ "cache_creation_tokens": 48301,
+ "reasoning_tokens": 20704,
+ "total_tokens": 44150,
+ "total_tokens_incl_cache": 306880,
+ "web_search_requests": 0,
+ "inference_cost_usd": 1.31207,
+ "inference_cost_nocache_usd": 1.933696,
+ "inference_cost_attributed_usd": 1.31207,
+ "harness_reported_cost_usd": 1.3120698,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.008249,
+ "total_execution_cost_usd": 1.320319,
+ "elapsed_s": 371.2,
+ "agent_elapsed_s": 370.6,
+ "orchestrator_observed_s": 371.48,
+ "eval_s": 0.6,
+ "active_s": 369.42,
+ "api_s": 367.74,
+ "hidden_tests": 56,
+ "hidden_pass": 56,
+ "hidden_fail": 0,
+ "own_tests": 9,
+ "own_pass": 9,
+ "functional_loc": 974,
+ "functional_chars": 30605,
+ "normalized_loc": 1020,
+ "minified_vendor_bytes": 0,
+ "test_loc": 26,
+ "comment_lines": 35,
+ "blank_lines": 66,
+ "retrieval": {
+  "search_queries": 0,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 974,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 0,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": null,
+  "first_src_write_step": 2,
+  "retrieval_invocations": 0,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "d826b43b89393f66"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 3,
+   "max_file_loc": 919,
+   "mean_file_loc": 324.7,
+   "functions": 145,
+   "loc_per_function": 6.7,
+   "duplicate_line_ratio": 0.0684
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": false,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 746,
+   "trivial": 263,
+   "exact": 0,
+   "modified": 0,
+   "generated": 746
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 974
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 14,
+    "outputTokens": 44136,
+    "cacheReadInputTokens": 214429,
+    "cacheCreationInputTokens": 48301,
+    "webSearchRequests": 0,
+    "costUSD": 1.3120698,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 20704,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 48301,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 14,
+    "output": 44136,
+    "cr": 214429,
+    "cw": 48301
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "code_generation": 5,
+  "other": 1
+ }
+}

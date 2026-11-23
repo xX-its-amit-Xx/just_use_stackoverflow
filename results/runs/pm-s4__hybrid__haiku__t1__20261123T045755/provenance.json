@@ -1,0 +1,92 @@
+{
+ "external_exact_fraction": 0.0,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.0,
+ "line_classes": {
+  "nontrivial": 1636,
+  "trivial": 412,
+  "exact": 0,
+  "modified": 0,
+  "generated": 1636
+ },
+ "corpus_sources": 0,
+ "corpus_sources_contributing": 0,
+ "corpus_lines": 0,
+ "corpus_lines_by_kind": {},
+ "contributing_sources": [],
+ "per_file": {
+  "src/store.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 15,
+   "trivial": 5
+  },
+  "src/util.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 12,
+   "trivial": 5
+  },
+  "src/constants.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 20,
+   "trivial": 4
+  },
+  "src/search.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 86,
+   "trivial": 27
+  },
+  "src/csv.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 35,
+   "trivial": 17
+  },
+  "src/crypto.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 14,
+   "trivial": 2
+  },
+  "src/errors.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 11,
+   "trivial": 2
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 943,
+   "trivial": 246
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 6,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 449,
+   "trivial": 97
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 37,
+   "trivial": 1
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 8,
+   "trivial": 5
+  }
+ },
+ "final_functional_loc": 2010
+}

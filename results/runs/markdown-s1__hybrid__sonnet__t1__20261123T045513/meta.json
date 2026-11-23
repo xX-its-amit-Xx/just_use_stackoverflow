@@ -1,0 +1,121 @@
+{
+ "run_id": "markdown-s1__hybrid__sonnet__t1__20261123T045513",
+ "task_id": "markdown-s1",
+ "strategy": "hybrid",
+ "trial": 1,
+ "tier": "S1",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "session_id": "5959ae6c-4f57-44f8-a0a9-7a37b81daf70",
+ "workspace": "/tmp/claude-0/-home-user-just-use-stackoverflow/0aee327b-dad0-5786-a62e-e964dcee381e/scratchpad/work/markdown-s1__hybrid__sonnet__t1__20261123T045513/ws",
+ "cmd": [
+  "claude",
+  "-p",
+  "Implement the application specified in SPEC.md, following the benchmark rules in your instructions.",
+  "--output-format",
+  "stream-json",
+  "--verbose",
+  "--model",
+  "claude-sonnet-5-5",
+  "--effort",
+  "medium",
+  "--session-id",
+  "5959ae6c-4f57-44f8-a0a9-7a37b81daf70",
+  "--tools",
+  "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch",
+  "--append-system-prompt",
+  "You are a participant agent in a controlled software-engineering benchmark. Work...<system prompt>",
+  "--disable-slash-commands",
+  "--strict-mcp-config",
+  "--setting-sources",
+  "",
+  "--permission-mode",
+  "auto",
+  "--max-budget-usd",
+  "3"
+ ],
+ "claude_code_version": "2.1.330 (Claude Code)",
+ "max_budget_usd": 3,
+ "max_wall_clock_s": 1800,
+ "protocol_sha": "3b2e23c8ad6e21d3",
+ "t_assigned": 1795409713.218205,
+ "t_agent_end": 1795409908.2649157,
+ "agent_elapsed_s": 195.04211831092834,
+ "wall_span_s": 195.046710729599,
+ "exit_code": 0,
+ "timed_out": false,
+ "segments": [
+  {
+   "started": 1795409713.2182474,
+   "seconds": 195.04,
+   "exit_code": 0,
+   "limit_hit": false,
+   "duration_ms": 194165
+  }
+ ],
+ "resumed_after_limit": false,
+ "final_limit_hit": false,
+ "harness_result": {
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 194165,
+  "duration_api_ms": 71679,
+  "num_turns": 5,
+  "total_cost_usd": 0.18525260000000005,
+  "usage": {
+   "input_tokens": 10,
+   "cache_creation_input_tokens": 16742,
+   "cache_read_input_tokens": 66046,
+   "output_tokens": 11166,
+   "output_tokens_details": {
+    "thinking_tokens": 2310
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 16742,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 332,
+     "cache_read_input_tokens": 21534,
+     "cache_creation_input_tokens": 1272,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1272
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "modelUsage": {
+   "claude-sonnet-5-5": {
+    "inputTokens": 10,
+    "outputTokens": 11166,
+    "cacheReadInputTokens": 66046,
+    "cacheCreationInputTokens": 16742,
+    "webSearchRequests": 0,
+    "costUSD": 0.18525260000000005,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 2310,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 16742,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "stop_reason": "end_turn"
+ },
+ "transcript_found": true
+}

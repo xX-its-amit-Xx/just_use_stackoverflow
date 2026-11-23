@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #f4f5f7; color: #172b4d; }
+header.top { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 8px 16px; background: #0747a6; color: #fff; }
+header.top .brand { font-weight: 700; margin-right: 8px; }
+header.top select, header.top button, header.top a { font: inherit; }
+header.top a { color: #deebff; text-decoration: none; padding: 4px 8px; border-radius: 4px; }
+header.top a.active, header.top a:hover { background: #0065ff; color: #fff; }
+header.top .spacer { flex: 1; }
+main { padding: 16px; }
+button { cursor: pointer; padding: 4px 10px; border: 1px solid #dfe1e6; border-radius: 4px; background: #fff; }
+button.primary { background: #0052cc; color: #fff; border-color: #0052cc; }
+button.danger { color: #de350b; }
+input, select, textarea { font: inherit; padding: 4px 6px; border: 1px solid #c1c7d0; border-radius: 4px; background: #fff; }
+textarea { width: 100%; min-height: 80px; }
+.error { background: #ffebe6; color: #bf2600; padding: 8px 12px; border-radius: 4px; margin: 8px 0; }
+.muted { color: #6b778c; font-size: 12px; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 6px 0; }
+.panel { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(9,30,66,.15); }
+.board { display: flex; gap: 12px; overflow-x: auto; align-items: flex-start; }
+.col { background: #ebecf0; border-radius: 6px; padding: 8px; min-width: 220px; flex: 1; min-height: 120px; }
+.col h3 { margin: 4px 4px 8px; font-size: 13px; text-transform: uppercase; color: #5e6c84; }
+.col .count { background: #dfe1e6; border-radius: 10px; padding: 0 6px; }
+.card { background: #fff; border-radius: 4px; padding: 8px; margin-bottom: 6px; box-shadow: 0 1px 1px rgba(9,30,66,.25); cursor: grab; }
+.card:hover { background: #f4f5f7; }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #ebecf0; }
+tr.clickable { cursor: pointer; }
+tr.clickable:hover { background: #f4f5f7; }
+.badge { display: inline-block; padding: 0 6px; border-radius: 3px; background: #dfe1e6; font-size: 12px; margin-right: 4px; }
+.badge.unread { background: #0052cc; color: #fff; }
+.grid2 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+.issue-detail label { display: block; margin-top: 8px; font-size: 12px; color: #5e6c84; }
+.issue-detail label input, .issue-detail label select, .issue-detail label textarea { display: block; width: 100%; margin-top: 2px; }
+.comment { border-top: 1px solid #ebecf0; padding: 6px 0; }
+svg.burndown { width: 100%; max-width: 680px; background: #fafbfc; border: 1px solid #ebecf0; }
+pre { background: #f4f5f7; padding: 8px; overflow: auto; font-size: 12px; }
+.auth { max-width: 360px; margin: 60px auto; }
+.auth input { display: block; width: 100%; margin: 6px 0; }

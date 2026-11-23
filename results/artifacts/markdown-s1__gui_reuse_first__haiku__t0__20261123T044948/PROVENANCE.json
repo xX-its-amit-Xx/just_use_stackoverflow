@@ -1,0 +1,53 @@
+[
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js (lib/ at master, fetched via GitHub Raw in the browser)",
+    "license": "BSD-3-Clause (Copyright (c) 2014, John MacFarlane)",
+    "files_or_snippet": "lib/blocks.js, lib/common.js, lib/from-code-point.js, lib/index.js, lib/inlines.js, lib/node.js, lib/package.json, lib/render/html.js, lib/render/renderer.js",
+    "local_paths": [
+      "src/vendor/commonmark/blocks.js",
+      "src/vendor/commonmark/common.js",
+      "src/vendor/commonmark/from-code-point.js",
+      "src/vendor/commonmark/index.js",
+      "src/vendor/commonmark/inlines.js",
+      "src/vendor/commonmark/node.js",
+      "src/vendor/commonmark/package.json",
+      "src/vendor/commonmark/render/html.js",
+      "src/vendor/commonmark/render/renderer.js"
+    ],
+    "lines_used_estimate": 2900,
+    "how_adapted": "Copied verbatim via browser copy/paste. Adaptations: index.js XmlRenderer export removed (render/xml.js not vendored); common.js and inlines.js import paths rewritten from npm specifiers ('mdurl/encode.js', 'entities') to vendored relative paths. Raw HTML handling is overridden in src/markdown.js (escape as text) rather than edited in html.js."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/mdurl/tree/master/lib (fetched via GitHub Raw in the browser)",
+    "license": "MIT (Copyright (c) 2014 Vitaly Puzrin, Alex Kocharin)",
+    "files_or_snippet": "lib/encode.mjs, lib/decode.mjs, lib/format.mjs, lib/parse.mjs",
+    "local_paths": [
+      "src/vendor/mdurl/encode.mjs",
+      "src/vendor/mdurl/decode.mjs",
+      "src/vendor/mdurl/format.mjs",
+      "src/vendor/mdurl/parse.mjs"
+    ],
+    "lines_used_estimate": 530,
+    "how_adapted": "Copied verbatim via browser copy/paste; only encode.mjs is imported at runtime by commonmark.js common.js."
+  },
+  {
+    "source_url": "https://github.com/fb55/entities/tree/main/maps (entities.json, fetched via GitHub Raw in the browser)",
+    "license": "BSD-2-Clause and other permissive notices, as reproduced in the upstream LICENSE file (see src/THIRD_PARTY_NOTICES.md)",
+    "files_or_snippet": "maps/entities.json",
+    "local_paths": [
+      "src/vendor/entities/entities.json"
+    ],
+    "lines_used_estimate": 1,
+    "how_adapted": "Copied verbatim via browser copy/paste (name -> characters map, 2125 entries). Consumed by src/vendor/entities/index.js."
+  },
+  {
+    "source_url": "none (written from scratch; the only reference was the npm entities API signature decodeHTMLStrict(string) used by commonmark.js)",
+    "license": "project-original",
+    "files_or_snippet": "n/a",
+    "local_paths": [
+      "src/vendor/entities/index.js"
+    ],
+    "lines_used_estimate": 0,
+    "how_adapted": "Written from scratch (~20 lines): strict &name; lookup against the vendored entities.json map, plus decimal/hex numeric references with the HTML5 replacement rule for 0, out-of-range and surrogate code points. No code copied from the npm entities package."
+  }
+]

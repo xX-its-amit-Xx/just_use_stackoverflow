@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>diagram-s5</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <section id="auth" class="panel">
+    <h1>diagram-s5</h1>
+    <form id="login-form">
+      <input name="username" placeholder="username" autocomplete="username" required>
+      <input name="password" type="password" placeholder="password" autocomplete="current-password" required>
+      <button type="submit">Log in</button>
+      <button type="button" id="register-btn">Register</button>
+    </form>
+    <div id="auth-error" class="error"></div>
+  </section>
+
+  <section id="dashboard" class="hidden">
+    <header>
+      <span>Signed in as <b id="whoami"></b></span>
+      <button id="logout-btn">Log out</button>
+    </header>
+    <form id="new-doc-form">
+      <input name="title" placeholder="New document title">
+      <button type="submit">Create</button>
+    </form>
+    <ul id="doc-list"></ul>
+  </section>
+
+  <section id="editor" class="hidden">
+    <div id="toolbar">
+      <span class="group" id="tools">
+        <button data-tool="select" title="Select (V)">Select</button>
+        <button data-tool="rect" title="Rectangle (R)">Rect</button>
+        <button data-tool="ellipse" title="Ellipse (E)">Ellipse</button>
+        <button data-tool="diamond" title="Diamond (D)">Diamond</button>
+        <button data-tool="text" title="Text (T)">Text</button>
+        <button data-tool="connector" title="Connector (C)">Connector</button>
+      </span>
+      <select id="routing" title="Connector routing">
+        <option value="straight">Straight</option>
+        <option value="orthogonal">Orthogonal</option>
+      </select>
+      <button id="undo" title="Ctrl+Z">Undo</button>
+      <button id="redo" title="Ctrl+Y">Redo</button>
+      <button id="delete" title="Delete">Delete</button>
+      <button id="dup" title="Ctrl+D">Duplicate</button>
+      <span class="group">
+        <button data-align="left">Align L</button>
+        <button data-align="center">Align C</button>
+        <button data-align="right">Align R</button>
+        <button data-align="top">Align T</button>
+        <button data-align="middle">Align M</button>
+        <button data-align="bottom">Align B</button>
+        <button data-dist="horizontal">Distribute H</button>
+        <button data-dist="vertical">Distribute V</button>
+      </span>
+      <button id="group">Group</button>
+      <button id="ungroup">Ungroup</button>
+      <select id="layout-kind">
+        <option value="">Auto-layout…</option>
+        <option value="layered-TB">Layered (top-down)</option>
+        <option value="layered-LR">Layered (left-right)</option>
+        <option value="grid">Grid</option>
+      </select>
+      <label class="file">Import draw.io <input type="file" id="import-file" accept=".xml,.drawio,text/xml"></label>
+      <button id="export-svg">Export SVG</button>
+      <button id="export-json">Export JSON</button>
+      <button id="back">Documents</button>
+      <span id="status"></span>
+    </div>
+    <div id="main">
+      <aside id="left">
+        <h3>Layers</h3>
+        <div id="layers"></div>
+        <button id="add-layer">+ Layer</button>
+        <label>New shapes go to
+          <select id="current-layer"></select>
+        </label>
+        <h3>Collaborators</h3>
+        <ul id="presence"></ul>
+      </aside>
+      <div id="canvas-wrap">
+        <svg id="canvas" xmlns="http://www.w3.org/2000/svg"></svg>
+        <svg id="minimap" width="180" height="120" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div id="zoom"></div>
+      </div>
+      <aside id="right">
+        <h3>Properties</h3>
+        <div id="props"></div>
+        <div class="zorder">
+          <button data-z="front">Front</button>
+          <button data-z="forward">Forward</button>
+          <button data-z="backward">Backward</button>
+          <button data-z="back">Back</button>
+        </div>
+        <h3>Versions</h3>
+        <form id="version-form">
+          <input name="label" placeholder="label">
+          <button type="submit">Save version</button>
+        </form>
+        <ul id="versions"></ul>
+        <h3>Comments</h3>
+        <form id="comment-form">
+          <input name="body" placeholder="comment on selected element">
+          <button type="submit">Add</button>
+        </form>
+        <ul id="comments"></ul>
+      </aside>
+    </div>
+  </section>
+  <div id="toast"></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+ "external_exact_fraction": 0.024024024024024024,
+ "external_modified_fraction": 0.024024024024024024,
+ "external_fraction": 0.04804804804804805,
+ "line_classes": {
+  "nontrivial": 666,
+  "trivial": 232,
+  "exact": 16,
+  "modified": 16,
+  "generated": 634
+ },
+ "corpus_sources": 16,
+ "corpus_sources_contributing": 7,
+ "corpus_lines": 926,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 786,
+  "tool_result": 140
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/regexparam@3.0.0/package/dist/index.js",
+   20
+  ],
+  [
+   ".retrieval/npm/regexparam@3.0.0/package/dist/index.mjs",
+   16
+  ],
+  [
+   ".retrieval/snippets/so_62908969.md",
+   7
+  ],
+  [
+   ".retrieval/npm/regexparam@3.0.0/package/readme.md",
+   5
+  ],
+  [
+   ".retrieval/npm/trouter@4.0.0/package/index.js",
+   3
+  ],
+  [
+   ".retrieval/npm/trouter@4.0.0/package/index.mjs",
+   3
+  ],
+  [
+   ".retrieval/npm/trouter@4.0.0/package/readme.md",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/router.js": {
+   "exact": 16,
+   "modified": 3,
+   "generated": 17,
+   "trivial": 23
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 11,
+   "generated": 484,
+   "trivial": 166
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 5,
+   "trivial": 1
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 128,
+   "trivial": 42
+  }
+ },
+ "final_functional_loc": 869
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/lukeed/regexparam (npm regexparam@3.0.0, dist/index.mjs)",
+    "license": "MIT",
+    "files_or_snippet": "parse(input, loose) route-pattern-to-RegExp function",
+    "local_paths": ["src/router.js"],
+    "lines_used_estimate": 28,
+    "how_adapted": "Copied parse() verbatim (reformatted indentation); inject() dropped."
+  },
+  {
+    "source_url": "https://github.com/lukeed/trouter (npm trouter@4.0.0, index.mjs)",
+    "license": "MIT",
+    "files_or_snippet": "Trouter class (method-bound add(), find() with param extraction)",
+    "local_paths": ["src/router.js"],
+    "lines_used_estimate": 30,
+    "how_adapted": "Simplified into Router: method helpers bound in a loop, per-route opts (public flag), find() returns first matching route with URI-decoded params instead of concatenating all matching handlers; use()/middleware removed; HEAD maps to GET."
+  },
+  {
+    "source_url": "https://stackoverflow.com/a/67038052 (question https://stackoverflow.com/q/62908969)",
+    "license": "CC BY-SA 4.0",
+    "files_or_snippet": "Password.hashPassword / comparePassword using crypto.scrypt + randomBytes salt + timingSafeEqual",
+    "local_paths": ["src/server.js (hashPassword, comparePassword)"],
+    "lines_used_estimate": 12,
+    "how_adapted": "Converted from async TypeScript static class to synchronous scryptSync JS functions; added length check before timingSafeEqual and malformed-hash guard."
+  }
+]

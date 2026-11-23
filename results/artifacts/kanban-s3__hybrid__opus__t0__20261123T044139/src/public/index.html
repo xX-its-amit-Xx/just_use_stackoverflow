@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanban</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; margin: 0; background: #f1f3f6; color: #222; }
+  header { background: #2d3e50; color: #fff; padding: 10px 16px; display: flex; gap: 12px; align-items: center; }
+  header h1 { font-size: 18px; margin: 0; flex: 1; }
+  main { padding: 16px; }
+  button { cursor: pointer; padding: 4px 10px; border: 1px solid #999; border-radius: 4px; background: #fff; }
+  input, textarea { padding: 5px; border: 1px solid #aaa; border-radius: 4px; }
+  .hidden { display: none !important; }
+  .error { color: #b00020; min-height: 1.2em; }
+  .panel { background: #fff; padding: 16px; border-radius: 6px; max-width: 420px; }
+  .boards li { margin: 4px 0; }
+  .columns { display: flex; gap: 12px; align-items: flex-start; overflow-x: auto; }
+  .column { background: #e2e6ea; border-radius: 6px; padding: 8px; width: 260px; flex: none; min-height: 80px; }
+  .column.over { outline: 2px dashed #2d7ff9; }
+  .column h3 { margin: 4px 0 8px; font-size: 15px; display: flex; justify-content: space-between; }
+  .card { background: #fff; border-radius: 4px; padding: 6px 8px; margin-bottom: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.2); cursor: grab; }
+  .card .actions { margin-top: 4px; display: flex; gap: 4px; }
+  .card .actions button { padding: 0 6px; font-size: 12px; }
+  .label { display: inline-block; font-size: 11px; color: #fff; padding: 0 5px; border-radius: 3px; margin-right: 3px; }
+  .muted { color: #666; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Kanban</h1>
+  <span id="whoami"></span>
+  <button id="logoutBtn" class="hidden">Log out</button>
+</header>
+<main>
+  <section id="authView" class="panel">
+    <h2>Log in or register</h2>
+    <form id="authForm">
+      <p><input id="username" placeholder="username" autocomplete="username" required></p>
+      <p><input id="password" type="password" placeholder="password (min 8 chars)" autocomplete="current-password" required></p>
+      <p><button type="submit" id="loginBtn">Log in</button> <button type="button" id="registerBtn">Register</button></p>
+      <div class="error" id="authError"></div>
+    </form>
+  </section>
+
+  <section id="boardsView" class="hidden">
+    <h2>Your boards</h2>
+    <ul class="boards" id="boardList"></ul>
+    <form id="newBoardForm">
+      <input id="newBoardName" placeholder="New board name" required maxlength="100">
+      <button type="submit">Create board</button>
+    </form>
+    <div class="error" id="boardsError"></div>
+  </section>
+
+  <section id="boardView" class="hidden">
+    <p><button id="backBtn">&larr; Boards</button> <strong id="boardTitle"></strong> <span class="muted" id="boardRole"></span></p>
+    <div class="error" id="boardError"></div>
+    <div class="columns" id="columns"></div>
+    <form id="newColumnForm" style="margin-top:12px">
+      <input id="newColumnName" placeholder="New column" required maxlength="100">
+      <button type="submit">Add column</button>
+    </form>
+  </section>
+</main>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  let token = localStorage.getItem('kanbanToken');
+  let me = null;
+  let board = null;
+
+  async function api(method, path, body) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers.Authorization = 'Bearer ' + token;
+    const res = await fetch(path, { method, headers, body: body === undefined ? undefined : JSON.stringify(body) });
+    if (res.status === 204) return null;
+    const data = await res.json().catch(() => null);
+    if (!res.ok) {
+      if (res.status === 401 && path !== '/api/auth/login') { setToken(null); show('auth'); }
+      throw new Error((data && data.message) || ('HTTP ' + res.status));
+    }
+    return data;
+  }
+  function setToken(t) { token = t; t ? localStorage.setItem('kanbanToken', t) : localStorage.removeItem('kanbanToken'); }
+  function show(view) {
+    $('authView').classList.toggle('hidden', view !== 'auth');
+    $('boardsView').classList.toggle('hidden', view !== 'boards');
+    $('boardView').classList.toggle('hidden', view !== 'board');
+    $('logoutBtn').classList.toggle('hidden', view === 'auth');
+    $('whoami').textContent = view !== 'auth' && me ? me.displayName : '';
+  }
+  const el = (tag, props = {}, ...kids) => {
+    const e = document.createElement(tag);
+    Object.assign(e, props);
+    for (const k of kids) e.append(k);
+    return e;
+  };
+
+  async function doLogin(u, p) {
+    const r = await api('POST', '/api/auth/login', { username: u, password: p });
+    setToken(r.token); me = r.user; await loadBoards();
+  }
+  $('authForm').addEventListener('submit', async (ev) => {
+    ev.preventDefault(); $('authError').textContent = '';
+    try { await doLogin($('username').value, $('password').value); } catch (e) { $('authError').textContent = e.message; }
+  });
+  $('registerBtn').addEventListener('click', async () => {
+    $('authError').textContent = '';
+    try {
+      await api('POST', '/api/auth/register', { username: $('username').value, password: $('password').value });
+      await doLogin($('username').value, $('password').value);
+    } catch (e) { $('authError').textContent = e.message; }
+  });
+  $('logoutBtn').addEventListener('click', async () => {
+    try { await api('POST', '/api/auth/logout'); } catch {}
+    setToken(null); me = null; show('auth');
+  });
+
+  async function loadBoards() {
+    const list = await api('GET', '/api/boards');
+    const ul = $('boardList'); ul.innerHTML = '';
+    if (!list.length) ul.append(el('li', { className: 'muted', textContent: 'No boards yet.' }));
+    for (const b of list) {
+      const a = el('a', { href: '#', textContent: b.name });
+      a.addEventListener('click', (ev) => { ev.preventDefault(); openBoard(b.id); });
+      ul.append(el('li', {}, a, ' ', el('span', { className: 'muted', textContent: '(' + b.role + ')' })));
+    }
+    show('boards');
+  }
+  $('newBoardForm').addEventListener('submit', async (ev) => {
+    ev.preventDefault(); $('boardsError').textContent = '';
+    try { const b = await api('POST', '/api/boards', { name: $('newBoardName').value }); $('newBoardName').value = ''; await openBoard(b.id); }
+    catch (e) { $('boardsError').textContent = e.message; }
+  });
+  $('backBtn').addEventListener('click', () => loadBoards());
+
+  async function openBoard(id) {
+    board = await api('GET', '/api/boards/' + id);
+    renderBoard(); show('board');
+  }
+  async function refresh() { if (board) { board = await api('GET', '/api/boards/' + board.id); renderBoard(); } }
+  async function act(fn) {
+    $('boardError').textContent = '';
+    try { await fn(); } catch (e) { $('boardError').textContent = e.message; }
+    await refresh().catch(() => {});
+  }
+  function moveCard(cardId, columnId, position) {
+    return act(() => api('POST', '/api/cards/' + cardId + '/move', position === undefined ? { columnId } : { columnId, position }));
+  }
+
+  function renderBoard() {
+    const myRole = (board.members.find((m) => me && m.userId === me.id) || {}).role || '';
+    const canEdit = myRole === 'owner' || myRole === 'editor';
+    $('boardTitle').textContent = board.name;
+    $('boardRole').textContent = myRole ? '(' + myRole + ')' : '';
+    $('newColumnForm').classList.toggle('hidden', !canEdit);
+    const labels = new Map(board.labels.map((l) => [l.id, l]));
+    const wrap = $('columns'); wrap.innerHTML = '';
+    board.columns.forEach((col, ci) => {
+      const colEl = el('div', { className: 'column' });
+      colEl.dataset.columnId = col.id;
+      const wip = col.wipLimit ? ' ' + col.cards.length + '/' + col.wipLimit : ' ' + col.cards.length;
+      colEl.append(el('h3', {}, el('span', { textContent: col.name }), el('span', { className: 'muted', textContent: wip })));
+      col.cards.forEach((card) => {
+        const c = el('div', { className: 'card', draggable: canEdit });
+        c.dataset.cardId = card.id;
+        c.append(el('div', { textContent: card.title }));
+        if (card.labels.length) {
+          const lw = el('div');
+          for (const lid of card.labels) { const l = labels.get(lid); if (l) { const s = el('span', { className: 'label', textContent: l.name }); s.style.background = l.color; lw.append(s); } }
+          c.append(lw);
+        }
+        if (card.dueDate) c.append(el('div', { className: 'muted', textContent: 'Due ' + card.dueDate }));
+        if (canEdit) {
+          const actions = el('div', { className: 'actions' });
+          if (ci > 0) { const b = el('button', { textContent: '←', title: 'Move left' }); b.onclick = () => moveCard(card.id, board.columns[ci - 1].id); actions.append(b); }
+          if (ci < board.columns.length - 1) { const b = el('button', { textContent: '→', title: 'Move right' }); b.onclick = () => moveCard(card.id, board.columns[ci + 1].id); actions.append(b); }
+          const del = el('button', { textContent: '×', title: 'Delete card' });
+          del.onclick = () => { if (confirm('Delete card?')) act(() => api('DELETE', '/api/cards/' + card.id)); };
+          actions.append(del);
+          c.append(actions);
+          c.addEventListener('dragstart', (ev) => ev.dataTransfer.setData('text/plain', card.id));
+        }
+        colEl.append(c);
+      });
+      if (canEdit) {
+        colEl.addEventListener('dragover', (ev) => { ev.preventDefault(); colEl.classList.add('over'); });
+        colEl.addEventListener('dragleave', () => colEl.classList.remove('over'));
+        colEl.addEventListener('drop', (ev) => {
+          ev.preventDefault(); colEl.classList.remove('over');
+          const cardId = ev.dataTransfer.getData('text/plain');
+          if (!cardId) return;
+          const cardsEls = [...colEl.querySelectorAll('.card')].filter((x) => x.dataset.cardId !== cardId);
+          let pos = cardsEls.length;
+          for (let i = 0; i < cardsEls.length; i++) {
+            const r = cardsEls[i].getBoundingClientRect();
+            if (ev.clientY < r.top + r.height / 2) { pos = i; break; }
+          }
+          moveCard(cardId, col.id, pos);
+        });
+        const f = el('form');
+        const inp = el('input', { placeholder: 'New card title', required: true, maxLength: 200 });
+        f.append(inp, ' ', el('button', { type: 'submit', textContent: 'Add' }));
+        f.addEventListener('submit', (ev) => { ev.preventDefault(); act(() => api('POST', '/api/columns/' + col.id + '/cards', { title: inp.value })); });
+        colEl.append(f);
+      }
+      wrap.append(colEl);
+    });
+  }
+  $('newColumnForm').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    act(async () => { await api('POST', '/api/boards/' + board.id + '/columns', { name: $('newColumnName').value }); $('newColumnName').value = ''; });
+  });
+
+  (async () => {
+    if (!token) return show('auth');
+    try { me = (await api('GET', '/api/auth/me')).user; await loadBoards(); } catch { show('auth'); }
+  })();
+})();
+</script>
+</body>
+</html>

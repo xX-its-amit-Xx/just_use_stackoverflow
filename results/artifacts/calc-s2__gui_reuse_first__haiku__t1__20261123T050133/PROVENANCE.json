@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval/blob/master/src/token-stream.js",
+    "license": "MIT (Copyright (c) 2015 Matthew Crumley; see src/THIRD_PARTY_NOTICES.md)",
+    "files_or_snippet": "src/token-stream.js (acquired via browser: Raw -> select all -> copy -> paste to src/reference/token-stream.js; reference copy deleted after adaptation)",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 60,
+    "how_adapted": "Adapted ideas and logic only: decimal number scanning with an exponent that is not consumed when it has no digits (isNumber), radix integer scanning (isRadixInteger), identifier scanning (isName/isNamedOp), and token position recording used for SyntaxError positions. Rewritten to the calc-s2 token shape ({t,v,p}), with the unknown-character token reported lazily by the parser, plus a 0x/0b prefix limited to lowercase per spec. The upstream parser, expression tree, evaluator, and the upstream getCoordinates/line:column error format were not used. Upstream comments/code text were not copied verbatim."
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/silentmatt/expr-eval/refs/heads/master/LICENSE.txt",
+    "license": "MIT",
+    "files_or_snippet": "LICENSE.txt (acquired via browser: raw view -> select all -> copy -> paste into src/THIRD_PARTY_NOTICES.md)",
+    "local_paths": ["src/THIRD_PARTY_NOTICES.md"],
+    "lines_used_estimate": 21,
+    "how_adapted": "Reproduced verbatim as the attribution notice for the adapted tokenizer code."
+  }
+]

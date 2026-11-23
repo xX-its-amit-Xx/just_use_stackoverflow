@@ -1,0 +1,238 @@
+{
+ "run_id": "markdown-s1__gui_reuse_first__haiku__t0__20261123T044948",
+ "task_id": "markdown-s1",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S1",
+ "family": "markdown",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "segments": 1,
+ "resumed_after_limit": false,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 29,
+ "model_invocations": 29,
+ "input_tokens": 58,
+ "output_tokens": 21067,
+ "cached_input_tokens": 773158,
+ "cache_creation_tokens": 41420,
+ "reasoning_tokens": 8997,
+ "total_tokens": 21125,
+ "total_tokens_incl_cache": 835703,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.026555,
+ "inference_cost_nocache_usd": 0.091997,
+ "inference_cost_attributed_usd": 0.026555,
+ "harness_reported_cost_usd": 0.026554879999999996,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.003495,
+ "total_execution_cost_usd": 0.03005,
+ "elapsed_s": 157.28,
+ "agent_elapsed_s": 156.87,
+ "orchestrator_observed_s": 157.66,
+ "eval_s": 0.41,
+ "active_s": 159.4,
+ "api_s": 107.48,
+ "hidden_tests": 26,
+ "hidden_pass": 26,
+ "hidden_fail": 0,
+ "own_tests": 8,
+ "own_pass": 8,
+ "functional_loc": 2813,
+ "functional_chars": 55936,
+ "normalized_loc": 1865,
+ "minified_vendor_bytes": 0,
+ "test_loc": 35,
+ "comment_lines": 415,
+ "blank_lines": 385,
+ "retrieval": {
+  "search_queries": 1,
+  "search_results_examined": 0,
+  "repositories_inspected": 3,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 17,
+  "files_copied": 17,
+  "snippets_retrieved": 17,
+  "retrieved_loc": 3318,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 2770,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 548,
+  "generated_loc": 43,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.9848,
+  "search_to_use_conversion": 0.7059,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 24,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 24,
+  "screenshots": 7,
+  "screenshot_tokens_estimate": 9555,
+  "screenshot_tokens_viewed_estimate": 9555,
+  "clicks": 0,
+  "text_selections": 17,
+  "copy_operations": 17,
+  "paste_operations": 17,
+  "failed_navigations": 0,
+  "gui_action_time_s": 41.23,
+  "browser_session_span_s": 151.15,
+  "visual_reasoning_calls": 7,
+  "visual_reasoning_cost_usd": 0.006285
+ },
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 9,
+  "retrieval_invocations": 14,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "3b2e23c8ad6e21d3"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 14,
+   "max_file_loc": 864,
+   "mean_file_loc": 200.9,
+   "functions": 384,
+   "loc_per_function": 7.3,
+   "duplicate_line_ratio": 0.1501
+  },
+  "license": {
+   "provenance_entries": 4,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.9848238482384823,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.9848238482384823,
+  "line_classes": {
+   "nontrivial": 1845,
+   "trivial": 1383,
+   "exact": 1817,
+   "modified": 0,
+   "generated": 28
+  },
+  "corpus_sources": 17,
+  "corpus_sources_contributing": 12,
+  "corpus_lines": 3318,
+  "corpus_lines_by_kind": {
+   "gui_clipboard": 3318
+  },
+  "contributing_sources": [
+   [
+    ".gui/clipboard_history/1795409432288.txt",
+    582
+   ],
+   [
+    ".gui/clipboard_history/1795409419424.txt",
+    560
+   ],
+   [
+    ".gui/clipboard_history/1795409424983.txt",
+    219
+   ],
+   [
+    ".gui/clipboard_history/1795409436017.txt",
+    171
+   ],
+   [
+    ".gui/clipboard_history/1795409471598.txt",
+    128
+   ],
+   [
+    ".gui/clipboard_history/1795409467776.txt",
+    64
+   ],
+   [
+    ".gui/clipboard_history/1795409426786.txt",
+    59
+   ],
+   [
+    ".gui/clipboard_history/1795409465938.txt",
+    51
+   ],
+   [
+    ".gui/clipboard_history/1795409428634.txt",
+    48
+   ],
+   [
+    ".gui/clipboard_history/1795409437873.txt",
+    36
+   ],
+   [
+    ".gui/clipboard_history/1795409469672.txt",
+    18
+   ],
+   [
+    ".gui/clipboard_history/1795409430462.txt",
+    12
+   ]
+  ],
+  "final_functional_loc": 2813
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 58,
+    "outputTokens": 21067,
+    "cacheReadInputTokens": 773158,
+    "cacheCreationInputTokens": 41420,
+    "webSearchRequests": 0,
+    "costUSD": 0.026554879999999996,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 8997,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 41420,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 58,
+    "output": 21067,
+    "cr": 773158,
+    "cw": 41420
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 5,
+  "computer_use": 7,
+  "screenshot": 7,
+  "file_copy": 5,
+  "code_generation": 3,
+  "test_execution": 1
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "external_exact_fraction": 0.05642023346303502,
+ "external_modified_fraction": 0.0012970168612191958,
+ "external_fraction": 0.05771725032425422,
+ "line_classes": {
+  "nontrivial": 1542,
+  "trivial": 481,
+  "exact": 87,
+  "modified": 2,
+  "generated": 1453
+ },
+ "corpus_sources": 3,
+ "corpus_sources_contributing": 2,
+ "corpus_lines": 254,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 254
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795408917958.txt",
+   73
+  ],
+  [
+   ".gui/clipboard_history/1795408926294.txt",
+   28
+  ]
+ ],
+ "per_file": {
+  "src/search.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 93,
+   "trivial": 36
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 981,
+   "trivial": 231
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 0
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 324,
+   "trivial": 57
+  },
+  "src/static/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 28,
+   "trivial": 4
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 20,
+   "trivial": 7
+  },
+  "src/vendor/csv-parse.js": {
+   "exact": 69,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 99
+  },
+  "src/vendor/csv-stringify.js": {
+   "exact": 18,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 47
+  }
+ },
+ "final_functional_loc": 1902
+}

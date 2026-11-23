@@ -1,0 +1,208 @@
+{
+ "run_id": "pm-s4__gui_reuse_first__opus__t0__20261123T044105",
+ "task_id": "pm-s4",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "segments": 1,
+ "resumed_after_limit": false,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 1,
+ "model_invocations": 33,
+ "input_tokens": 66,
+ "output_tokens": 73249,
+ "cached_input_tokens": 1584890,
+ "cache_creation_tokens": 98712,
+ "reasoning_tokens": 13170,
+ "total_tokens": 73315,
+ "total_tokens_incl_cache": 1756917,
+ "web_search_requests": 0,
+ "inference_cost_usd": 2.571918,
+ "inference_cost_nocache_usd": 8.199652,
+ "inference_cost_attributed_usd": 2.571918,
+ "harness_reported_cost_usd": 2.5719179999999997,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.000103,
+ "total_execution_cost_usd": 2.572021,
+ "elapsed_s": 4.66,
+ "agent_elapsed_s": 3.4,
+ "orchestrator_observed_s": 726.04,
+ "eval_s": 1.25,
+ "active_s": 735.1,
+ "api_s": 580.21,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 5,
+ "own_pass": 5,
+ "functional_loc": 1902,
+ "functional_chars": 89601,
+ "normalized_loc": 2987,
+ "minified_vendor_bytes": 0,
+ "test_loc": 197,
+ "comment_lines": 123,
+ "blank_lines": 105,
+ "retrieval": {
+  "search_queries": 4,
+  "search_results_examined": 0,
+  "repositories_inspected": 1,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 3,
+  "files_copied": 3,
+  "snippets_retrieved": 3,
+  "retrieved_loc": 254,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 107,
+  "retrieved_loc_modified": 2,
+  "retrieved_loc_discarded": 145,
+  "generated_loc": 1793,
+  "modified_loc": 2,
+  "integration_modifications": 0,
+  "external_fraction": 0.0577,
+  "search_to_use_conversion": 0.6667,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 10,
+  "retrieval_failures": 1,
+  "retrieval_failure_rate": 0.1
+ },
+ "gui": {
+  "browser_navigations": 10,
+  "screenshots": 7,
+  "screenshot_tokens_estimate": 9555,
+  "screenshot_tokens_viewed_estimate": 8190,
+  "clicks": 0,
+  "text_selections": 3,
+  "copy_operations": 3,
+  "paste_operations": 3,
+  "failed_navigations": 1,
+  "gui_action_time_s": 15.75,
+  "browser_session_span_s": 715.31,
+  "visual_reasoning_calls": 6,
+  "visual_reasoning_cost_usd": 0.115698
+ },
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 15,
+  "retrieval_invocations": 13,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 8,
+   "max_file_loc": 1182,
+   "mean_file_loc": 237.8,
+   "functions": 305,
+   "loc_per_function": 6.2,
+   "duplicate_line_ratio": 0.0739
+  },
+  "license": {
+   "provenance_entries": 4,
+   "notices_file": true,
+   "issues": [
+    "no license recorded for https://github.com/search?q=jira+clone&type=repositories"
+   ],
+   "compliant": false
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [
+   {
+    "where": "tool_result",
+    "input": {
+     "command": "pgrep -af \"node\" | grep -v claude | head"
+    }
+   }
+  ],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.05642023346303502,
+  "external_modified_fraction": 0.0012970168612191958,
+  "external_fraction": 0.05771725032425422,
+  "line_classes": {
+   "nontrivial": 1542,
+   "trivial": 481,
+   "exact": 87,
+   "modified": 2,
+   "generated": 1453
+  },
+  "corpus_sources": 3,
+  "corpus_sources_contributing": 2,
+  "corpus_lines": 254,
+  "corpus_lines_by_kind": {
+   "gui_clipboard": 254
+  },
+  "contributing_sources": [
+   [
+    ".gui/clipboard_history/1795408917958.txt",
+    73
+   ],
+   [
+    ".gui/clipboard_history/1795408926294.txt",
+    28
+   ]
+  ],
+  "final_functional_loc": 1902
+ },
+ "reconciliation": {
+  "claude-opus-5-5": {
+   "harness": {
+    "inputTokens": 66,
+    "outputTokens": 73249,
+    "cacheReadInputTokens": 1584890,
+    "cacheCreationInputTokens": 98712,
+    "webSearchRequests": 0,
+    "costUSD": 2.5719179999999997,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 13170,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 98712,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 66,
+    "output": 73249,
+    "cr": 1584890,
+    "cw": 98712
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 6,
+  "computer_use": 7,
+  "screenshot": 6,
+  "file_copy": 2,
+  "code_generation": 5,
+  "test_execution": 3,
+  "debugging": 3
+ }
+}

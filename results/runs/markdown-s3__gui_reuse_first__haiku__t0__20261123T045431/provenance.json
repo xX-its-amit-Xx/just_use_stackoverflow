@@ -1,0 +1,155 @@
+{
+ "external_exact_fraction": 0.6570281124497992,
+ "external_modified_fraction": 0.01646586345381526,
+ "external_fraction": 0.6734939759036145,
+ "line_classes": {
+  "nontrivial": 2490,
+  "trivial": 1552,
+  "exact": 1636,
+  "modified": 41,
+  "generated": 813
+ },
+ "corpus_sources": 10,
+ "corpus_sources_contributing": 9,
+ "corpus_lines": 2818,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 2818
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795409717077.txt",
+   597
+  ],
+  [
+   ".gui/clipboard_history/1795409714006.txt",
+   571
+  ],
+  [
+   ".gui/clipboard_history/1795409718647.txt",
+   220
+  ],
+  [
+   ".gui/clipboard_history/1795409720196.txt",
+   192
+  ],
+  [
+   ".gui/clipboard_history/1795409706844.txt",
+   63
+  ],
+  [
+   ".gui/clipboard_history/1795409747742.txt",
+   53
+  ],
+  [
+   ".gui/clipboard_history/1795409715537.txt",
+   46
+  ],
+  [
+   ".gui/clipboard_history/1795409721733.txt",
+   37
+  ],
+  [
+   ".gui/clipboard_history/1795409723298.txt",
+   7
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 12,
+   "modified": 15,
+   "generated": 186,
+   "trivial": 115
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 20,
+   "generated": 296,
+   "trivial": 121
+  },
+  "src/diff.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 35,
+   "trivial": 26
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 1
+  },
+  "src/public/app.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 36,
+   "trivial": 7
+  },
+  "src/public/app.js": {
+   "exact": 5,
+   "modified": 6,
+   "generated": 219,
+   "trivial": 90
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 22,
+   "trivial": 15
+  },
+  "src/vendor/mdurl/encode.mjs": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/entities/decode.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 9,
+   "trivial": 7
+  },
+  "src/vendor/commonmark/from-code-point.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 23
+  },
+  "src/vendor/commonmark/inlines.js": {
+   "exact": 563,
+   "modified": 0,
+   "generated": 1,
+   "trivial": 409
+  },
+  "src/vendor/commonmark/common.js": {
+   "exact": 51,
+   "modified": 0,
+   "generated": 2,
+   "trivial": 46
+  },
+  "src/vendor/commonmark/node.js": {
+   "exact": 200,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 88
+  },
+  "src/vendor/commonmark/blocks.js": {
+   "exact": 539,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 426
+  },
+  "src/vendor/commonmark/render/renderer.js": {
+   "exact": 26,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 39
+  },
+  "src/vendor/commonmark/render/html.js": {
+   "exact": 163,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 106
+  }
+ },
+ "final_functional_loc": 3686
+}
