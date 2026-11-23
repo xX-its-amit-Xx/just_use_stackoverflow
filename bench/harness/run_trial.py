@@ -10,6 +10,7 @@ Outputs (results/runs/<run_id>/):
   stderr.txt
 """
 import json
+import re
 import os
 import shutil
 import subprocess
@@ -56,6 +57,23 @@ def protocol_sha(task_id, strategy):
             for f in sorted(fs):
                 h.update(f.encode()); h.update(open(os.path.join(d, f), "rb").read())
     return h.hexdigest()[:16]
+
+
+LIMIT_RE = re.compile(r"hit your [^\"]{0,40}limit|usage limit|rate limit|overloaded", re.I)
+
+
+def wait_for_capacity(env):
+    """Poll with a 1-token call until the provider accepts requests again."""
+    while True:
+        p = subprocess.run(["claude", "-p", "Reply with OK", "--model", "claude-haiku-5-5", "--output-format", "json", "--tools", "",
+                            "--disable-slash-commands", "--strict-mcp-config", "--setting-sources", ""],
+                           capture_output=True, text=True, env=env, timeout=300, cwd="/tmp")
+        try:
+            if not json.loads(p.stdout).get("is_error"):
+                return
+        except Exception:
+            pass
+        time.sleep(600)
 
 
 def find_transcript(session_id):
@@ -105,32 +123,69 @@ def run(task_id, strategy, trial, runs_root=None, model=None):
             "protocol_sha": protocol_sha(task_id, strategy)}
     t_assign = time.time()
     meta["t_assigned"] = t_assign
-    timed_out = False
-    with open(os.path.join(out, "stream.jsonl"), "w") as so, open(os.path.join(out, "stderr.txt"), "w") as se:
-        p = subprocess.Popen(cmd, cwd=ws, env=env, stdout=so, stderr=se, stdin=subprocess.DEVNULL)
-        try:
-            p.wait(timeout=EXP["max_wall_clock_s"][tier])
-        except subprocess.TimeoutExpired:
-            timed_out = True
-            p.kill()
-            p.wait()
+    # A provider usage limit can interrupt a run. Instead of discarding the work, wait for capacity and resume the
+    # same session (same transcript, so per-message telemetry stays complete). Waiting time is excluded from the
+    # run's elapsed time; resumed runs are flagged (`segments` > 1) for sensitivity analysis.
+    limit_s = EXP["max_wall_clock_s"][tier]
+    segments, active, timed_out = [], 0.0, False
+    stream_path = os.path.join(out, "stream.jsonl")
+    open(stream_path, "w").close()
+    seg_cmd = cmd
+    while True:
+        t0 = time.time()
+        with open(stream_path, "a") as so, open(os.path.join(out, "stderr.txt"), "a") as se:
+            p = subprocess.Popen(seg_cmd, cwd=ws, env=env, stdout=so, stderr=se, stdin=subprocess.DEVNULL)
+            try:
+                p.wait(timeout=max(60, limit_s - active))
+            except subprocess.TimeoutExpired:
+                timed_out = True
+                p.kill()
+                p.wait()
+        dt = time.time() - t0
+        active += dt
+        result = None
+        for line in open(stream_path):
+            try:
+                d = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if d.get("type") == "result":
+                result = d
+        limited = bool(result) and LIMIT_RE.search(json.dumps(result.get("result") or "")) is not None
+        segments.append({"started": t0, "seconds": round(dt, 2), "exit_code": p.returncode, "limit_hit": limited,
+                         "duration_ms": (result or {}).get("duration_ms")})
+        if timed_out or not limited or len(segments) >= 30:
+            break
+        wait_for_capacity(env)
+        seg_cmd = [c for c in cmd if True]
+        i = seg_cmd.index("--session-id")
+        seg_cmd[i:i + 2] = ["--resume", session_id]
+        seg_cmd[2] = ("The session was interrupted by an external usage limit and has now been resumed. "
+                      "Continue the task from where you left off, following the same rules.")
     t_end = time.time()
-    meta.update(t_agent_end=t_end, agent_elapsed_s=t_end - t_assign, exit_code=p.returncode, timed_out=timed_out)
+    meta.update(t_agent_end=t_end, agent_elapsed_s=active, wall_span_s=t_end - t_assign, exit_code=p.returncode,
+                timed_out=timed_out, segments=segments, resumed_after_limit=len(segments) > 1,
+                final_limit_hit=segments[-1]["limit_hit"])
     if strategy == "gui_reuse_first":
         subprocess.run([os.path.join(bindir, "gui"), "shutdown"], cwd=ws, env=env, capture_output=True, timeout=30)
 
-    # harness-reported result summary (aggregate usage, cost, durations)
-    result = None
-    for line in open(os.path.join(out, "stream.jsonl")):
-        try:
-            d = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if d.get("type") == "result":
-            result = d
+    # harness-reported result summary: usage/cost are cumulative across resumed segments (last result);
+    # durations are per segment, so they are summed.
     if result:
         meta["harness_result"] = {k: result.get(k) for k in ("subtype", "is_error", "duration_ms", "duration_api_ms", "num_turns",
                                                              "total_cost_usd", "usage", "modelUsage", "stop_reason")}
+        if len(segments) > 1:
+            durs, apis = [], []
+            for line in open(stream_path):
+                try:
+                    d = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if d.get("type") == "result":
+                    durs.append(d.get("duration_ms") or 0)
+                    apis.append(d.get("duration_api_ms") or 0)
+            meta["harness_result"]["duration_ms"] = sum(durs)
+            meta["harness_result"]["duration_api_ms"] = sum(apis)
     tr = find_transcript(session_id)
     meta["transcript_found"] = bool(tr)
     if tr:

@@ -41,19 +41,14 @@ _gate = threading.Lock()
 
 
 def infra_failure(out):
-    """A run interrupted by the provider (usage/rate limit, API error) is not a trial outcome: detect it."""
+    """A run that still ended on a provider interruption (after run_trial's own resume attempts) is not a trial outcome."""
     try:
         meta = json.load(open(os.path.join(out, "meta.json")))
     except Exception:
         return "no meta"
     hr = meta.get("harness_result") or {}
-    tp = os.path.join(out, "transcript.jsonl")
-    if os.path.exists(tp):
-        for line in open(tp):
-            if '"<synthetic>"' in line:
-                m = LIMIT_RE.search(line)
-                if m:
-                    return m.group(0)
+    if meta.get("final_limit_hit"):
+        return "usage limit (unresolved after resumes)"
     if not hr:
         return None if meta.get("timed_out") else "no result record"
     if hr.get("is_error") and not (hr.get("total_cost_usd") or 0):

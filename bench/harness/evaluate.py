@@ -380,6 +380,7 @@ def process(run_dir, copy=True):
     q_tests = hid["tests"]
     run = {k: meta[k] for k in ("run_id", "task_id", "strategy", "trial", "tier", "family", "model", "effort")}
     run.update({
+        "segments": len(meta.get("segments") or [1]), "resumed_after_limit": bool(meta.get("resumed_after_limit")),
         "exit_code": meta["exit_code"], "timed_out": meta["timed_out"], "harness_subtype": hr.get("subtype"), "num_turns": hr.get("num_turns"),
         "model_invocations": sum(1 for e in events if e["measurement_confidence"] != "actual_aggregate_unattributed"),
         "input_tokens": tok["input_tokens"], "output_tokens": tok["output_tokens"], "cached_input_tokens": tok["cached_input_tokens"],

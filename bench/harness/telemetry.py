@@ -47,6 +47,8 @@ def load_transcript(path):
             continue
         t = d.get("type")
         msg = d.get("message") if isinstance(d.get("message"), dict) else None
+        if t == "assistant" and msg and msg.get("model") == "<synthetic>":
+            continue  # harness-generated notice (e.g. usage-limit message): no model invocation, no usage
         if t == "assistant" and msg and msg.get("id"):
             mid = msg["id"]
             if mid not in inv:
