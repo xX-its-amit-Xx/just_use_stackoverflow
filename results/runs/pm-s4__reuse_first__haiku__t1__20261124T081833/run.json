@@ -1,0 +1,320 @@
+{
+ "run_id": "pm-s4__reuse_first__haiku__t1__20261124T081833",
+ "task_id": "pm-s4",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S4",
+ "family": "kanban",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "segments": 2,
+ "resumed_after_limit": true,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 2,
+ "model_invocations": 41,
+ "input_tokens": 82,
+ "output_tokens": 148090,
+ "cached_input_tokens": 4477122,
+ "cache_creation_tokens": 173531,
+ "reasoning_tokens": 69684,
+ "total_tokens": 148172,
+ "total_tokens_incl_cache": 4798825,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.523846,
+ "inference_cost_nocache_usd": 2.376151,
+ "inference_cost_attributed_usd": 0.523846,
+ "harness_reported_cost_usd": 0.5238458199999999,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.015229,
+ "total_execution_cost_usd": 0.539075,
+ "elapsed_s": 685.32,
+ "agent_elapsed_s": 682.76,
+ "orchestrator_observed_s": 684.48,
+ "eval_s": 2.55,
+ "active_s": 1284.6,
+ "api_s": 1201.65,
+ "hidden_tests": 18,
+ "hidden_pass": 18,
+ "hidden_fail": 0,
+ "own_tests": 12,
+ "own_pass": 12,
+ "functional_loc": 2193,
+ "functional_chars": 91502,
+ "normalized_loc": 3050,
+ "minified_vendor_bytes": 0,
+ "test_loc": 312,
+ "comment_lines": 64,
+ "blank_lines": 170,
+ "retrieval": {
+  "search_queries": 11,
+  "search_results_examined": 56,
+  "repositories_inspected": 2,
+  "repositories_cloned": 2,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 17628,
+  "cloned_repo_lines": 21229,
+  "retrieved_loc_incorporated": 61,
+  "retrieved_loc_modified": 236,
+  "retrieved_loc_discarded": 17331,
+  "generated_loc": 1896,
+  "modified_loc": 236,
+  "integration_modifications": 0,
+  "external_fraction": 0.1356,
+  "search_to_use_conversion": 0.3509,
+  "repository_acquisition_s": 13.58,
+  "retrieval_actions": 5,
+  "retrieval_failures": 3,
+  "retrieval_failure_rate": 0.6
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 3,
+  "first_src_write_step": 12,
+  "retrieval_invocations": 11,
+  "acquired_any": true,
+  "compliant": true,
+  "compliant_strict": true,
+  "protocol_sha": "900f5ba0f9b8658b"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 147
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 154
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 275
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 283
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 364
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 413
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 468
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 472
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 476
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 571
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 572
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/public/app.js",
+    "line": 658
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 9,
+   "max_file_loc": 1144,
+   "mean_file_loc": 243.7,
+   "functions": 281,
+   "loc_per_function": 7.8,
+   "duplicate_line_ratio": 0.0835
+  },
+  "license": {
+   "provenance_entries": 3,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.02803203661327231,
+  "external_modified_fraction": 0.10755148741418764,
+  "external_fraction": 0.13558352402745996,
+  "line_classes": {
+   "nontrivial": 1748,
+   "trivial": 496,
+   "exact": 49,
+   "modified": 188,
+   "generated": 1511
+  },
+  "corpus_sources": 57,
+  "corpus_sources_contributing": 20,
+  "corpus_lines": 17628,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 17361,
+   "tool_result": 267
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/public/app.js",
+    149
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/lib/store.mjs",
+    118
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/lib/api.mjs",
+    63
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/public/widget.js",
+    58
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/test/mocha.js",
+    43
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/server.mjs",
+    36
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/tests/widget.test.mjs",
+    32
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/bin/cli.mjs",
+    32
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/tests/mcp.test.mjs",
+    26
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/mcp-server.mjs",
+    17
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/public/help.html",
+    17
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/lib/search-query-parser.js",
+    13
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/tests/store.test.mjs",
+    11
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/tests/screenshot.test.mjs",
+    11
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/tests/api.test.mjs",
+    10
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/test/test.js",
+    9
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/lib/data-dir.mjs",
+    7
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/public/index.html",
+    4
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/public/styles.css",
+    3
+   ],
+   [
+    ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/test/index.html",
+    2
+   ]
+  ],
+  "final_functional_loc": 2193
+ },
+ "reconciliation": {
+  "claude-haiku-5-5": {
+   "harness": {
+    "inputTokens": 82,
+    "outputTokens": 148090,
+    "thinkingTokens": 69684,
+    "cacheReadInputTokens": 4477122,
+    "cacheCreationInputTokens": 173531,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 173531,
+    "webSearchRequests": 0,
+    "costUSD": 0.5238458199999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 82,
+    "output": 148090,
+    "cr": 4477122,
+    "cw": 173531
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "other": 9,
+  "github_search": 2,
+  "repository_clone": 1,
+  "repository_inspection": 6,
+  "web_search": 2,
+  "code_generation": 8,
+  "code_edit": 2,
+  "test_execution": 10
+ }
+}

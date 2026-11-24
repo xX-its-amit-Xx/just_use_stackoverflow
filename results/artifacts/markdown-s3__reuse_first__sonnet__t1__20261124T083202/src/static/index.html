@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Markdown Wiki</title>
+<style>
+body{font-family:sans-serif;margin:0;display:flex;height:100vh}
+#side{width:240px;border-right:1px solid #ccc;padding:8px;overflow:auto}
+#main{flex:1;display:flex;flex-direction:column;padding:8px;overflow:auto}
+#edit{display:flex;gap:8px;flex:1}#edit textarea{flex:1;min-height:300px}#preview{flex:1;border:1px solid #ddd;padding:8px;overflow:auto}
+pre.diff span.p{color:green}pre.diff span.m{color:red}.msg{color:#b00}
+</style></head><body>
+<div id="side">
+ <input id="q" placeholder="Search"><ul id="results"></ul>
+ <select id="tag"><option value="">all tags</option></select>
+ <button id="new">New</button><ul id="list"></ul>
+</div>
+<div id="main">
+ <input id="slug" placeholder="slug"><input id="title" placeholder="Title"><input id="tags" placeholder="tags, comma separated">
+ <div id="edit"><textarea id="body"></textarea><div id="preview"></div></div>
+ <div><button id="save">Save</button> <button id="del">Delete</button> <span id="msg" class="msg"></span></div>
+ <h4>Backlinks</h4><ul id="backlinks"></ul>
+ <h4>History</h4><ul id="history"></ul><pre id="diff" class="diff"></pre>
+</div>
+<script src="/static/app.js"></script></body></html>

@@ -1,0 +1,18 @@
+[
+  {
+    "source_url": "https://github.com/rocicorp/fractional-indexing/blob/main/src/index.js",
+    "license": "CC0-1.0",
+    "files_or_snippet": "src/index.js (generateKeyBetween, generateNKeysBetween and helpers), copied verbatim via the browser (Raw view, select all, copy/paste)",
+    "local_paths": ["src/core/fractional-indexing.js"],
+    "lines_used_estimate": 586,
+    "how_adapted": "Vendored unchanged. Used by src/core/index.js for z-order fractional index keys (add, reorder front/back/forward/backward, draw.io import, fromJSON)."
+  },
+  {
+    "source_url": "(none - written from scratch)",
+    "license": "n/a",
+    "files_or_snippet": "Searched GitHub via the browser for a zero-dependency Node WebSocket server (Particle-Academy/fancy-ws: TypeScript; MinaSamirSaad/manual-websocket-server and llaine/nodejs-websocket-server: no license). Nothing usable with a compatible license, so the RFC 6455 framing, CRDT document model, orthogonal router, Sugiyama layout, draw.io importer, server and editor UI were written from scratch.",
+    "local_paths": ["src/ws.js", "src/core/index.js", "src/core/geometry.js", "src/core/layout.js", "src/core/xml.js", "src/server.js", "src/main.js", "src/public/"],
+    "lines_used_estimate": 0,
+    "how_adapted": "Original code; notes only."
+  }
+]

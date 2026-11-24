@@ -1,0 +1,26 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path';
+import { createServer } from '../src/server.js';
+import { render } from '../src/markdown.js';
+test('flow', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'wiki-'));
+  const srv = createServer({ dataDir: dir }); await new Promise(r => srv.listen(0, r));
+  const b = `http://127.0.0.1:${srv.address().port}`;
+  const put = (s, o) => fetch(`${b}/api/pages/${s}`, { method: 'PUT', body: JSON.stringify(o) });
+  assert.equal((await put('a', { title: 'A', body: 'x\ny\nz', tags: ['B', 'b'] })).status, 201);
+  assert.equal((await put('b', { title: 'B', body: 'see [[A]]' })).status, 201);
+  const r = await put('a', { title: 'A', body: 'x\nq\nz', baseVersion: 1 });
+  assert.equal((await r.json()).version, 2);
+  assert.equal((await put('a', { title: 'A', body: 'x', baseVersion: 1 })).status, 409);
+  const pg = await (await fetch(`${b}/api/pages/a`)).json();
+  assert.deepEqual(pg.backlinks, ['b']);
+  const d = await (await fetch(`${b}/api/pages/a/diff?from=1&to=2`)).json();
+  assert.deepEqual(d.lines.map(l => l.op), [' ', '-', '+', ' ']);
+  const s = await (await fetch(`${b}/api/search?q=SEE`)).json();
+  assert.match(s[0].snippet, /<mark>see<\/mark>/);
+  assert.equal((await fetch(`${b}/wiki/a`)).status, 200);
+  assert.equal((await fetch(`${b}/`)).status, 200);
+  srv.close();
+});
+test('render', () => { assert.match(render('~~a~~'), /<del>a<\/del>/); });

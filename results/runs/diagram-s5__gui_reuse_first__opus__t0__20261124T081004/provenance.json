@@ -1,0 +1,93 @@
+{
+ "external_exact_fraction": 0.08161708619374523,
+ "external_modified_fraction": 0.007627765064836003,
+ "external_fraction": 0.08924485125858124,
+ "line_classes": {
+  "nontrivial": 2622,
+  "trivial": 1049,
+  "exact": 214,
+  "modified": 20,
+  "generated": 2388
+ },
+ "corpus_sources": 1,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 556,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 556
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795507837493.txt",
+   234
+  ]
+ ],
+ "per_file": {
+  "src/ws.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 85,
+   "trivial": 24
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 4,
+   "generated": 427,
+   "trivial": 109
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 6,
+   "generated": 604,
+   "trivial": 154
+  },
+  "src/public/style.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 24,
+   "trivial": 25
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 101,
+   "trivial": 31
+  },
+  "src/core/geometry.js": {
+   "exact": 0,
+   "modified": 4,
+   "generated": 207,
+   "trivial": 66
+  },
+  "src/core/fractional-indexing.js": {
+   "exact": 212,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 343
+  },
+  "src/core/xml.js": {
+   "exact": 0,
+   "modified": 1,
+   "generated": 33,
+   "trivial": 17
+  },
+  "src/core/index.js": {
+   "exact": 1,
+   "modified": 2,
+   "generated": 758,
+   "trivial": 227
+  },
+  "src/core/layout.js": {
+   "exact": 1,
+   "modified": 3,
+   "generated": 142,
+   "trivial": 52
+  }
+ },
+ "final_functional_loc": 3361
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "source_url": "https://github.com/markdown-it/markdown-it/tree/14.1.0/lib",
+    "license": "MIT",
+    "files_or_snippet": "markdown-it 14.1.0 lib/**/*.mjs (parser_block, parser_core, parser_inline, renderer, ruler, token, index, common/utils, common/html_blocks, common/html_re, helpers/*, presets/*, rules_block/*, rules_core/*, rules_inline/*), fetched via the GitHub web UI and raw.githubusercontent.com copy-paste; LICENSE from the repository root",
+    "local_paths": [
+      "src/vendor/markdown-it/",
+      "src/vendor/markdown-it/LICENSE"
+    ],
+    "lines_used_estimate": 5950,
+    "how_adapted": "Copied verbatim except: (1) common/utils.mjs imports mdurl and entities from ../../mdurl and ../../entities; uc.micro is replaced by a local const with native Unicode property regexes /^\\p{P}$/u and /^\\p{S}$/u (one line repaired after a copy-paste mishap, content verified); (2) rules_inline/entity.mjs imports decodeHTML from ../../entities/index.mjs; (3) index.mjs drops the linkify-it import and instance (this.linkify = null; the linkify option is off in the default preset), imports mdurl from ../mdurl/index.mjs and punycode from ./punycode.mjs. punycode.mjs is project-written glue (WHATWG URL for IDN hosts, ASCII unchanged). Tables and strikethrough come from markdown-it's default preset. The TypeScript master branch was not used because it is not runnable without a build step."
+  },
+  {
+    "source_url": "https://github.com/markdown-it/mdurl",
+    "license": "MIT",
+    "files_or_snippet": "mdurl lib/encode.mjs, lib/decode.mjs (from master; copied via browser), lib/format.mjs, lib/parse.mjs, index.mjs (root), and LICENSE",
+    "local_paths": [
+      "src/vendor/mdurl/encode.mjs",
+      "src/vendor/mdurl/decode.mjs",
+      "src/vendor/mdurl/format.mjs",
+      "src/vendor/mdurl/parse.mjs",
+      "src/vendor/mdurl/index.mjs",
+      "src/vendor/mdurl/LICENSE"
+    ],
+    "lines_used_estimate": 580,
+    "how_adapted": "Copied verbatim. index.mjs had its imports changed from ./lib/*.mjs to ./*.mjs because the lib/ folder was flattened into src/vendor/mdurl/."
+  },
+  {
+    "source_url": "https://github.com/fb55/entities/blob/main/maps/entities.json",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "maps/entities.json (HTML5 named character reference table, 2125 names without trailing ';') and LICENSE",
+    "local_paths": [
+      "src/vendor/entities/entities.json",
+      "src/vendor/entities/LICENSE"
+    ],
+    "lines_used_estimate": 1,
+    "how_adapted": "Data file copied verbatim. src/vendor/entities/index.mjs (decodeHTML over this table) is project-written glue, not copied from the entities package, which only supplies the data here."
+  }
+]

@@ -1,0 +1,39 @@
+{
+ "external_exact_fraction": 0.7666666666666667,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.7666666666666667,
+ "line_classes": {
+  "nontrivial": 30,
+  "trivial": 9,
+  "exact": 23,
+  "modified": 0,
+  "generated": 7
+ },
+ "corpus_sources": 2,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 77,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 77
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795508671404.txt",
+   23
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 7
+  },
+  "src/vendor/lil-marky.mjs": {
+   "exact": 23,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2
+  }
+ },
+ "final_functional_loc": 34
+}

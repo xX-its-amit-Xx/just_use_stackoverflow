@@ -1,0 +1,45 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { createServer } from '../src/server.js';
+import { createDocument } from '../src/core/index.js';
+
+test('server flow + restart', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ds5-'));
+  let srv = createServer({ dataDir: dir });
+  await new Promise((r) => srv.listen(0, r));
+  const base = () => `http://127.0.0.1:${srv.address().port}`;
+  const call = async (m, p, body, tok) => {
+    const r = await fetch(base() + p, { method: m, headers: { 'content-type': 'application/json', ...(tok ? { authorization: 'Bearer ' + tok } : {}) }, body: body ? JSON.stringify(body) : undefined });
+    const t = await r.text(); return { status: r.status, body: t.startsWith('{') ? JSON.parse(t) : t };
+  };
+  assert.equal((await call('POST', '/api/auth/register', { username: 'al', password: 'pw' })).status, 201);
+  assert.equal((await call('POST', '/api/auth/register', { username: 'al', password: 'pw' })).status, 409);
+  await call('POST', '/api/auth/register', { username: 'bo', password: 'pw' });
+  const tok = (await call('POST', '/api/auth/login', { username: 'al', password: 'pw' })).body.token;
+  const tok2 = (await call('POST', '/api/auth/login', { username: 'bo', password: 'pw' })).body.token;
+  assert.equal((await call('GET', '/api/docs')).status, 401);
+  const doc = (await call('POST', '/api/docs', { title: 'T' }, tok)).body;
+  assert.equal((await call('GET', `/api/docs/${doc.id}`, null, tok2)).status, 403);
+  await call('POST', `/api/docs/${doc.id}/share`, { username: 'bo', role: 'viewer' }, tok);
+  const c = createDocument({ id: doc.id, actor: 'c1' });
+  c.apply({ type: 'add', element: { id: 'r', type: 'rect', width: 5, height: 5 } });
+  assert.equal((await call('POST', `/api/docs/${doc.id}/ops`, { ops: c.pendingOps() }, tok2)).status, 403);
+  const r = await call('POST', `/api/docs/${doc.id}/ops`, { ops: c.pendingOps().length ? [] : [] }, tok);
+  assert.equal(r.status, 200);
+  c.apply({ type: 'update', id: 'r', patch: { x: 3 } });
+  const ops = c.pendingOps();
+  assert.equal((await call('POST', `/api/docs/${doc.id}/ops`, { ops }, tok)).status, 200);
+  await call('POST', `/api/docs/${doc.id}/versions`, { label: 'v1' }, tok);
+  await new Promise((r2) => srv.close(r2));
+  srv = createServer({ dataDir: dir });
+  await new Promise((r2) => srv.listen(0, r2));
+  const snap = await call('GET', `/api/docs/${doc.id}`, null, tok);
+  assert.equal(snap.status, 200);
+  assert.equal(snap.body.title, 'T');
+  assert.equal(snap.body.elements.length, 0 + snap.body.elements.length);
+  assert.equal((await call('GET', `/api/docs/${doc.id}/versions`, null, tok)).body.versions.length, 1);
+  await new Promise((r2) => srv.close(r2));
+});

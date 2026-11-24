@@ -1,0 +1,115 @@
+{
+ "external_exact_fraction": 0.9504937283159861,
+ "external_modified_fraction": 0.0029356818788364024,
+ "external_fraction": 0.9534294101948225,
+ "line_classes": {
+  "nontrivial": 7494,
+  "trivial": 2818,
+  "exact": 7123,
+  "modified": 22,
+  "generated": 349
+ },
+ "corpus_sources": 21,
+ "corpus_sources_contributing": 14,
+ "corpus_lines": 21926,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 21926
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+   7131
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+   531
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+   521
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+   217
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+   172
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+   149
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+   46
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+   44
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+   40
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+   37
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+   37
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/README.md",
+   12
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+   3
+  ],
+  [
+   ".retrieval/npm/commonmark@0.31.2/package/bin/commonmark",
+   2
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 16,
+   "generated": 141,
+   "trivial": 45
+  },
+  "src/server.js": {
+   "exact": 1,
+   "modified": 6,
+   "generated": 147,
+   "trivial": 33
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 3,
+   "trivial": 0
+  },
+  "src/static/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 42,
+   "trivial": 8
+  },
+  "src/static/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 16,
+   "trivial": 6
+  },
+  "src/vendor/commonmark.cjs": {
+   "exact": 7122,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2726
+  }
+ },
+ "final_functional_loc": 9931
+}

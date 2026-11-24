@@ -1,0 +1,216 @@
+{
+ "run_id": "markdown-s1__reuse_first__sonnet__t1__20261124T081105",
+ "task_id": "markdown-s1",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S1",
+ "family": "markdown",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "segments": 1,
+ "resumed_after_limit": false,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 7,
+ "model_invocations": 7,
+ "input_tokens": 14,
+ "output_tokens": 2678,
+ "cached_input_tokens": 77157,
+ "cache_creation_tokens": 8513,
+ "reasoning_tokens": 323,
+ "total_tokens": 2692,
+ "total_tokens_incl_cache": 88362,
+ "web_search_requests": 0,
+ "inference_cost_usd": 0.068576,
+ "inference_cost_nocache_usd": 0.198148,
+ "inference_cost_attributed_usd": 0.068576,
+ "harness_reported_cost_usd": 0.0685757,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.000859,
+ "total_execution_cost_usd": 0.069435,
+ "elapsed_s": 38.67,
+ "agent_elapsed_s": 38.36,
+ "orchestrator_observed_s": 39.16,
+ "eval_s": 0.31,
+ "active_s": 45.0,
+ "api_s": 34.28,
+ "hidden_tests": 26,
+ "hidden_pass": 26,
+ "hidden_fail": 0,
+ "own_tests": 1,
+ "own_pass": 1,
+ "functional_loc": 9502,
+ "functional_chars": 242995,
+ "normalized_loc": 8100,
+ "minified_vendor_bytes": 0,
+ "test_loc": 5,
+ "comment_lines": 381,
+ "blank_lines": 360,
+ "retrieval": {
+  "search_queries": 2,
+  "search_results_examined": 6,
+  "repositories_inspected": 0,
+  "repositories_cloned": 1,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 13244,
+  "cloned_repo_lines": 13972,
+  "retrieved_loc_incorporated": 9470,
+  "retrieved_loc_modified": 3,
+  "retrieved_loc_discarded": 3771,
+  "generated_loc": 29,
+  "modified_loc": 3,
+  "integration_modifications": 0,
+  "external_fraction": 0.9969,
+  "search_to_use_conversion": 0.625,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 1,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": null,
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 3,
+  "retrieval_invocations": 2,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "3b2e23c8ad6e21d3"
+ },
+ "quality": {
+  "security_findings": [],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 2,
+   "max_file_loc": 9469,
+   "mean_file_loc": 4751.0,
+   "functions": 449,
+   "loc_per_function": 21.2,
+   "duplicate_line_ratio": 0.251
+  },
+  "license": {
+   "provenance_entries": 1,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.9966414777497901,
+  "external_modified_fraction": 0.000279876854184159,
+  "external_fraction": 0.9969213546039742,
+  "line_classes": {
+   "nontrivial": 7146,
+   "trivial": 2736,
+   "exact": 7122,
+   "modified": 2,
+   "generated": 22
+  },
+  "corpus_sources": 16,
+  "corpus_sources_contributing": 10,
+  "corpus_lines": 13244,
+  "corpus_lines_by_kind": {
+   "retrieval_dir": 13186,
+   "tool_result": 58
+  },
+  "contributing_sources": [
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/dist/commonmark.js",
+    7123
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/inlines.js",
+    529
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/blocks.js",
+    518
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/node.js",
+    217
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/html.js",
+    169
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/xml.js",
+    147
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/common.js",
+    46
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/from-code-point.js",
+    40
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/lib/render/renderer.js",
+    35
+   ],
+   [
+    ".retrieval/npm/commonmark@0.31.2/package/README.md",
+    11
+   ]
+  ],
+  "final_functional_loc": 9502
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 14,
+    "outputTokens": 2678,
+    "cacheReadInputTokens": 77157,
+    "cacheCreationInputTokens": 8513,
+    "webSearchRequests": 0,
+    "costUSD": 0.0685757,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 323,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 8513,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 14,
+    "output": 2678,
+    "cr": 77157,
+    "cw": 8513
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "github_search": 1,
+  "code_generation": 2,
+  "repository_inspection": 1,
+  "test_execution": 1,
+  "other": 1
+ }
+}

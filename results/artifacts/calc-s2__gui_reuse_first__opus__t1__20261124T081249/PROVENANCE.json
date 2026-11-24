@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/silentmatt/expr-eval/blob/master/src/token-stream.js",
+    "license": "MIT (Copyright (c) 2015 Matthew Crumley)",
+    "files_or_snippet": "TokenStream.prototype.isRadixInteger and TokenStream.prototype.isNumber",
+    "local_paths": ["src/calc.js"],
+    "lines_used_estimate": 75,
+    "how_adapted": "Acquired via browser (Raw view copy/paste). Converted from prototype methods on TokenStream to standalone functions (expr, start) returning {value,end}; accept uppercase X/B prefixes; guard exponent parsing so '2e' lexes as 2 followed by name e (implicit multiplication). The parser, evaluator, built-ins, calculator state and REPL were written new because expr-eval's grammar (precedence, implicit multiplication, error positions) does not match the spec."
+  }
+]

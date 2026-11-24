@@ -1,0 +1,264 @@
+{
+ "external_exact_fraction": 0.9742306730047535,
+ "external_modified_fraction": 0.004503377533149862,
+ "external_fraction": 0.9787340505379034,
+ "line_classes": {
+  "nontrivial": 3997,
+  "trivial": 3411,
+  "exact": 3894,
+  "modified": 18,
+  "generated": 85
+ },
+ "corpus_sources": 61,
+ "corpus_sources_contributing": 33,
+ "corpus_lines": 17294,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 17212,
+  "tool_result": 82
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.cjs.js",
+   2371
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/dist/markdown-it.mjs",
+   2349
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/decode.js",
+   575
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/src/decode.ts",
+   426
+  ],
+  [
+   ".retrieval/npm/linkify-it@6.1.0/package/build/index.mjs",
+   323
+  ],
+  [
+   ".retrieval/npm/linkify-it@6.1.0/package/build/index.cjs.js",
+   310
+  ],
+  [
+   ".retrieval/npm/mdurl@2.1.0/package/build/index.cjs.js",
+   244
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/punycode.es6.js",
+   192
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/punycode.js",
+   190
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/encode.js",
+   147
+  ],
+  [
+   ".retrieval/npm/mdurl@2.1.0/package/lib/parse.mjs",
+   131
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/src/encode.ts",
+   97
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/escape.js",
+   94
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/internal/decode-data-format.js",
+   82
+  ],
+  [
+   ".retrieval/npm/mdurl@2.1.0/package/lib/decode.mjs",
+   81
+  ],
+  [
+   ".retrieval/npm/mdurl@2.1.0/package/lib/encode.mjs",
+   66
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/src/internal/decode-data-format.ts",
+   58
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/src/escape.ts",
+   56
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/index.js",
+   39
+  ],
+  [
+   ".retrieval/npm/mdurl@2.1.0/package/lib/format.mjs",
+   33
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/decode-codepoint.js",
+   18
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/src/index.ts",
+   17
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/src/decode-codepoint.ts",
+   11
+  ],
+  [
+   ".retrieval/npm/uc.micro@3.0.0/package/build/index.mjs",
+   7
+  ],
+  [
+   ".retrieval/npm/uc.micro@3.0.0/package/build/index.cjs.js",
+   7
+  ],
+  [
+   ".retrieval/npm/markdown-it@15.0.3/package/bin/markdown-it.mjs",
+   4
+  ],
+  [
+   ".retrieval/npm/mdurl@2.1.0/package/index.mjs",
+   4
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/index.d.ts",
+   3
+  ],
+  [
+   ".retrieval/npm/punycode.js@2.3.1/package/README.md",
+   2
+  ],
+  [
+   ".retrieval/npm/entities@9.0.0/package/dist/decode.d.ts",
+   2
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 7,
+   "modified": 7,
+   "generated": 52,
+   "trivial": 31
+  },
+  "src/gfm-strikethrough.js": {
+   "exact": 11,
+   "modified": 7,
+   "generated": 18,
+   "trivial": 16
+  },
+  "src/cli.js": {
+   "exact": 2,
+   "modified": 3,
+   "generated": 10,
+   "trivial": 7
+  },
+  "src/vendor/mdurl/index.mjs": {
+   "exact": 4,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 6
+  },
+  "src/vendor/mdurl/lib/encode.mjs": {
+   "exact": 39,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/mdurl/lib/parse.mjs": {
+   "exact": 128,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 148
+  },
+  "src/vendor/mdurl/lib/decode.mjs": {
+   "exact": 52,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 33
+  },
+  "src/vendor/mdurl/lib/format.mjs": {
+   "exact": 13,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 4
+  },
+  "src/vendor/markdown-it/markdown-it.mjs": {
+   "exact": 2306,
+   "modified": 0,
+   "generated": 5,
+   "trivial": 1623
+  },
+  "src/vendor/uc.micro/index.mjs": {
+   "exact": 7,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 0
+  },
+  "src/vendor/entities/decode.js": {
+   "exact": 549,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 580
+  },
+  "src/vendor/entities/decode-codepoint.js": {
+   "exact": 17,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 44
+  },
+  "src/vendor/entities/index.js": {
+   "exact": 38,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 49
+  },
+  "src/vendor/entities/encode.js": {
+   "exact": 124,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 171
+  },
+  "src/vendor/entities/escape.js": {
+   "exact": 66,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 97
+  },
+  "src/vendor/entities/generated/decode-data-html.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 10
+  },
+  "src/vendor/entities/generated/encode-html.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2
+  },
+  "src/vendor/entities/internal/decode-data-format.js": {
+   "exact": 81,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 81
+  },
+  "src/vendor/punycode/punycode.es6.js": {
+   "exact": 160,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 228
+  },
+  "src/vendor/linkify-it/index.mjs": {
+   "exact": 288,
+   "modified": 1,
+   "generated": 0,
+   "trivial": 248
+  }
+ },
+ "final_functional_loc": 5755
+}

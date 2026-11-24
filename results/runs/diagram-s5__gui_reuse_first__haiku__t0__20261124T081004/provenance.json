@@ -1,0 +1,135 @@
+{
+ "external_exact_fraction": 0.00038153376573826786,
+ "external_modified_fraction": 0.0,
+ "external_fraction": 0.00038153376573826786,
+ "line_classes": {
+  "nontrivial": 2621,
+  "trivial": 887,
+  "exact": 1,
+  "modified": 0,
+  "generated": 2620
+ },
+ "corpus_sources": 2,
+ "corpus_sources_contributing": 1,
+ "corpus_lines": 24,
+ "corpus_lines_by_kind": {
+  "gui_clipboard": 24
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795507858486.txt",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/store.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 42,
+   "trivial": 23
+  },
+  "src/ws.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 60,
+   "trivial": 20
+  },
+  "src/server.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 377,
+   "trivial": 111
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 7,
+   "trivial": 1
+  },
+  "src/public/styles.css": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 32,
+   "trivial": 18
+  },
+  "src/public/app.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 853,
+   "trivial": 238
+  },
+  "src/public/index.html": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 94,
+   "trivial": 28
+  },
+  "src/vendor/dagre/dagre.esm.js": {
+   "exact": 1,
+   "modified": 0,
+   "generated": 0,
+   "trivial": 2
+  },
+  "src/core/util.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 21,
+   "trivial": 8
+  },
+  "src/core/svg.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 75,
+   "trivial": 20
+  },
+  "src/core/geometry.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 70,
+   "trivial": 22
+  },
+  "src/core/drawio.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 120,
+   "trivial": 45
+  },
+  "src/core/xml.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 39,
+   "trivial": 17
+  },
+  "src/core/index.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 32,
+   "trivial": 11
+  },
+  "src/core/route.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 153,
+   "trivial": 52
+  },
+  "src/core/layout.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 29,
+   "trivial": 15
+  },
+  "src/core/errors.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 4,
+   "trivial": 2
+  },
+  "src/core/document.js": {
+   "exact": 0,
+   "modified": 0,
+   "generated": 612,
+   "trivial": 254
+  }
+ },
+ "final_functional_loc": 3436
+}

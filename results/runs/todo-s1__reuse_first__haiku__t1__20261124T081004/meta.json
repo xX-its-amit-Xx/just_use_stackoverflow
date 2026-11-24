@@ -1,0 +1,121 @@
+{
+ "run_id": "todo-s1__reuse_first__haiku__t1__20261124T081004",
+ "task_id": "todo-s1",
+ "strategy": "reuse_first",
+ "trial": 1,
+ "tier": "S1",
+ "family": "todo",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "session_id": "e1b7d384-a478-452a-a161-b805b308ef42",
+ "workspace": "/tmp/claude-0/-home-user-just-use-stackoverflow/0aee327b-dad0-5786-a62e-e964dcee381e/scratchpad/work/todo-s1__reuse_first__haiku__t1__20261124T081004/ws",
+ "cmd": [
+  "claude",
+  "-p",
+  "Implement the application specified in SPEC.md, following the benchmark rules in your instructions.",
+  "--output-format",
+  "stream-json",
+  "--verbose",
+  "--model",
+  "claude-haiku-5-5",
+  "--effort",
+  "medium",
+  "--session-id",
+  "e1b7d384-a478-452a-a161-b805b308ef42",
+  "--tools",
+  "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch",
+  "--append-system-prompt",
+  "You are a participant agent in a controlled software-engineering benchmark. Work...<system prompt>",
+  "--disable-slash-commands",
+  "--strict-mcp-config",
+  "--setting-sources",
+  "",
+  "--permission-mode",
+  "auto",
+  "--max-budget-usd",
+  "1"
+ ],
+ "claude_code_version": "2.1.331 (Claude Code)",
+ "max_budget_usd": 1,
+ "max_wall_clock_s": 1800,
+ "protocol_sha": "4d303822b207bdb2",
+ "t_assigned": 1795507805.0016217,
+ "t_agent_end": 1795507864.719098,
+ "agent_elapsed_s": 59.71212029457092,
+ "wall_span_s": 59.71747636795044,
+ "exit_code": 0,
+ "timed_out": false,
+ "segments": [
+  {
+   "started": 1795507805.001844,
+   "seconds": 59.71,
+   "exit_code": 0,
+   "limit_hit": false,
+   "duration_ms": 58421
+  }
+ ],
+ "resumed_after_limit": false,
+ "final_limit_hit": false,
+ "harness_result": {
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 58421,
+  "duration_api_ms": 52547,
+  "num_turns": 10,
+  "total_cost_usd": 0.011829139999999998,
+  "usage": {
+   "input_tokens": 20,
+   "cache_creation_input_tokens": 21275,
+   "cache_read_input_tokens": 169614,
+   "output_tokens": 11752,
+   "output_tokens_details": {
+    "thinking_tokens": 2919
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 21275,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1070,
+     "cache_read_input_tokens": 26436,
+     "cache_creation_input_tokens": 903,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 903
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "modelUsage": {
+   "claude-haiku-5-5": {
+    "inputTokens": 20,
+    "outputTokens": 11752,
+    "cacheReadInputTokens": 169614,
+    "cacheCreationInputTokens": 21275,
+    "webSearchRequests": 0,
+    "costUSD": 0.011829139999999998,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 2919,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 21275,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "stop_reason": "end_turn"
+ },
+ "transcript_found": true
+}

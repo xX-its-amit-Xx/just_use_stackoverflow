@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>diagram-s5</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <section id="auth" class="screen">
+    <h1>diagram-s5</h1>
+    <form id="auth-form">
+      <input name="username" placeholder="Username" autocomplete="username" required>
+      <input name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+      <div class="row">
+        <button type="submit" id="login-btn">Log in</button>
+        <button type="button" id="register-btn">Register</button>
+      </div>
+    </form>
+    <p id="auth-msg" class="msg"></p>
+  </section>
+
+  <section id="home" class="screen hidden">
+    <header class="bar">
+      <strong>diagram-s5</strong>
+      <span id="whoami"></span>
+      <button id="logout-btn" type="button">Log out</button>
+    </header>
+    <div class="home-body">
+      <form id="new-doc" class="row">
+        <input name="title" placeholder="New diagram title">
+        <button type="submit">Create</button>
+      </form>
+      <ul id="doc-list"></ul>
+      <p id="home-msg" class="msg"></p>
+    </div>
+  </section>
+
+  <section id="editor" class="screen hidden">
+    <header class="bar toolbar">
+      <a href="#" id="home-link" title="Back to documents">&larr;</a>
+      <strong id="doc-title"></strong>
+      <span class="sep"></span>
+      <button data-tool="select" title="Select (V)">Select</button>
+      <button data-tool="rect" title="Rectangle (R)">Rect</button>
+      <button data-tool="ellipse" title="Ellipse (O)">Ellipse</button>
+      <button data-tool="diamond" title="Diamond (D)">Diamond</button>
+      <button data-tool="text" title="Text (T)">Text</button>
+      <button data-tool="connector" title="Connector (C)">Connector</button>
+      <span class="sep"></span>
+      <button id="undo" title="Undo (Ctrl+Z)">Undo</button>
+      <button id="redo" title="Redo (Ctrl+Y)">Redo</button>
+      <span class="sep"></span>
+      <button data-align="left">⇤</button>
+      <button data-align="center">↔</button>
+      <button data-align="right">⇥</button>
+      <button data-align="top">⤒</button>
+      <button data-align="middle">↕</button>
+      <button data-align="bottom">⤓</button>
+      <button id="dist-h">Dist H</button>
+      <button id="dist-v">Dist V</button>
+      <span class="sep"></span>
+      <select id="layout-menu" title="Auto-layout">
+        <option value="">Auto-layout…</option>
+        <option value="layered:TB">Layered (top→bottom)</option>
+        <option value="layered:LR">Layered (left→right)</option>
+        <option value="grid">Grid</option>
+      </select>
+      <label class="btn-like">Import draw.io <input id="import-file" type="file" accept=".drawio,.xml,application/xml" hidden></label>
+      <button id="export-svg">Export SVG</button>
+      <button id="export-json">Export JSON</button>
+      <span class="sep"></span>
+      <button id="zoom-out">−</button>
+      <span id="zoom-label">100%</span>
+      <button id="zoom-in">+</button>
+      <button id="zoom-fit">Fit</button>
+      <label><input type="checkbox" id="snap-grid"> Grid snap</label>
+      <span id="conn-status" class="status">offline</span>
+    </header>
+
+    <div id="main">
+      <aside id="left" class="panel">
+        <h3>Layers <button id="add-layer" title="Add layer">+</button></h3>
+        <ul id="layers"></ul>
+      </aside>
+
+      <div id="canvas-wrap">
+        <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#333"></path>
+            </marker>
+          </defs>
+          <g id="content"></g>
+          <g id="overlay"></g>
+        </svg>
+        <svg id="minimap" xmlns="http://www.w3.org/2000/svg" title="Minimap"></svg>
+      </div>
+
+      <aside id="right" class="panel">
+        <div class="tabs">
+          <button data-tab="props" class="active">Properties</button>
+          <button data-tab="comments">Comments</button>
+          <button data-tab="versions">Versions</button>
+        </div>
+        <div id="tab-props" class="tab"></div>
+        <div id="tab-comments" class="tab hidden">
+          <form id="comment-form">
+            <textarea name="body" rows="3" placeholder="Comment on selected element…"></textarea>
+            <button type="submit">Comment</button>
+          </form>
+          <ul id="comment-list"></ul>
+        </div>
+        <div id="tab-versions" class="tab hidden">
+          <form id="version-form" class="row">
+            <input name="label" placeholder="Version label">
+            <button type="submit">Save version</button>
+          </form>
+          <ul id="version-list"></ul>
+        </div>
+      </aside>
+    </div>
+    <footer id="footer" class="status"></footer>
+  </section>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/MohamedBakrr/taskninja--todo-CLI-app-/blob/main/src/commands/sortCommand.js",
+    "license": "MIT",
+    "files_or_snippet": "priorityOrder map + comparator pattern for sorting by priority",
+    "local_paths": ["src/todo.js"],
+    "lines_used_estimate": 3,
+    "how_adapted": "Acquired via browser (raw view, copy/paste). Renamed 'medium' to 'normal', added id tie-break. All other code (store, validation, persistence, CLI without commander/inquirer) written as glue because the candidate depends on interactive npm packages and has a different data model. GitHub code search required sign-in; repository search yielded no closer match."
+  }
+]

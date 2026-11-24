@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/igembitsky/vibeops-tracker",
+    "license": "MIT (Copyright (c) 2026 Igor Gembitsky)",
+    "files_or_snippet": "lib/store.mjs — writeFileAtomic() (temp file + rename) pattern",
+    "local_paths": ["src/util.js"],
+    "lines_used_estimate": 5,
+    "how_adapted": "Copied the write-to-temp-then-rename idea; reduced to a plain function (no mkdir lock logic, no gray-matter dependency). Attribution and MIT notice in src/THIRD_PARTY_NOTICES.md."
+  },
+  {
+    "source_url": "https://github.com/nepsilon/search-query-parser (npm: search-query-parser@1.6.0, lib/search-query-parser.js)",
+    "license": "MIT (Copyright (c) 2014 retraceio)",
+    "files_or_snippet": "Quoted-token regex for key:\"value\", key:'value', \"phrase\" and bare terms; backslash-unescape of quoted values",
+    "local_paths": ["src/search.js"],
+    "lines_used_estimate": 8,
+    "how_adapted": "Took the tokenizer regex and quote/backslash handling as a starting point, extended with a leading '-' negation group, per-key validation (unknown key, empty value, unterminated quotes -> 400), comparison operators for due/points, and the SPEC's field semantics (assignee:me, sprint:active, is:open, etc.). The library's own parse/ranges/exclusion logic was not used. MIT notice in src/THIRD_PARTY_NOTICES.md."
+  },
+  {
+    "source_url": "n/a (original code; retrieval searched GitHub code/repo search, npm search, Stack Overflow and reviewed candidates, none implementing this SPEC's domain)",
+    "license": "n/a (project code)",
+    "files_or_snippet": "Notes only: no retrieved implementation covered workspaces/RBAC, workflows, sprints, burndown, webhooks, or the SPA. Candidates reviewed and not used: vibeops-tracker as a whole (markdown-file store, gray-matter dependency, different domain); Sitebill (Laravel, not Node); jkanban, csv-parse/papaparse/csv (dependency-heavy or browser-oriented; the CSV module is our own RFC 4180 implementation).",
+    "local_paths": ["src/server.js", "src/csv.js", "src/webhooks.js", "src/main.js", "src/public/app.js", "src/public/index.html", "src/public/styles.css"],
+    "lines_used_estimate": 0,
+    "how_adapted": "Written from scratch for SPEC.md. Stack Overflow results were consulted only for orientation (scrypt/crypto usage); no SO content was copied. Node built-in crypto and fetch are used as documented."
+  }
+]

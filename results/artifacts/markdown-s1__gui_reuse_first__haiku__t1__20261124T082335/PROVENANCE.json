@@ -1,0 +1,10 @@
+[
+  {
+    "source_url": "https://github.com/turtlehat/lil-marky/blob/main/dist/lil-marky.mjs",
+    "license": "MIT (Copyright (c) 2026 Doug Mcleod; see src/vendor/LICENSE-lil-marky.txt, copied from https://github.com/turtlehat/lil-marky/blob/main/LICENSE)",
+    "files_or_snippet": "dist/lil-marky.mjs (single minified ES module bundle, 30 lines, 26.5 KB), found via GitHub repository search for 'commonmark markdown parser javascript' in the browser, acquired by Raw view -> select all -> copy -> paste",
+    "local_paths": ["src/vendor/lil-marky.mjs", "src/vendor/LICENSE-lil-marky.txt"],
+    "lines_used_estimate": 30,
+    "how_adapted": "Vendored unmodified. src/markdown.js imports create and html from it, creates a parser with features.html=false and features.extLinkify=false (so raw HTML is escaped as text and no bare-URL autolinking occurs) and unsafeLinks=true (no link-scheme stripping), and exposes render(markdown) = html()(parser.parse(markdown)). Upstream repo state: main branch, commit a8378ef, package version 2.3.0."
+  }
+]

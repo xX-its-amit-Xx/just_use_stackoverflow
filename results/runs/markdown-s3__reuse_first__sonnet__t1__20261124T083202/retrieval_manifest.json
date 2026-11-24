@@ -1,0 +1,12 @@
+[
+ {
+  "path": ".retrieval/npm/commonmark@0.31.2",
+  "files": 16,
+  "bytes": 673094
+ },
+ {
+  "path": ".retrieval/npm/markdown-it@15.0.3",
+  "files": 14,
+  "bytes": 2064760
+ }
+]

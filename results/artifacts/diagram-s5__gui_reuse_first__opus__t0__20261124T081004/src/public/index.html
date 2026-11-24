@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagram Editor</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="auth" class="overlay">
+  <form id="auth-form" class="card">
+    <h1>Diagram Editor</h1>
+    <input id="auth-user" placeholder="Username" autocomplete="username" required>
+    <input id="auth-pass" placeholder="Password" type="password" autocomplete="current-password" required>
+    <div class="row">
+      <button type="submit" id="btn-login">Log in</button>
+      <button type="button" id="btn-register">Register</button>
+    </div>
+    <p id="auth-msg" class="msg"></p>
+  </form>
+</div>
+
+<div id="doclist" class="overlay hidden">
+  <div class="card wide">
+    <h2>Your diagrams</h2>
+    <form id="new-doc" class="row"><input id="new-doc-title" placeholder="New diagram title"><button type="submit">Create</button></form>
+    <ul id="docs"></ul>
+    <button id="btn-logout" type="button">Log out</button>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <header id="toolbar" role="toolbar">
+    <button id="btn-home" title="Documents">☰</button>
+    <span id="doc-title"></span>
+    <span class="sep"></span>
+    <button data-tool="select" class="tool active" title="Select (V)">⬚</button>
+    <button data-tool="rect" class="tool" title="Rectangle (R)">▭</button>
+    <button data-tool="ellipse" class="tool" title="Ellipse (O)">◯</button>
+    <button data-tool="diamond" class="tool" title="Diamond (D)">◇</button>
+    <button data-tool="text" class="tool" title="Text (T)">T</button>
+    <button data-tool="line" class="tool" title="Line (L)">╱</button>
+    <button data-tool="image" class="tool" title="Image">🖼</button>
+    <button data-tool="connector" class="tool" title="Connector (C)">→</button>
+    <span class="sep"></span>
+    <button id="btn-undo" title="Undo (Ctrl+Z)">↶</button>
+    <button id="btn-redo" title="Redo (Ctrl+Y)">↷</button>
+    <span class="sep"></span>
+    <select id="align" title="Align">
+      <option value="">Align…</option>
+      <option value="left">Left</option><option value="center">Center</option><option value="right">Right</option>
+      <option value="top">Top</option><option value="middle">Middle</option><option value="bottom">Bottom</option>
+      <option value="dist-h">Distribute horizontally</option><option value="dist-v">Distribute vertically</option>
+    </select>
+    <select id="layout" title="Auto-layout">
+      <option value="">Layout…</option>
+      <option value="layered-TB">Layered (top→bottom)</option>
+      <option value="layered-LR">Layered (left→right)</option>
+      <option value="grid">Grid</option>
+    </select>
+    <select id="arrange" title="Arrange">
+      <option value="">Arrange…</option>
+      <option value="front">Bring to front</option><option value="forward">Bring forward</option>
+      <option value="backward">Send backward</option><option value="back">Send to back</option>
+      <option value="group">Group</option><option value="ungroup">Ungroup</option>
+    </select>
+    <span class="sep"></span>
+    <label class="filebtn" title="Import draw.io">Import<input type="file" id="import-file" accept=".drawio,.xml,.json"></label>
+    <button id="btn-export-svg">SVG</button>
+    <button id="btn-export-json">JSON</button>
+    <span class="sep"></span>
+    <button id="btn-zoom-out">−</button><span id="zoom-label">100%</span><button id="btn-zoom-in">+</button><button id="btn-zoom-fit">Fit</button>
+    <label><input type="checkbox" id="snap-toggle" checked> Snap</label>
+    <span class="grow"></span>
+    <span id="collaborators"></span>
+    <span id="status" class="status">offline</span>
+  </header>
+  <main>
+    <aside id="left">
+      <section>
+        <h3>Layers <button id="btn-add-layer" title="Add layer">+</button></h3>
+        <ul id="layers"></ul>
+      </section>
+      <section>
+        <h3>Versions <button id="btn-save-version" title="Save version">+</button></h3>
+        <ul id="versions"></ul>
+      </section>
+    </aside>
+    <div id="canvas-wrap">
+      <svg id="canvas" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+        <defs>
+          <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#eee" stroke-width="0.5"/></pattern>
+          <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+        </defs>
+        <g id="viewport">
+          <rect id="grid-bg" x="-100000" y="-100000" width="200000" height="200000" fill="url(#grid)"/>
+          <g id="content"></g>
+          <g id="remote"></g>
+          <g id="overlay"></g>
+        </g>
+      </svg>
+      <svg id="minimap" xmlns="http://www.w3.org/2000/svg"><g id="mini-content"></g><rect id="mini-view" fill="rgba(30,120,255,0.15)" stroke="#1e78ff"/></svg>
+      <textarea id="text-editor" class="hidden"></textarea>
+    </div>
+    <aside id="right">
+      <section id="props">
+        <h3>Properties</h3>
+        <div id="props-empty" class="muted">Nothing selected</div>
+        <form id="props-form" class="hidden">
+          <label>Text <textarea id="p-text" rows="2"></textarea></label>
+          <label>Fill <input type="color" id="p-fill"></label>
+          <label>Stroke <input type="color" id="p-stroke"></label>
+          <label>Stroke width <input type="number" id="p-strokeWidth" min="0" step="0.5"></label>
+          <label>Font size <input type="number" id="p-fontSize" min="4"></label>
+          <label>Font <select id="p-fontFamily"><option>sans-serif</option><option>serif</option><option>monospace</option></select></label>
+          <label>Opacity <input type="range" id="p-opacity" min="0" max="1" step="0.05"></label>
+          <label>Routing <select id="p-routing"><option>straight</option><option>orthogonal</option></select></label>
+          <label>X <input type="number" id="p-x"></label><label>Y <input type="number" id="p-y"></label>
+          <label>W <input type="number" id="p-width"></label><label>H <input type="number" id="p-height"></label>
+          <label>Rotation <input type="number" id="p-rotation"></label>
+        </form>
+      </section>
+      <section id="comments-panel">
+        <h3>Comments</h3>
+        <form id="comment-form"><textarea id="comment-text" rows="2" placeholder="Comment on selected element"></textarea><button type="submit">Add</button></form>
+        <label><input type="checkbox" id="show-resolved"> Show resolved</label>
+        <ul id="comments"></ul>
+      </section>
+    </aside>
+  </main>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

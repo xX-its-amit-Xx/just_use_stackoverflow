@@ -1,0 +1,11 @@
+[
+  {
+    "source_url": "https://github.com/dagrejs/dagre/blob/master/dist/dagre.esm.js (raw: https://raw.githubusercontent.com/dagrejs/dagre/master/dist/dagre.esm.js)",
+    "license": "MIT (Copyright (c) 2012-2014 Chris Pettitt); license text in src/vendor/dagre/LEGAL.txt",
+    "files_or_snippet": "dist/dagre.esm.js (whole minified ESM bundle, includes inlined graphlib) and dist/dagre.esm.js.LEGAL.txt",
+    "local_paths": ["src/vendor/dagre/dagre.esm.js", "src/vendor/dagre/LEGAL.txt", "src/THIRD_PARTY_NOTICES.md"],
+    "lines_used_estimate": 3,
+    "how_adapted": "Copied verbatim through the browser (GitHub blob page -> Raw -> select all -> copy -> paste into workspace); not modified. Imported by src/core/layout.js, which builds a dagre graph from the document's shapes and connectors (rankdir TB/LR, nodesep/ranksep = spacing), runs dagre.layout and converts the returned centre coordinates to top-left positions for the layered layout.",
+    "notes": "Acquired through the GUI browser only. Candidates inspected and rejected: YahyaABOUE/layered-graph-drawing (no LICENSE file, so not reusable). GitHub searches for orthogonal connector routing and mxGraph XML import returned no usable repositories. Everything else is original code written for this task: the CRDT/LWW op model and undo history (src/core/document.js), straight and grid-based orthogonal routing (src/core/route.js), geometry (src/core/geometry.js), draw.io XML parsing and import (src/core/xml.js, src/core/drawio.js), SVG export (src/core/svg.js), snapping (src/core/index.js), HTTP/WebSocket server, persistence and WebSocket framing (src/server.js, src/store.js, src/ws.js), and the browser editor (src/public/)."
+  }
+]

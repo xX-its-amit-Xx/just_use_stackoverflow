@@ -1,0 +1,243 @@
+{
+ "run_id": "diagram-s5__gui_reuse_first__sonnet__t0__20261124T082728",
+ "task_id": "diagram-s5",
+ "strategy": "gui_reuse_first",
+ "trial": 0,
+ "tier": "S5",
+ "family": "diagram",
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "segments": 1,
+ "resumed_after_limit": false,
+ "exit_code": 0,
+ "timed_out": false,
+ "harness_subtype": "success",
+ "num_turns": 16,
+ "model_invocations": 14,
+ "input_tokens": 28,
+ "output_tokens": 75386,
+ "cached_input_tokens": 561721,
+ "cache_creation_tokens": 84963,
+ "reasoning_tokens": 19788,
+ "total_tokens": 75414,
+ "total_tokens_incl_cache": 722098,
+ "web_search_requests": 0,
+ "inference_cost_usd": 1.14994,
+ "inference_cost_nocache_usd": 2.047284,
+ "inference_cost_attributed_usd": 1.14994,
+ "harness_reported_cost_usd": 1.1499401,
+ "search_api_cost_usd": 0.0,
+ "compute_cost_usd_estimate": 0.010596,
+ "total_execution_cost_usd": 1.160536,
+ "elapsed_s": 476.82,
+ "agent_elapsed_s": 476.0,
+ "orchestrator_observed_s": 477.06,
+ "eval_s": 0.82,
+ "active_s": 475.73,
+ "api_s": 465.32,
+ "hidden_tests": 13,
+ "hidden_pass": 13,
+ "hidden_fail": 0,
+ "own_tests": 8,
+ "own_pass": 8,
+ "functional_loc": 1699,
+ "functional_chars": 79672,
+ "normalized_loc": 2656,
+ "minified_vendor_bytes": 0,
+ "test_loc": 116,
+ "comment_lines": 28,
+ "blank_lines": 43,
+ "retrieval": {
+  "search_queries": 3,
+  "search_results_examined": 0,
+  "repositories_inspected": 0,
+  "repositories_cloned": 0,
+  "clone_attempts_failed": 0,
+  "files_inspected": 0,
+  "files_copied": 0,
+  "snippets_retrieved": 0,
+  "retrieved_loc": 0,
+  "cloned_repo_lines": 0,
+  "retrieved_loc_incorporated": 0,
+  "retrieved_loc_modified": 0,
+  "retrieved_loc_discarded": 0,
+  "generated_loc": 1699,
+  "modified_loc": 0,
+  "integration_modifications": 0,
+  "external_fraction": 0.0,
+  "search_to_use_conversion": null,
+  "repository_acquisition_s": 0,
+  "retrieval_actions": 3,
+  "retrieval_failures": 0,
+  "retrieval_failure_rate": 0.0
+ },
+ "gui": {
+  "browser_navigations": 3,
+  "screenshots": 3,
+  "screenshot_tokens_estimate": 4095,
+  "screenshot_tokens_viewed_estimate": 4095,
+  "clicks": 0,
+  "text_selections": 0,
+  "copy_operations": 0,
+  "paste_operations": 0,
+  "failed_navigations": 0,
+  "gui_action_time_s": 5.1,
+  "browser_session_span_s": 471.06,
+  "visual_reasoning_calls": 3,
+  "visual_reasoning_cost_usd": 0.455125
+ },
+ "protocol": {
+  "first_retrieval_step": 2,
+  "first_src_write_step": 8,
+  "retrieval_invocations": 6,
+  "acquired_any": false,
+  "compliant": true,
+  "compliant_strict": false,
+  "protocol_sha": "cf33c28dd4da9635"
+ },
+ "quality": {
+  "security_findings": [
+   {
+    "rule": "weak_hash_for_password",
+    "file": "src/server.js",
+    "line": 331
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 34
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 105
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 122
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 148
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 355
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 358
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 367
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 369
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 374
+   },
+   {
+    "rule": "innerHTML_with_variable",
+    "file": "src/static/app.js",
+    "line": 377
+   }
+  ],
+  "dependencies": {
+   "runtime_dependencies": [],
+   "dev_dependencies": [],
+   "audit": {
+    "vulnerabilities": 0,
+    "note": "no dependencies declared"
+   }
+  },
+  "maintainability": {
+   "src_files": 6,
+   "max_file_loc": 898,
+   "mean_file_loc": 283.2,
+   "functions": 361,
+   "loc_per_function": 4.7,
+   "duplicate_line_ratio": 0.0558
+  },
+  "license": {
+   "provenance_entries": 0,
+   "notices_file": true,
+   "issues": [],
+   "compliant": true
+  },
+  "syntax_errors": [],
+  "human_interventions": 0,
+  "contamination": [],
+  "permission_denials": [],
+  "hidden_failed_names": []
+ },
+ "provenance": {
+  "external_exact_fraction": 0.0,
+  "external_modified_fraction": 0.0,
+  "external_fraction": 0.0,
+  "line_classes": {
+   "nontrivial": 1380,
+   "trivial": 347,
+   "exact": 0,
+   "modified": 0,
+   "generated": 1380
+  },
+  "corpus_sources": 0,
+  "corpus_sources_contributing": 0,
+  "corpus_lines": 0,
+  "corpus_lines_by_kind": {},
+  "contributing_sources": [],
+  "final_functional_loc": 1699
+ },
+ "reconciliation": {
+  "claude-sonnet-5-5": {
+   "harness": {
+    "inputTokens": 28,
+    "outputTokens": 75386,
+    "cacheReadInputTokens": 561721,
+    "cacheCreationInputTokens": 84963,
+    "webSearchRequests": 0,
+    "costUSD": 1.1499401,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 19788,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 84963,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "transcript": {
+    "input": 28,
+    "output": 75386,
+    "cr": 561721,
+    "cw": 84963
+   },
+   "delta": {
+    "input": 0,
+    "output": 0,
+    "cr": 0,
+    "cw": 0
+   }
+  }
+ },
+ "action_counts": {
+  "planning": 1,
+  "computer_use": 3,
+  "screenshot": 3,
+  "code_generation": 4,
+  "test_execution": 1,
+  "debugging": 1,
+  "other": 1
+ }
+}

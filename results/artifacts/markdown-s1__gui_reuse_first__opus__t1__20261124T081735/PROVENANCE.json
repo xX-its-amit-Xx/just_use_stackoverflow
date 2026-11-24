@@ -1,0 +1,26 @@
+[
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/inlines.js",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "InlineParser: peek/spnl/parseBackticks/parseBackslash/parseAutolink/scanDelims/previousChar/handleDelim/removeDelimiter/processEmphasis/parseLinkTitle/parseLinkDestination/addBracket/removeBracket/parseOpenBracket/parseBang/parseCloseBracket/parseEntity/parseString/parseNewline/parseInline/parseInlines and associated regexes",
+    "local_paths": ["src/inlines.js"],
+    "lines_used_estimate": 300,
+    "how_adapted": "Acquired via browser (raw view, copy/paste). Converted to an ES class; removed smart punctuation, raw HTML inlines (left as escaped text per spec) and reference-link lookup; replaced commonmark Node with a minimal local Node class."
+  },
+  {
+    "source_url": "https://github.com/commonmark/commonmark.js/blob/master/lib/common.js",
+    "license": "BSD-2-Clause",
+    "files_or_snippet": "ESCAPABLE, ENTITY, unescapeString, escapeXml, normalizeURI",
+    "local_paths": ["src/inlines.js"],
+    "lines_used_estimate": 40,
+    "how_adapted": "Acquired via browser. Replaced the 'entities' dependency with a small built-in entity table + numeric decoding, and the 'mdurl' encode dependency with an equivalent local percent-encoder."
+  },
+  {
+    "source_url": "https://github.com/developit/snarkdown/blob/main/src/index.js",
+    "license": "MIT",
+    "files_or_snippet": "encodeAttr idea (escaping \" < > in attributes); inspected as a candidate",
+    "local_paths": ["src/markdown.js"],
+    "lines_used_estimate": 2,
+    "how_adapted": "Reviewed via browser; its single-regex design is not CommonMark-compatible, so only the escaping idea was used. The block parser and HTML renderer in src/markdown.js were written for this project (glue)."
+  }
+]

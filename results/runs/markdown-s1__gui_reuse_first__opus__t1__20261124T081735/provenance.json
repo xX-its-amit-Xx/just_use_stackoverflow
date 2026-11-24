@@ -1,0 +1,52 @@
+{
+ "external_exact_fraction": 0.11882998171846434,
+ "external_modified_fraction": 0.02376599634369287,
+ "external_fraction": 0.1425959780621572,
+ "line_classes": {
+  "nontrivial": 547,
+  "trivial": 177,
+  "exact": 65,
+  "modified": 13,
+  "generated": 469
+ },
+ "corpus_sources": 8,
+ "corpus_sources_contributing": 4,
+ "corpus_lines": 2486,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 1241,
+  "gui_clipboard": 1245
+ },
+ "contributing_sources": [
+  [
+   ".gui/clipboard_history/1795508375868.txt",
+   77
+  ],
+  [
+   ".retrieval/cm_inlines.js",
+   77
+  ],
+  [
+   ".retrieval/cm_common.js",
+   1
+  ],
+  [
+   ".gui/clipboard_history/1795508384352.txt",
+   1
+  ]
+ ],
+ "per_file": {
+  "src/markdown.js": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 197,
+   "trivial": 86
+  },
+  "src/inlines.js": {
+   "exact": 65,
+   "modified": 10,
+   "generated": 272,
+   "trivial": 91
+  }
+ },
+ "final_functional_loc": 695
+}

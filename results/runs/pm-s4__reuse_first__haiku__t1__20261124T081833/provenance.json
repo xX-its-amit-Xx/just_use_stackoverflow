@@ -1,0 +1,158 @@
+{
+ "external_exact_fraction": 0.02803203661327231,
+ "external_modified_fraction": 0.10755148741418764,
+ "external_fraction": 0.13558352402745996,
+ "line_classes": {
+  "nontrivial": 1748,
+  "trivial": 496,
+  "exact": 49,
+  "modified": 188,
+  "generated": 1511
+ },
+ "corpus_sources": 57,
+ "corpus_sources_contributing": 20,
+ "corpus_lines": 17628,
+ "corpus_lines_by_kind": {
+  "retrieval_dir": 17361,
+  "tool_result": 267
+ },
+ "contributing_sources": [
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/public/app.js",
+   149
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/lib/store.mjs",
+   118
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/lib/api.mjs",
+   63
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/public/widget.js",
+   58
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/test/mocha.js",
+   43
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/server.mjs",
+   36
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/tests/widget.test.mjs",
+   32
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/bin/cli.mjs",
+   32
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/tests/mcp.test.mjs",
+   26
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/mcp-server.mjs",
+   17
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/public/help.html",
+   17
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/lib/search-query-parser.js",
+   13
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/tests/store.test.mjs",
+   11
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/tests/screenshot.test.mjs",
+   11
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/tests/api.test.mjs",
+   10
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/test/test.js",
+   9
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/lib/data-dir.mjs",
+   7
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/public/index.html",
+   4
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/public/styles.css",
+   3
+  ],
+  [
+   ".retrieval/repos/igembitsky__vibeops-tracker/.retrieval/npm/search-query-parser@1.6.0/package/test/index.html",
+   2
+  ]
+ ],
+ "per_file": {
+  "src/util.js": {
+   "exact": 6,
+   "modified": 1,
+   "generated": 10,
+   "trivial": 5
+  },
+  "src/search.js": {
+   "exact": 0,
+   "modified": 11,
+   "generated": 84,
+   "trivial": 36
+  },
+  "src/webhooks.js": {
+   "exact": 2,
+   "modified": 3,
+   "generated": 17,
+   "trivial": 11
+  },
+  "src/csv.js": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 33,
+   "trivial": 30
+  },
+  "src/server.js": {
+   "exact": 26,
+   "modified": 102,
+   "generated": 792,
+   "trivial": 245
+  },
+  "src/main.js": {
+   "exact": 0,
+   "modified": 2,
+   "generated": 4,
+   "trivial": 2
+  },
+  "src/public/styles.css": {
+   "exact": 0,
+   "modified": 3,
+   "generated": 39,
+   "trivial": 1
+  },
+  "src/public/app.js": {
+   "exact": 13,
+   "modified": 61,
+   "generated": 528,
+   "trivial": 161
+  },
+  "src/public/index.html": {
+   "exact": 2,
+   "modified": 2,
+   "generated": 4,
+   "trivial": 5
+  }
+ },
+ "final_functional_loc": 2193
+}
